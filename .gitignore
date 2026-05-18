@@ -1,0 +1,6 @@
+# Exclude source files (PDFs, captures) but keep the index
+sources/*
+!sources/SOURCE_INDEX.md
+
+# Claude Code local settings
+.claude/
