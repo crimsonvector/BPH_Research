@@ -37,12 +37,12 @@ BPH_Research/
 |                                     pivoting, tools/sources, workflows, templates
 |
 |-- sources/
-    |-- SOURCE_INDEX.md           <-- Catalog of all sources with metadata and grade
-    |-- IOCTA-2026.md             <-- Europol IOCTA 2026 (markdown)
-    |-- IOCTA-2026.pdf            <-- Europol IOCTA 2026 (original PDF)
-    |-- Bulletproof_Defense_*.pdf  <-- CISA/NSA BPH Mitigation Guidance (Nov 2025)
-    |-- screencapture-*.pdf       <-- Recorded Future TAE article (May 2026)
+|   |-- SOURCE_INDEX.md           <-- Catalog of all sources with metadata and grade
+|
+|-- LICENSE                       <-- MIT License
 ```
+
+> **Note:** Source documents (PDFs, web captures) are not included in this repository. See `sources/SOURCE_INDEX.md` for a full catalog with links and metadata.
 
 ---
 
@@ -58,7 +58,7 @@ BPH_Research/
 2. Review **`analysis/TIMELINE.md`** for the chronology of sanctions, takedowns, and evasion responses
 
 ### For adding new intelligence
-1. Save source material to **`sources/`** and add an entry to **`sources/SOURCE_INDEX.md`**
+1. Add an entry to **`sources/SOURCE_INDEX.md`** with full metadata and source grade
 2. Use the assessment template in **`playbook/ANALYST_PLAYBOOK.md`** Section 5 to evaluate new providers
 3. Add the provider to **`BPH_Master.csv`** with all applicable columns populated
 4. Update relevant analytical documents as needed
@@ -139,7 +139,7 @@ See `sources/SOURCE_INDEX.md` for the full catalog.
 To add new intelligence to this repository:
 
 1. **New provider:** Use the assessment template in the playbook, add to CSV, document sources
-2. **New source:** Save to `/sources/`, add to SOURCE_INDEX.md, cross-reference in CSV
+2. **New source:** Add to `sources/SOURCE_INDEX.md` with metadata and grade, cross-reference in CSV
 3. **Status change:** Update CSV status/tier, add timeline entry, update ecosystem map if relationships changed
 4. **Sanctions update:** Add to timeline, update CSV sanctions_designations field, check for evasion vehicles
 
