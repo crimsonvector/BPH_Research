@@ -15,7 +15,7 @@
 
 # --- internal hunting infrastructure (hostnames / platform codenames) ---
 <hunting-box-hostname>
-<tailscale-hostname>
+<mesh-vpn-hostname>
 <ct-fingerprint-platform-codename>
 <feed-fusion-platform-codename>
 <pivot-toolkit-name>
@@ -23,7 +23,7 @@
 # --- egress / VPN tradecraft ---
 <vpn-provider-name>
 <egress-bind-ip>
-<tailscale-ip>
+<mesh-vpn-ip>
 
 # --- local working paths / quarantine ---
 <quarantine-dir-name>
