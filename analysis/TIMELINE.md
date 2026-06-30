@@ -1,7 +1,7 @@
 # BPH Sanctions & Enforcement Timeline
 
-**Version:** 1.0
-**Last Updated:** 2026-05-16
+**Version:** 1.1
+**Last Updated:** 2026-06-29
 **Maintainer:** CrimsonVector Research
 
 ---
@@ -18,6 +18,18 @@
 ---
 
 ## 2026
+
+**2026-06-24** | **LE Operation** | **Operation Endgame -- SocGholish / Amadey / StealC**
+> Europol announces (takedown operations 15-19 June) the disruption of the SocGholish (fake-update initial access; Evil Corp-linked), Amadey (loader), and StealC (infostealer) networks. 326 servers and 142 domains seized/disrupted; over EUR 41M (~$47M) in criminal crypto frozen; 27M credentials recovered; 14,971 infected WordPress sites cleaned. Directly removes initial-access and credential-theft enabling infrastructure. [Source: EUROPOL-ENDGAME-2026]
+
+**2026-06-23** | **Sanctions + LE Operation** | **Prince Group / Huione Laundering Ecosystem (US coordinated action)**
+> OFAC sanctions 35 targets (9 individuals + 26 entities) tied to the Prince Group transnational criminal organization -- including second-in-command Hu Xiaowei (Chen Xiao'er), front companies, and scam-compound investors. The FBI San Francisco Field Office (with IRS-CI and AUSTRAC) seizes Huione backend laundering infrastructure. FinCEN proposes amending its October 2025 Huione Section 311 Final Rule to add Cambodia-based H-Pay Service PLC and "any successor entity," naming H-Pay the successor facilitator that inherited Huione Pay's branches, customers, branding, and footprint. Huione processed over $98B total inflows (Aug 2021-Jan 2025), $4B+ confirmed illicit. [Source: OFAC-HUIONE-PRINCE]
+
+**2026-06-02** | **Sanctions** | **OFAC "Economic Fury" -- Iranian Cryptocurrency Exchanges**
+> OFAC designates four Iranian cryptocurrency exchanges -- Nobitex, Wallex, Bitpin, and Ramzinex -- for terror finance and sanctions evasion. Wallex, Bitpin, and Ramzinex under E.O. 13902 (Iran financial sector); Nobitex additionally under counterterrorism E.O. 13224. [Source: OFAC-IRAN-FURY]
+
+**2026-05-28** | **LE Operation** | **Asocks Residential-Proxy Botnet Takedown**
+> Dutch National Police (Politie) and NCSC-NL dismantle a residential-proxy botnet of 17M+ infected devices across ~163 countries, seizing ~200 servers (all physically in the Netherlands). Press attributes the network to the "Asocks" residential-proxy provider (asocks[.]com); Dutch authorities did not name Asocks in official statements. Partial takedown -- the clearnet storefront remained live. [Sources: NCSC-NL-ASOCKS; SILENTPUSH-CHINESEVPN]
 
 **2026-05-06** | **Intelligence** | **Recorded Future / TAE Framework**
 > Recorded Future publishes "Threat Activity Enablers: The Backbone of Today's Threat Landscape" (Stowe & Plude). Formally defines the TAE framework and introduces the Threat Density Score methodology for systematically quantifying malicious hosting concentration across providers.
@@ -238,8 +250,8 @@
 
 | Authority | Designations | Key Targets |
 |-----------|-------------|-------------|
-| **OFAC (US)** | 7 | Garantex (2022 + 2025 re-designation), Zservers/XHOST (2025), FUNNULL (2025), Aeza International (2025), Media Land/Yalishanda (2025), Hypercore/Datavice (2025) |
-| **EU** | 3 | Stark Industries + Neculiti brothers (2025 -- 17th package), Garantex (2026 -- 16th package) |
+| **OFAC (US)** | 9 | Garantex (2022 + 2025 re-designation), Zservers/XHOST (2025), FUNNULL (2025), Aeza International (2025), Media Land/Yalishanda (2025), Hypercore/Datavice (2025), Iranian exchanges -- Nobitex/Wallex/Bitpin/Ramzinex (2026 "Economic Fury"), Prince Group/Huione -- 35 targets (2026) |
+| **EU** | 4 | Stark Industries + Neculiti brothers (2025 -- 17th package), Garantex (2026 -- 16th package), A7A5 stablecoin ban (2025 -- 19th package) |
 | **UK** | 4 | Zservers/XHOST (2025), Aeza International/Hypercore/Datavice (2025), Media Land/Yalishanda (2025) |
 | **Australia** | 2 | Zservers/XHOST (2025), Media Land/Yalishanda (2025) |
 | **Canada** | 1 | 764 Network / Maniac Murder Cult / Terrorgram Collective (2025 -- terrorist designation) |
@@ -249,9 +261,9 @@
 | Metric | Count | Notes |
 |--------|-------|-------|
 | **Providers sanctioned** | 8+ | Garantex, Zservers/XHOST, FUNNULL, Aeza International, Media Land, Hypercore, Datavice, Stark Industries |
-| **Providers seized/disrupted by LE** | 10+ | Garantex (seized), LockBit (Op Cronos), BreachForums, XSS, Phobos/8Base, CrazyRDP, Cryptomixer.io, Archetyp Market, NoName057(16), Smokeloader/Endgame coalition |
-| **Providers that evaded via rebranding** | 5+ | Stark -> THE.Hosting -> WorkTitans B.V.; Garantex -> Grinex/Exved; Aeza -> Hypercore/Datavice; Virtualine -> metaspinner net; Stark prefixes -> UFO Hosting / PQ Hosting Plus |
-| **Individuals sanctioned** | 10+ | Mishin, Bolshakov (Zservers); Neculiti x2 (Stark); Penzev, Bozoyan, Gast, Knyazev (Aeza); Volosovyk (Media Land); Liu Lizhi (FUNNULL); Serda (Garantex/Grinex) |
+| **Providers seized/disrupted by LE** | 13+ | Garantex (seized), LockBit (Op Cronos), BreachForums, XSS, Phobos/8Base, CrazyRDP, Cryptomixer.io, Archetyp Market, NoName057(16), Smokeloader/Endgame coalition, SocGholish/Amadey/StealC (Op Endgame June 2026), Huione backend infra (FBI June 2026), Asocks residential-proxy botnet (NCSC-NL May 2026) |
+| **Providers that evaded via rebranding** | 6+ | Stark -> THE.Hosting -> WorkTitans B.V.; Garantex -> Grinex/Exved; Aeza -> Hypercore/Datavice; Virtualine -> metaspinner net; Stark prefixes -> UFO Hosting / PQ Hosting Plus; Huione -> Tudou -> H-Pay Service PLC |
+| **Individuals sanctioned** | 11+ | Mishin, Bolshakov (Zservers); Neculiti x2 (Stark); Penzev, Bozoyan, Gast, Knyazev (Aeza); Volosovyk (Media Land); Liu Lizhi (FUNNULL); Serda (Garantex/Grinex); Hu Xiaowei/Chen Xiao'er (Prince Group/Huione) |
 
 ### Evasion Velocity: Time from Sanctions/LE Action to Successor Entity
 
@@ -263,6 +275,7 @@
 | Stark Industries | 2025-05-20 (EU sanctions) | UFO Hosting LLC | 2025-03-13 | **-68** (pre-positioned) |
 | Garantex | 2025-03-25 (seized) | Grinex/Exved | Pre-existing | **0** (parallel operations) |
 | Aeza International | 2025-07-01 (OFAC) | Hypercore/Datavice | Pre-existing | **0** (pre-positioned fronts) |
+| Huione Guarantee | 2025-05 (Telegram ban / shutdown) | Tudou Guarantee -> H-Pay Service PLC | Pre-existing (30%-owned) | **0** (pre-positioned; 30+ successor marketplaces emerged) |
 
 ### Key Analytical Pattern
 

@@ -146,7 +146,7 @@ BPH providers rebrand, migrate, and re-emerge. Historical analysis is how you co
 **Step-by-step:**
 
 1. **Passive DNS:**
-   - SecurityTrails: historical DNS records for domains hosted on the provider's IPs
+   - Validin (community passive DNS, web UI) / urlscan.io: historical DNS records and resolutions for domains hosted on the provider's IPs
    - DomainTools Iris: reverse DNS, historical WHOIS, domain-to-IP mapping
    - CIRCL passive DNS: `https://www.circl.lu/services/passive-dns/`
    - **What to look for:** domains that migrated from a known BPH provider to the new one
@@ -391,7 +391,7 @@ Copy this template for each new provider investigation. Fill in every field; mar
 - **First Observed:** [date of first CrimsonVector observation]
 
 ## Classification
-- **Status:** [active / flagged / suspected / sanctioned / evading / dissolved]
+- **Status:** [active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed]
 - **Risk Tier:** [T1 / T2 / T3 / T4 / T5]
 - **Provider Type:** [Pure BPH / BPH-Adjacent / Upstream Enabler / Financial Enabler / Corporate Shell / Sanctions-Evasion Vehicle]
 

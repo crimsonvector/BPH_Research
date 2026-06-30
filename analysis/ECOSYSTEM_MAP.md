@@ -1,10 +1,12 @@
 # BPH & TAE Ecosystem Map
 
-> **Version:** 1.0 | **Last Updated:** 2026-05-16 | **Maintainer:** CrimsonVector Research
+> **Version:** 1.1 | **Last Updated:** 2026-06-29 | **Maintainer:** CrimsonVector Research
 >
 > This document maps the bullet-proof hosting (BPH) and Threat Activity Enabler (TAE) ecosystem, charting the supply chain from bare metal to criminal end-user, the geographic clusters where these operations concentrate, the corporate relationship networks that sustain them, and the financial infrastructure that monetizes them. Risk tier references follow the classification system defined in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md).
 
 ---
+
+> **2026-06 update:** This narrative map predates the June-2026 refresh; `BPH_Master.csv` is the authoritative entity list (now 60 rows). Newly tracked clusters not yet diagrammed below: the **Garantex -> Grinex / A7A5 (Old Vector)** financial-evasion rails (now OFAC-sanctioned); the **SEA guarantee-marketplace** economy (**Huione -> Tudou -> H-Pay Service PLC**; **Dabai Guarantee**); **BtHoster** (UK-shell AS-leasing via Skynet AS214295 / Inside Network AS215476, upstream UAB Host Baltic AS209605); **Pfcloud UG (AS51396)**; the **Asocks** residential-proxy botnet; and OFAC's Iranian exchange designations (Nobitex/Wallex/Bitpin/Ramzinex).
 
 ## Table of Contents
 
@@ -121,8 +123,8 @@ BPH operations concentrate in specific geographic corridors, each offering disti
 
 | Provider | ASN(s) | Risk Tier | Status | Key Detail |
 |----------|--------|-----------|--------|------------|
-| **Aeza International** | AS210644, AS211522, AS216246 | T1 | Sanctioned (OFAC July 2025) | CEO Penzev arrested April 2025; TRON wallet designated |
-| **Media Land LLC** | AS206728 + sister ASNs | T1 | Active | Underground-forum advertised BPH; multiple sister ASNs for redundancy |
+| **Aeza International** | AS210644, AS216246 | T1 | Sanctioned (OFAC July 2025) | CEO Penzev arrested April 2025; TRON wallet designated; AS211522 belongs to front Hypercore Ltd |
+| **Media Land LLC** | AS206728 + sister ASNs | T1 | Sanctioned (OFAC/UK/AU Nov 2025) | Underground-forum advertised BPH; multiple sister ASNs for redundancy |
 | **PINSPB** | AS44050 | T1 | Active | Long-running St. Petersburg BPH provider |
 | **PROSPERO / Proton66** | AS200593, AS198953 | T1 | Active | Forum-advertised BPH (confirmed by Intrinsec); aka BEARHOST |
 | **ELITETEAM / 1337TEAM** | AS51381 | T1 | Active | Seychelles registration; DDoS-Guard peering; forum presence |
@@ -349,7 +351,7 @@ Aeza International Ltd was designated by OFAC in July 2025. The group operated t
 ```
              AEZA INTERNATIONAL LTD
              (Russia, OFAC-Sanctioned July 2025)
-             AS210644 / AS211522 / AS216246
+             AS210644 / AS216246  (AS211522 -> Hypercore front)
              TRON: TU4tDFRvcKhAZ1jdihojmBWZqvJhQCnJ4F
                           |
          +----------------+----------------+
@@ -373,7 +375,7 @@ Aeza International Ltd was designated by OFAC in July 2025. The group operated t
    +------------------------------------------+
 ```
 
-**Analytical Assessment:** The five-month gap between Aeza's OFAC designation (July 2025) and Hypercore's designation (November 2025) represents a window during which Hypercore operated as an undesignated successor, presumably continuing to service Aeza's customer base. This delay pattern is common and exploitable: sanctioned entities can pre-position successors that operate in a gray zone until authorities catch up. The arrest of CEO Penzev in April 2025 (before the OFAC designation) suggests that criminal investigation and sanctions tracks were running in parallel.
+**Analytical Assessment:** The five-month gap between Aeza's OFAC designation (July 2025) and Hypercore's designation (November 2025) represents a window during which Hypercore operated as an undesignated successor, presumably continuing to service Aeza's customer base. This delay pattern is common and exploitable: sanctioned entities can pre-position successors that operate in a gray zone until authorities catch up. The arrest of CEO Penzev in April 2025 (before the OFAC designation) suggests that criminal investigation and sanctions tracks were running in parallel. **ASN correction (2026-06):** AS211522 -- previously logged as an Aeza secondary ASN -- is in fact registered to the front company **Hypercore Ltd** (RIPE as-name HYPERCORELTD, created 2025-07-10; Companies House No. 16558658). Aeza migrated 2,100+ IPs from AS210644 to AS211522 beginning 2025-07-20, and OFAC/OFSI designated Hypercore on 2025-11-19.
 
 ---
 
@@ -670,7 +672,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 
 | Entity | ASN(s) | Tier | Status | Geographic Cluster | Primary Role |
 |--------|--------|------|--------|--------------------|--------------|
-| Aeza International | AS210644, AS211522, AS216246 | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
+| Aeza International | AS210644, AS216246 | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
 | AlexHost | AS200019 | T4 | Active | Moldova | BPH-Adjacent |
 | Altawk | — | T3 | Active | UK Shell | BPH downstream |
 | aurologic GmbH | AS30823 | T2 | Active | Germany/Netherlands | Upstream Enabler |
@@ -681,15 +683,15 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Femo IT / Defhost | AS214351 | T2 | Active | UK Shell | BPH downstream |
 | FUNNULL Technology | CDN | T1 | Sanctioned | APAC / Triad Nexus | Infrastructure Laundering |
 | GCSAS | AS215540 | T2 | Active | UK Shell | Corporate Shell / BPH |
-| Hypercore LTD | AS215552 | T1 | Sanctioned | UK Shell | Sanctions Evasion (Aeza) |
+| Hypercore LTD | AS215552, AS211522 | T1 | Sanctioned | UK Shell | Sanctions Evasion (Aeza) |
 | Kaopu Cloud HK | AS138915 | T3 | Active | Hong Kong | APAC BPH cluster |
 | Karina Rashkovska | AS215789 | T2 | Active | UK Shell / aurologic | BPH downstream |
 | KPROHOST | AS214940 | T3 | Active | aurologic downstream | BPH downstream |
-| Media Land LLC | AS206728 + sisters | T1 | Active | Russia / St. Petersburg | Pure BPH |
+| Media Land LLC | AS206728 + sisters | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
 | metaspinner net | AS209800 | T3 | Active | aurologic downstream | BPH downstream |
 | MIRhosting B.V. | AS52000 | T1 | Active | Netherlands | Infrastructure Pillar |
 | PINSPB | AS44050 | T1 | Active | Russia / St. Petersburg | Pure BPH |
-| PQ Hosting Plus S.R.L. | AS44477 | T1 | Evading | Moldova | Sanctions Evasion (Stark) |
+| PQ Hosting Plus S.R.L. | AS44477 | T1 | Sanctioned | Moldova | Sanctions Evasion (Stark) |
 | PROSPERO / Proton66 | AS200593, AS198953 | T1 | Active | Russia | Pure BPH |
 | QWINS LTD | AS213702 | T2 | Active | UK Shell | BPH |
 | Railnet / Virtualine | AS214943 | T2 | Active | aurologic downstream | BPH downstream |
@@ -729,7 +731,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS209800 | metaspinner net | T3 | aurologic downstream |
 | AS209847 | WorkTitans / THE.Hosting | T1 | Stark successor; Zinad/Fezzy BV |
 | AS210644 | Aeza International | T1 | OFAC-sanctioned; primary ASN |
-| AS211522 | Aeza International | T1 | Secondary ASN |
+| AS211522 | Hypercore LTD | T1 | Aeza front; RIPE HYPERCORELTD (created 2025-07-10) |
 | AS213010 | Zservers (hop 3) | T1 | Post-sanctions prefix hop |
 | AS213194 | Zservers (hop 1) | T1 | Post-sanctions prefix hop |
 | AS213702 | QWINS LTD | T2 | UK shell BPH |

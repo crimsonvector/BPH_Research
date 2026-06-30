@@ -2,7 +2,7 @@
 
 > **Bullet-Proof Hosting, Threat Activity Enablers & Cybercrime Infrastructure Intelligence**
 >
-> Maintained by CrimsonVector Research | Last Updated: 2026-05-16
+> Maintained by CrimsonVector Research | Last Updated: 2026-06-29
 
 ---
 
@@ -10,7 +10,7 @@
 
 This repository is a comprehensive intelligence resource for tracking bullet-proof hosting (BPH) providers, threat activity enablers (TAEs), and the infrastructure that underpins modern cybercrime. It combines a structured provider database with analytical documents, an investigative playbook, and an organized source library.
 
-**Current scope:** 50+ providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, and sanctions-evasion vehicles.
+**Current scope:** 60 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/TAE networks.
 
 ---
 
@@ -72,7 +72,7 @@ The CSV uses 25 columns. Key fields:
 | Column | Description |
 |--------|-------------|
 | `provider_name` | Primary name |
-| `status` | active / flagged / suspected / sanctioned / evading / dissolved / seized |
+| `status` | active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed |
 | `risk_tier` | T1-Confirmed BPH through T5-Watch List (see taxonomy) |
 | `primary_asn` | Primary Autonomous System Number |
 | `sanctions_designations` | OFAC / EU / UK / AU designations with dates |
@@ -87,7 +87,7 @@ Full schema documented in the CSV header row.
 
 ## Key Intelligence Highlights
 
-### Sanctioned Entities (as of May 2026)
+### Sanctioned Entities (as of June 2026)
 - **Aeza International Ltd** — OFAC/UK July 2025 + expanded Nov 2025
 - **Stark Industries Solutions** — EU May 2025 (17th Russia package)
 - **Zservers / XHOST** — US/UK/AU trilateral Feb 2025
@@ -96,7 +96,10 @@ Full schema documented in the CSV header row.
 - **Garantex** — OFAC April 2022 + EU Feb 2026 (evading via Grinex/Exved)
 - **WorkTitans B.V. / THE.Hosting** — EU via Stark/Neculiti designation
 - **PQ Hosting Plus S.R.L.** — EU via Stark/Neculiti designation
-- **Hypercore LTD** — OFAC/UK Nov 2025 (Aeza front)
+- **Hypercore LTD** — OFAC/UK Nov 2025 (Aeza front); operates AS215552 + AS211522
+- **Grinex / A7A5 (Old Vector)** — OFAC Aug 2025 (Garantex successors); EU 19th-package A7A5 ban Oct 2025
+- **Nobitex / Wallex / Bitpin / Ramzinex** — OFAC June 2026 ("Economic Fury" — Iranian exchanges)
+- **Prince Group / Huione ecosystem** — OFAC (35 targets) + FBI infra seizure + FinCEN H-Pay successor rule, June 2026
 
 ### Critical Infrastructure Node
 - **aurologic GmbH (AS30823)** — Central upstream for 10+ BPH downstream operations in Europe. Disrupting aurologic would cascade across Femo IT, Railnet/Virtualine, metaspinner, Tnsecurity, WAIcore, Altawk, Karina Rashkovska, KPROHOST, SWISSNETWORK02, and potentially Aeza transit.
@@ -105,6 +108,8 @@ Full schema documented in the CSV header row.
 - **CrazyRDP seized** Nov 2025 (Operation Endgame, Dutch police, 250 servers)
 - **Cryptomixer.io seized** Nov 2025 (EUR 1.3B Bitcoin mixed since 2016)
 - **Operation Endgame** targeting infostealers Nov 2025 (1025 servers worldwide)
+- **Operation Endgame** June 2026 — SocGholish/Amadey/StealC (326 servers, 142 domains, EUR 41M frozen)
+- **Asocks residential-proxy botnet** dismantled May 2026 (NCSC-NL/Politie — 17M devices, 200 servers)
 
 ---
 

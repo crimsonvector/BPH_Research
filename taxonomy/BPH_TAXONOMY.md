@@ -35,7 +35,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block at CIDR/ASN level. Monitor for prefix migration.
 
-**Current T1 entities:** Aeza International, Stark Industries Solutions, Zservers/XHOST, Media Land LLC, FUNNULL Technology, ELITETEAM/1337TEAM, PROSPERO OOO/Proton66
+**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative):** Aeza International, Stark Industries Solutions, Zservers/XHOST, Media Land LLC, FUNNULL Technology/CTG Server, ELITETEAM/1337TEAM, PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, PQ Hosting Plus, CrazyRDP (seized), Garantex (financial enabler)
 
 ---
 
@@ -53,7 +53,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block known malicious prefixes; consider ASN-level block with allowlisting for confirmed legitimate customers.
 
-**Current T2 entities:** Femo IT/Defhost, Tnsecurity/EVILEMPIRE, Railnet/Virtualine, QWINS LTD, Karina Rashkovska, GCSAS
+**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative):** Femo IT/Defhost, Tnsecurity/EVILEMPIRE, Railnet/Virtualine, QWINS LTD, Karina Rashkovska, GCSAS, aurologic GmbH (upstream enabler), MIRhosting, PINSPB, SWISSNETWORK02/Global-Data, WAIcore, First Server Limited, UFO Hosting (evading)
 
 ---
 
@@ -71,7 +71,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Monitor and alert. Block specific confirmed-malicious IPs. Reassess quarterly.
 
-**Current T3 entities:** Cloudzy/abrNOC, metaspinner net, KPROHOST, Altawk, HostSlick, NECHAEVDS, NETINNOVATIONLLC
+**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative):** Cloudzy/abrNOC, metaspinner net, KPROHOST, Altawk, HostSlick, StarCloud Global, Kaopu Cloud HK
 
 ---
 
@@ -89,7 +89,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** No blanket blocking. Monitor for escalation. Flag in threat intel enrichment.
 
-**Current T4 entities:** BuyVM/Frantech, AlexHost, PrivateAlps/Private Layer, FlokiNET, Shinjiru, Phanes Networks/Flaunt7
+**Current T4 entities (illustrative; `BPH_Master.csv` is authoritative):** BuyVM/Frantech, AlexHost, PrivateAlps/Private Layer, FlokiNET, Shinjiru, Phanes Networks/Flaunt7
 
 ---
 
@@ -106,7 +106,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** No blocking. Passive monitoring. Reassess upon new intelligence.
 
-**Current T5 entities:** CDNCloud, Tiger Net, HOSTYPE, 1GSERVERS, DDoS-Guard, StarCloud Global
+**Current T5 entities (illustrative; `BPH_Master.csv` is authoritative):** CDNCloud, NECHAEVDS, NETINNOVATIONLLC, Tiger Net, HOSTYPE, 1GSERVERS, DDoS-Guard
 
 ---
 
@@ -393,6 +393,8 @@ Each provider carries a **status** reflecting its current operational and legal 
                                  +-------------+
 ```
 
+> **Auxiliary states** are also used in the database alongside the core lifecycle above: `seized` (law-enforcement seizure of infrastructure, whole or partial) and `exposed` (publicly identified as a malicious operation or front by credible research/media, but not yet formally sanctioned or seized). Both can co-occur with a risk tier.
+
 ### Status Definitions
 
 | Status | Definition | Action Implications |
@@ -403,6 +405,8 @@ Each provider carries a **status** reflecting its current operational and legal 
 | `sanctioned` | Formally designated by OFAC, EU, UK OFSI, Australian DFAT, or equivalent authority. | Mandatory compliance blocking; transactions prohibited; secondary sanctions exposure |
 | `evading` | Operating under a new corporate identity or through successor entities post-sanctions. Infrastructure continuity confirmed. | Track successor entities; report to OFAC/OFSI evasion units; block successor infrastructure |
 | `dissolved` | Corporate entity dissolved, struck off, or otherwise legally defunct. Network infrastructure may still be operational. | Monitor for network persistence; track ASN/prefix fate |
+| `seized` | Law-enforcement seizure of the entity's infrastructure (whole or partial). Operations halted or materially degraded; a clearnet storefront or re-enrollment path may persist. | Confirm infrastructure offline; track operator re-emergence; preserve seizure as an attribution anchor |
+| `exposed` | Publicly identified/outed as a malicious operation or front company by credible research or media, but not (yet) formally sanctioned or seized. | Treat as high-confidence malicious; monitor for sanctions/LE follow-through and rebranding |
 
 ---
 

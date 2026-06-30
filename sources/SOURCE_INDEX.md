@@ -1,6 +1,6 @@
 # Source Index
 
-> **Last Updated:** 2026-05-16 | **Maintainer:** CrimsonVector Research
+> **Last Updated:** 2026-06-29 | **Maintainer:** CrimsonVector Research
 >
 > All sources used in the BPH Research repository are cataloged here. Source IDs are referenced in the `sources` column of BPH_Master.csv.
 
@@ -81,16 +81,39 @@ When adding a new source to this index:
 | RU-UNDERGROUND | Research: Russian Speaking Underground | Various | Unknown | Unknown | Research | `Research-Russian_Speaking_Underground.pdf` | Russian cybercrime forums; BPH advertising patterns; underground services |
 | CHAINALYSIS-CRYPTO-2026 | The 2026 Crypto Crime Report | Chainalysis | Chainalysis | 2026-03-17 | Annual Report | `the-2026-crypto-crime-report-3-17-release.pdf` | Cryptocurrency crime trends; ransomware payments; mixer usage decline; stablecoin shift |
 
+**Grades (Additional Sources, 2026-05-16 block):** `CISA-FASTFLUX` = A; `TRENDMICRO-AGENTIC`, `CHAINALYSIS-OFAC`, `FALCONFEEDS-HYDRATED`, `CHAINALYSIS-CRYPTO-2026` = B; `SANCTIONS-IO-TRENDS`, `TOC-CONVERGENCE-2024`, `SPAMHAUS-BPH-WP`, `RU-UNDERGROUND` = C.
+
+---
+
+### Additional Sources (Added 2026-06-29)
+
+> June-2026 refresh: primary-sourced enforcement actions and the CTI reports underpinning the new database rows. Grade shown inline.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| EUROPOL-ENDGAME-2026 | A | Global cyber strike disrupts SocGholish, Amadey & StealC malware networks | Europol + partners | Europol | 2026-06-24 | — | Operation Endgame; SocGholish; Amadey; StealC; 326 servers/142 domains |
+| OFAC-HUIONE-PRINCE | A | Treasury/FinCEN/DOJ Target Prince Group–Huione Laundering Ecosystem (sb0538) | US Treasury OFAC; FinCEN; DOJ | US Treasury | 2026-06-23 | — | Prince Group; Hu Xiaowei; H-Pay Service PLC; Huione; Tudou |
+| OFAC-IRAN-FURY | A | Economic Fury — Iranian Cryptocurrency Exchanges (sb0519) | US Treasury OFAC | US Treasury | 2026-06-02 | — | Nobitex; Wallex; Bitpin; Ramzinex |
+| NCSC-NL-ASOCKS | A | Joint police/NCSC operation takes down major residential-proxy botnet | NCSC-NL; Politie | NCSC-NL | 2026-05-28 | — | Asocks (press-attributed); 17M-device botnet; 200 servers |
+| INTRINSEC-BTHOSTER | B | BtHoster: Identifying noisy networks emitting malicious traffic via masscan servers | Intrinsec | Intrinsec | 2025-06-10 | — | BtHoster; Skynet Network Ltd (AS214295); Inside Network LTD (AS215476); UAB Host Baltic (AS209605) |
+| RF-GUARANTEE-2026 | B | Evolution of Chinese-Language Guarantee Telegram Marketplaces | Insikt Group | Recorded Future | 2026-02 | — | Dabai Guarantee (大白担保); Tudou; Xinbi; 30+ Huione successors |
+| ELLIPTIC-TUDOU | B | Tudou Guarantee Winds Down After $12B in Transactions | Elliptic | Elliptic | 2026-01 | — | Tudou Guarantee; Huione; Chen Zhi/Prince Group |
+| SILENTPUSH-CHINESEVPN | B | Traffic Origin Data Uncovers Suspicious Chinese VPN | Silent Push | Silent Push | 2026-02-09 | — | Asocks; LVCHA VPN (lvcha.in); residential-proxy IOCs |
+| CHAINALYSIS-A7A5 | B | A7A5/Grinex and the Russian Crypto Economy (OFAC Aug 2025) | Chainalysis | Chainalysis | 2025-08 | — | Grinex; A7A5; Old Vector; Garantex successor rails |
+| TRM-A7A5-2026 | B | 2026 Crypto Crime Report (A7A5/Grinex laundering rails) | TRM Labs | TRM Labs | 2026 | — | A7A5; Grinex; sanctions-evasion stablecoin rails |
+| INFOBLOX-DCLOUD | B | From San Pedro to Salinas: How a Chinese Framework (DCloud Uni-App) Powers a Global Scam Economy | Infoblox Threat Intel | Infoblox | 2026-06 | — | DCloud Uni-App (236k+ scam SLDs); CTG Server Limited (AS152194); RainbowEx |
+| RUDIS-BPH-WATCH | C | Weekly Bulletproof Hosting Watch (honeypot ASN telemetry) | hrbrmstr (Bob Rudis) | ai.rud.is | 2026-06 | — | Pfcloud UG (AS51396); 26 tracked BPH ASNs |
+
 ---
 
 ## Source Statistics
 
 | Grade | Count | Description |
 |-------|-------|-------------|
-| A — Government/Official | 10 | Sanctions notices, LE press releases, government advisories |
-| B — Established CTI Vendor | 16 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 13 | Independent researchers, community blocklists, investigative journalism |
-| **Total** | **39** | |
+| A — Government/Official | 13 | Sanctions notices, LE press releases, government advisories |
+| B — Established CTI Vendor | 23 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 14 | Independent researchers, community blocklists, investigative journalism |
+| **Total** | **50** | |
 
 ---
 
