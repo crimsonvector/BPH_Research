@@ -103,6 +103,8 @@ When adding a new source to this index:
 | TRM-A7A5-2026 | B | 2026 Crypto Crime Report (A7A5/Grinex laundering rails) | TRM Labs | TRM Labs | 2026 | — | A7A5; Grinex; sanctions-evasion stablecoin rails |
 | INFOBLOX-DCLOUD | B | From San Pedro to Salinas: How a Chinese Framework (DCloud Uni-App) Powers a Global Scam Economy | Infoblox Threat Intel | Infoblox | 2026-06 | — | DCloud Uni-App (236k+ scam SLDs); CTG Server Limited (AS152194); RainbowEx |
 | RUDIS-BPH-WATCH | C | Weekly Bulletproof Hosting Watch (honeypot ASN telemetry) | hrbrmstr (Bob Rudis) | ai.rud.is | 2026-06 | — | Pfcloud UG (AS51396); 26 tracked BPH ASNs |
+| SECURITYONLINE-BTHOSTER | C | Unmasking BtHoster: the bulletproof host fueling global cyberattacks | securityonline.info | 2025 | — | BtHoster; AS213790 = BTCloud; shells |
+| RIPE-AAWG-BTHOSTER | B | RIPE anti-abuse-wg thread — BtHoster LTD (AS198465) abuse report + advertised pricing | RIPE NCC mailing list | 2023-11-01 | — | AS198465 predecessor; SS-NET cluster; 2023 pricing |
 
 ---
 
@@ -111,9 +113,9 @@ When adding a new source to this index:
 | Grade | Count | Description |
 |-------|-------|-------------|
 | A — Government/Official | 13 | Sanctions notices, LE press releases, government advisories |
-| B — Established CTI Vendor | 23 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 14 | Independent researchers, community blocklists, investigative journalism |
-| **Total** | **50** | |
+| B — Established CTI Vendor | 24 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 15 | Independent researchers, community blocklists, investigative journalism |
+| **Total** | **52** | |
 
 ---
 
