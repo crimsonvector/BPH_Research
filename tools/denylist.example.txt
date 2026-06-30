@@ -1,0 +1,37 @@
+# OPSEC denylist (EXAMPLE / TEMPLATE — safe to commit).
+#
+# build_dashboard_data.py reads tools/denylist.txt (gitignored, private) and
+# ABORTS the build — publishing nothing — if any listed case-insensitive token
+# appears anywhere in the generated dashboard JSON. This guarantees internal
+# tradecraft can never be published, regardless of the IOC policy.
+#
+# Copy this file to tools/denylist.txt and fill in the REAL tokens. The real
+# file is gitignored precisely because it enumerates the internal names it is
+# meant to keep secret — never commit it.
+#
+# One token per line. Blank lines and # comments ignored. Substring match,
+# case-insensitive. Keep tokens specific enough to avoid false positives on
+# legitimate public content.
+
+# --- internal hunting infrastructure (hostnames / platform codenames) ---
+<hunting-box-hostname>
+<tailscale-hostname>
+<ct-fingerprint-platform-codename>
+<feed-fusion-platform-codename>
+<pivot-toolkit-name>
+
+# --- egress / VPN tradecraft ---
+<vpn-provider-name>
+<egress-bind-ip>
+<tailscale-ip>
+
+# --- local working paths / quarantine ---
+<quarantine-dir-name>
+<interpreter-venv-path>
+
+# --- analyst PII ---
+<analyst-full-name>
+<analyst-usernames>
+
+# --- secrets / config ---
+.env

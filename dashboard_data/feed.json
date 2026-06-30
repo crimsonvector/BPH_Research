@@ -1,0 +1,91 @@
+[
+  {
+    "id": "remcos-virtuo-194-59-31-39-2026-06",
+    "title": "Active Remcos / AgentTesla C2 tied to Aeza staging",
+    "date": "2026-06-30",
+    "first_observed": "2026-06-29",
+    "category": "c2",
+    "family": "Remcos + AgentTesla (\"Taskun\")",
+    "confidence": "confirmed",
+    "status": "active",
+    "asn": "AS399486",
+    "provider": "Virtuo Networks (France)",
+    "bph_link": "Aeza International Ltd",
+    "vt": "multi-sample",
+    "summary": "A Windows C2 server running Remcos, AgentTesla and a \"Taskun\" panel, fed by RFQ/quotation malspam. A UAC-bypass ChromeElevator loader staged on Aeza beacons here, linking the Aeza open-directory staging dir to an active info-stealer operation.",
+    "tags": [
+      "remcos",
+      "agenttesla",
+      "chromeelevator",
+      "infostealer",
+      "aeza",
+      "malspam"
+    ]
+  },
+  {
+    "id": "ns-mheusa04-2026-06",
+    "title": "Unreported NetSupport RAT C2 chain (mheusa04)",
+    "date": "2026-06-30",
+    "first_observed": "2026-06-09",
+    "category": "c2",
+    "family": "NetSupport Manager RAT",
+    "confidence": "confirmed",
+    "status": "active",
+    "asn": "AS135392",
+    "provider": "MillenialHost",
+    "bph_link": "Aeza International Ltd",
+    "vt": "0/91",
+    "summary": "A novel, unsubmitted NetSupport Manager RAT dropper staged on Aeza infrastructure delivers a fully unreported C2 chain. Procurement/tender-themed lure; financially-motivated (BEC/fraud/access) tradecraft against corporate finance teams.",
+    "tags": [
+      "netsupport",
+      "rat",
+      "bec",
+      "procurement-lure",
+      "aeza",
+      "novel-sample"
+    ]
+  },
+  {
+    "id": "nexus-c2-bthoster-2026-05",
+    "title": "Nexus C2 panel hosted on BtHoster (since pulled)",
+    "date": "2026-06-30",
+    "first_observed": "2026-04-19",
+    "category": "c2",
+    "family": "Nexus C2 (emerging framework)",
+    "confidence": "confirmed",
+    "status": "dead",
+    "asn": "AS213790",
+    "provider": "Limited Network LTD (BtHoster / BTCloud)",
+    "bph_link": "BtHoster",
+    "vt": "13/91",
+    "summary": "An instance of the emerging multi-tenant Nexus C2 framework ran on confirmed BtHoster infrastructure with 40+ communicating Windows implants during an April-May 2026 burst, then was pulled to a maintenance page after public disclosure. Notable for placing a documented C2-as-a-service framework directly on an actively-rotating bulletproof operator.",
+    "tags": [
+      "nexus-c2",
+      "c2-as-a-service",
+      "bthoster",
+      "limited-network-ltd",
+      "pulled"
+    ]
+  },
+  {
+    "id": "meshcentral-23-94-252-217-2026-06",
+    "title": "MeshCentral RMM-abuse C2 on Aeza-staged payloads",
+    "date": "2026-06-30",
+    "first_observed": "2026-06-30",
+    "category": "c2",
+    "family": "MeshAgent / MeshCentral (abused RMM)",
+    "confidence": "confirmed",
+    "status": "active",
+    "asn": "AS207043",
+    "provider": "(US hosting)",
+    "bph_link": "Aeza International Ltd",
+    "vt": "31/—",
+    "summary": "A MeshCentral C2 reached by MeshAgent and a .NET stub payload both staged in the same Aeza open directory — RMM software repurposed as remote-access C2.",
+    "tags": [
+      "meshcentral",
+      "rmm-abuse",
+      "aeza",
+      "remote-access"
+    ]
+  }
+]

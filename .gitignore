@@ -4,3 +4,14 @@ sources/*
 
 # Claude Code local settings
 .claude/
+
+# Dashboard pipeline — PRIVATE inputs stay local, never published.
+# The denylist *contains* the very internal tokens it screens for, and the
+# raw findings file holds held/unpublished leads + analyst notes. Only the
+# build script (tools/) and the sanitized outputs (dashboard_data/) are public.
+/tools/denylist.txt
+/dashboard_src/
+
+# Python build artifacts
+__pycache__/
+*.pyc

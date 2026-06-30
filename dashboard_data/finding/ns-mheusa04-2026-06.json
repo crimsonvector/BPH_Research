@@ -1,0 +1,58 @@
+{
+  "id": "ns-mheusa04-2026-06",
+  "title": "Unreported NetSupport RAT C2 chain (mheusa04)",
+  "date": "2026-06-30",
+  "first_observed": "2026-06-09",
+  "category": "c2",
+  "family": "NetSupport Manager RAT",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS135392",
+  "provider": "MillenialHost",
+  "bph_link": "Aeza International Ltd",
+  "vt": "0/91",
+  "summary": "A novel, unsubmitted NetSupport Manager RAT dropper staged on Aeza infrastructure delivers a fully unreported C2 chain. Procurement/tender-themed lure; financially-motivated (BEC/fraud/access) tradecraft against corporate finance teams.",
+  "iocs": [
+    {
+      "type": "domain",
+      "value": "mheusa04[.]xyz",
+      "role": "primary NetSupport gateway"
+    },
+    {
+      "type": "ip",
+      "value": "167[.]148[.]201[.]142",
+      "port": 443,
+      "role": "secondary gateway (AS135392 MillenialHost, US)"
+    },
+    {
+      "type": "domain",
+      "value": "mytenderdownload[.]com",
+      "role": "delivery domain (VT-clean / under-radar)"
+    },
+    {
+      "type": "url",
+      "value": "hxxps://mytenderdownload[.]com/Rateconf[.]pdf",
+      "role": "tender-lure decoy PDF"
+    },
+    {
+      "type": "domain",
+      "value": "mheusa03[.]xyz",
+      "role": "sibling operator domain (April cluster)"
+    }
+  ],
+  "detail": "An open-directory sweep of Aeza staging infrastructure surfaced a native Windows loader (compiled ~2026-06-18, not present in VirusTotal). The loader carries a 4.9 MB encrypted overlay (magic 0x12345678) which decrypts with a static 8-byte XOR key to an embedded ZIP — a NetSupport Manager RAT package (PCICL32/HTCTL32/TCCTL32.DLL, remcmdstub.exe, Client32.ini). The recovered Client32.ini names a primary gateway (mheusa04[.]xyz:443) and secondary gateway (167[.]148[.]201[.]142:443), both fresh (~2026-06-09) and entirely unreported. The delivery domain mytenderdownload[.]com was VT-clean at time of discovery and serves a benign 86 KB procurement decoy PDF. The mheusaNN naming series (mheusa03 in April, mheusa04 in June) ties to a single operator via shared Dynadot registration and dyna-ns[.]net nameservers, NetSupport family reuse, and consistent business/procurement (PO/RFQ/tender) lures — hallmarks of a commodity BEC-ecosystem crew. Attribution beyond that pattern is low-confidence.",
+  "references": [
+    {
+      "label": "NetSupport Manager (legitimate RMM, frequently abused)",
+      "url": "hxxps://www[.]netsupportmanager[.]com/"
+    }
+  ],
+  "tags": [
+    "netsupport",
+    "rat",
+    "bec",
+    "procurement-lure",
+    "aeza",
+    "novel-sample"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "meshcentral-23-94-252-217-2026-06",
+  "title": "MeshCentral RMM-abuse C2 on Aeza-staged payloads",
+  "date": "2026-06-30",
+  "first_observed": "2026-06-30",
+  "category": "c2",
+  "family": "MeshAgent / MeshCentral (abused RMM)",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS207043",
+  "provider": "(US hosting)",
+  "bph_link": "Aeza International Ltd",
+  "vt": "31/—",
+  "summary": "A MeshCentral C2 reached by MeshAgent and a .NET stub payload both staged in the same Aeza open directory — RMM software repurposed as remote-access C2.",
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "23[.]94[.]252[.]217",
+      "port": 443,
+      "role": "MeshCentral C2"
+    }
+  ],
+  "detail": "An abused MeshAgent (legitimate MeshCentral RMM, ~31/VT) and a .NET stub (stager2.exe, trojan.msil) recovered from the same Aeza open directory both contact this MeshCentral C2, evidencing RMM-as-C2 tradecraft alongside the NetSupport and Remcos activity staged on the same operator infrastructure.",
+  "references": [
+    {
+      "label": "MeshCentral (open-source RMM, frequently abused)",
+      "url": "hxxps://meshcentral[.]com/"
+    }
+  ],
+  "tags": [
+    "meshcentral",
+    "rmm-abuse",
+    "aeza",
+    "remote-access"
+  ]
+}

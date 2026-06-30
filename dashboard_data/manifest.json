@@ -1,0 +1,13 @@
+{
+  "generated_utc": "2026-06-30T20:06:47+00:00",
+  "provider_count": 60,
+  "published_finding_count": 4,
+  "held_finding_count": 1,
+  "source_last_updated": "2026-06-30",
+  "schema": {
+    "providers": 1,
+    "aggregates": 1,
+    "feed": 1,
+    "finding": 1
+  }
+}

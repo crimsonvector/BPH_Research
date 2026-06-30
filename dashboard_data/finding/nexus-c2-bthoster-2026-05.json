@@ -1,0 +1,41 @@
+{
+  "id": "nexus-c2-bthoster-2026-05",
+  "title": "Nexus C2 panel hosted on BtHoster (since pulled)",
+  "date": "2026-06-30",
+  "first_observed": "2026-04-19",
+  "category": "c2",
+  "family": "Nexus C2 (emerging framework)",
+  "confidence": "confirmed",
+  "status": "dead",
+  "asn": "AS213790",
+  "provider": "Limited Network LTD (BtHoster / BTCloud)",
+  "bph_link": "BtHoster",
+  "vt": "13/91",
+  "summary": "An instance of the emerging multi-tenant Nexus C2 framework ran on confirmed BtHoster infrastructure with 40+ communicating Windows implants during an April-May 2026 burst, then was pulled to a maintenance page after public disclosure. Notable for placing a documented C2-as-a-service framework directly on an actively-rotating bulletproof operator.",
+  "iocs": [
+    {
+      "type": "domain",
+      "value": "nexusc2[.]works",
+      "role": "Nexus C2 panel (\"NEXUS — Login\", uvicorn backend)"
+    },
+    {
+      "type": "ip",
+      "value": "192[.]253[.]248[.]13",
+      "role": "panel host (now serving nginx Maintenance)"
+    }
+  ],
+  "detail": "The Nexus C2 panel (nexusc2[.]works) ran on 192[.]253[.]248[.]13 (AS213790, Limited Network LTD — the confirmed corporate identity behind BtHoster / BTCloud) with a wiki subdomain and wildcard cert, indicating it is sold as a C2-as-a-service. VirusTotal showed the domain at 13/91 with 40+ communicating Windows implants (stager.exe / client.exe / process-masquerade names), first-seen 2026-04-19 to 2026-05-12 — a ~3-week burst that stopped after public disclosure (newtonpaul, May 2026), after which the node was pulled to a maintenance page. Public reporting tied the panel to \"Limited Network LTD\" as a hosting name; the additional finding here is that Limited Network LTD = BtHoster, an actively-rotating bulletproof operator co-hosting a pan-EU phishing hub. A title-only fingerprint for sibling nodes proved too generic (FastAPI/uvicorn + the common name \"Nexus\"), so no live sibling C2 was validated.",
+  "references": [
+    {
+      "label": "newtonpaul — Hunting (AI-generated) C2 Part 2: Nexus C2, Shipped with Creds",
+      "url": "hxxps://newtonpaul[.]com/blog/hunting-ai-generated-c2-part_2/"
+    }
+  ],
+  "tags": [
+    "nexus-c2",
+    "c2-as-a-service",
+    "bthoster",
+    "limited-network-ltd",
+    "pulled"
+  ]
+}

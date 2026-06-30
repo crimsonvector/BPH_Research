@@ -1,0 +1,314 @@
+{
+  "totals": {
+    "providers": 60,
+    "sanctioned": 18,
+    "seized_or_takedown": 3,
+    "active": 19
+  },
+  "by_tier": {
+    "T2": 18,
+    "T1": 16,
+    "T3": 13,
+    "T5": 7,
+    "T4": 6
+  },
+  "by_status": {
+    "active": 19,
+    "flagged": 14,
+    "sanctioned": 13,
+    "suspected": 5,
+    "dissolved": 3,
+    "evading": 3,
+    "seized": 2,
+    "exposed": 1
+  },
+  "by_country": {
+    "Russia": 8,
+    "Iran": 5,
+    "Netherlands": 4,
+    "Russia (St. Petersburg)": 4,
+    "China": 3,
+    "Germany": 3,
+    "Switzerland": 3,
+    "United Kingdom": 3,
+    "Moldova": 2,
+    "Philippines": 2,
+    "Russia-linked": 2,
+    "Southeast Asia": 2
+  },
+  "by_authority": {
+    "OFAC": 14,
+    "EU": 4,
+    "UK": 3,
+    "AU": 2,
+    "Other": 1
+  },
+  "top_upstreams": {
+    "aurologic GmbH (AS30823)": 10,
+    "AS Infolika": 1,
+    "Alibaba Cloud": 1,
+    "Arelion": 1,
+    "Cogent": 1,
+    "ColocationX (upstream)": 1,
+    "Crex Fex Pex": 1,
+    "DDoS-Guard": 1,
+    "Datahouse.ru": 1,
+    "Filanco": 1,
+    "Level3": 1,
+    "NTT": 1
+  },
+  "top_malware": {
+    "RedLine": 5,
+    "Lumma": 4,
+    "Amadey": 3,
+    "LockBit": 2,
+    "Mallox": 2,
+    "Pig-butchering infrastructure": 2,
+    "Rhadamanthys": 2,
+    "Stealc": 2,
+    "AgentTesla": 1,
+    "AsyncRAT": 1,
+    "BabbleLoader": 1,
+    "BianLian": 1
+  },
+  "timeline": [
+    {
+      "date": "2022-04-01",
+      "date_label": "April 2022",
+      "provider": "Garantex",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+    },
+    {
+      "date": "2025-02-11",
+      "date_label": "Feb 11 2025",
+      "provider": "Zservers",
+      "authorities": [
+        "AU"
+      ],
+      "detail": "US/UK/AU trilateral Feb 11 2025"
+    },
+    {
+      "date": "2025-03-01",
+      "date_label": "March 2025",
+      "provider": "Garantex",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+    },
+    {
+      "date": "2025-05-01",
+      "date_label": "May 2025",
+      "provider": "FUNNULL Technology Inc.",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC May 2025"
+    },
+    {
+      "date": "2025-05-01",
+      "date_label": "May 2025",
+      "provider": "CTG Server Limited",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC May 2025 (via FUNNULL designation)"
+    },
+    {
+      "date": "2025-05-01",
+      "date_label": "May 2025",
+      "provider": "StarCloud Global (Triad Nexus)",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC May 2025 (via FUNNULL lineage)"
+    },
+    {
+      "date": "2025-05-20",
+      "date_label": "May 20 2025",
+      "provider": "Stark Industries Solutions",
+      "authorities": [
+        "EU"
+      ],
+      "detail": "EU May 20 2025 (17th Russia package)"
+    },
+    {
+      "date": "2025-05-20",
+      "date_label": "May 20 2025",
+      "provider": "PQ Hosting Plus S.R.L.",
+      "authorities": [
+        "EU"
+      ],
+      "detail": "EU May 20 2025 (via Stark/Neculiti designation)"
+    },
+    {
+      "date": "2025-07-01",
+      "date_label": "July 1 2025",
+      "provider": "Aeza International Ltd",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC July 1 2025; UK NCA July 1 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+    },
+    {
+      "date": "2025-07-01",
+      "date_label": "July 1 2025",
+      "provider": "Aeza International Ltd",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC July 1 2025; UK NCA July 1 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+    },
+    {
+      "date": "2025-08-14",
+      "date_label": "Aug 14 2025",
+      "provider": "Garantex",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+    },
+    {
+      "date": "2025-08-14",
+      "date_label": "Aug 14 2025",
+      "provider": "Grinex",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC Aug 14 2025 (successor to Garantex); UK OFSI Aug 20 2025"
+    },
+    {
+      "date": "2025-08-14",
+      "date_label": "Aug 14 2025",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC Aug 14 2025 (Old Vector); EU 19th package Oct 2025 (A7A5 transactions banned)"
+    },
+    {
+      "date": "2025-08-20",
+      "date_label": "Aug 20 2025",
+      "provider": "Grinex",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC Aug 14 2025 (successor to Garantex); UK OFSI Aug 20 2025"
+    },
+    {
+      "date": "2025-10-01",
+      "date_label": "Oct 2025",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC Aug 14 2025 (Old Vector); EU 19th package Oct 2025 (A7A5 transactions banned)"
+    },
+    {
+      "date": "2025-11-12",
+      "date_label": "Nov 12 2025",
+      "provider": "CrazyRDP",
+      "authorities": [
+        "Other"
+      ],
+      "detail": "Seized Nov 12 2025 (Operation Endgame; Dutch police)"
+    },
+    {
+      "date": "2025-11-19",
+      "date_label": "Nov 19 2025",
+      "provider": "Aeza International Ltd",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC July 1 2025; UK NCA July 1 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+    },
+    {
+      "date": "2025-11-19",
+      "date_label": "Nov 19 2025",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "AU"
+      ],
+      "detail": "OFAC/UK/AU trilateral Nov 19 2025"
+    },
+    {
+      "date": "2025-11-19",
+      "date_label": "Nov 19 2025",
+      "provider": "Hypercore LTD",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC/UK Nov 19 2025"
+    },
+    {
+      "date": "2026-02-01",
+      "date_label": "Feb 2026",
+      "provider": "Garantex",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+    },
+    {
+      "date": "2026-06-02",
+      "date_label": "June 2 2026",
+      "provider": "Nobitex",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC June 2 2026 (E.O. 13902 + counterterrorism E.O. 13224)"
+    },
+    {
+      "date": "2026-06-02",
+      "date_label": "June 2 2026",
+      "provider": "Wallex",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC June 2 2026 (E.O. 13902)"
+    },
+    {
+      "date": "2026-06-02",
+      "date_label": "June 2 2026",
+      "provider": "Bitpin",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC June 2 2026 (E.O. 13902)"
+    },
+    {
+      "date": "2026-06-02",
+      "date_label": "June 2 2026",
+      "provider": "Ramzinex",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC June 2 2026 (E.O. 13902)"
+    },
+    {
+      "date": "2026-06-23",
+      "date_label": "June 23 2026",
+      "provider": "H-Pay Service PLC",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "FinCEN proposed Section 311 amendment June 23 2026 (successor-entity rule)"
+    }
+  ]
+}

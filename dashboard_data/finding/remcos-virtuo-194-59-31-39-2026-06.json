@@ -1,0 +1,32 @@
+{
+  "id": "remcos-virtuo-194-59-31-39-2026-06",
+  "title": "Active Remcos / AgentTesla C2 tied to Aeza staging",
+  "date": "2026-06-30",
+  "first_observed": "2026-06-29",
+  "category": "c2",
+  "family": "Remcos + AgentTesla (\"Taskun\")",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS399486",
+  "provider": "Virtuo Networks (France)",
+  "bph_link": "Aeza International Ltd",
+  "vt": "multi-sample",
+  "summary": "A Windows C2 server running Remcos, AgentTesla and a \"Taskun\" panel, fed by RFQ/quotation malspam. A UAC-bypass ChromeElevator loader staged on Aeza beacons here, linking the Aeza open-directory staging dir to an active info-stealer operation.",
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "194[.]59[.]31[.]39",
+      "role": "Remcos/AgentTesla/Taskun C2 (RDP/WinRM/SMB exposed)"
+    }
+  ],
+  "detail": "C2 server confirmed hosting Remcos, AgentTesla and a \"Taskun\" panel across eight samples (2023-2025), delivered via REQUEST FOR QUOTATION / RFQ malspam lures. A ChromeElevator UAC-bypass loader (agentus.exe, masquerading as SecurityHealthService.exe, ~17/VT) pulled from an Aeza open directory beacons to this IP. The host (AS399486, registered \"12651980 CANADA INC.\" / Virtuo Networks France) exposes RDP/WinRM/SMB (3389/5985/445). Commodity but active — it concretely links recent Aeza payload-staging to a running info-stealer operation.",
+  "references": [],
+  "tags": [
+    "remcos",
+    "agenttesla",
+    "chromeelevator",
+    "infostealer",
+    "aeza",
+    "malspam"
+  ]
+}
