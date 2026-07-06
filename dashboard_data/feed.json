@@ -1,5 +1,75 @@
 [
   {
+    "id": "delivery-evriupdate-aeza-2026-07",
+    "title": "Evri parcel-delivery phishing with authoritative DNS on sanctioned Aeza",
+    "date": "2026-07-06",
+    "first_observed": "2026-07-05",
+    "category": "phishing",
+    "family": "Parcel-delivery (Evri) phishing",
+    "confidence": "confirmed",
+    "status": "active",
+    "asn": "AS210644",
+    "provider": "Aeza International Ltd",
+    "bph_link": "Aeza International Ltd",
+    "vt": "10/94",
+    "summary": "A parcel-delivery (Evri) phishing domain runs its own authoritative nameservers inside the OFAC-sanctioned bulletproof host Aeza, while serving the phishing page from commodity hosting — using the sanctioned operator for DNS resilience against takedown.",
+    "tags": [
+      "phishing",
+      "evri",
+      "parcel-lure",
+      "aeza",
+      "sanctioned",
+      "dns-on-bph"
+    ]
+  },
+  {
+    "id": "darkseller-carding-market-2026-07",
+    "title": "DarkSeller carding / fullz marketplace and shadow-services forum",
+    "date": "2026-07-06",
+    "first_observed": "2026-07-05",
+    "category": "cybercrime-market",
+    "family": "Carding / fullz marketplace",
+    "confidence": "confirmed",
+    "status": "active",
+    "asn": "AS216071",
+    "provider": "VDSINA (AS216071, ex-Zservers) + GREEN FLOID / REG[.]RU / M247, Cloudflare-fronted",
+    "bph_link": "Zservers",
+    "vt": "0/94 (missed by VT/ThreatFox/URLhaus; urlscan-confirmed)",
+    "summary": "DarkSeller is a live carding / fullz marketplace selling self-registered US bank accounts and SSNs, paired with a Russian-language 'Migalki' shadow-services forum. It is Cloudflare-fronted with backend and DNS spread across commodity and bulletproof-adjacent hosts; no malware/phishing feed flags it.",
+    "tags": [
+      "carding",
+      "fullz",
+      "marketplace",
+      "migalki",
+      "cybercrime-forum",
+      "vdsina",
+      "cloudflare-fronted"
+    ]
+  },
+  {
+    "id": "aeza-hosted-dns-pattern-2026-07",
+    "title": "93 domains self-hosting authoritative DNS inside sanctioned Aeza",
+    "date": "2026-07-06",
+    "first_observed": "2026-07-05",
+    "category": "sanctioned-infrastructure",
+    "family": "Sanctioned-hosted DNS infrastructure",
+    "confidence": "high",
+    "status": "active",
+    "asn": "AS210644",
+    "provider": "Aeza International Ltd",
+    "bph_link": "Aeza International Ltd",
+    "vt": "n/a",
+    "summary": "A Certificate-Transparency-derived sweep found 93 distinct domains running their own authoritative nameservers inside the OFAC-sanctioned bulletproof host Aeza (AS210644 / AS216246, both verified currently Aeza) — proxy/tunnel, VPN, delivery-phishing and generic-scam themes co-located on the sanctioned operator's DNS, a takedown-resistance pattern.",
+    "tags": [
+      "sanctioned",
+      "bulletproof",
+      "aeza",
+      "dns-infrastructure",
+      "takedown-resistance",
+      "proxy"
+    ]
+  },
+  {
     "id": "remcos-virtuo-194-59-31-39-2026-06",
     "title": "Active Remcos / AgentTesla C2 tied to Aeza staging",
     "date": "2026-06-30",

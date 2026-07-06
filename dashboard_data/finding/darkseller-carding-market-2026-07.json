@@ -1,0 +1,53 @@
+{
+  "id": "darkseller-carding-market-2026-07",
+  "title": "DarkSeller carding / fullz marketplace and shadow-services forum",
+  "date": "2026-07-06",
+  "first_observed": "2026-07-05",
+  "category": "cybercrime-market",
+  "family": "Carding / fullz marketplace",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS216071",
+  "provider": "VDSINA (AS216071, ex-Zservers) + GREEN FLOID / REG[.]RU / M247, Cloudflare-fronted",
+  "bph_link": "Zservers",
+  "vt": "0/94 (missed by VT/ThreatFox/URLhaus; urlscan-confirmed)",
+  "summary": "DarkSeller is a live carding / fullz marketplace selling self-registered US bank accounts and SSNs, paired with a Russian-language 'Migalki' shadow-services forum. It is Cloudflare-fronted with backend and DNS spread across commodity and bulletproof-adjacent hosts; no malware/phishing feed flags it.",
+  "detail": "Passive urlscan history (14 scans) shows the domain serving 'DarkSeller', a 'Realfullz[.]com - Self-Registered US Bank | SSN' storefront, and a Russian-language '✦ Migalki ✦' shadow-services forum. It is fronted by Cloudflare, with authoritative DNS (ns1/ns2) on 109[.]234[.]37[.]143 — announced by AS216071 (VDSINA), an ASN historically associated with the sanctioned host Zservers — and backend across GREEN FLOID/ITLDC, REG[.]RU and M247. VirusTotal (0/94), ThreatFox and URLhaus do not flag it, illustrating that carding-market infrastructure evades malware-C2 feeds; its nature was recovered from existing passive scan history.",
+  "iocs": [
+    {
+      "type": "domain",
+      "value": "darkseller[.]org",
+      "role": "carding/fullz marketplace + Migalki forum"
+    },
+    {
+      "type": "ip",
+      "value": "109[.]234[.]37[.]143",
+      "role": "nameserver (VDSINA AS216071, ex-Zservers)"
+    },
+    {
+      "type": "ip",
+      "value": "195[.]123[.]217[.]81",
+      "role": "backend (GREEN FLOID/ITLDC AS21100)"
+    },
+    {
+      "type": "ip",
+      "value": "217[.]12[.]207[.]43",
+      "role": "backend (GREEN FLOID AS204957)"
+    },
+    {
+      "type": "ip",
+      "value": "38[.]180[.]18[.]176",
+      "role": "backend (M247 AS9009)"
+    }
+  ],
+  "references": [],
+  "tags": [
+    "carding",
+    "fullz",
+    "marketplace",
+    "migalki",
+    "cybercrime-forum",
+    "vdsina",
+    "cloudflare-fronted"
+  ]
+}

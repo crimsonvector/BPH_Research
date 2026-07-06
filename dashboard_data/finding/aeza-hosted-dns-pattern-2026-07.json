@@ -1,0 +1,72 @@
+{
+  "id": "aeza-hosted-dns-pattern-2026-07",
+  "title": "93 domains self-hosting authoritative DNS inside sanctioned Aeza",
+  "date": "2026-07-06",
+  "first_observed": "2026-07-05",
+  "category": "sanctioned-infrastructure",
+  "family": "Sanctioned-hosted DNS infrastructure",
+  "confidence": "high",
+  "status": "active",
+  "asn": "AS210644",
+  "provider": "Aeza International Ltd",
+  "bph_link": "Aeza International Ltd",
+  "vt": "n/a",
+  "summary": "A Certificate-Transparency-derived sweep found 93 distinct domains running their own authoritative nameservers inside the OFAC-sanctioned bulletproof host Aeza (AS210644 / AS216246, both verified currently Aeza) — proxy/tunnel, VPN, delivery-phishing and generic-scam themes co-located on the sanctioned operator's DNS, a takedown-resistance pattern.",
+  "detail": "Cross-referencing newly-observed CT domains against Aeza's currently-announced prefixes (live holder verified as Aeza Group LLC) surfaced 93 registered domains whose ns1/ns2 resolve into Aeza space. Recurrent themes: anonymity/proxy infrastructure (711-proxy[.]online, bonfire-tunnel.website, edge-stream-gate[.]pro, connectser.digital), phishing (delivery-evriupdate[.]live — separate finding), and short-lived scam/parking domains. Self-hosting DNS on a sanctioned bulletproof operator rather than a mainstream DNS provider is a deliberate resilience choice. Apparent matches on other formerly-sanctioned providers (Zservers, FUNNULL, most of Media Land) were EXCLUDED after verifying their ASNs are now held by successor/commodity operators (VDSINA, CTG Server, Regxa) — only Aeza's own ASNs remain Aeza.",
+  "iocs": [
+    {
+      "type": "domain",
+      "value": "711-proxy[.]online",
+      "role": "proxy infra, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "bonfire-tunnel[.]website",
+      "role": "tunnel/anonymity infra, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "edge-stream-gate[.]pro",
+      "role": "proxy/gateway infra, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "connectser[.]digital",
+      "role": "proxy infra, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "dnsinfra[.]pro",
+      "role": "DNS infra, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "blockchange[.]finance",
+      "role": "finance-themed, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "conditienalbarclop[.]xyz",
+      "role": "scam/random-string, DNS on Aeza"
+    },
+    {
+      "type": "domain",
+      "value": "clo-main-23[.]top",
+      "role": "cloud/clone-themed, DNS on Aeza"
+    },
+    {
+      "type": "ip",
+      "value": "77[.]221[.]156[.]75",
+      "role": "example Aeza nameserver IP (AS210644)"
+    }
+  ],
+  "references": [],
+  "tags": [
+    "sanctioned",
+    "bulletproof",
+    "aeza",
+    "dns-infrastructure",
+    "takedown-resistance",
+    "proxy"
+  ]
+}

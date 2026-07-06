@@ -1,0 +1,42 @@
+{
+  "id": "delivery-evriupdate-aeza-2026-07",
+  "title": "Evri parcel-delivery phishing with authoritative DNS on sanctioned Aeza",
+  "date": "2026-07-06",
+  "first_observed": "2026-07-05",
+  "category": "phishing",
+  "family": "Parcel-delivery (Evri) phishing",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS210644",
+  "provider": "Aeza International Ltd",
+  "bph_link": "Aeza International Ltd",
+  "vt": "10/94",
+  "summary": "A parcel-delivery (Evri) phishing domain runs its own authoritative nameservers inside the OFAC-sanctioned bulletproof host Aeza, while serving the phishing page from commodity hosting — using the sanctioned operator for DNS resilience against takedown.",
+  "detail": "delivery-evriupdate[.]live impersonates the UK parcel courier Evri. VirusTotal flags it 10/94 malicious and categorises it as phishing. Its nameservers ns1/ns2[.]delivery-evriupdate[.]live both resolve to 77[.]221[.]156[.]75, an IP announced by AS210644 (AEZA-AS, Aeza Group LLC — OFAC-sanctioned), while the phishing web content is served from 192[.]64[.]119[.]19 (Namecheap). Hosting only the DNS on the sanctioned bulletproof operator, with the disposable web page on commodity hosting, is a takedown-resilience pattern.",
+  "iocs": [
+    {
+      "type": "domain",
+      "value": "delivery-evriupdate[.]live",
+      "role": "Evri phishing domain"
+    },
+    {
+      "type": "ip",
+      "value": "77[.]221[.]156[.]75",
+      "role": "nameserver ns1/ns2 (Aeza AS210644, sanctioned)"
+    },
+    {
+      "type": "ip",
+      "value": "192[.]64[.]119[.]19",
+      "role": "phishing web host (Namecheap AS22612)"
+    }
+  ],
+  "references": [],
+  "tags": [
+    "phishing",
+    "evri",
+    "parcel-lure",
+    "aeza",
+    "sanctioned",
+    "dns-on-bph"
+  ]
+}
