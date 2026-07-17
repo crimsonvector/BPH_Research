@@ -1,7 +1,7 @@
 # BPH & TAE Analyst Playbook
 
-**Version:** 1.0
-**Last Updated:** 2026-05-16
+**Version:** 1.2
+**Last Updated:** 2026-07-17
 **Maintainer:** CrimsonVector Research
 
 > *A practitioner's guide to identifying, investigating, and tracking bullet-proof hosting providers and threat activity enablers.*
@@ -32,7 +32,7 @@ Use the following red-flag checklists when triaging a suspected BPH provider. No
 | T2 | ASN registered recently (<24 months) with immediate high-volume hosting | Normal providers grow gradually; instant capacity suggests pre-staged infrastructure for abuse |
 | T3 | Single upstream provider, especially aurologic (AS30823) or similar known enabler | Legitimate networks multi-home for resilience; single-homing to a known enabler signals intentional alignment |
 | T4 | IP prefixes announced and withdrawn at rates inconsistent with normal business (prefix churn/hopping) | Rapid prefix rotation defeats IP-based blocklists and complicates attribution |
-| T5 | Inclusion on the abuse.ch ASN-DROP list | Community-validated signal that the ASN exists primarily to facilitate abuse |
+| T5 | Inclusion on the Spamhaus ASN-DROP list | Community-validated signal that the ASN exists primarily to facilitate abuse |
 | T6 | VirusTotal community scores showing high percentage of flagged IPs within announced prefixes | Crowdsourced corroboration of malicious hosting concentration |
 | T7 | VMmanager/ISPsystem default hostname reuse across the provider's fleet | Indicator from Sophos Feb 2026 research; shows rapid, templated VM deployment without customization -- hallmark of BPH scale operations |
 | T8 | Identical RDP hostnames across multiple VMs (e.g., WIN-J9D866ESIJ2 pattern from Stark/WorkTitans migration) | Reveals mass-cloned VM images, often carried across provider migrations -- a fingerprint linking old and new infrastructure |
@@ -80,12 +80,12 @@ This is the most common starting point. You have a suspicious IP; you need to id
 
 2. **Map the ASN to its registered organization.**
    - RIPE Stat: `https://stat.ripe.net/app/launchpad/S2_AS[number]`
-   - BGPView: `https://bgpview.io/asn/[number]`
+   - bgp.tools: `https://bgp.tools/as/[number]`
    - ipinfo.io: `https://ipinfo.io/AS[number]`
 
 3. **Check ASN reputation immediately.**
-   - abuse.ch ThreatFox: `https://threatfox.abuse.ch/browse/as_num/[number]/`
-   - Spamhaus ASN-DROP list: check if the ASN appears
+   - abuse.ch ThreatFox: `https://threatfox.abuse.ch/browse/as_num/[number]/` (requires an Auth-Key -- see Section 3)
+   - Spamhaus ASN-DROP: `https://www.spamhaus.org/drop/asndrop.json` -- check if the ASN appears
    - GreyNoise: search by ASN for scanning/exploitation activity
 
 4. **Map all announced prefixes.**
@@ -158,7 +158,7 @@ BPH providers rebrand, migrate, and re-emerge. Historical analysis is how you co
 
 3. **Historical BGP data:**
    - RIPE Stat BGP routing history widget
-   - BGPStream: `https://bgpstream.com/`
+   - BGPStream (Cisco Crosswork): `https://bgpstream.crosswork.cisco.com/` -- the old `bgpstream.com` has moved here
    - **What to look for:** prefix announcements that were previously made by a different (now-defunct) ASN -- this is the BGP equivalent of following someone who changed their name
 
 4. **Wayback Machine:**
@@ -188,9 +188,11 @@ Every BPH investigation must include a sanctions check. Failure to do so exposes
    - URL: `https://www.sanctionsmap.eu/`
    - Search by name, entity, or country
 
-3. **UK OFSI (Office of Financial Sanctions Implementation):**
-   - URL: `https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets`
-   - Downloadable and searchable
+3. **UK Sanctions List (FCDO):**
+   - URL: `https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv` (machine-readable; carries a Report Date)
+   - **Use this, not the OFSI consolidated list.** The OFSI consolidated list was deprecated 2026-01-28 and superseded by the FCDO UK Sanctions List; querying OFSI now returns a stale answer.
+   - Grep it directly rather than relying on aggregators. Entity-splitting on aggregator sites means *absence* there does not prove a party is undesignated — confirm against this file.
+   - **Check the `Subsidiaries` field, not just primary names.** Some entities (e.g. Hypercore Ltd) are captured by UK ownership-and-control rules as a subsidiary entry on a parent's row rather than by a designation of their own. A name-only search will miss them.
 
 4. **Australian DFAT Consolidated List:**
    - Downloadable consolidated list of sanctions targets
@@ -249,9 +251,8 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 | RIPE Stat | `stat.ripe.net` | ASN details, routing history, prefix announcements, abuse contacts, resource transfers |
 | BGP.tools | `bgp.tools` | Real-time BGP monitoring, AS path analysis, prefix tracking, upstream identification |
 | Hurricane Electric BGP Toolkit | `bgp.he.net` | ASN lookup, prefix lists, peering data, IRR records |
-| BGPView | `bgpview.io` | ASN search, prefix mapping, upstream/downstream provider identification |
 | PeeringDB | `peeringdb.com` | Peering relationships, IX presence, facility locations, contact information |
-| BGPStream | `bgpstream.com` | Real-time BGP event monitoring, hijack detection, route leak alerting |
+| BGPStream | `bgpstream.crosswork.cisco.com` | Real-time BGP event monitoring, hijack detection, route leak alerting. Moved to Cisco Crosswork; `bgpstream.com` is the old address. Not to be confused with `bgpstream.caida.org`, CAIDA's measurement framework |
 
 ### Threat Intelligence Platforms
 
@@ -259,18 +260,20 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 |------|-----|----------|
 | Recorded Future | `recordedfuture.com` | Threat Density Score, Network Intelligence module, TAE tracking, dark web monitoring |
 | Shodan | `shodan.io` | Internet-wide device scanning, service enumeration, banner grabbing, historical data |
-| Censys | `search.censys.io` | Certificate transparency, service discovery, infrastructure mapping, host enumeration |
+| Censys | `platform.censys.io` | Certificate transparency, service discovery, infrastructure mapping, host enumeration. Legacy Search (`search.censys.io`) and its API are deprecated and sunset September 2026 -- migrate to Platform (`api.platform.censys.io/v3/`) |
 | GreyNoise | `greynoise.io` | Internet-wide scan classification, mass exploitation detection, benign scanner filtering |
 | ipinfo.io | `ipinfo.io` | IP/ASN geolocation, hosted domain counts, privacy/proxy detection, company data |
 | ipapi.is | `ipapi.is` | Hosting detection, ASN abuse scoring, VPN/proxy/tor detection |
 
 ### Malware/C2 Intelligence
 
+> **abuse.ch requires authentication.** Since 2025-06-30 every abuse.ch platform and API — ThreatFox, URLhaus, MalwareBazaar, YARAify — requires an account at `auth.abuse.ch` and an Auth-Key passed as an HTTP header (`Auth-Key: YOUR-AUTH-KEY-HERE`). Unauthenticated scripted pulls fail. Free for community contributors; commercial use may need a subscription via Spamhaus Technology. Note that abuse.ch and Spamhaus remain separate organizations — Spamhaus Technology has been the primary licensee of abuse.ch data since 2022-08-01, which is a licensing alliance, not an acquisition.
+
 | Tool | URL | Use Case |
 |------|-----|----------|
 | abuse.ch ThreatFox | `threatfox.abuse.ch` | IOC database searchable by ASN, malware family attribution, threat actor linkage |
 | abuse.ch URLhaus | `urlhaus.abuse.ch` | Malware URL tracking by ASN, payload identification, takedown tracking |
-| abuse.ch ASN-DROP | `spamhaus.com/drop` | ASN blocklist -- networks recommended for "do not route or peer" treatment |
+| Spamhaus ASN-DROP | `spamhaus.org/drop/asndrop.json` | ASN blocklist -- networks recommended for "do not route or peer" treatment. **Use the JSON feed.** The legacy `asndrop.txt` is now an empty stub that still carries a current datestamp, so a freshness check passes while returning zero listings |
 | VirusTotal | `virustotal.com` | Multi-engine scanning, IP/domain reputation, file relations, community intelligence |
 | ANY.RUN | `any.run` | Interactive malware sandbox, C2 extraction, network traffic capture, behavioral analysis |
 | MalwareBazaar | `bazaar.abuse.ch` | Malware sample repository with hosting attribution, YARA rule matching |
@@ -283,7 +286,7 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 | OpenCorporates | `opencorporates.com` | Cross-jurisdiction corporate search, officer search, registered agent identification |
 | RIPE NCC Database | `apps.db.ripe.net` | WHOIS for European IP resources and ASN registration, maintainer objects, organization records |
 | ARIN WHOIS | `whois.arin.net` | North American IP/ASN registration, organization details, POC records |
-| APNIC WHOIS | `wq.apnic.net` | Asia-Pacific IP/ASN registration, resource delegation, abuse contacts |
+| APNIC WHOIS | `wq.apnic.net/static/search.html` | Asia-Pacific IP/ASN registration, resource delegation, abuse contacts |
 | DomainTools | `domaintools.com` | Domain/IP WHOIS history, reverse WHOIS, Iris investigation platform, hosting history |
 
 ### Sanctions Databases
@@ -292,7 +295,8 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 |------|-----|----------|
 | OFAC SDN Search | `sanctionssearch.ofac.treas.gov` | US sanctions: individuals, entities, crypto wallets, vessels, aircraft |
 | EU Sanctions Map | `sanctionsmap.eu` | EU consolidated sanctions list with geographic and regime filtering |
-| UK OFSI | `gov.uk/ofsi` | UK financial sanctions list, licensing information |
+| UK Sanctions List (FCDO) | `sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv` | UK designations, machine-readable. Supersedes the OFSI consolidated list (deprecated 2026-01-28) |
+| UK OFSI | `gov.uk/ofsi` | Licensing, enforcement, and guidance. **Not** the authoritative designation list — use the FCDO list above |
 | Chainalysis | `chainalysis.com` | Cryptocurrency transaction tracing, sanctions compliance, wallet clustering |
 
 ### Community Resources
@@ -363,7 +367,7 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 | Step | Action | Reference | Output |
 |------|--------|-----------|--------|
 | 4.1 | Apply risk tier | `taxonomy/BPH_TAXONOMY.md` criteria (T1-T5) | Tier assignment with justification |
-| 4.2 | Assign provider type | Pure BPH, BPH-Adjacent, Upstream Enabler, Financial Enabler, Corporate Shell, Sanctions-Evasion Vehicle | Type classification |
+| 4.2 | Assign provider type | Pure BPH, BPH-Adjacent, Upstream Enabler, Financial Enabler, Corporate Shell, Sanctions-Evasion Vehicle, Anonymization/Proxy Enabler | Type classification |
 | 4.3 | Document operational patterns | Taxonomy Section 3 pattern matching | Pattern list with evidence |
 | 4.4 | Score identification signals | Taxonomy Section 4 signal matrix | Signal score |
 | 4.5 | Update BPH_Master.csv | Populate all 25 schema columns | New row in master dataset |
@@ -393,13 +397,13 @@ Copy this template for each new provider investigation. Fill in every field; mar
 ## Classification
 - **Status:** [active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed]
 - **Risk Tier:** [T1 / T2 / T3 / T4 / T5]
-- **Provider Type:** [Pure BPH / BPH-Adjacent / Upstream Enabler / Financial Enabler / Corporate Shell / Sanctions-Evasion Vehicle]
+- **Provider Type:** [Pure BPH / BPH-Adjacent / Upstream Enabler / Financial Enabler / Corporate Shell / Sanctions-Evasion Vehicle / Anonymization/Proxy Enabler]
 
 ## Evidence
 
 ### Technical Indicators
 - [ ] Malicious traffic ratio: ___% (source: ___)
-- [ ] abuse.ch ASN-DROP listed: Y/N (date checked: ___)
+- [ ] Spamhaus ASN-DROP listed: Y/N (date checked: ___)
 - [ ] Upstream providers: [list with ASN numbers]
 - [ ] Known enabler upstream present: Y/N (which: ___)
 - [ ] Route diversification: Y/N (number of upstreams: ___)

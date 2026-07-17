@@ -1,6 +1,6 @@
 # Source Index
 
-> **Last Updated:** 2026-06-29 | **Maintainer:** CrimsonVector Research
+> **Last Updated:** 2026-07-17 | **Maintainer:** CrimsonVector Research
 >
 > All sources used in the BPH Research repository are cataloged here. Source IDs are referenced in the `sources` column of BPH_Master.csv.
 
@@ -108,14 +108,59 @@ When adding a new source to this index:
 
 ---
 
+### Additional Sources (Added 2026-07-17)
+
+> July-2026 refresh: coordinated EU/UK/US action against Media Land, the OFAC 1VPNS designation, the FBI/Google NetNut takedown, and the primary EU sanctions-package releases used to correct package/date attributions. Grade shown inline.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| DOJ-MEDIALAND-INDICTMENT | A | Three Russian Nationals and Two Companies Indicted for International Cybercrimes (Release 26-773) | US DOJ Office of Public Affairs | US DOJ | 2026-07-14 | — | Medialand LLC; ML.Cloud LLC; Volosovik; Zatolokin; Pankova; Operation Riptide; $10M RFJ reward |
+| EU-CYBER-2026-1714 | A | Council Implementing Regulation (EU) 2026/1714 (cyber-attacks regime, impl. Reg. 2019/796) | Council of the EU | EU Council | 2026-07-13 | — | Media Land LLC; ML.Cloud; Volosovik; Z-Pentest; Kovalev ("Stern"); Lumma developers; GRU Unit 29155 |
+| OFSI-CYBER-2026-07 | A | UK OFSI Sanctions Notice — Cyber regime, 13 July 2026 (CYB0115–CYB0129) | UK OFSI / FCDO | HM Treasury | 2026-07-13 | — | Lumma operators; GRU Unit 29155 officers; CARR; OOO Impuls |
+| OFAC-1VPNS | A | Treasury Sanctions Malware and Infrastructure Providers Supporting Ransomware Attacks Against Americans (sb0559) | US Treasury OFAC | US Treasury | 2026-07-13 | — | First VPN Service (1VPNS); Dmytro Rashevskyi; Yegeniy Silayev; E.O. 14390 |
+| GTIG-NETNUT | B | Google Continues Disruption of Residential Proxy Networks (NetNut / Popa) | Google Threat Intelligence Group | Google Cloud | 2026-07-02 | — | NetNut; Alarum Technologies (NASDAQ: ALAR); Popa botnet; 316 actor clusters |
+| KREBS-NETNUT | C | FBI Seizes NetNut Proxy Platform, Popa Botnet | Brian Krebs | Krebs on Security | 2026-07-02 | — | NetNut; Popa botnet; FBI; Alarum |
+| EU-16TH-PACKAGE | A | 16th package of sanctions on Russia — EU lists additional 48 individuals and 35 entities | Council of the EU | EU Council | 2025-02-24 | — | Garantex (first EU crypto-exchange listing); 6 wallet addresses |
+| EU-20TH-PACKAGE | A | 20th package of EU sanctions — energy, financial services including crypto | Council of the EU | EU Council | 2026-04-23 | — | Sectoral CASP ban (eff. 2026-05-24); Kyrgyzstan anti-circumvention; 120 listings |
+| FCDO-UK-SANCTIONS-LIST | A | UK Sanctions List (machine-readable consolidated designations) | FCDO | UK Government | 2026 (rolling) | — | Authoritative UK designations; supersedes deprecated OFSI consolidated list |
+| KREBS-FIOD-STARK | C | Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks | Brian Krebs | Krebs on Security | 2026-05-18 | — | FIOD raid; THE.Hosting/WorkTitans; Youssef Zinad; Andrey Nesterenko; NoName057(16) |
+| DARKREADING-ELLIO-STARK | B | Dutch Raid Fails to Dent Russian Bulletproof Host | Dark Reading (citing ELLIO) | Dark Reading | 2026-05-28 | — | THE.Hosting/WorkTitans; post-raid telemetry; reseller-distributed resilience |
+| ELLIPTIC-GRINEX | B | Sanctioned Russia-Linked Crypto Exchange Grinex Halts Operations | Elliptic | Elliptic | 2026-04 | — | Grinex suspension; A7A5 ~96% volume collapse; possible false-flag exit |
+
+---
+
+### Source-ID Normalization (2026-07-17)
+
+> Canonical IDs assigned to previously free-text citations that lingered in the CSV `sources` column. These formalize existing citations — no new claims. The two `OSINT-*` buckets group platform/forum evidence that is not a discrete report.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| EUROPOL-ENDGAME-2025 | A | Operation Endgame Phase 2 (Rhadamanthys/VenomRAT/Elysium; CrazyRDP seizure window) | Europol + partners | Europol | 2025-11 | — | CrazyRDP; Operation Endgame Nov 2025 |
+| FBI-IC3-FUNNULL | A | FBI IC3 public advisory on FUNNULL pig-butchering infrastructure | FBI IC3 | FBI | 2025 | — | FUNNULL Technology Inc. |
+| STISC-ALEXHOST | A | Moldovan STISC / government reporting on AlexHost | STISC (Moldova) | Moldovan government | 2025 | — | AlexHost |
+| TRUSTWAVE-PROSPERO | B | Trustwave SpiderLabs analysis of PROSPERO / BEARHOST | Trustwave SpiderLabs | Trustwave | 2025 | — | PROSPERO OOO / Proton66 |
+| GREYNOISE-PROSPERO | B | GreyNoise: AS200593 dominant source of Ivanti EPMM mass exploitation | GreyNoise | GreyNoise | 2026-02 | — | PROSPERO OOO / Proton66 |
+| RIPE-DB | B | RIPE NCC database registrations (registry lookups) | RIPE NCC | RIPE NCC | rolling | — | KPROHOST; registrant/ASN attribution |
+| KREBS-BPH | C | Krebs on Security — BPH provider reporting (incl. reader-comment leads) | Brian Krebs | Krebs on Security | 2025 | — | MIRhosting B.V.; metaspinner net GmbH |
+| BLEEPINGCOMPUTER-BPH | C | BleepingComputer — ransomware / BPH-hosting reporting | BleepingComputer | BleepingComputer | 2025 | — | First Server Limited; CrazyRDP |
+| TROLLEYE-FIRSTSERVER | C | TrollEye Security — First Server Limited / WantToCry analysis | TrollEye Security | TrollEye | 2025 | — | First Server Limited |
+| FLARE-CLOUDZY | C | Flare / SRA-TIGR reporting on Cloudzy | Flare (SRA-TIGR) | Flare | 2026-03 | — | Cloudzy / abrNOC |
+| ABUSECH-FEEDS | C | abuse.ch URLhaus / ThreatFox ASN feeds | abuse.ch | abuse.ch (Spamhaus licensee) | rolling | — | Tnsecurity Ltd (EVILEMPIRE) |
+| OSINT-REVIEWS | D | Public reputation / review platforms (Trustpilot, Scamalytics) | Various | Various | rolling | — | Phanes Networks; BuyVM / Frantech |
+| OSINT-FORUMS | E | Hosting / cybercrime forum advertising presence (BreachForums, LowEndTalk, WebHostingTalk) | Various | Various | rolling | — | HostSlick; Shinjiru |
+
+---
+
 ## Source Statistics
 
 | Grade | Count | Description |
 |-------|-------|-------------|
-| A — Government/Official | 13 | Sanctions notices, LE press releases, government advisories |
-| B — Established CTI Vendor | 24 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 15 | Independent researchers, community blocklists, investigative journalism |
-| **Total** | **52** | |
+| A — Government/Official | 23 | Sanctions notices, LE press releases, government advisories |
+| B — Established CTI Vendor | 30 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 22 | Independent researchers, community blocklists, investigative journalism |
+| D — Single Source / Unverified | 1 | Reputation/review platforms and single-source OSINT |
+| E — Self-Reported / Marketing | 1 | Forum advertising presence and provider marketing |
+| **Total** | **77** | |
 
 ---
 

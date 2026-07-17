@@ -1,9 +1,9 @@
 {
-  "generated_utc": "2026-07-06T15:54:59+00:00",
-  "provider_count": 60,
+  "generated_utc": "2026-07-17T15:31:30+00:00",
+  "provider_count": 63,
   "published_finding_count": 7,
   "held_finding_count": 1,
-  "source_last_updated": "2026-06-30",
+  "source_last_updated": "2026-07-17",
   "schema": {
     "providers": 1,
     "aggregates": 1,

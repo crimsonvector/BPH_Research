@@ -1,12 +1,14 @@
 # BPH & TAE Ecosystem Map
 
-> **Version:** 1.1 | **Last Updated:** 2026-06-29 | **Maintainer:** CrimsonVector Research
+> **Version:** 1.2 | **Last Updated:** 2026-07-17 | **Maintainer:** CrimsonVector Research
 >
-> This document maps the bullet-proof hosting (BPH) and Threat Activity Enabler (TAE) ecosystem, charting the supply chain from bare metal to criminal end-user, the geographic clusters where these operations concentrate, the corporate relationship networks that sustain them, and the financial infrastructure that monetizes them. Risk tier references follow the classification system defined in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md).
+> This document maps the bullet-proof hosting (BPH) and Threat Activity Enabler (TAE) ecosystem, charting the supply chain from bare metal to criminal end-user, the geographic clusters where these operations concentrate, the corporate relationship networks that sustain them, and the financial infrastructure that monetizes them. Risk tier references follow the classification system defined in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md). The Appendix A/B reference tables are generated from `BPH_Master.csv` and are authoritative; the narrative sections 1–6 are hand-maintained and may lag the CSV.
 
 ---
 
-> **2026-06 update:** This narrative map predates the June-2026 refresh; `BPH_Master.csv` is the authoritative entity list (now 60 rows). Newly tracked clusters not yet diagrammed below: the **Garantex -> Grinex / A7A5 (Old Vector)** financial-evasion rails (now OFAC-sanctioned); the **SEA guarantee-marketplace** economy (**Huione -> Tudou -> H-Pay Service PLC**; **Dabai Guarantee**); **BtHoster** (UK-shell AS-leasing via Skynet AS214295 / Inside Network AS215476, upstream UAB Host Baltic AS209605); **Pfcloud UG (AS51396)**; the **Asocks** residential-proxy botnet; and OFAC's Iranian exchange designations (Nobitex/Wallex/Bitpin/Ramzinex).
+> **2026-07 update:** Appendices A and B were regenerated against `BPH_Master.csv` (63 rows) and now match it exactly on tier, status, and ASN. The narrative sections below still predate the June-2026 refresh. Clusters tracked in the CSV but not yet diagrammed in sections 1–6: the **Garantex -> Grinex / A7A5 (Old Vector)** financial-evasion rails (now OFAC-sanctioned); the **SEA guarantee-marketplace** economy (**Huione -> Tudou -> H-Pay Service PLC**; **Dabai Guarantee**); **BtHoster** (UK-shell AS-leasing via Skynet AS214295 / Inside Network AS215476, upstream UAB Host Baltic AS209605); **Pfcloud UG (AS51396)**; the **Asocks** residential-proxy botnet; and OFAC's Iranian exchange designations (Nobitex/Wallex/Bitpin/Ramzinex).
+>
+> **July-2026 developments (see `analysis/TIMELINE.md`):** Media Land LLC / Volosovik and sister company ML.Cloud were **EU-designated** (Impl. Reg. (EU) 2026/1714, 13 July) and **criminally indicted** in the US (N.D. Ohio, unsealed 14 July, Operation Riptide). OFAC designated proxy/VPN enabler **First VPN Service (1VPNS)** (13 July). The FBI and Google seized the **NetNut** residential-proxy platform and **Popa** botnet (2 July) — a commercial, Western, publicly-listed proxy operator (Alarum Technologies) sourcing exit nodes from a botnet, a TAE profile not yet modeled in the taxonomy.
 
 ## Table of Contents
 
@@ -670,84 +672,147 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 
 ## Appendix A: Entity Quick Reference
 
+> Generated from `BPH_Master.csv` (63 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
+
 | Entity | ASN(s) | Tier | Status | Geographic Cluster | Primary Role |
 |--------|--------|------|--------|--------------------|--------------|
-| Aeza International | AS210644, AS216246 | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
+| 1GSERVERS LLC | AS14315 | T5 | Active | United States | Watch list |
+| A7A5 / Old Vector | — | T1 | Sanctioned | Russia / Kyrgyzstan | Financial Enabler (sanctions-evasion stablecoin) |
+| Aeza International | AS210644; AS216246 | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
 | AlexHost | AS200019 | T4 | Active | Moldova | BPH-Adjacent |
-| Altawk | — | T3 | Active | UK Shell | BPH downstream |
+| Altawk | — | T3 | Suspected | aurologic downstream | BPH downstream |
+| Asocks | AS48266 | T2 | Seized | Netherlands (servers) / global | Residential-proxy TAE |
 | aurologic GmbH | AS30823 | T2 | Active | Germany/Netherlands | Upstream Enabler |
-| CTG Server Limited | AS152194 | T1 | Active | Hong Kong | FUNNULL backbone |
-| DDoS-Guard | AS49612 | T5 | Active | Russia | Dual-use / Peering |
-| Dolphon 1337 | AS215208 | — | Dissolved | UK Shell | Corporate Shell |
-| ELITETEAM / 1337TEAM | AS51381 | T1 | Active | Russia (Seychelles reg.) | Pure BPH |
-| Femo IT / Defhost | AS214351 | T2 | Active | UK Shell | BPH downstream |
-| FUNNULL Technology | CDN | T1 | Sanctioned | APAC / Triad Nexus | Infrastructure Laundering |
-| GCSAS | AS215540 | T2 | Active | UK Shell | Corporate Shell / BPH |
-| Hypercore LTD | AS215552, AS211522 | T1 | Sanctioned | UK Shell | Sanctions Evasion (Aeza) |
-| Kaopu Cloud HK | AS138915 | T3 | Active | Hong Kong | APAC BPH cluster |
-| Karina Rashkovska | AS215789 | T2 | Active | UK Shell / aurologic | BPH downstream |
-| KPROHOST | AS214940 | T3 | Active | aurologic downstream | BPH downstream |
-| Media Land LLC | AS206728 + sisters | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
-| metaspinner net | AS209800 | T3 | Active | aurologic downstream | BPH downstream |
-| MIRhosting B.V. | AS52000 | T1 | Active | Netherlands | Infrastructure Pillar |
-| PINSPB | AS44050 | T1 | Active | Russia / St. Petersburg | Pure BPH |
-| PQ Hosting Plus S.R.L. | AS44477 | T1 | Sanctioned | Moldova | Sanctions Evasion (Stark) |
-| PROSPERO / Proton66 | AS200593, AS198953 | T1 | Active | Russia | Pure BPH |
-| QWINS LTD | AS213702 | T2 | Active | UK Shell | BPH |
-| Railnet / Virtualine | AS214943 | T2 | Active | aurologic downstream | BPH downstream |
-| Shinjiru | AS45839 | T4 | Active | Malaysia | BPH-Adjacent |
-| Silent Connection | AS215240 | — | Dissolved | UK Shell | Corporate Shell |
-| StarCloud Global | — | T5 | Active | APAC | FUNNULL front brand |
-| Stark Industries | (Historical) | T1 | Dissolved/Sanctioned | UK Shell / Moldova | Pure BPH (historical) |
-| SWISSNETWORK02 / Global-Data | AS34888, AS42624 | T3 | Active | aurologic downstream | BPH downstream |
-| Tnsecurity / EVILEMPIRE | AS216309 | T2 | Active | aurologic downstream | BPH downstream |
+| Bitpin | — | T3 | Sanctioned | Iran | Financial Enabler |
+| BtHoster | AS213790; AS213388; AS214295 (dark); AS215476 (dead); AS198465 (predecessor, recycled to CN) | T1 | Active | Lithuania / Bulgaria (UK shells) | Pure BPH (AS-leasing) |
+| BuyVM / Frantech | AS53667 | T4 | Active | Canada / US / Luxembourg | BPH-Adjacent |
+| CDNCloud | — | T5 | Active | China (Alibaba-routed) | Watch list |
+| Cloudzy / abrNOC | AS14956 | T3 | Exposed | Iran | BPH-Adjacent (front) |
+| CrazyRDP | AS394711; AS211252 | T1 | Seized | Netherlands | RDP-as-a-service (seized) |
+| CTG Server Limited | AS152194 | T1 | Flagged | Hong Kong | FUNNULL backbone |
+| Dabai Guarantee | — | T2 | Active | SEA / China | Financial Enabler (guarantee marketplace) |
+| Datavice MCHJ | — | T1 | Sanctioned | Uzbekistan (Tashkent) | Sanctions Evasion (Aeza) |
+| DDoS-Guard | AS49612; AS57724 | T5 | Active | Russia | Dual-use / Peering |
+| Dolphon 1337 | AS215208 | T3 | Dissolved | UK Shell | Corporate Shell |
+| ELITETEAM / 1337TEAM | AS51381; AS39770; AS60424; AS56873 | T1 | Active | Russia (Seychelles reg.) | Pure BPH |
+| Femo IT / Defhost | AS214351 | T2 | Flagged | aurologic downstream | BPH downstream |
+| First Server Limited | AS204997; AS50113; AS205090 | T2 | Flagged | Russia-linked | BPH (VMmanager fleet) |
+| First VPN Service (1VPNS) | — | T1 | Sanctioned | Russia/Ukraine nexus | Anonymization/Proxy Enabler (criminal VPN) |
+| FlokiNET | AS200651 | T4 | Active | Romania / Finland / Iceland | BPH-Adjacent |
+| FUNNULL Technology | routes through AS152194 (CTG Server Limited) | T1 | Sanctioned | APAC / Triad Nexus | Infrastructure Laundering |
+| Garantex | — | T1 | Evading | Russia / Estonia shell | Financial Enabler |
+| GCSAS | AS215540 | T2 | Suspected | UK Shell | Corporate Shell / BPH |
+| Grinex | — | T1 | Sanctioned | Russia | Financial Enabler (Garantex successor) |
+| H-Pay Service PLC | — | T2 | Flagged | Cambodia | Financial Enabler (Huione successor) |
+| HostSlick | AS208046 | T3 | Suspected | Netherlands | BPH-Adjacent |
+| HOSTYPE | — | T5 | Active | Unknown | Watch list |
+| Hypercore LTD | AS215552; AS211522 | T1 | Sanctioned | UK Shell | Sanctions Evasion (Aeza) |
+| Kaopu Cloud HK | AS138915 | T3 | Active | Hong Kong/Global | APAC BPH cluster |
+| Karina Rashkovska | AS215789 | T2 | Flagged | aurologic downstream | BPH downstream |
+| KPROHOST | AS214940 | T3 | Suspected | aurologic downstream | BPH downstream |
+| Media Land LLC | AS206728; AS48721; AS211409; AS215311 | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
+| metaspinner net | AS209800 | T3 | Suspected | aurologic downstream | BPH downstream |
+| MIRhosting B.V. | AS52000 | T2 | Flagged | Netherlands | Infrastructure Pillar |
+| NECHAEVDS | — | T5 | Active | Russia | Watch list |
+| NETINNOVATIONLLC | — | T5 | Active | Eastern Europe (likely) | Watch list |
+| NetNut (Alarum Technologies) | — | T2 | Seized | Israel / global exit nodes | Anonymization/Proxy Enabler (commercial, botnet-sourced) |
+| Nobitex | — | T2 | Sanctioned | Iran | Financial Enabler |
+| Pfcloud UG | AS51396 | T3 | Active | Germany | BPH downstream |
+| Phanes Networks / Flaunt7 | AS49042 | T4 | Active | Netherlands (Urk) | BPH-Adjacent |
+| PINSPB | AS44050 | T2 | Flagged | Russia / St. Petersburg | Pure BPH |
+| PQ Hosting Plus S.R.L. | AS44477 (post-transfer) | T1 | Sanctioned | Moldova | Sanctions Evasion (Stark) |
+| PrivateAlps / Private Layer | AS51852 | T4 | Active | Switzerland | BPH-Adjacent |
+| PROSPERO / Proton66 | AS200593; AS198953 | T1 | Flagged | Russia / St. Petersburg | Pure BPH |
+| QWINS LTD | AS213702 | T2 | Flagged | UK Shell | BPH |
+| Railnet / Virtualine | AS214943 | T2 | Flagged | aurologic downstream | BPH downstream |
+| Ramzinex | — | T3 | Sanctioned | Iran | Financial Enabler |
+| Shinjiru | AS45839; multiple regional ASNs | T4 | Active | Malaysia | BPH-Adjacent |
+| Silent Connection | AS215240 | T3 | Dissolved | UK Shell | Corporate Shell |
+| StarCloud Global | — | T3 | Flagged | APAC | FUNNULL front brand |
+| Stark Industries | AS44477 (transferred) | T1 | Sanctioned | UK Shell / Moldova | Pure BPH (historical) |
+| SWISSNETWORK02 / Global-Data | AS34888; AS42624 | T2 | Flagged | aurologic downstream | BPH downstream |
+| Tiger Net (SOW-A) | — | T5 | Active | Unknown (likely Asia/CIS) | Watch list |
+| Tnsecurity / EVILEMPIRE | AS216309 | T2 | Flagged | aurologic downstream | BPH downstream |
+| Tudou Guarantee | — | T2 | Dissolved | SEA | Financial Enabler (wound down) |
 | UFO Hosting LLC | AS33993 | T2 | Evading | Russia | Sanctions Evasion (Stark) |
-| WAIcore | AS213887 | T3 | Active | aurologic downstream | BPH downstream |
+| WAIcore | AS213887; AS210281 | T2 | Flagged | aurologic downstream | BPH downstream |
+| Wallex | — | T3 | Sanctioned | Iran | Financial Enabler |
 | WorkTitans / THE.Hosting | AS209847 | T1 | Evading | Netherlands | Sanctions Evasion (Stark) |
-| XHOST Internet Solutions LP | Multiple | T1 | Active | UK Shell | Zservers front entity |
-| Zservers | AS216071 (historical) | T1 | Sanctioned | Russia | Pure BPH |
+| Zservers | AS216071 (historical); AS213194; AS61336; AS213010 | T1 | Sanctioned | Russia (Barnaul) | Pure BPH |
+
+---
 
 ## Appendix B: ASN Cross-Reference Index
 
+> Every ASN attributed to a tracked entity in `BPH_Master.csv`, in ascending order. Parenthetical qualifiers from the CSV (historical, transferred) are preserved.
+
 | ASN | Entity | Tier | Notes |
 |-----|--------|------|-------|
-| AS30823 | aurologic GmbH | T2 | Critical upstream; LIR |
-| AS33993 | UFO Hosting LLC | T2 | Stark Russian prefix vehicle |
-| AS34888 | SWISSNETWORK02 | T3 | aurologic downstream |
-| AS42624 | Global-Data System | T3 | aurologic downstream |
-| AS44050 | PINSPB | T1 | St. Petersburg BPH |
-| AS44477 | PQ Hosting Plus S.R.L. | T1 | Transferred from Stark pre-sanctions |
-| AS45839 | Shinjiru | T4 | Malaysia permissive hoster |
-| AS49612 | DDoS-Guard | T5 | Dual-use; ELITETEAM peer |
-| AS51381 | ELITETEAM / 1337TEAM | T1 | Seychelles; forum-advertised |
-| AS52000 | MIRhosting B.V. | T1 | Nesterenko; Stark infra pillar |
-| AS61336 | Zservers (hop 2) | T1 | Post-sanctions prefix hop |
-| AS138915 | Kaopu Cloud HK | T3 | APAC BPH cluster |
-| AS152194 | CTG Server Limited | T1 | FUNNULL backbone |
-| AS198953 | Proton66 | T1 | PROSPERO sister ASN |
-| AS200019 | AlexHost | T4 | Chisinau bomb shelter |
-| AS200593 | PROSPERO | T1 | Forum-advertised BPH |
-| AS206728 | Media Land LLC | T1 | St. Petersburg; sister ASNs |
-| AS209800 | metaspinner net | T3 | aurologic downstream |
-| AS209847 | WorkTitans / THE.Hosting | T1 | Stark successor; Zinad/Fezzy BV |
-| AS210644 | Aeza International | T1 | OFAC-sanctioned; primary ASN |
-| AS211522 | Hypercore LTD | T1 | Aeza front; RIPE HYPERCORELTD (created 2025-07-10) |
-| AS213010 | Zservers (hop 3) | T1 | Post-sanctions prefix hop |
-| AS213194 | Zservers (hop 1) | T1 | Post-sanctions prefix hop |
-| AS213702 | QWINS LTD | T2 | UK shell BPH |
-| AS213887 | WAIcore | T3 | aurologic downstream |
-| AS214351 | Femo IT / Defhost | T2 | aurologic downstream; 12+ malware families |
-| AS214940 | KPROHOST | T3 | aurologic downstream |
-| AS214943 | Railnet / Virtualine | T2 | aurologic downstream |
-| AS215208 | Dolphon 1337 | — | Dissolved UK shell |
-| AS215240 | Silent Connection | — | Dissolved UK shell |
-| AS215540 | GCSAS | T2 | UK LLP shell |
-| AS215552 | Hypercore LTD | T1 | Aeza front; sanctioned Nov 2025 |
-| AS215789 | Karina Rashkovska | T2 | aurologic downstream |
-| AS216071 | Zservers (historical) | T1 | Original ASN; depeered post-sanctions |
-| AS216246 | Aeza International | T1 | Tertiary ASN |
-| AS216309 | Tnsecurity / EVILEMPIRE | T2 | aurologic downstream; abuse.ch listed |
-
+| AS14315 | 1GSERVERS LLC | T5 | Watch list; United States |
+| AS14956 | Cloudzy / abrNOC | T3 | BPH-Adjacent (front); Iran |
+| AS30823 | aurologic GmbH | T2 | Upstream Enabler; Germany/Netherlands |
+| AS33993 | UFO Hosting LLC | T2 | Sanctions Evasion (Stark); Russia |
+| AS34888 | SWISSNETWORK02 / Global-Data | T2 | BPH downstream; aurologic downstream |
+| AS39770 | ELITETEAM / 1337TEAM | T1 | Pure BPH; Russia (Seychelles reg.) |
+| AS42624 | SWISSNETWORK02 / Global-Data | T2 | BPH downstream; aurologic downstream |
+| AS44050 | PINSPB | T2 | Pure BPH; Russia / St. Petersburg |
+| AS44477 | PQ Hosting Plus S.R.L. | T1 | post-transfer |
+| AS44477 | Stark Industries | T1 | transferred |
+| AS45839 | Shinjiru | T4 | BPH-Adjacent; Malaysia |
+| AS48266 | Asocks | T2 | Residential-proxy TAE; Netherlands (servers) / global |
+| AS48721 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
+| AS49042 | Phanes Networks / Flaunt7 | T4 | BPH-Adjacent; Netherlands (Urk) |
+| AS49612 | DDoS-Guard | T5 | Dual-use / Peering; Russia |
+| AS50113 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked |
+| AS51381 | ELITETEAM / 1337TEAM | T1 | Pure BPH; Russia (Seychelles reg.) |
+| AS51396 | Pfcloud UG | T3 | BPH downstream; Germany |
+| AS51852 | PrivateAlps / Private Layer | T4 | BPH-Adjacent; Switzerland |
+| AS52000 | MIRhosting B.V. | T2 | Infrastructure Pillar; Netherlands |
+| AS53667 | BuyVM / Frantech | T4 | BPH-Adjacent; Canada / US / Luxembourg |
+| AS56873 | ELITETEAM / 1337TEAM | T1 | Pure BPH; Russia (Seychelles reg.) |
+| AS57724 | DDoS-Guard | T5 | Dual-use / Peering; Russia |
+| AS60424 | ELITETEAM / 1337TEAM | T1 | Pure BPH; Russia (Seychelles reg.) |
+| AS61336 | Zservers | T1 | Pure BPH; Russia (Barnaul) |
+| AS138915 | Kaopu Cloud HK | T3 | APAC BPH cluster; Hong Kong/Global |
+| AS152194 | CTG Server Limited | T1 | FUNNULL backbone; Hong Kong |
+| AS152194 | FUNNULL Technology | T1 | CTG Server Limited |
+| AS198465 | BtHoster | T1 | predecessor, recycled to CN |
+| AS198953 | PROSPERO / Proton66 | T1 | Pure BPH; Russia / St. Petersburg |
+| AS200019 | AlexHost | T4 | BPH-Adjacent; Moldova |
+| AS200593 | PROSPERO / Proton66 | T1 | Pure BPH; Russia / St. Petersburg |
+| AS200651 | FlokiNET | T4 | BPH-Adjacent; Romania / Finland / Iceland |
+| AS204997 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked |
+| AS205090 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked |
+| AS206728 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
+| AS208046 | HostSlick | T3 | BPH-Adjacent; Netherlands |
+| AS209800 | metaspinner net | T3 | BPH downstream; aurologic downstream |
+| AS209847 | WorkTitans / THE.Hosting | T1 | Sanctions Evasion (Stark); Netherlands |
+| AS210281 | WAIcore | T2 | BPH downstream; aurologic downstream |
+| AS210644 | Aeza International | T1 | Pure BPH; Russia / St. Petersburg |
+| AS211252 | CrazyRDP | T1 | RDP-as-a-service (seized); Netherlands |
+| AS211409 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
+| AS211522 | Hypercore LTD | T1 | Sanctions Evasion (Aeza); UK Shell |
+| AS213010 | Zservers | T1 | Pure BPH; Russia (Barnaul) |
+| AS213194 | Zservers | T1 | Pure BPH; Russia (Barnaul) |
+| AS213388 | BtHoster | T1 | Pure BPH (AS-leasing); Lithuania / Bulgaria (UK shells) |
+| AS213702 | QWINS LTD | T2 | BPH; UK Shell |
+| AS213790 | BtHoster | T1 | Pure BPH (AS-leasing); Lithuania / Bulgaria (UK shells) |
+| AS213887 | WAIcore | T2 | BPH downstream; aurologic downstream |
+| AS214295 | BtHoster | T1 | dark |
+| AS214351 | Femo IT / Defhost | T2 | BPH downstream; aurologic downstream |
+| AS214940 | KPROHOST | T3 | BPH downstream; aurologic downstream |
+| AS214943 | Railnet / Virtualine | T2 | BPH downstream; aurologic downstream |
+| AS215208 | Dolphon 1337 | T3 | Corporate Shell; UK Shell |
+| AS215240 | Silent Connection | T3 | Corporate Shell; UK Shell |
+| AS215311 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
+| AS215476 | BtHoster | T1 | dead |
+| AS215540 | GCSAS | T2 | Corporate Shell / BPH; UK Shell |
+| AS215552 | Hypercore LTD | T1 | Sanctions Evasion (Aeza); UK Shell |
+| AS215789 | Karina Rashkovska | T2 | BPH downstream; aurologic downstream |
+| AS216071 | Zservers | T1 | historical |
+| AS216246 | Aeza International | T1 | Pure BPH; Russia / St. Petersburg |
+| AS216309 | Tnsecurity / EVILEMPIRE | T2 | BPH downstream; aurologic downstream |
+| AS394711 | CrazyRDP | T1 | RDP-as-a-service (seized); Netherlands |
 ---
 
 *This ecosystem map is a living analytical product. Update as new corporate relationships are identified, sanctions are issued, or infrastructure migrations are observed. Cross-reference all provider assessments against the risk tier definitions in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md).*

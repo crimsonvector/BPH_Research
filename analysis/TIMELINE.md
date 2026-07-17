@@ -1,7 +1,7 @@
 # BPH Sanctions & Enforcement Timeline
 
-**Version:** 1.1
-**Last Updated:** 2026-06-29
+**Version:** 1.2
+**Last Updated:** 2026-07-17
 **Maintainer:** CrimsonVector Research
 
 ---
@@ -19,6 +19,24 @@
 
 ## 2026
 
+**2026-07-14** | **LE Operation** | **DOJ Unseals Media Land / ML.Cloud Indictment (Operation Riptide)**
+> The Northern District of Ohio unseals an indictment -- returned December 2024 -- charging Alexander Alexandrovich Volosovik (43), Kirill Andreevich Zatolokin (34), and Yulia Vladimirovna Pankova (29), together with corporate defendants Medialand LLC and ML.Cloud LLC, with conspiracy to commit computer fraud, wire fraud, and money laundering. DOJ states 42 victims across 21 states; Medialand infrastructure operated out of China, Finland, the Netherlands, and the United States. State Department Rewards for Justice offers up to $10M for information on foreign-government-linked associates or foreign-government use of Media Land/ML.Cloud. Assistance from Dutch National Police, UK NCA/FCDO, and Australian DFAT/AFP. Part of Operation Riptide, an ongoing FBI campaign against cybercrime actors, infrastructure, and financial networks. [Source: DOJ-MEDIALAND-INDICTMENT]
+>
+> *Note: several outlets report "44 victims across 20 other states" -- the DOJ primary says 42 across 21. The "Yalishanda" alias does not appear in the DOJ release; it comes from prior reporting.*
+
+**2026-07-13** | **Sanctions** | **EU + UK First Joint Cyber Sanctions -- Media Land, ML.Cloud, Z-Pentest**
+> Council Implementing Regulation (EU) 2026/1714, implementing Regulation (EU) 2019/796, designates individuals and entities including BPH provider Media Land LLC, owner Alexander Volosovik, sister company ML.Cloud, and hacktivist group Z-Pentest. Also listed: Vitaly Kovalev ("Stern", Trickbot/Conti), Lumma Stealer developers Voronin and Gordienko, and GRU Unit 29155 members. The first EU cyber sanctions adopted in parallel with the UK. In the same action UK OFSI adds 14 Cyber-regime entries (CYB0115-CYB0129) -- Lumma operators, GRU Unit 29155 officers, CARR members, and entity OOO Impuls -- plus 10 Rybar individuals under the Russia regime. [Sources: EU-CYBER-2026-1714; OFSI-CYBER-2026-07]
+>
+> *Media Land was already UK-designated in the November 2025 trilateral, so the July UK notice contains no Media Land entry -- contrary to some reporting that the UK "joined" sanctions against Media Land on this date. Entity roster reconstructed from secondary sources; the authoritative annex has not been read directly, and the Council press release ("nine individuals") and a EUR-Lex summary ("eight natural persons") disagree. Confirm counts against the annex before citing.*
+
+**2026-07-13** | **Sanctions** | **OFAC -- First VPN Service (1VPNS) + Rashevskyi + Silayev**
+> OFAC designates First VPN Service (1VPNS), administrator Dmytro Rashevskyi, and Belarusian cryptor-seller Yegeniy Vladimirovich Silayev under E.O. 13694 as amended, in coordination with the UK FCDO. 1VPNS had advertised on criminal forums since 2014, kept no logs, and refused law-enforcement cooperation; Rashevskyi used false identities ("Maksim Sorin", "Roman Chabanenko") to procure infrastructure. Follows the May 2026 European takedown of 1VPNS infrastructure. Issued in furtherance of E.O. 14390 (March 2026). [Source: OFAC-1VPNS]
+
+**2026-07-02** | **LE Operation** | **FBI/Google Seize NetNut Proxy Platform + Popa Botnet**
+> The FBI, with Google, Lumen, Shadowserver, and IRS-CI, seizes hundreds of domains tied to NetNut -- a residential-proxy service operated by publicly-traded Israeli firm Alarum Technologies (NASDAQ: ALAR) -- and the associated Popa botnet of 2M+ hijacked devices (smart TVs, streaming boxes, Android). Google Threat Intelligence Group observed 316 distinct threat-actor clusters using suspected NetNut exit nodes in a single week in June 2026. Google disabled C2 accounts and set Play Protect to disable apps carrying NetNut SDKs; Alarum stock fell ~67% within a week. Builds on Google's January 2026 IPIDEA disruption. [Sources: GTIG-NETNUT; KREBS-NETNUT]
+>
+> *Notable as a TAE profile the taxonomy does not yet model: a listed Western public company whose commercial proxy service sourced exit nodes from a botnet.*
+
 **2026-06-24** | **LE Operation** | **Operation Endgame -- SocGholish / Amadey / StealC**
 > Europol announces (takedown operations 15-19 June) the disruption of the SocGholish (fake-update initial access; Evil Corp-linked), Amadey (loader), and StealC (infostealer) networks. 326 servers and 142 domains seized/disrupted; over EUR 41M (~$47M) in criminal crypto frozen; 27M credentials recovered; 14,971 infected WordPress sites cleaned. Directly removes initial-access and credential-theft enabling infrastructure. [Source: EUROPOL-ENDGAME-2026]
 
@@ -31,11 +49,24 @@
 **2026-05-28** | **LE Operation** | **Asocks Residential-Proxy Botnet Takedown**
 > Dutch National Police (Politie) and NCSC-NL dismantle a residential-proxy botnet of 17M+ infected devices across ~163 countries, seizing ~200 servers (all physically in the Netherlands). Press attributes the network to the "Asocks" residential-proxy provider (asocks[.]com); Dutch authorities did not name Asocks in official statements. Partial takedown -- the clearnet storefront remained live. [Sources: NCSC-NL-ASOCKS; SILENTPUSH-CHINESEVPN]
 
+**2026-05-18** | **LE Operation** | **FIOD Raid on THE.Hosting / WorkTitans B.V. (Stark Successor)**
+> The Dutch FIOD (fiscal-crimes service) raids data centers in Dronten and Schiphol-Rijk, with searches in Enschede and Almere, seizing 800+ servers plus devices and records from the Stark Industries successor network operating as THE.Hosting under WorkTitans B.V. Two arrests: Youssef Zinad (57, Amsterdam, company director) and Andrey Nesterenko (39, The Hague, MIRhosting operator). Charge: making economic resources available to EU-sanctioned Russian/Belarusian entities; infrastructure tied to NoName057(16). [Sources: KREBS-FIOD-STARK; DARKREADING-ELLIO-STARK]
+>
+> *Assessed ineffective against the broader network. ELLIO telemetry (via Dark Reading, ~2026-05-28) found scanning/botnet traffic from the network at almost pre-raid levels more than a week later: THE.Hosting resells VPS across multiple countries, so the distributed infrastructure survived the seizure of its Dutch nodes. THE.Hosting told customers data was "lost and cannot be recovered"; MIRhosting said it "temporarily paused" WorkTitans services. A textbook demonstration that the WorkTitans successor structure was purpose-built for continuity.*
+
 **2026-05-06** | **Intelligence** | **Recorded Future / TAE Framework**
 > Recorded Future publishes "Threat Activity Enablers: The Backbone of Today's Threat Landscape" (Stowe & Plude). Formally defines the TAE framework and introduces the Threat Density Score methodology for systematically quantifying malicious hosting concentration across providers.
 
-**2026-05** | **Intelligence** | **Europol IOCTA 2026**
-> Europol publishes the Internet Organised Crime Threat Assessment (IOCTA) 2026 -- comprehensive assessment covering BPH ecosystems, ransomware-as-a-service, cryptocurrency laundering pipelines, and AI-enabled cybercrime.
+**2026-04-28** | **Intelligence** | **Europol IOCTA 2026**
+> Europol publishes the Internet Organised Crime Threat Assessment (IOCTA) 2026, "The evolving threat landscape -- how encryption, proxies and AI are expanding cybercrime" -- a comprehensive assessment covering BPH ecosystems, ransomware-as-a-service, cryptocurrency laundering pipelines, and AI-enabled cybercrime. [Source: IOCTA-2026]
+
+**2026-04-23** | **Sanctions** | **EU 20th Russia Sanctions Package -- Sectoral CASP Ban**
+> The EU adopts its 20th package: 120 listings, the largest in two years, plus a sectoral **total ban on all Russian-established crypto-asset service providers** effective 2026-05-24. Kyrgyzstan is named as the first anti-circumvention jurisdiction. Strategically this is a pivot: rather than continue naming individual platforms -- each of which spawned a successor -- the EU moved to a category-wide prohibition. [Source: EU-20TH-PACKAGE]
+>
+> *Analytical significance: the named-entity/successor-tracking model that this repository is built around becomes less load-bearing for EU compliance under a sectoral regime. See the Key Analytical Pattern note at the foot of this document.*
+
+**2026-04-16** | **Evasion / Provider Event** | **Grinex Suspends Operations; A7A5 Economy Collapses**
+> Grinex -- the Garantex successor exchange -- announces it is suspending operations, claiming a ~$13.7M (≈1 billion ruble) cyberattack it attributes to "Western special services." Elliptic and Chainalysis are skeptical of that attribution (Western LE typically freezes rather than drains stablecoins) and flag a possible false-flag exit. The A7A5 ruble-backed stablecoin (Old Vector) did not technically depeg -- it was deliberately built without a freeze function -- but its economy ran through Grinex, so on-chain volume collapsed by up to ~96% from a peak that had facilitated ~$93.3B the prior year. Grinex, A7A5, and Old Vector remain sanctioned (OFAC/UK/EU); the change is operational, not legal. [Sources: CHAINALYSIS-A7A5; ELLIPTIC-GRINEX; TRM-A7A5-2026]
 
 **2026-04** | **Intelligence** | **Silent Push / FUNNULL / Triad Nexus**
 > Silent Push publishes FUNNULL/Triad Nexus infrastructure laundering update documenting 175+ rotating CNAMEs used by the network to obscure pig-butchering and financial fraud infrastructure behind legitimate CDN services.
@@ -52,9 +83,6 @@
 **2026-02** | **Intelligence** | **Sophos / VMmanager Research**
 > Sophos publishes VMmanager ransomware VM research identifying Stark Industries Solutions and First Server Limited as primary providers of malicious virtual machines used to deploy ransomware payloads via compromised hypervisors.
 
-**2026-02** | **Sanctions** | **EU 16th Sanctions Package / Garantex**
-> EU 16th sanctions package adds Garantex to European sanctions lists, complementing prior OFAC and LE actions against the cryptocurrency exchange.
-
 ---
 
 ## 2025
@@ -68,11 +96,15 @@
 **2025-11-19** | **Sanctions** | **OFAC/UK/AU -- Media Land LLC + Yalishanda (Alexander Volosovyk)**
 > Coordinated trilateral sanctions action. OFAC, UK, and Australia sanction Media Land LLC, its operator Yalishanda (Alexander Volosovyk), three additional leaders, and three sister companies. Media Land operated as a major BPH provider supporting ransomware, fraud, and botnet infrastructure.
 
-**2025-11-19** | **Sanctions** | **OFAC/UK -- Hypercore LTD + Datavice (Aeza Fronts)**
-> OFAC and UK sanction Hypercore LTD (identified as an Aeza front company) and Datavice (Aeza expansion entity), continuing the coordinated pressure campaign against the Aeza hosting ecosystem following CEO Penzev's arrest.
+**2025-11-19** | **Sanctions** | **OFAC -- Hypercore LTD + Datavice MCHJ (Aeza Fronts)**
+> OFAC sanctions Hypercore LTD (an Aeza front company, AS215552 + AS211522) and Datavice MCHJ (Aeza expansion entity, Tashkent, Uzbekistan; established 2025-07-03; Tax ID 312252645; Reg. 2868352), continuing the coordinated pressure campaign against the Aeza hosting ecosystem following CEO Penzev's arrest. Both under E.O. 13694; Datavice listed [CAATSA-RUSSIA] [CYBER4], Linked To AEZA GROUP LLC.
+>
+> *UK participation is narrower than previously recorded here. Verified against the live FCDO UK Sanctions List (2026-07-17): **Datavice is not UK-designated at all** — Treasury's own wording distinguishes "OFAC is designating Datavice" from "OFAC and the United Kingdom are designating Hypercore Ltd." **Hypercore is not separately listed by the UK either** — it appears only as a `Subsidiaries` field value on the Aeza Group LLC row, so it is captured by UK ownership-and-control rules rather than by its own designation. The UK's entire 2025-11-19 action is seven names: Media Land LLC, ML.Cloud LLC, Volosovik, Zatolokin, Pankova, Kozlov (Cyber regime), and Aeza Group LLC (Russia regime).*
 
-**2025-11-19** | **Intelligence** | **CISA/NSA/FBI/DC3 + Five Eyes -- BPH Guidance**
-> CISA, NSA, FBI, DC3, and Five Eyes partners publish "Bulletproof Defense: Mitigating Risks from Bulletproof Hosting Providers" -- the first comprehensive interagency guidance document on identifying and defending against BPH-sourced threats.
+**2025-11-19** | **Intelligence** | **CISA/NSA/FBI/DC3 + International Partners -- BPH Guidance**
+> CISA, NSA, FBI, and DC3 (US), with ASD's ACSC (AU), the Canadian Centre for Cyber Security (CA), NCSC-NL (NL), NCSC-NZ (NZ), and NCSC-UK (UK), publish "Bulletproof Defense: Mitigating Risks from Bulletproof Hosting Providers" -- the first comprehensive interagency guidance document on identifying and defending against BPH-sourced threats. Developed via the Joint Ransomware Task Force. [Source: CISA-BPH-2025]
+>
+> *Co-sealers are Five Eyes **plus the Netherlands** -- NCSC-NL is not a Five Eyes member, so "Five Eyes" alone understates the coalition.*
 
 **2025-11-13** | **LE Operation** | **Operation Endgame Phase 2**
 > Operation Endgame targets Rhadamanthys, VenomRAT, and Elysium botnet infrastructure. 1,025 servers taken down worldwide. VenomRAT suspect arrested in Greece. Represents continued momentum from the May 2025 Endgame operations.
@@ -116,8 +148,10 @@
 **2025-06-16** | **LE Operation** | **Archetyp Market**
 > Archetyp Market dismantled. The platform had 600,000 users and facilitated EUR 250M in transactions, making it the oldest surviving dark web drug marketplace at time of seizure. Administrator arrested in Barcelona. Infrastructure relied on BPH-hosted services.
 
-**2025-05-20** | **Sanctions** | **EU 17th Russia Sanctions Package -- Stark Industries + Neculiti Brothers**
-> EU sanctions Stark Industries Solutions Ltd along with Ivan and Iurie Neculiti under the 17th Russia sanctions package. First EU sanctions directly targeting a BPH provider and its operators. Stark had been identified as a primary infrastructure provider for Russian state-aligned cyber operations.
+**2025-05-20** | **Sanctions** | **EU -- Stark Industries + Neculiti Brothers (Hybrid Threats Regulation)**
+> EU sanctions Stark Industries Solutions Ltd along with owner Ivan Neculiti and CEO Iurie Neculiti. First EU sanctions directly targeting a BPH provider and its operators. Stark had been identified as a primary infrastructure provider for Russian state-aligned cyber operations.
+>
+> *Legal basis correction: these designations were made under the **Hybrid Threats Regulation, Council Regulation (EU) 2024/2642** -- not the 17th Russia package (Reg. 833/2014 / 269/2014), which was adopted the same day and covered the shadow fleet. The distinction matters: it changes the delisting path and the legal basis for challenge.*
 
 **2025-05-19** | **Evasion** | **Stark Industries -> THE.Hosting Rebrand**
 > Stark Industries Solutions renamed to THE.Hosting under WorkTitans B.V. control -- executed one day before EU sanctions announcement. Indicates advance knowledge of sanctions timing and pre-positioned evasion strategy.
@@ -157,6 +191,9 @@
 
 **2025-03-13** | **Evasion** | **UFO Hosting LLC (AS33993)**
 > UFO Hosting LLC (AS33993) registered in RIPE by Savushkin. Purpose-built as a sanctions-resilient vehicle for receiving Stark Industries prefix migrations. Registration precedes EU sanctions by approximately 68 days.
+
+**2025-02-24** | **Sanctions** | **EU 16th Russia Sanctions Package -- Garantex**
+> The EU's 16th package lists Garantex along with six attributed wallet addresses -- the first cryptocurrency exchange the EU ever sanctioned. Complements the prior OFAC designation (April 2022) and precedes the March 2025 server seizure. [Source: EU-16TH-PACKAGE]
 
 **2025-02-20** | **Intelligence** | **BlackBasta Chat Leak**
 > BlackBasta internal chat logs leaked publicly, exposing the ransomware group's internal operations, affiliate communications, victim targeting, ransom negotiations, and BPH infrastructure procurement patterns.
@@ -248,11 +285,11 @@
 
 ### Sanctions Designations by Authority
 
-| Authority | Designations | Key Targets |
-|-----------|-------------|-------------|
-| **OFAC (US)** | 9 | Garantex (2022 + 2025 re-designation), Zservers/XHOST (2025), FUNNULL (2025), Aeza International (2025), Media Land/Yalishanda (2025), Hypercore/Datavice (2025), Iranian exchanges -- Nobitex/Wallex/Bitpin/Ramzinex (2026 "Economic Fury"), Prince Group/Huione -- 35 targets (2026) |
-| **EU** | 4 | Stark Industries + Neculiti brothers (2025 -- 17th package), Garantex (2026 -- 16th package), A7A5 stablecoin ban (2025 -- 19th package) |
-| **UK** | 4 | Zservers/XHOST (2025), Aeza International/Hypercore/Datavice (2025), Media Land/Yalishanda (2025) |
+| Authority | Actions | Key Targets |
+|-----------|---------|-------------|
+| **OFAC (US)** | 10 | Garantex (2022 + 2025 re-designation), Zservers/XHOST (2025), FUNNULL (2025), Aeza International (2025), Media Land/Yalishanda (2025), Hypercore + Datavice (2025), Iranian exchanges -- Nobitex/Wallex/Bitpin/Ramzinex (2026 "Economic Fury"), Prince Group/Huione -- 35 targets (2026), First VPN Service/1VPNS + Rashevskyi + Silayev (2026) |
+| **EU** | 5 | Garantex (2025-02-24 -- 16th package, first EU crypto-exchange listing), Stark Industries + Neculiti brothers (2025-05-20 -- **Hybrid Threats Reg. (EU) 2024/2642, not the 17th package**), A7A5 ban + Grinex + Old Vector (2025-10-23 -- 19th package), sectoral CASP ban (2026-04-23 -- 20th package), Media Land + ML.Cloud + Volosovik + Z-Pentest (2026-07-13 -- Impl. Reg. (EU) 2026/1714) |
+| **UK** | 4 | Zservers/XHOST (2025), Aeza International + Hypercore-via-control (2025; **Datavice NOT UK-designated**), Grinex (2025-08-20 OFSI), Media Land/Volosovik (2025) |
 | **Australia** | 2 | Zservers/XHOST (2025), Media Land/Yalishanda (2025) |
 | **Canada** | 1 | 764 Network / Maniac Murder Cult / Terrorgram Collective (2025 -- terrorist designation) |
 
@@ -260,10 +297,10 @@
 
 | Metric | Count | Notes |
 |--------|-------|-------|
-| **Providers sanctioned** | 8+ | Garantex, Zservers/XHOST, FUNNULL, Aeza International, Media Land, Hypercore, Datavice, Stark Industries |
-| **Providers seized/disrupted by LE** | 13+ | Garantex (seized), LockBit (Op Cronos), BreachForums, XSS, Phobos/8Base, CrazyRDP, Cryptomixer.io, Archetyp Market, NoName057(16), Smokeloader/Endgame coalition, SocGholish/Amadey/StealC (Op Endgame June 2026), Huione backend infra (FBI June 2026), Asocks residential-proxy botnet (NCSC-NL May 2026) |
+| **Providers/entities sanctioned** | 15 | (`status=sanctioned` in `BPH_Master.csv`) Aeza International, Stark Industries, Zservers, Media Land, FUNNULL, Hypercore, PQ Hosting Plus, Grinex, A7A5/Old Vector, Nobitex, Wallex, Bitpin, Ramzinex, Datavice, First VPN Service/1VPNS |
+| **Providers seized/disrupted by LE** | 16+ | Garantex (seized), LockBit (Op Cronos), BreachForums, XSS, Phobos/8Base, CrazyRDP, Cryptomixer.io, Archetyp Market, NoName057(16), Smokeloader/Endgame coalition, SocGholish/Amadey/StealC (Op Endgame June 2026), Huione backend infra (FBI June 2026), Asocks residential-proxy botnet (NCSC-NL May 2026), THE.Hosting/WorkTitans (FIOD May 2026, network survived), 1VPNS infra (Europe, May 2026), NetNut proxy + Popa botnet (FBI/Google, July 2026) |
 | **Providers that evaded via rebranding** | 6+ | Stark -> THE.Hosting -> WorkTitans B.V.; Garantex -> Grinex/Exved; Aeza -> Hypercore/Datavice; Virtualine -> metaspinner net; Stark prefixes -> UFO Hosting / PQ Hosting Plus; Huione -> Tudou -> H-Pay Service PLC |
-| **Individuals sanctioned** | 11+ | Mishin, Bolshakov (Zservers); Neculiti x2 (Stark); Penzev, Bozoyan, Gast, Knyazev (Aeza); Volosovyk (Media Land); Liu Lizhi (FUNNULL); Serda (Garantex/Grinex); Hu Xiaowei/Chen Xiao'er (Prince Group/Huione) |
+| **Individuals sanctioned** | 17+ | Mishin, Bolshakov (Zservers); Neculiti x2 (Stark); Penzev, Bozoyan, Gast, Knyazev (Aeza); Volosovik (Media Land); Liu Lizhi (FUNNULL); Mira Serda (Garantex/Grinex); Hu Xiaowei/Chen Xiao'er (Prince Group/Huione); Rashevskyi, Silayev (1VPNS); Zatolokin, Pankova, Kovalev/"Stern" (Media Land / EU July 2026) |
 
 ### Evasion Velocity: Time from Sanctions/LE Action to Successor Entity
 
@@ -280,6 +317,8 @@
 ### Key Analytical Pattern
 
 > **Average evasion lead time: Negative.** In every major case tracked in 2025, successor entities were established *before* sanctions or LE actions took effect. The Stark Industries case is paradigmatic: UFO Hosting was registered 68 days before EU sanctions, PQ Hosting Plus 7 days before, and the corporate rebrand to THE.Hosting occurred the day before announcement. This pattern indicates that sanctioned entities have consistent advance warning of enforcement actions, enabling pre-positioned evasion infrastructure. Effective enforcement requires targeting the successor entities simultaneously with the original designation -- as demonstrated by OFAC's expanded Garantex re-designation in August 2025, which named Grinex, Exved, and related entities in a single action.
+
+> **2026 regime shift -- from named entities to categories.** The pre-positioned-successor problem drove a strategic change in EU practice. The 20th package (2026-04-23) abandoned the whack-a-mole of naming individual platforms in favour of a **sectoral ban on an entire category** -- all Russian-established crypto-asset service providers -- which a freshly-spun successor cannot escape by virtue of being new. On the US side, E.O. 14390 (2026-03-06, "Combating Cybercrime, Fraud, and Predatory Schemes Against American Citizens") set a coordination and policy mandate around the same problem -- though it created **no new sanctions authority**: the actual 2026 designations still rest on pre-existing OFAC executive orders (1VPNS under E.O. 13694 "in furtherance of" 14390; Prince Group/Huione under the TCO authority E.O. 13581/13863). The EU category ban reduces the analytical leverage of pure successor-entity tracking for *compliance blocking*, because the successor is caught automatically. Successor tracking remains essential for *attribution and infrastructure mapping*.
 
 ---
 

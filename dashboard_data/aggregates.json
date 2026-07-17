@@ -1,29 +1,29 @@
 {
   "totals": {
-    "providers": 60,
-    "sanctioned": 18,
-    "seized_or_takedown": 3,
+    "providers": 63,
+    "sanctioned": 20,
+    "seized_or_takedown": 4,
     "active": 19
   },
   "by_tier": {
-    "T2": 18,
-    "T1": 16,
+    "T2": 19,
+    "T1": 18,
     "T3": 13,
     "T5": 7,
     "T4": 6
   },
   "by_status": {
     "active": 19,
+    "sanctioned": 15,
     "flagged": 14,
-    "sanctioned": 13,
     "suspected": 5,
     "dissolved": 3,
     "evading": 3,
-    "seized": 2,
+    "seized": 3,
     "exposed": 1
   },
   "by_country": {
-    "Russia": 8,
+    "Russia": 9,
     "Iran": 5,
     "Netherlands": 4,
     "Russia (St. Petersburg)": 4,
@@ -37,9 +37,9 @@
     "Southeast Asia": 2
   },
   "by_authority": {
-    "OFAC": 14,
-    "EU": 4,
-    "UK": 3,
+    "OFAC": 16,
+    "EU": 5,
+    "UK": 4,
     "AU": 2,
     "Other": 1
   },
@@ -73,14 +73,14 @@
   },
   "timeline": [
     {
-      "date": "2022-04-01",
-      "date_label": "April 2022",
+      "date": "2022-04-05",
+      "date_label": "April 5 2022",
       "provider": "Garantex",
       "authorities": [
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
     },
     {
       "date": "2025-02-11",
@@ -92,6 +92,16 @@
       "detail": "US/UK/AU trilateral Feb 11 2025"
     },
     {
+      "date": "2025-02-24",
+      "date_label": "Feb 24 2025",
+      "provider": "Garantex",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+    },
+    {
       "date": "2025-03-01",
       "date_label": "March 2025",
       "provider": "Garantex",
@@ -99,34 +109,7 @@
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
-    },
-    {
-      "date": "2025-05-01",
-      "date_label": "May 2025",
-      "provider": "FUNNULL Technology Inc.",
-      "authorities": [
-        "OFAC"
-      ],
-      "detail": "OFAC May 2025"
-    },
-    {
-      "date": "2025-05-01",
-      "date_label": "May 2025",
-      "provider": "CTG Server Limited",
-      "authorities": [
-        "OFAC"
-      ],
-      "detail": "OFAC May 2025 (via FUNNULL designation)"
-    },
-    {
-      "date": "2025-05-01",
-      "date_label": "May 2025",
-      "provider": "StarCloud Global (Triad Nexus)",
-      "authorities": [
-        "OFAC"
-      ],
-      "detail": "OFAC May 2025 (via FUNNULL lineage)"
+      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
     },
     {
       "date": "2025-05-20",
@@ -135,7 +118,7 @@
       "authorities": [
         "EU"
       ],
-      "detail": "EU May 20 2025 (17th Russia package)"
+      "detail": "EU May 20 2025 (Hybrid Threats Regulation (EU) 2024/2642 - NOT the 17th Russia package; adopted same day but a separate legal basis)"
     },
     {
       "date": "2025-05-20",
@@ -144,7 +127,34 @@
       "authorities": [
         "EU"
       ],
-      "detail": "EU May 20 2025 (via Stark/Neculiti designation)"
+      "detail": "EU May 20 2025 (via Stark/Neculiti designation under Hybrid Threats Regulation (EU) 2024/2642)"
+    },
+    {
+      "date": "2025-05-29",
+      "date_label": "May 29 2025",
+      "provider": "FUNNULL Technology Inc.",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC May 29 2025"
+    },
+    {
+      "date": "2025-05-29",
+      "date_label": "May 29 2025",
+      "provider": "CTG Server Limited",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC May 29 2025 (via FUNNULL designation)"
+    },
+    {
+      "date": "2025-05-29",
+      "date_label": "May 29 2025",
+      "provider": "StarCloud Global (Triad Nexus)",
+      "authorities": [
+        "OFAC"
+      ],
+      "detail": "OFAC May 29 2025 (via FUNNULL lineage)"
     },
     {
       "date": "2025-07-01",
@@ -154,17 +164,7 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC July 1 2025; UK NCA July 1 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
-    },
-    {
-      "date": "2025-07-01",
-      "date_label": "July 1 2025",
-      "provider": "Aeza International Ltd",
-      "authorities": [
-        "OFAC",
-        "UK"
-      ],
-      "detail": "OFAC July 1 2025; UK NCA July 1 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+      "detail": "OFAC July 1 2025 (in coordination with UK NCA); UK designation Sept 19 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
     },
     {
       "date": "2025-08-14",
@@ -174,7 +174,7 @@
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
     },
     {
       "date": "2025-08-14",
@@ -207,6 +207,16 @@
       "detail": "OFAC Aug 14 2025 (successor to Garantex); UK OFSI Aug 20 2025"
     },
     {
+      "date": "2025-09-19",
+      "date_label": "Sept 19 2025",
+      "provider": "Aeza International Ltd",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC July 1 2025 (in coordination with UK NCA); UK designation Sept 19 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+    },
+    {
       "date": "2025-10-01",
       "date_label": "Oct 2025",
       "provider": "A7A5 / Old Vector",
@@ -233,7 +243,7 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC July 1 2025; UK NCA July 1 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+      "detail": "OFAC July 1 2025 (in coordination with UK NCA); UK designation Sept 19 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
     },
     {
       "date": "2025-11-19",
@@ -241,9 +251,10 @@
       "provider": "Media Land LLC",
       "authorities": [
         "OFAC",
+        "EU",
         "AU"
       ],
-      "detail": "OFAC/UK/AU trilateral Nov 19 2025"
+      "detail": "OFAC/UK/AU trilateral Nov 19 2025; EU July 13 2026 (Impl. Reg. (EU) 2026/1714 - Media Land + Volosovik + ML[.]Cloud); DOJ indictment unsealed July 14 2026 (N.D. Ohio)"
     },
     {
       "date": "2025-11-19",
@@ -253,17 +264,16 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC/UK Nov 19 2025"
+      "detail": "OFAC Nov 19 2025 (E.O. 13694); UK: not separately listed - captured via ownership/control as a Subsidiaries entry on the Aeza Group LLC row of the FCDO UK Sanctions List"
     },
     {
-      "date": "2026-02-01",
-      "date_label": "Feb 2026",
-      "provider": "Garantex",
+      "date": "2025-11-19",
+      "date_label": "Nov 19 2025",
+      "provider": "Datavice MCHJ",
       "authorities": [
-        "OFAC",
-        "EU"
+        "OFAC"
       ],
-      "detail": "OFAC April 2022; EU 16th package Feb 2026; servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC Nov 19 2025 (E.O. 13694; CAATSA-RUSSIA; CYBER4; Linked To Aeza Group LLC); NOT UK-designated"
     },
     {
       "date": "2026-06-02",
@@ -309,6 +319,38 @@
         "OFAC"
       ],
       "detail": "FinCEN proposed Section 311 amendment June 23 2026 (successor-entity rule)"
+    },
+    {
+      "date": "2026-07-13",
+      "date_label": "July 13 2026",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "AU"
+      ],
+      "detail": "OFAC/UK/AU trilateral Nov 19 2025; EU July 13 2026 (Impl. Reg. (EU) 2026/1714 - Media Land + Volosovik + ML[.]Cloud); DOJ indictment unsealed July 14 2026 (N.D. Ohio)"
+    },
+    {
+      "date": "2026-07-13",
+      "date_label": "July 13 2026",
+      "provider": "First VPN Service (1VPNS)",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC July 13 2026 (E.O. 13694 as amended, in furtherance of E.O. 14390; coordinated with UK FCDO)"
+    },
+    {
+      "date": "2026-07-14",
+      "date_label": "July 14 2026",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "AU"
+      ],
+      "detail": "OFAC/UK/AU trilateral Nov 19 2025; EU July 13 2026 (Impl. Reg. (EU) 2026/1714 - Media Land + Volosovik + ML[.]Cloud); DOJ indictment unsealed July 14 2026 (N.D. Ohio)"
     }
   ]
 }
