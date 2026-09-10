@@ -1,0 +1,34 @@
+{
+  "id": "kaopu-byovd-c2-2026-08",
+  "title": "Hands-on intrusion / custom C2 with BYOVD EDR evasion on Kaopu Cloud HK",
+  "date": "2026-09-10",
+  "first_observed": "2026-08-17",
+  "last_verified": "2026-09-10",
+  "category": "c2",
+  "family": "Custom Python C2 + BYOVD EDR evasion (hands-on intrusion)",
+  "confidence": "high",
+  "status": "active",
+  "asn": "AS138915",
+  "provider": "Kaopu Cloud HK Limited (AS138915)",
+  "bph_link": "Kaopu Cloud HK Limited",
+  "vt": "0 (not externally flagged; verified live via exposure)",
+  "summary": "A hands-on-keyboard intrusion operation staged on the suspected-BPH host Kaopu Cloud HK (AS138915), still Shodan-visible as of 2026-09-10 (ports 22/80). The host held a custom Python C2 with accumulated live implant state, an MSSQL RCE chain, a Windows privilege-escalation suite, a bring-your-own-vulnerable-driver EDR-evasion kit, and a chisel tunneller. Not flagged by public feeds, so assessed on first-party evidence.",
+  "detail": "A hands-on-keyboard intrusion toolkit on Kaopu Cloud HK (AS138915, a suspected bulletproof host tracked here). The host 38[.]60[.]252[.]110 remains Shodan-visible as of 2026-09-10 (ports 22/80), though VirusTotal does not flag it - so this rests on first-party evidence, hence high rather than confirmed. Contents: a custom Python C2 server plus a state file holding accumulated live implant data; an MSSQL RCE exploit series; a full Windows local-privilege-escalation 'Potato' suite; a bring-your-own-vulnerable-driver kit for disabling EDR; and a chisel tunneller for pivoting. Kaopu's suspected-BPH profile gives the C2 takedown resistance.",
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "38[[.]]60[[.]]252[[.]]110",
+      "role": "custom Python C2 + BYOVD/privesc intrusion staging (Kaopu Cloud HK, AS138915), live 2026-09-10"
+    }
+  ],
+  "references": [],
+  "tags": [
+    "c2",
+    "byovd",
+    "edr-evasion",
+    "hands-on-keyboard",
+    "mssql-rce",
+    "kaopu",
+    "suspected-bph"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "aeza-comfyui-cryptojacking-2026-08",
+  "title": "GPU/AI-host (ComfyUI) cryptojacking run from sanctioned Aeza",
+  "date": "2026-09-10",
+  "first_observed": "2026-08-17",
+  "last_verified": "2026-09-10",
+  "category": "cryptojacking",
+  "family": "GPU/AI-host cryptojacking (mass ComfyUI scanning + miners)",
+  "confidence": "high",
+  "status": "active",
+  "asn": "AS210644",
+  "provider": "Aeza International Ltd (AS210644)",
+  "bph_link": "Aeza International Ltd",
+  "vt": "4 malicious",
+  "summary": "An operator on the OFAC-sanctioned bulletproof host Aeza (AS210644) mass-scans internet-exposed AI image-generation (ComfyUI) and other GPU hosts and deploys cryptominers. The staging host is still live and VirusTotal-flagged as of 2026-09-10 (ports 8080/8081 up), holding large scan-result sets, 10+ miner builds, and directories masquerading as system/kubelet components for persistence.",
+  "detail": "A cryptojacking operation on the OFAC-sanctioned bulletproof host Aeza (AS210644) targeting internet-exposed AI/GPU hosts, notably ComfyUI image-generation servers. The staging host 176[.]124[.]207[.]93 remains Shodan-visible and VirusTotal-flagged (4) as of 2026-09-10 on ports 8080/8081. It holds scan-result corpora tying back to mass ComfyUI scanning, 10+ distinct miner builds (xmrig and alternatives), and masquerade directories imitating system and kubelet helper components for persistence. GPU-host cryptojacking is a rising monetisation pattern; sanctioned-BPH hosting gives it takedown resistance. Assessed high-confidence on first-party evidence plus current VT flagging.",
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "176[[.]]124[[.]]207[[.]]93",
+      "role": "ComfyUI/GPU cryptojacking scan+miner staging (Aeza, AS210644), live 2026-09-10 on 8080/8081"
+    }
+  ],
+  "references": [],
+  "tags": [
+    "cryptojacking",
+    "cryptomining",
+    "comfyui",
+    "gpu",
+    "aeza",
+    "sanctioned"
+  ]
+}

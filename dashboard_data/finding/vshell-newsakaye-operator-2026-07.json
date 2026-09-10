@@ -1,0 +1,64 @@
+{
+  "id": "vshell-newsakaye-operator-2026-07",
+  "title": "Live Vshell C2 operator 'newsakaye' - 4-node HK cluster",
+  "date": "2026-09-10",
+  "first_observed": "2026-07-23",
+  "last_verified": "2026-09-10",
+  "category": "c2",
+  "family": "Vshell C2 (Chinese framework)",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS45753",
+  "provider": "Netsec Limited (AS45753, HK)",
+  "bph_link": "Netsec Limited (AS45753) - HK host, not currently a tracked BPH entity",
+  "vt": "6-15 malicious per node",
+  "summary": "A single Vshell C2 operator runs a four-node cluster on Netsec Limited (AS45753, HK), all four Shodan-visible and VirusTotal-flagged as of 2026-09-10, with an exposed MariaDB still on :3306. The nodes share one TLS cert (vshell[.]newsakaye[.]com) and back the same operator tooling domain. Shares the fraud-oriented, HK-hosted, Chinese-C2 profile of the co-reported Gshell activity.",
+  "detail": "A Vshell C2 cluster on Netsec Limited (AS45753, HK): 52[.]128[.]224[.]234/236/237/238, all live and VirusTotal-flagged (6-15 detections) as of 2026-09-10 on the Vshell C2 port 8084 plus 8089/9090/9191, with MariaDB still exposed on :3306. All four present one shared TLS certificate vshell[.]newsakaye[.]com (serial 0590E720...). The operator domain newsakaye[.]com is dedicated offensive infrastructure - subdomains vshell (C2), rshell (reverse shell) and xss (payload/hook); GoDaddy-registered 2025-07-18, privacy-protected. Nodes also back random-string '...555' scam domains. Note: Netsec is not currently a tracked BPH entity in the dataset; it is a HK commodity host repeatedly backing Chinese C2 and fraud, included as the co-reported partner of the CTG Gshell activity.",
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "52[[.]]128[[.]]224[[.]]234",
+      "role": "Vshell C2, live 2026-09-10; backs scam domains + exposes MariaDB :3306"
+    },
+    {
+      "type": "ip",
+      "value": "52[[.]]128[[.]]224[[.]]236",
+      "role": "Vshell C2 (:8084), live 2026-09-10 - shared cert"
+    },
+    {
+      "type": "ip",
+      "value": "52[[.]]128[[.]]224[[.]]237",
+      "role": "Vshell C2, live 2026-09-10 - shared cert"
+    },
+    {
+      "type": "ip",
+      "value": "52[[.]]128[[.]]224[[.]]238",
+      "role": "Vshell C2 (:8084), live 2026-09-10 - shared cert"
+    },
+    {
+      "type": "domain",
+      "value": "newsakaye[[.]]com",
+      "role": "operator tooling domain (GoDaddy, reg 2025-07-18, privacy-protected)"
+    },
+    {
+      "type": "domain",
+      "value": "vshell[[.]]newsakaye[[.]]com",
+      "role": "Vshell C2 subdomain (shared cert across the 4 nodes)"
+    }
+  ],
+  "references": [
+    {
+      "label": "Hunt[.]io - Chinese Operators, Claude Code + DeepSeek government intrusion",
+      "url": "hxxps://hunt[[.]]io/blog/chinese-operators-claude-deepseek-government-intrusion"
+    }
+  ],
+  "tags": [
+    "vshell",
+    "c2",
+    "china-nexus",
+    "newsakaye",
+    "netsec",
+    "fraud",
+    "cert-pivot"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "gshell-c2-cluster-ctg-2026-07",
+  "title": "Live Gshell C2 nodes on CTG Server (HK), China-nexus fraud",
+  "date": "2026-09-10",
+  "first_observed": "2026-07-23",
+  "last_verified": "2026-09-10",
+  "category": "c2",
+  "family": "Gshell C2 (Go-based Chinese C2 framework)",
+  "confidence": "confirmed",
+  "status": "active",
+  "asn": "AS152194",
+  "provider": "CTG Server Limited (AS152194, HK)",
+  "bph_link": "CTG Server Limited",
+  "vt": "3-4 malicious per node; 1 communicating sample on a since-offline outlier",
+  "summary": "Two co-managed Gshell C2 servers (Go-based Chinese framework) remain live on CTG Server (AS152194, HK), verified 2026-09-10 on ports 8080/8089. Co-management is proven by a shared TLS cert serial and a shared SSH host key. The wider cluster first mapped in July (SHANGXING, NTT, SpeedVM, Globenet nodes) has largely gone dark, leaving CTG as the persistent host. Passive DNS ties the nodes to a financially-motivated fraud domain web.",
+  "detail": "The CTG Server pair 134[.]122[.]204[.]86 and [.]106 (AS152194, HK) still present the Gshell framework and are Shodan-visible as of 2026-09-10 on ports 8080/8089 (the operator has added 8089 alongside the original 8080). Co-management is proven two ways: a shared TLS cert serial (AEE548...) and a shared SSH host key d5:94:a4:a1:bc:db:10 (ed25519 SHA256:TOJ3LH...). These extend the publicly documented China-linked Gshell/TencShell activity onto CTG (tracked here). The rest of the July cluster - a SHANGXING (HK) pair, plus NTT (US), SpeedVM (US) and Globenet (BR) singletons - has since gone offline or off-port, so this card is scoped to the still-live CTG nodes. Passive DNS ties the cluster to a financially-motivated fraud domain web (Kelly Services staffing typosquat, crypto-scam, finance and booking lures). Assessment: China-nexus and financially-motivated rather than a confirmed government-espionage APT.",
+  "iocs": [
+    {
+      "type": "ip",
+      "value": "134[[.]]122[[.]]204[[.]]86",
+      "role": "Gshell C2 (CTG, HK), live 2026-09-10 on 8080/8089; co-managed pair (shared cert AEE548... + SSH d5:94:a4:a1:bc:db:10)"
+    },
+    {
+      "type": "ip",
+      "value": "134[[.]]122[[.]]204[[.]]106",
+      "role": "Gshell C2 (CTG, HK), live 2026-09-10; co-managed pair"
+    },
+    {
+      "type": "cert",
+      "value": "CN=Gshell Server, O=Gshell C2",
+      "role": "Gshell default TLS cert (ports 8080/8089)"
+    },
+    {
+      "type": "domain",
+      "value": "kellyservicess[[.]]net",
+      "role": "fraud domain on CTG node (Kelly Services staffing typosquat)"
+    },
+    {
+      "type": "domain",
+      "value": "sgx-business[[.]]com",
+      "role": "finance-lure domain on CTG node"
+    }
+  ],
+  "references": [
+    {
+      "label": "Hunt[.]io - Chinese Operators, Claude Code + DeepSeek government intrusion",
+      "url": "hxxps://hunt[[.]]io/blog/chinese-operators-claude-deepseek-government-intrusion"
+    }
+  ],
+  "tags": [
+    "gshell",
+    "c2",
+    "china-nexus",
+    "ctg-server",
+    "fraud",
+    "cert-pivot"
+  ]
+}
