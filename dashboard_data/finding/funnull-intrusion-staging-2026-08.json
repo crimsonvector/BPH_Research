@@ -29,5 +29,8 @@
     "ctg-server",
     "sanctioned",
     "threatfox"
-  ]
+  ],
+  "last_seen_utc": "2026-09-04",
+  "stale_days": 5,
+  "vt_malicious": 10
 }

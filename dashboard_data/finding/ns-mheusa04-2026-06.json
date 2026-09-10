@@ -54,5 +54,9 @@
     "procurement-lure",
     "aeza",
     "novel-sample"
-  ]
+  ],
+  "last_verified": "2026-09-10",
+  "last_seen_utc": "2026-09-08",
+  "stale_days": 2,
+  "vt_malicious": 6
 }

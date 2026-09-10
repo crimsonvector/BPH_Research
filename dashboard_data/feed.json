@@ -233,28 +233,6 @@
     ]
   },
   {
-    "id": "nexus-c2-bthoster-2026-05",
-    "title": "Nexus C2 panel hosted on BtHoster (since pulled)",
-    "date": "2026-06-30",
-    "first_observed": "2026-04-19",
-    "category": "c2",
-    "family": "Nexus C2 (emerging framework)",
-    "confidence": "confirmed",
-    "status": "dead",
-    "asn": "AS213790",
-    "provider": "Limited Network LTD (BtHoster / BTCloud)",
-    "bph_link": "BtHoster",
-    "vt": "13/91",
-    "summary": "An instance of the emerging multi-tenant Nexus C2 framework ran on confirmed BtHoster infrastructure with 40+ communicating Windows implants during an April-May 2026 burst, then was pulled to a maintenance page after public disclosure. Notable for placing a documented C2-as-a-service framework directly on an actively-rotating bulletproof operator.",
-    "tags": [
-      "nexus-c2",
-      "c2-as-a-service",
-      "bthoster",
-      "limited-network-ltd",
-      "pulled"
-    ]
-  },
-  {
     "id": "meshcentral-23-94-252-217-2026-06",
     "title": "MeshCentral RMM-abuse C2 on Aeza-staged payloads",
     "date": "2026-06-30",

@@ -60,5 +60,8 @@
     "netsec",
     "fraud",
     "cert-pivot"
-  ]
+  ],
+  "last_seen_utc": "2026-09-10",
+  "stale_days": 0,
+  "vt_malicious": 15
 }

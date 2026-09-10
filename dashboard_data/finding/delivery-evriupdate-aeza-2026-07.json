@@ -38,5 +38,9 @@
     "aeza",
     "sanctioned",
     "dns-on-bph"
-  ]
+  ],
+  "last_verified": "2026-09-10",
+  "last_seen_utc": "2026-09-10",
+  "stale_days": 0,
+  "vt_malicious": 1
 }

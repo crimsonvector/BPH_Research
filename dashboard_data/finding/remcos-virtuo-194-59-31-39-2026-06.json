@@ -28,5 +28,9 @@
     "infostealer",
     "aeza",
     "malspam"
-  ]
+  ],
+  "last_verified": "2026-09-10",
+  "last_seen_utc": "2026-09-07",
+  "stale_days": 3,
+  "vt_malicious": 5
 }

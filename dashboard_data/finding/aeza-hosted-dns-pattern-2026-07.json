@@ -68,5 +68,9 @@
     "dns-infrastructure",
     "takedown-resistance",
     "proxy"
-  ]
+  ],
+  "last_verified": "2026-09-10",
+  "last_seen_utc": "2026-09-09",
+  "stale_days": 1,
+  "vt_malicious": 1
 }
