@@ -1447,5 +1447,28 @@
     "last_updated": "2026-07-17",
     "rf_threat_density_score": "",
     "description": "LE-seized commercial residential-proxy platform (Alarum/NASDAQ: ALAR) with botnet-sourced exit nodes."
+  },
+  {
+    "provider_name": "SHANGXING TECH LIMITED",
+    "status": "suspected",
+    "risk_tier": "T2-High Risk",
+    "primary_asn": "AS400619",
+    "additional_asns": "",
+    "known_prefixes": "103[.]112[.]97[.]0/24",
+    "country_registration": "Hong Kong",
+    "country_operations": "Hong Kong/US",
+    "corporate_entity": "SHANGXING TECH LIMITED",
+    "aliases": "Fastmos Co Limited; AROSSCLOUD INC.; Zun Cloud Limited",
+    "parent_entity": "",
+    "upstream_providers": "",
+    "sanctions_designations": "",
+    "key_personnel": "",
+    "associated_threat_actors": "China-nexus",
+    "associated_malware": "Gshell C2; Vshell-adjacent; mass web-exploitation (Java memshell / CVE PoC)",
+    "operational_patterns": "Multi-org HK reseller ASN; recurring China-nexus C2 + exploitation staging; SOCKS relays",
+    "first_observed": "2026-07-23",
+    "last_updated": "2026-09-10",
+    "rf_threat_density_score": "",
+    "description": "HK reseller ASN, recurring China-nexus C2 and mass-exploitation host (SHANGXING/Fastmos/Arosscloud)."
   }
 ]

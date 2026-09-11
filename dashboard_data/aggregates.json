@@ -1,12 +1,12 @@
 {
   "totals": {
-    "providers": 63,
+    "providers": 64,
     "sanctioned": 20,
     "seized_or_takedown": 4,
     "active": 19
   },
   "by_tier": {
-    "T2": 19,
+    "T2": 20,
     "T1": 18,
     "T3": 13,
     "T5": 7,
@@ -16,7 +16,7 @@
     "active": 19,
     "sanctioned": 15,
     "flagged": 14,
-    "suspected": 5,
+    "suspected": 6,
     "dissolved": 3,
     "evading": 3,
     "seized": 3,
@@ -31,10 +31,10 @@
     "Germany": 3,
     "Switzerland": 3,
     "United Kingdom": 3,
+    "Hong Kong": 2,
     "Moldova": 2,
     "Philippines": 2,
-    "Russia-linked": 2,
-    "Southeast Asia": 2
+    "Russia-linked": 2
   },
   "by_authority": {
     "OFAC": 16,
