@@ -3,7 +3,7 @@
   "title": "Intrusion toolkit / credential-dumping staging on sanctioned FUNNULL (via CTG)",
   "date": "2026-09-10",
   "first_observed": "2026-08-17",
-  "last_verified": "2026-09-14",
+  "last_verified": "2026-09-15",
   "category": "c2",
   "family": "Intrusion toolkit staging (credential dumping + masqueraded payload)",
   "confidence": "confirmed",
@@ -31,6 +31,6 @@
     "threatfox"
   ],
   "last_seen_utc": "2026-09-04",
-  "stale_days": 9,
+  "stale_days": 10,
   "vt_malicious": 10
 }

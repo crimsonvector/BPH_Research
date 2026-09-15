@@ -3,7 +3,7 @@
   "title": "Live Gshell C2 nodes on CTG Server (HK), China-nexus fraud",
   "date": "2026-09-10",
   "first_observed": "2026-07-23",
-  "last_verified": "2026-09-14",
+  "last_verified": "2026-09-15",
   "category": "c2",
   "family": "Gshell C2 (Go-based Chinese C2 framework)",
   "confidence": "confirmed",
@@ -55,7 +55,7 @@
     "fraud",
     "cert-pivot"
   ],
-  "last_seen_utc": "2026-09-08",
-  "stale_days": 6,
+  "last_seen_utc": "2026-09-15",
+  "stale_days": 0,
   "vt_malicious": 4
 }
