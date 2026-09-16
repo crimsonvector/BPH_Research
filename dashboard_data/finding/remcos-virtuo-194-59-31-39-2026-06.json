@@ -29,8 +29,8 @@
     "aeza",
     "malspam"
   ],
-  "last_verified": "2026-09-15",
+  "last_verified": "2026-09-16",
   "last_seen_utc": "2026-09-13",
-  "stale_days": 1,
+  "stale_days": 2,
   "vt_malicious": 5
 }
