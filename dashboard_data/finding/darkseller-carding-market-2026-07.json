@@ -50,8 +50,8 @@
     "vdsina",
     "cloudflare-fronted"
   ],
-  "last_verified": "2026-09-17",
+  "last_verified": "2026-09-18",
   "last_seen_utc": "2026-09-16",
-  "stale_days": 0,
+  "stale_days": 1,
   "vt_malicious": 0
 }
