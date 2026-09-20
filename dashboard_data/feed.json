@@ -71,29 +71,6 @@
     ]
   },
   {
-    "id": "funnull-intrusion-staging-2026-08",
-    "title": "Intrusion toolkit / credential-dumping staging on sanctioned FUNNULL (via CTG)",
-    "date": "2026-09-10",
-    "first_observed": "2026-08-17",
-    "category": "c2",
-    "family": "Intrusion toolkit staging (credential dumping + masqueraded payload)",
-    "confidence": "confirmed",
-    "status": "active",
-    "asn": "AS152194",
-    "provider": "FUNNULL Technology Inc. (routes via CTG Server, AS152194)",
-    "bph_link": "FUNNULL Technology Inc.",
-    "vt": "10 malicious; ThreatFox botnet_cc",
-    "summary": "An intrusion-toolkit staging host on the OFAC-sanctioned bulletproof operator FUNNULL (routing via CTG Server, AS152194) remains live and flagged as of 2026-09-10 (VirusTotal 10, ThreatFox botnet C2, ports 80/7000). It served a credential-dumping utility, an SSH tunneller, and a payload masquerading as a Microsoft Word executable.",
-    "tags": [
-      "intrusion-staging",
-      "credential-dumping",
-      "funnull",
-      "ctg-server",
-      "sanctioned",
-      "threatfox"
-    ]
-  },
-  {
     "id": "aeza-comfyui-cryptojacking-2026-08",
     "title": "GPU/AI-host (ComfyUI) cryptojacking run from sanctioned Aeza",
     "date": "2026-09-10",
