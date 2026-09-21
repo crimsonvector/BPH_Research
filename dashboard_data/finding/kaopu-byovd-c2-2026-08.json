@@ -3,7 +3,7 @@
   "title": "Hands-on intrusion / custom C2 with BYOVD EDR evasion on Kaopu Cloud HK",
   "date": "2026-09-10",
   "first_observed": "2026-08-17",
-  "last_verified": "2026-09-20",
+  "last_verified": "2026-09-21",
   "category": "c2",
   "family": "Custom Python C2 + BYOVD EDR evasion (hands-on intrusion)",
   "confidence": "high",
@@ -31,7 +31,7 @@
     "kaopu",
     "suspected-bph"
   ],
-  "last_seen_utc": "2026-09-18",
-  "stale_days": 1,
+  "last_seen_utc": "2026-09-20",
+  "stale_days": 0,
   "vt_malicious": 0
 }
