@@ -69,8 +69,8 @@
     "takedown-resistance",
     "proxy"
   ],
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-22",
   "last_seen_utc": "2026-09-18",
-  "stale_days": 2,
+  "stale_days": 3,
   "vt_malicious": 1
 }

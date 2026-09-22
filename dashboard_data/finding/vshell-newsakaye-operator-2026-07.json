@@ -3,7 +3,7 @@
   "title": "Live Vshell C2 operator 'newsakaye' - 4-node HK cluster",
   "date": "2026-09-10",
   "first_observed": "2026-07-23",
-  "last_verified": "2026-09-21",
+  "last_verified": "2026-09-22",
   "category": "c2",
   "family": "Vshell C2 (Chinese framework)",
   "confidence": "confirmed",
