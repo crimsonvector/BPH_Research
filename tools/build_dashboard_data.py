@@ -74,7 +74,10 @@ _DOMAIN_RE = re.compile(
 
 
 def _defang_dots(s: str) -> str:
-    return s.replace(".", "[.]")
+    # Idempotent: collapse any existing "[.]" first. Values in findings.json often
+    # arrive already defanged; defanging them again yields "1[[.]]2", which standard
+    # refang tooling cannot undo and which slipped past the denylist normalization.
+    return s.replace("[.]", ".").replace(".", "[.]")
 
 
 def defang_value(v: str) -> str:
@@ -143,11 +146,15 @@ def load_denylist(path: str) -> list[str]:
 
 
 def _normalize_for_scan(text: str) -> str:
-    """Un-defang so a defanged internal token still trips the denylist."""
-    return (text.replace("[.]", ".")
-                .replace("hxxps://", "https://")
-                .replace("hxxp://", "http://")
-                .lower())
+    """Un-defang so a defanged internal token still trips the denylist.
+
+    Collapses any depth of bracketing ("[.]", "[[.]]", ...) so a token that was
+    defanged more than once cannot evade the scan.
+    """
+    return (re.sub(r"\[+\.\]+", ".", text)
+              .replace("hxxps://", "https://")
+              .replace("hxxp://", "http://")
+              .lower())
 
 
 def denylist_gate(payload: str, denylist: list[str]) -> list[str]:

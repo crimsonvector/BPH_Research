@@ -1,75 +1,76 @@
 {
   "totals": {
-    "providers": 64,
-    "sanctioned": 20,
-    "seized_or_takedown": 4,
-    "active": 19
+    "providers": 70,
+    "sanctioned": 18,
+    "seized_or_takedown": 5,
+    "active": 12
   },
   "by_tier": {
-    "T2": 20,
-    "T1": 18,
-    "T3": 13,
-    "T5": 7,
-    "T4": 6
+    "T2": 25,
+    "T1": 24,
+    "T3": 11,
+    "T4": 6,
+    "T5": 4
   },
   "by_status": {
-    "active": 19,
-    "sanctioned": 15,
-    "flagged": 14,
-    "suspected": 6,
-    "dissolved": 3,
-    "evading": 3,
-    "seized": 3,
-    "exposed": 1
+    "flagged": 24,
+    "sanctioned": 13,
+    "active": 12,
+    "dissolved": 6,
+    "evading": 4,
+    "seized": 4,
+    "dormant": 3,
+    "exposed": 2,
+    "suspected": 2
   },
   "by_country": {
-    "Russia": 9,
+    "Russia": 6,
     "Iran": 5,
     "Netherlands": 4,
     "Russia (St. Petersburg)": 4,
     "China": 3,
-    "Germany": 3,
-    "Switzerland": 3,
-    "United Kingdom": 3,
+    "US": 3,
+    "EU-hosted infrastructure": 2,
+    "Germany": 2,
+    "HK": 2,
     "Hong Kong": 2,
-    "Moldova": 2,
-    "Philippines": 2,
-    "Russia-linked": 2
+    "Lithuania": 2,
+    "Moldova": 2
   },
   "by_authority": {
-    "OFAC": 16,
+    "OFAC": 15,
+    "UK": 6,
     "EU": 5,
-    "UK": 4,
     "AU": 2,
-    "Other": 1
+    "Other": 2
   },
   "top_upstreams": {
-    "aurologic GmbH (AS30823)": 10,
-    "AS Infolika": 1,
-    "Alibaba Cloud": 1,
+    "aurologic GmbH (AS30823)": 8,
+    "24)": 1,
+    "AS215436 (peers)": 1,
+    "AS218878": 1,
     "Arelion": 1,
+    "Aug 2025)": 1,
     "Cogent": 1,
-    "ColocationX (upstream)": 1,
-    "Crex Fex Pex": 1,
-    "DDoS-Guard": 1,
-    "Datahouse.ru": 1,
-    "Filanco": 1,
-    "Level3": 1,
-    "NTT": 1
+    "ColocationX was the AS holder": 1,
+    "DDoS-Guard (AS49612)": 1,
+    "Des Capital B.V. (colocation": 1,
+    "Historical (2020-22): Crex Fex Pex (AS3555)": 1,
+    "Historical: WorldStream (AS49981)": 1
   },
   "top_malware": {
-    "RedLine": 5,
-    "Lumma": 4,
-    "Amadey": 3,
+    "RedLine": 7,
+    "Lumma": 5,
+    "Amadey": 4,
+    "Cobalt Strike": 4,
+    "QuasarRAT": 3,
+    "Rhadamanthys": 3,
+    "AsyncRAT": 2,
+    "GootLoader": 2,
+    "Latrodectus": 2,
     "LockBit": 2,
     "Mallox": 2,
-    "Pig-butchering infrastructure": 2,
-    "Rhadamanthys": 2,
-    "Stealc": 2,
-    "AgentTesla": 1,
-    "AsyncRAT": 1,
-    "BabbleLoader": 1,
-    "BianLian": 1
+    "Meduza": 2
   },
   "timeline": [
     {
@@ -80,16 +81,39 @@
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC April 5 2022 (with Hydra Market); EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); domains seized March 6 2025 (USSS with NL/DE/EE/FI) and E.D. Va. indictment of Besciokov and Mira Serda unsealed March 7 2025; OFAC Aug 14 2025 re-designation of Garantex Europe OU alongside successor Grinex, executives and six related companies"
+    },
+    {
+      "date": "2024-12-05",
+      "date_label": "Dec 5 2024",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK",
+        "AU"
+      ],
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
     },
     {
       "date": "2025-02-11",
       "date_label": "Feb 11 2025",
       "provider": "Zservers",
       "authorities": [
+        "OFAC",
         "AU"
       ],
-      "detail": "US/UK/AU trilateral Feb 11 2025"
+      "detail": "Feb 11 2025 trilateral, differing by authority - OFAC: Zservers, Alexander Mishin, Aleksandr Bolshakov (3 BTC addresses on Zservers, 1 on Mishin); UK: ZSERVERS, XHOST Internet Solutions LP and six individuals; Australia (Feb 12 2025 AEDT): Zservers and five individuals"
+    },
+    {
+      "date": "2025-02-12",
+      "date_label": "Feb 12 2025",
+      "provider": "Zservers",
+      "authorities": [
+        "OFAC",
+        "AU"
+      ],
+      "detail": "Feb 11 2025 trilateral, differing by authority - OFAC: Zservers, Alexander Mishin, Aleksandr Bolshakov (3 BTC addresses on Zservers, 1 on Mishin); UK: ZSERVERS, XHOST Internet Solutions LP and six individuals; Australia (Feb 12 2025 AEDT): Zservers and five individuals"
     },
     {
       "date": "2025-02-24",
@@ -99,17 +123,38 @@
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC April 5 2022 (with Hydra Market); EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); domains seized March 6 2025 (USSS with NL/DE/EE/FI) and E.D. Va. indictment of Besciokov and Mira Serda unsealed March 7 2025; OFAC Aug 14 2025 re-designation of Garantex Europe OU alongside successor Grinex, executives and six related companies"
     },
     {
-      "date": "2025-03-01",
-      "date_label": "March 2025",
+      "date": "2025-03-06",
+      "date_label": "March 6 2025",
       "provider": "Garantex",
       "authorities": [
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC April 5 2022 (with Hydra Market); EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); domains seized March 6 2025 (USSS with NL/DE/EE/FI) and E.D. Va. indictment of Besciokov and Mira Serda unsealed March 7 2025; OFAC Aug 14 2025 re-designation of Garantex Europe OU alongside successor Grinex, executives and six related companies"
+    },
+    {
+      "date": "2025-03-07",
+      "date_label": "March 7 2025",
+      "provider": "Garantex",
+      "authorities": [
+        "OFAC",
+        "EU"
+      ],
+      "detail": "OFAC April 5 2022 (with Hydra Market); EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); domains seized March 6 2025 (USSS with NL/DE/EE/FI) and E.D. Va. indictment of Besciokov and Mira Serda unsealed March 7 2025; OFAC Aug 14 2025 re-designation of Garantex Europe OU alongside successor Grinex, executives and six related companies"
+    },
+    {
+      "date": "2025-05-01",
+      "date_label": "May 2025",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
     },
     {
       "date": "2025-05-20",
@@ -118,16 +163,7 @@
       "authorities": [
         "EU"
       ],
-      "detail": "EU May 20 2025 (Hybrid Threats Regulation (EU) 2024/2642 - NOT the 17th Russia package; adopted same day but a separate legal basis)"
-    },
-    {
-      "date": "2025-05-20",
-      "date_label": "May 20 2025",
-      "provider": "PQ Hosting Plus S.R.L.",
-      "authorities": [
-        "EU"
-      ],
-      "detail": "EU May 20 2025 (via Stark/Neculiti designation under Hybrid Threats Regulation (EU) 2024/2642)"
+      "detail": "EU May 20 2025: Council Implementing Regulation (EU) 2025/965 under the hybrid-threats regime Reg. (EU) 2024/2642 (not the 17th Russia package) - Stark Industries Solutions Ltd; Iurie Neculiti; Ivan Neculiti"
     },
     {
       "date": "2025-05-29",
@@ -136,25 +172,7 @@
       "authorities": [
         "OFAC"
       ],
-      "detail": "OFAC May 29 2025"
-    },
-    {
-      "date": "2025-05-29",
-      "date_label": "May 29 2025",
-      "provider": "CTG Server Limited",
-      "authorities": [
-        "OFAC"
-      ],
-      "detail": "OFAC May 29 2025 (via FUNNULL designation)"
-    },
-    {
-      "date": "2025-05-29",
-      "date_label": "May 29 2025",
-      "provider": "StarCloud Global (Triad Nexus)",
-      "authorities": [
-        "OFAC"
-      ],
-      "detail": "OFAC May 29 2025 (via FUNNULL lineage)"
+      "detail": "OFAC May 29 2025 (sb0149): Funnull Technology Inc. and administrator Liu Lizhi"
     },
     {
       "date": "2025-07-01",
@@ -164,7 +182,18 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC July 1 2025 (in coordination with UK NCA); UK designation Sept 19 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+      "detail": "OFAC July 1 2025 (sb0185): Aeza Group LLC (primary) + Aeza International Ltd, Aeza Logistic LLC, Cloud Solutions LLC and four executives, coordinated with UK NCA; UK Nov 19 2025: Aeza Group LLC designated under the Russia regime (Aeza International Ltd not separately listed); OFAC Nov 19 2025 follow-on: Hypercore Ltd, Smart Digital Ideas DOO (RS), Datavice MCHJ (UZ), Maksim Makarov, Ilya Zakirov"
+    },
+    {
+      "date": "2025-07-01",
+      "date_label": "July 2025",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
     },
     {
       "date": "2025-08-14",
@@ -174,7 +203,7 @@
         "OFAC",
         "EU"
       ],
-      "detail": "OFAC April 5 2022; EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); servers/domains seized March 2025; OFAC re-designation Aug 14 2025 expanded to Grinex Exved InDeFi Bank A7A5"
+      "detail": "OFAC April 5 2022 (with Hydra Market); EU 16th package Feb 24 2025 (first EU crypto-exchange listing; 6 wallet addresses); domains seized March 6 2025 (USSS with NL/DE/EE/FI) and E.D. Va. indictment of Besciokov and Mira Serda unsealed March 7 2025; OFAC Aug 14 2025 re-designation of Garantex Europe OU alongside successor Grinex, executives and six related companies"
     },
     {
       "date": "2025-08-14",
@@ -182,9 +211,10 @@
       "provider": "Grinex",
       "authorities": [
         "OFAC",
+        "EU",
         "UK"
       ],
-      "detail": "OFAC Aug 14 2025 (successor to Garantex); UK OFSI Aug 20 2025"
+      "detail": "OFAC Aug 14 2025 (as Garantex's direct successor); UK Aug 20 2025 (Grinex LLC, Russia regime); EU 19th package Oct 23 2025 (A7A5-ecosystem trading platform)"
     },
     {
       "date": "2025-08-14",
@@ -192,9 +222,10 @@
       "provider": "A7A5 / Old Vector",
       "authorities": [
         "OFAC",
-        "EU"
+        "EU",
+        "UK"
       ],
-      "detail": "OFAC Aug 14 2025 (Old Vector); EU 19th package Oct 2025 (A7A5 transactions banned)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
     },
     {
       "date": "2025-08-20",
@@ -202,29 +233,43 @@
       "provider": "Grinex",
       "authorities": [
         "OFAC",
+        "EU",
         "UK"
       ],
-      "detail": "OFAC Aug 14 2025 (successor to Garantex); UK OFSI Aug 20 2025"
+      "detail": "OFAC Aug 14 2025 (as Garantex's direct successor); UK Aug 20 2025 (Grinex LLC, Russia regime); EU 19th package Oct 23 2025 (A7A5-ecosystem trading platform)"
     },
     {
-      "date": "2025-09-19",
-      "date_label": "Sept 19 2025",
-      "provider": "Aeza International Ltd",
-      "authorities": [
-        "OFAC",
-        "UK"
-      ],
-      "detail": "OFAC July 1 2025 (in coordination with UK NCA); UK designation Sept 19 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
-    },
-    {
-      "date": "2025-10-01",
-      "date_label": "Oct 2025",
+      "date": "2025-08-20",
+      "date_label": "Aug 20 2025",
       "provider": "A7A5 / Old Vector",
       "authorities": [
         "OFAC",
-        "EU"
+        "EU",
+        "UK"
       ],
-      "detail": "OFAC Aug 14 2025 (Old Vector); EU 19th package Oct 2025 (A7A5 transactions banned)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+    },
+    {
+      "date": "2025-10-23",
+      "date_label": "Oct 23 2025",
+      "provider": "Grinex",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "OFAC Aug 14 2025 (as Garantex's direct successor); UK Aug 20 2025 (Grinex LLC, Russia regime); EU 19th package Oct 23 2025 (A7A5-ecosystem trading platform)"
+    },
+    {
+      "date": "2025-10-23",
+      "date_label": "Oct 23 2025",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
     },
     {
       "date": "2025-11-12",
@@ -233,7 +278,16 @@
       "authorities": [
         "Other"
       ],
-      "detail": "Seized Nov 12 2025 (Operation Endgame; Dutch police)"
+      "detail": "Dutch police seizure Nov 12 2025 (announced Nov 14 2025; ~250 physical servers in The Hague and Zoetermeer) - police did not name the service and said the case is not connected to Operation Endgame"
+    },
+    {
+      "date": "2025-11-14",
+      "date_label": "Nov 14 2025",
+      "provider": "CrazyRDP",
+      "authorities": [
+        "Other"
+      ],
+      "detail": "Dutch police seizure Nov 12 2025 (announced Nov 14 2025; ~250 physical servers in The Hague and Zoetermeer) - police did not name the service and said the case is not connected to Operation Endgame"
     },
     {
       "date": "2025-11-19",
@@ -243,7 +297,17 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC July 1 2025 (in coordination with UK NCA); UK designation Sept 19 2025; OFAC expanded Nov 19 2025 (Hypercore; Datavice)"
+      "detail": "OFAC July 1 2025 (sb0185): Aeza Group LLC (primary) + Aeza International Ltd, Aeza Logistic LLC, Cloud Solutions LLC and four executives, coordinated with UK NCA; UK Nov 19 2025: Aeza Group LLC designated under the Russia regime (Aeza International Ltd not separately listed); OFAC Nov 19 2025 follow-on: Hypercore Ltd, Smart Digital Ideas DOO (RS), Datavice MCHJ (UZ), Maksim Makarov, Ilya Zakirov"
+    },
+    {
+      "date": "2025-11-19",
+      "date_label": "Nov 19 2025",
+      "provider": "Aeza International Ltd",
+      "authorities": [
+        "OFAC",
+        "UK"
+      ],
+      "detail": "OFAC July 1 2025 (sb0185): Aeza Group LLC (primary) + Aeza International Ltd, Aeza Logistic LLC, Cloud Solutions LLC and four executives, coordinated with UK NCA; UK Nov 19 2025: Aeza Group LLC designated under the Russia regime (Aeza International Ltd not separately listed); OFAC Nov 19 2025 follow-on: Hypercore Ltd, Smart Digital Ideas DOO (RS), Datavice MCHJ (UZ), Maksim Makarov, Ilya Zakirov"
     },
     {
       "date": "2025-11-19",
@@ -252,9 +316,22 @@
       "authorities": [
         "OFAC",
         "EU",
+        "UK",
         "AU"
       ],
-      "detail": "OFAC/UK/AU trilateral Nov 19 2025; EU July 13 2026 (Impl. Reg. (EU) 2026/1714 - Media Land + Volosovik + ML[.]Cloud); DOJ indictment unsealed July 14 2026 (N.D. Ohio)"
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
+    },
+    {
+      "date": "2025-11-19",
+      "date_label": "Nov 19 2025",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK",
+        "AU"
+      ],
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
     },
     {
       "date": "2025-11-19",
@@ -264,7 +341,7 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC Nov 19 2025 (E.O. 13694); UK: not separately listed - captured via ownership/control as a Subsidiaries entry on the Aeza Group LLC row of the FCDO UK Sanctions List"
+      "detail": "OFAC Nov 19 2025 (E.O. 13694, as an Aeza Group front); not listed in the UK notices of the same date"
     },
     {
       "date": "2025-11-19",
@@ -276,13 +353,36 @@
       "detail": "OFAC Nov 19 2025 (E.O. 13694; CAATSA-RUSSIA; CYBER4; Linked To Aeza Group LLC); NOT UK-designated"
     },
     {
+      "date": "2025-11-20",
+      "date_label": "Nov 20 2025",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK",
+        "AU"
+      ],
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
+    },
+    {
+      "date": "2025-11-25",
+      "date_label": "Nov 25 2025",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+    },
+    {
       "date": "2026-06-02",
       "date_label": "June 2 2026",
       "provider": "Nobitex",
       "authorities": [
         "OFAC"
       ],
-      "detail": "OFAC June 2 2026 (E.O. 13902 + counterterrorism E.O. 13224)"
+      "detail": "OFAC June 2 2026 (sb0519, 'Economic Fury'): E.O. 13224 (material support to the IRGC) and E.O. 13902; four executives designated under E.O. 13224"
     },
     {
       "date": "2026-06-02",
@@ -312,13 +412,13 @@
       "detail": "OFAC June 2 2026 (E.O. 13902)"
     },
     {
-      "date": "2026-06-23",
-      "date_label": "June 23 2026",
+      "date": "2026-06-25",
+      "date_label": "June 25 2026",
       "provider": "H-Pay Service PLC",
       "authorities": [
         "OFAC"
       ],
-      "detail": "FinCEN proposed Section 311 amendment June 23 2026 (successor-entity rule)"
+      "detail": "FinCEN proposed rule (Federal Register 2026-12794, published June 25 2026) adding H-Pay and any successor to the Huione Group Section 311 special measure - a proposal, not a final rule"
     },
     {
       "date": "2026-07-13",
@@ -327,9 +427,10 @@
       "authorities": [
         "OFAC",
         "EU",
+        "UK",
         "AU"
       ],
-      "detail": "OFAC/UK/AU trilateral Nov 19 2025; EU July 13 2026 (Impl. Reg. (EU) 2026/1714 - Media Land + Volosovik + ML[.]Cloud); DOJ indictment unsealed July 14 2026 (N.D. Ohio)"
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
     },
     {
       "date": "2026-07-13",
@@ -339,7 +440,7 @@
         "OFAC",
         "UK"
       ],
-      "detail": "OFAC July 13 2026 (E.O. 13694 as amended, in furtherance of E.O. 14390; coordinated with UK FCDO)"
+      "detail": "OFAC July 13 2026 (E.O. 13694 as amended, in furtherance of E.O. 14390; coordinated with UK FCDO, which did not co-designate)"
     },
     {
       "date": "2026-07-14",
@@ -348,9 +449,31 @@
       "authorities": [
         "OFAC",
         "EU",
+        "UK",
         "AU"
       ],
-      "detail": "OFAC/UK/AU trilateral Nov 19 2025; EU July 13 2026 (Impl. Reg. (EU) 2026/1714 - Media Land + Volosovik + ML[.]Cloud); DOJ indictment unsealed July 14 2026 (N.D. Ohio)"
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
+    },
+    {
+      "date": "2026-08-08",
+      "date_label": "Aug 8 2026",
+      "provider": "Media Land LLC",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK",
+        "AU"
+      ],
+      "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
+    },
+    {
+      "date": "2026-08-26",
+      "date_label": "Aug 26 2026",
+      "provider": "QTFY (QScan / QTRouter)",
+      "authorities": [
+        "Other"
+      ],
+      "detail": "DOJ/FBI court-authorised seizure of QScan and QTRouter domains, Aug 26 2026"
     }
   ]
 }
