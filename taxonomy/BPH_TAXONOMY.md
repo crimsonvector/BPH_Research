@@ -1,6 +1,6 @@
 # BPH & Threat Activity Enabler (TAE) Taxonomy Framework
 
-> **Version:** 1.2 | **Last Updated:** 2026-07-17 | **Maintainer:** CrimsonVector Research
+> **Version:** 1.3 | **Last Updated:** 2026-09-25 | **Maintainer:** CrimsonVector Research
 >
 > This document defines the classification system used across the BPH Research repository. All provider assessments, risk ratings, and analytical products reference this taxonomy.
 
@@ -10,7 +10,7 @@
 
 1. [Risk Tier Definitions](#1-risk-tier-definitions)
 2. [Provider Type Classification](#2-provider-type-classification)
-3. [Operational Pattern Taxonomy](#3-operational-pattern-taxonomy)
+3. [Operational Pattern Taxonomy](#3-operational-pattern-taxonomy) (incl. 3.9 ASN recycling, 3.10 actor-preferred providers)
 4. [Identification Signals Matrix](#4-identification-signals-matrix)
 5. [Status Lifecycle Model](#5-status-lifecycle-model)
 6. [Evidence Standards](#6-evidence-standards)
@@ -27,7 +27,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 **Definition:** Entity whose primary or predominant business function is enabling malicious cyber operations. Confirmed through sanctions designations, law enforcement actions, or overwhelming convergent intelligence from multiple independent sources.
 
 **Criteria (meet ANY):**
-- Designated by OFAC, EU, UK OFSI, or Australian DFAT sanctions specifically for hosting/enabling cyber operations
+- Designated by OFAC, the EU, the UK (FCDO; implemented by OFSI), or Australian DFAT sanctions specifically for hosting/enabling cyber operations
 - Subject of law enforcement seizure or takedown action targeting hosting infrastructure
 - Self-advertises as "bulletproof" on underground forums with corroborating infrastructure evidence
 - Recorded Future Threat Density Score in top decile with sustained concentration over 6+ months
@@ -35,7 +35,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block at CIDR/ASN level. Monitor for prefix migration.
 
-**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 18 rows):** Aeza International, Stark Industries Solutions, Zservers/XHOST, Media Land LLC, FUNNULL Technology/CTG Server, ELITETEAM/1337TEAM, PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus, CrazyRDP (seized), BtHoster, First VPN Service/1VPNS (anonymization enabler), Garantex / Grinex / A7A5-Old Vector (financial enablers)
+**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 21 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (network dark), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine, Femo IT/Defhost, CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector (financial enablers)
 
 ---
 
@@ -53,7 +53,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block known malicious prefixes; consider ASN-level block with allowlisting for confirmed legitimate customers.
 
-**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 20 rows):** Femo IT/Defhost, Tnsecurity/EVILEMPIRE, Railnet/Virtualine, QWINS LTD, Karina Rashkovska, GCSAS, aurologic GmbH (upstream enabler), MIRhosting, PINSPB, SWISSNETWORK02/Global-Data, WAIcore, First Server Limited, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks (proxy enabler, seized), NetNut/Alarum (proxy enabler, seized), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
+**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 27 rows):** Tnsecurity/EVILEMPIRE (defunct), QWINS LTD, GCSAS, Karina Rashkovska (defunct), KPROHOST, Altawk, aurologic GmbH and UAB Host Baltic (upstream enablers), MIRhosting, PINSPB, SWISSNETWORK02/Global-Data, WAIcore, First Server Limited, Kaopu Cloud HK, Pfcloud UG, Chang Way Technologies, VPSVault.host, Feo Prest, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks / NetNut-Alarum / IPIDEA (proxy enablers), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
 
 ---
 
@@ -71,7 +71,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Monitor and alert. Block specific confirmed-malicious IPs. Reassess quarterly.
 
-**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative — 13 rows):** Cloudzy/abrNOC, metaspinner net, KPROHOST, Altawk, HostSlick, StarCloud Global, Kaopu Cloud HK, Pfcloud UG, Silent Connection (dissolved), Dolphon 1337 (dissolved), Wallex / Bitpin / Ramzinex (financial enablers)
+**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative — 12 rows):** Cloudzy/abrNOC, metaspinner-named AS209800 (defunct Virtualine front), HostSlick, PrivateAlps/Private Layer, StarCloud Global, NECHAEVDS, NETINNOVATIONLLC, Tiger Network Limited, Silent Connection (dissolved), Wallex / Bitpin / Ramzinex (financial enablers)
 
 ---
 
@@ -89,7 +89,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** No blanket blocking. Monitor for escalation. Flag in threat intel enrichment.
 
-**Current T4 entities (illustrative; `BPH_Master.csv` is authoritative — 6 rows):** BuyVM/Frantech, AlexHost, PrivateAlps/Private Layer, FlokiNET, Shinjiru, Phanes Networks/Flaunt7
+**Current T4 entities (illustrative; `BPH_Master.csv` is authoritative — 6 rows):** BuyVM/Frantech, AlexHost, FlokiNET, Shinjiru, Phanes Networks/Flaunt7, HostZealot (HZ Hosting Ltd)
 
 ---
 
@@ -106,7 +106,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** No blocking. Passive monitoring. Reassess upon new intelligence.
 
-**Current T5 entities (illustrative; `BPH_Master.csv` is authoritative — 7 rows):** CDNCloud, NECHAEVDS, NETINNOVATIONLLC, Tiger Net, HOSTYPE, 1GSERVERS, DDoS-Guard
+**Current T5 entities (illustrative; `BPH_Master.csv` is authoritative — 5 rows):** CDNCloud (unsourced; removal candidate), HOSTYPE (dormant), 1GSERVERS, DDoS-Guard, Dolphon 1337 (ASN recycled)
 
 ---
 
@@ -122,7 +122,8 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 | Spamhaus ASN-DROP inclusion | Escalate to T2 minimum | Tnsecurity/EVILEMPIRE |
 | Sustained 12-month clean period + ownership change | De-escalate one tier | (No current examples) |
 | Sanctions lifted or LE clears entity | De-escalate, case-by-case | (No current examples) |
-| Corporate dissolution with network still live | No de-escalation — reclassify as "dissolved" status | Silent Connection Ltd |
+| Corporate dissolution with network still live | No de-escalation — reclassify as "dissolved" status | Stark Industries Solutions (dissolved 2025-09-16; network lives on as WorkTitans/THE.Hosting) |
+| ASN returned and re-issued to an unrelated holder | Mark the ASN `historical; reassigned to X - do not block` in the CSV; if no successor network is identifiable, set status `dissolved` (network defunct) and keep the tier as a historical record | Karina Rashkovska (AS215789 now BLIK); Tnsecurity (AS216309); CrazyRDP (AS394711, AS211252) |
 
 ---
 
@@ -251,7 +252,7 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 - Identical BGP routing patterns, peering relationships, or upstreams post-transfer
 - Shared technical fingerprints (RDP hostnames, TLS certificates, server configurations)
 
-**Observed in:** Stark Industries → THE.Hosting (RDP hostname WIN-J9D866ESIJ2 reuse); Virtualine → metaspinner net pivot; Garantex → Grinex/Exved
+**Observed in:** Stark Industries → THE.Hosting (RDP hostname WIN-J9D866ESIJ2 reuse); Virtualine → metaspinner-named AS209800 → OMEGATECH (AS202412); Garantex → Grinex
 
 ### 3.3 Sub-Sub-Leasing (Infrastructure Nesting)
 
@@ -275,7 +276,7 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 - New ASN registrations correlated with adverse events against existing ASNs
 - Control over number resources used to evade blocklists by rotating prefixes
 
-**Observed in:** aurologic GmbH (LIR); Stark Industries pre-sanctions prefix transfers; Zservers post-sanctions prefix-hopping to AS213194, AS61336, AS213010
+**Observed in:** aurologic GmbH (LIR); Stark Industries pre-sanctions AS44477 transfer (2025-05-16, four days before the EU listing); Zservers post-sanctions prefix-hopping to AS213194, AS61336, AS213010
 
 ### 3.5 Prefix Hopping / ASN Migration
 
@@ -287,7 +288,7 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 - BGP announcements appearing from previously-unannounced prefixes
 - GreyNoise/Shodan scan data showing infrastructure "moving" between ASNs
 
-**Observed in:** Zservers (AS216071 → AS213194 → AS61336 → AS213010); Virtualine shedding /24s to TELCHAK GOLD VENTURES, iHostART, metaspinner
+**Observed in:** Zservers (AS197414 → AS213194 → AS61336 → AS213010, per Intrinsec); Virtualine shedding /24s to TELCHAK GOLD VENTURES, iHostART and the metaspinner-named AS209800, then to OMEGATECH (AS202412); Aeza → Hypercore (AS211522)
 
 ### 3.6 Proprietary Infrastructure Deployment
 
@@ -311,7 +312,7 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 - Rapidly rotating CNAMEs pointing to legitimate CDN infrastructure
 - Geofencing (returning 451 errors to investigator IP ranges)
 
-**Observed in:** FUNNULL/Triad Nexus (175+ rotating CNAMEs, compromised AWS/Cloudflare/Google/Microsoft accounts); described in Silent Push April 2026
+**Observed in:** FUNNULL/Triad Nexus (FBI: 548 FUNNULL CNAMEs linked to 332,000+ domains since Jan 2025; accounts at AWS/Cloudflare/Google/Microsoft; pre-sanction 'clean' front brands per Silent Push, April 2026)
 
 ### 3.8 Residential Proxy Abuse
 
@@ -323,7 +324,35 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 - Proxy-as-a-service offerings on underground forums
 - Traffic patterns inconsistent with normal residential usage
 
-**Observed in:** Described extensively in IOCTA 2026 Section 1.2; used by ransomware and malware operations for C2 anonymization
+**Observed in:** Described extensively in IOCTA 2026 Section 1.2; enforcement lineage 911 S5 (2024) → Moonlander/5socks (2025) → SocksEscort (Mar 2026) → IPIDEA (Jan 2026, Google) → Asocks (May 2026) → NetNut/Popa (Jul 2026) → QTFY/QTRouter (Aug 2026, a PRC state-enablement ORB that bought commercial proxy subscriptions)
+
+### 3.9 ASN Recycling and Re-issue
+
+**Description:** When a shell is struck off or abandoned, its RIPE/ARIN/APNIC number resources are returned and later re-issued to unrelated organisations, sometimes within months. The historical ASN keeps its reputation in blocklists and in this database long after it has changed hands.
+
+**Indicators:**
+- Registry holder name no longer matches the tracked entity (check the current RIR/ipverse holder before any ASN-level action)
+- ASN announces nothing for months, then reappears under a new org handle
+- Spamhaus ASN-DROP delists the ASN while a sibling ASN under the same `domain` field appears
+- Former prefixes surface under a different, often also-listed, ASN
+
+**Observed in (2026-09-25 audit):** AS215789 (Karina Rashkovska → BLIK); AS216309 (Tnsecurity → InvisionTech); AS209800 (metaspinner front → ZEMA GbR); AS208046 (HostSlick/ColocationX → a French individual); AS203727 (Altawk → byon); AS210281, AS202973, AS206425 (WAIcore); AS215208 (Dolphon 1337 → an Indonesian ISP); AS215240 (Silent Connection → Microdex UG); AS394711 and AS211252 (CrazyRDP); AS198465 (BtHoster). Separately, two ASNs in this database had simply been mis-attributed (AS216071 for Zservers is VDSina; AS215552 for Hypercore is a Romanian individual).
+
+**Handling:** Keep the ASN in the CSV only with a `historical; reassigned to X - do not block` qualifier, verify every ASN against the registry and `asndrop.json` before publishing blocklists, and treat Spamhaus's `domain` field as an attribution anchor for successor ASNs.
+
+### 3.10 Actor-Preferred Mainstream-Adjacent Providers (Repeat Tenancy)
+
+**Description:** Some capable actors return to the same commercial hosts across campaigns even though those hosts are not bulletproof - they run KYC and an AUP, are absent from DROP/ASN-DROP and show ordinary reputation density. The hoster is chosen for availability, locations and payment convenience, and the actor rents fresh VPS in the same blocks each time, so exact IPs burn but /24s and ASNs recur.
+
+**Indicators:**
+- The same provider appears in several independent campaign IOC lists years apart, usually at different exact IPs
+- Reuse clusters at /22-/24 level inside a few provider blocks
+- Multiple unrelated advanced actors share the provider (espionage and ransomware)
+- No evidence of deliberate enablement (no forum advertising, KYC present)
+
+**Observed in:** HostZealot / HZ Hosting Ltd - 4 of 10 Cl0p mass-exploitation campaigns (Accellion 2020, GoAnywhere and MOVEit 2023, Cleo 2024), plus SideWinder, Akira/Fog and DanaBot tenants; see `analysis/CL0P_HOSTZEALOT_REUSE.md`. Also ReliableSite, Datahome and Data Campus in the Cl0p data.
+
+**Handling:** Classify on enablement evidence (usually T4/T5), but use the actor-specific blocks as a watchlist and risk-scoring input for 2-3 years after they burn rather than for blanket blocking.
 
 ---
 
@@ -418,7 +447,7 @@ Each provider carries a **status** reflecting its current operational and legal 
 | `active` | Operating with no formal government adverse action. May still carry high risk tier. | Monitor per risk tier |
 | `flagged` | Mounting evidence of malicious enablement from multiple sources. Under active investigation or community scrutiny. | Enhanced monitoring; prepare for escalation |
 | `suspected` | Limited but credible indicators from single or few sources. Requires further investigation. | Targeted monitoring; research enrichment priority |
-| `sanctioned` | Formally designated by OFAC, EU, UK OFSI, Australian DFAT, or equivalent authority. | Mandatory compliance blocking; transactions prohibited; secondary sanctions exposure |
+| `sanctioned` | Formally designated by OFAC, the EU, the UK (FCDO), Australian DFAT, or an equivalent authority. | Mandatory compliance blocking; transactions prohibited; secondary sanctions exposure |
 | `evading` | Operating under a new corporate identity or through successor entities post-sanctions. Infrastructure continuity confirmed. | Track successor entities; report to OFAC/OFSI evasion units; block successor infrastructure |
 | `dissolved` | Corporate entity dissolved, struck off, or otherwise legally defunct. Network infrastructure may still be operational. | Monitor for network persistence; track ASN/prefix fate |
 | `seized` | Law-enforcement seizure of the entity's infrastructure (whole or partial). Operations halted or materially degraded; a clearnet storefront or re-enrollment path may persist. | Confirm infrastructure offline; track operator re-emergence; preserve seizure as an attribution anchor |
@@ -434,7 +463,7 @@ Each provider carries a **status** reflecting its current operational and legal 
 |-------|-------------|---------|
 | **A — Government/Official** | Sanctions designations, LE press releases, court filings, regulatory actions | OFAC SDN entries, Europol press releases, EU Council decisions |
 | **B — Established CTI Vendor** | Published research from recognized threat intelligence firms with named analysts and methodology | Recorded Future Insikt, Mandiant, CrowdStrike, Trend Micro, Unit 42, Intel 471 |
-| **C — Community/Independent** | Reputable independent researchers, community blocklists, investigative journalism | Krebs on Security, abuse.ch, Spamhaus, Team Cymru, Qurium |
+| **C — Community/Independent** | Reputable independent researchers, community blocklists and registry mirrors, investigative journalism | Krebs on Security, abuse.ch, Spamhaus, Team Cymru, Qurium, ipverse/RIR-derived registry mirrors |
 | **D — Single Source / Unverified** | Single blog post, social media, anonymous tip, unconfirmed OSINT | Individual Twitter/X posts, Reddit, Telegram channel claims |
 | **E — Self-Reported / Marketing** | Provider's own marketing materials, forum posts, AUP text | "We are bulletproof" forum ads, provider websites |
 
@@ -462,12 +491,14 @@ Each provider carries a **status** reflecting its current operational and legal 
 | **KYC** | Know Your Customer — identity verification requirements for financial and business services |
 | **LIR** | Local Internet Registry — organization allocated IP address space by a Regional Internet Registry (RIR) for assignment to end users |
 | **OFAC** | Office of Foreign Assets Control — US Treasury department administering sanctions |
-| **OFSI** | Office of Financial Sanctions Implementation — UK equivalent of OFAC |
+| **OFSI** | Office of Financial Sanctions Implementation — HM Treasury body that implements and enforces UK financial sanctions. Designations are made by the FCDO and published on the **UK Sanctions List**, which replaced OFSI's Consolidated List on 2026-01-28 |
 | **Prefix** | A block of IP addresses announced via BGP, expressed in CIDR notation |
 | **RIR** | Regional Internet Registry — organization managing IP address allocation for a geographic region (RIPE NCC for Europe, ARIN for North America, etc.) |
 | **TAE** | Threat Activity Enabler — Recorded Future's term for entities providing infrastructure or services that enable malicious cyber operations |
 | **Threat Density Score** | Recorded Future metric: concentration of validated malicious activity relative to total IP address prefixes a network announces |
 
 ---
+
+> **Evidence floor on escalation (2026-09-25).** The escalation triggers above never override §6. Where the only independent B/C source is the Spamhaus listing itself, hold the entity at T3 with status `flagged` and record the pending escalation in `notes` (as of 2026-09-25: NETINNOVATIONLLC, Tiger Network Limited, HostSlick). Where Spamhaus plus one independent vendor provide specific indicators, apply T2 (e.g. VPSVault.host, Feo Prest with GreyNoise).
 
 *This taxonomy is a living document. Update as new patterns emerge, sanctions are issued, or classification criteria require refinement.*

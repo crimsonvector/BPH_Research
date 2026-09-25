@@ -1,7 +1,7 @@
 # BPH & TAE Analyst Playbook
 
-**Version:** 1.2
-**Last Updated:** 2026-07-17
+**Version:** 1.3
+**Last Updated:** 2026-09-25
 **Maintainer:** CrimsonVector Research
 
 > *A practitioner's guide to identifying, investigating, and tracking bullet-proof hosting providers and threat activity enablers.*
@@ -17,6 +17,7 @@
 5. [New Provider Assessment Template](#5-new-provider-assessment-template)
 6. [Recorded Future TAE Framework Integration](#6-recorded-future-tae-framework-integration)
 7. [CISA/NSA BPH Mitigation Framework](#7-cisansa-bph-mitigation-framework)
+8. [Infrastructure Reuse and Indicator Retention](#8-infrastructure-reuse-and-indicator-retention)
 
 ---
 
@@ -46,7 +47,7 @@ Use the following red-flag checklists when triaging a suspected BPH provider. No
 | B3 | No KYC -- anonymous registration with username/password only | Deliberate choice to avoid knowing customers, ensuring plausible deniability |
 | B4 | Cryptocurrency-only payment, especially Monero/privacy coins | Eliminates the financial paper trail that leads investigators to beneficial owners |
 | B5 | Advertising on underground forums (XSS, Exploit, BreachForums, cracked.io) | The customer acquisition channel reveals the intended customer base |
-| B6 | UK LLP or LLC incorporation with no financial filings | A favorite shell structure: UK LLPs require no audited accounts and can be formed remotely with minimal identity verification |
+| B6 | UK LLP/Ltd or US LLC shell with overdue, dormant or minimal filings | UK LLPs and Ltds **must** file annual accounts (only small entities may skip the audit), so overdue, dormant or skeletal accounts on a company that holds an ASN are the signal. UK incorporation is still fast and cheap (GBP 100 online from 2026-02-01) but no longer anonymous: identity verification for directors, LLP members and PSCs has been mandatory since 2025-11-18 |
 | B7 | Nominee directors with short tenures (6-month rotations -- see QWINS pattern) | Short-tenure nominees make it nearly impossible to identify beneficial owners and frustrate corporate subpoenas |
 | B8 | Formation agent addresses shared with many other entities | Mass-incorporation agents are a key enabler; the same registered office appearing on dozens of unrelated companies is a strong shell indicator |
 | B9 | Corporate entity dissolved but network infrastructure persists | The legal entity was a disposable wrapper; the infrastructure outlives the corporate fiction |
@@ -79,13 +80,14 @@ This is the most common starting point. You have a suspicious IP; you need to id
    - Programmatic: Team Cymru IP-to-ASN mapping service
 
 2. **Map the ASN to its registered organization.**
-   - RIPE Stat: `https://stat.ripe.net/app/launchpad/S2_AS[number]`
+   - RIPE Stat: `https://stat.ripe.net/resource/AS[number]` (or `https://stat.ripe.net/app/launchpad/AS[number]`)
    - bgp.tools: `https://bgp.tools/as/[number]`
    - ipinfo.io: `https://ipinfo.io/AS[number]`
 
 3. **Check ASN reputation immediately.**
-   - abuse.ch ThreatFox: `https://threatfox.abuse.ch/browse/as_num/[number]/` (requires an Auth-Key -- see Section 3)
-   - Spamhaus ASN-DROP: `https://www.spamhaus.org/drop/asndrop.json` -- check if the ASN appears
+   - abuse.ch ThreatFox ASN report: `https://threatfox.abuse.ch/asn/[number]/` (the form CISA cites; the Auth-Key is required for the abuse.ch APIs -- see Section 3)
+   - Spamhaus ASN-DROP: `https://www.spamhaus.org/drop/asndrop.json` -- check if the ASN appears, and read its `domain` field: Spamhaus uses it to tie sibling and successor ASNs to one operator (e.g. `virtualine.org`, `pfcloud.io`, `kaopuyun.com`)
+   - **Confirm the registry holder is still the entity you think it is.** ASNs are returned and re-issued: in September 2026, twelve ASNs in `BPH_Master.csv` belonged to unrelated organisations (a Polish payments company, an Indonesian ISP, a Japanese firm). Never block on a historical ASN without checking.
    - GreyNoise: search by ASN for scanning/exploitation activity
 
 4. **Map all announced prefixes.**
@@ -129,8 +131,9 @@ Once you have the organization name from WHOIS/RIPE, trace the corporate structu
    - BPH operators often maintain parallel shells in multiple jurisdictions
 
 5. **For US LLCs, check state Secretary of State records:**
-   - Wyoming, Kentucky, and Delaware are favorites for minimal-disclosure shell LLCs
-   - Wyoming in particular requires no public disclosure of members/managers
+   - Wyoming and Delaware are the confirmed minimal-disclosure favourites: Wyoming articles name only the organiser and registered agent; Delaware certificates list no members or managers
+   - Kentucky is *not* a no-disclosure state -- its annual reports list members or managers (useful for KPROHOST LLC and Railnet LLC)
+   - There is no federal fallback: FinCEN's final rule (effective 2026-08-14) ended beneficial-ownership reporting for US-formed companies
    - Check for registered agent services that are commonly used (e.g., mass-filing agents)
 
 6. **Build the corporate chain:**
@@ -214,12 +217,12 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 **Step-by-step:**
 
 1. **abuse.ch URLhaus:**
-   - URL: `https://urlhaus.abuse.ch/browse/asn/AS[number]/`
-   - Returns all malware distribution URLs hosted on the ASN
+   - Web search: `https://urlhaus.abuse.ch/browse.php?search=[value]` (the by-ASN browse path used in earlier versions could not be verified; use the authenticated API for ASN-wide pulls)
+   - Returns malware distribution URLs matching the IP, domain or other value
    - Note malware families, submission dates, and whether URLs are still active
 
 2. **abuse.ch ThreatFox:**
-   - URL: `https://threatfox.abuse.ch/browse/as_num/[number]/`
+   - URL: `https://threatfox.abuse.ch/asn/[number]/`
    - IOC database searchable by ASN
    - Links IOCs to specific malware families and threat actors
 
@@ -238,7 +241,7 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 
 6. **GreyNoise:**
    - Differentiate targeted attacks from opportunistic scanning
-   - If an IP is flagged as "malicious" by GreyNoise, it is actively scanning/exploiting at internet scale
+   - GreyNoise classifies sensor-observed IPs as benign, suspicious or malicious; "malicious" means it was seen scanning or exploiting at internet scale. Absence from GreyNoise is not evidence that an IP is benign
 
 ---
 
@@ -260,14 +263,14 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 |------|-----|----------|
 | Recorded Future | `recordedfuture.com` | Threat Density Score, Network Intelligence module, TAE tracking, dark web monitoring |
 | Shodan | `shodan.io` | Internet-wide device scanning, service enumeration, banner grabbing, historical data |
-| Censys | `platform.censys.io` | Certificate transparency, service discovery, infrastructure mapping, host enumeration. Legacy Search (`search.censys.io`) and its API are deprecated and sunset September 2026 -- migrate to Platform (`api.platform.censys.io/v3/`) |
-| GreyNoise | `greynoise.io` | Internet-wide scan classification, mass exploitation detection, benign scanner filtering |
+| Censys | `platform.censys.io` | Certificate transparency, service discovery, infrastructure mapping, host enumeration. Legacy Search (`search.censys.io`) and its API were retired in September 2026 (already disabled for free users; the host redirects to Platform) -- use Platform (`api.platform.censys.io/v3/`) |
+| GreyNoise | `greynoise.io` | Internet-wide scan classification (benign / suspicious / malicious), mass exploitation detection, benign scanner filtering; weekly-brief IOC files are a good source of persistent BPH scanners |
 | ipinfo.io | `ipinfo.io` | IP/ASN geolocation, hosted domain counts, privacy/proxy detection, company data |
 | ipapi.is | `ipapi.is` | Hosting detection, ASN abuse scoring, VPN/proxy/tor detection |
 
 ### Malware/C2 Intelligence
 
-> **abuse.ch requires authentication.** Since 2025-06-30 every abuse.ch platform and API — ThreatFox, URLhaus, MalwareBazaar, YARAify — requires an account at `auth.abuse.ch` and an Auth-Key passed as an HTTP header (`Auth-Key: YOUR-AUTH-KEY-HERE`). Unauthenticated scripted pulls fail. Free for community contributors; commercial use may need a subscription via Spamhaus Technology. Note that abuse.ch and Spamhaus remain separate organizations — Spamhaus Technology has been the primary licensee of abuse.ch data since 2022-08-01, which is a licensing alliance, not an acquisition.
+> **abuse.ch requires authentication.** Since 2025-06-30 the abuse.ch APIs — ThreatFox, URLhaus, MalwareBazaar, YARAify — require an account at `auth.abuse.ch` and an Auth-Key passed as an HTTP header (`Auth-Key: YOUR-AUTH-KEY-HERE`); scripted API pulls without it fail (some static `/downloads/` exports still answered unauthenticated in Aug 2026, which should not be relied on). The ThreatFox recent-IOC API returns at most 7 days, so archive history locally. Small independent organisations keep free access; commercial licensing is offered through Spamhaus Technology. Note that abuse.ch and Spamhaus remain separate organizations — Spamhaus Technology has been the primary licensee of abuse.ch data since 2022-08-01, which is a licensing alliance, not an acquisition.
 
 | Tool | URL | Use Case |
 |------|-----|----------|
@@ -305,7 +308,7 @@ Map the provider's infrastructure to known malware campaigns and threat actors.
 |----------|-----|----------|
 | Spamhaus Project | `spamhaus.org` | ASN/domain blocklists, SBL/XBL/DBL, BPH research, policy block listings |
 | Team Cymru | `team-cymru.com` | IP reputation, BGP intelligence, Nimbus threat monitor, community feeds |
-| COMM-ISAC | `comm-isac.org` | Communications sector information sharing and analysis center |
+| COMM-ISAC | (URL unverified) | Communications sector information sharing and analysis center; named by CISA as a sharing channel for building a high-confidence BPH list |
 | Krebs on Security | `krebsonsecurity.com` | Investigative journalism on cybercrime infrastructure, BPH provider exposures |
 | BleepingComputer | `bleepingcomputer.com` | Malware/ransomware news with infrastructure details, IOC reporting |
 
@@ -463,11 +466,12 @@ This section operationalizes Recorded Future's Threat Activity Enabler (TAE) con
 
 The Threat Density Score measures **validated malicious activity as a proportion of total IP prefixes announced by an ASN.** It answers the question: "What fraction of this network's address space is being used for malicious purposes?"
 
-**Interpretation benchmarks:**
+**Interpretation benchmarks (CrimsonVector heuristics).** Recorded Future publishes rankings, not these bands; the thresholds below are this repository's working assumptions and should be tuned. RF's 2025 top ten by Threat Density was Virtualine, CrazyRDP, Stark Industries, Kaopu Cloud HK, Aeza, PrivateAlps, 4VPS, Defhost, Silent Connection and DolphinHost (relayed; verify against CTA-2026-0319).
+
 
 | Score Range | Interpretation | Analyst Action |
 |-------------|---------------|----------------|
-| >10% | **Strong TAE indicator** -- the network exists primarily to enable threat activity. Virtualine peaked at approximately 20%. | Immediate Phase 2 investigation. Consider preemptive blocking. |
+| >10% | **Strong TAE indicator** -- the network exists primarily to enable threat activity. (Virtualine ranked #1 in RF's 2025 list; the often-quoted ~20% peak is unsourced.) | Immediate Phase 2 investigation. Consider preemptive blocking. |
 | 5-10% | **Significant TAE indicator** -- malicious hosting is a substantial portion of the provider's business. | Priority Phase 2 investigation within 48 hours. |
 | 1-5% | **Warrants investigation** -- could be a negligent provider or an emerging BPH operation. | Phase 1 triage. Schedule follow-up in 2 weeks to check trend. |
 | <1% | **Within normal range** for most legitimate providers. | No action unless other red flags are present. |
@@ -479,7 +483,7 @@ The Threat Density Score measures **validated malicious activity as a proportion
 
 ### Three Operational Applications
 
-These are the three ways analysts should integrate TAE intelligence into daily operations, derived from Recorded Future's framework:
+These are the three ways analysts should integrate TAE intelligence into daily operations, adapted from Recorded Future's TAE framing (the RF source text was not re-verified in the 2026-09 audit):
 
 #### Application 1: Preventive Control Adjustments
 
@@ -535,82 +539,131 @@ Use these questions as a self-assessment checklist and as discussion prompts for
 
 ## 7. CISA/NSA BPH Mitigation Framework
 
-This section references the November 19, 2025 joint guidance titled **"Bulletproof Defense: How to Identify and Mitigate Malicious Use of Bulletproof Hosting Services"**, issued by CISA, NSA, FBI, DC3, and Five Eyes partner agencies (ASD/ACSC, CCCS, NCSC-NZ, NCSC-UK).
+This section references the November 19, 2025 joint guidance **"Bulletproof Defense: Mitigating Risks From Bulletproof Hosting Providers"** (TLP:CLEAR, version 1). It was authored by nine agencies: CISA, NSA, DC3, FBI, ASD's ACSC, the Canadian Centre for Cyber Security, **NCSC-NL**, NCSC-NZ and NCSC-UK -- Five Eyes plus the Netherlands. It was developed through the Joint Ransomware Task Force, with contributions from AWS, Silent Push and RedSense, and NSA publishes it as a Cybersecurity Information Sheet.
 
-The guidance provides a framework for both **network defenders** and **ISPs/hosting providers** to counter BPH threats. Below is the actionable distillation.
+The guidance defines a BPH provider as "an internet infrastructure provider that knowingly and intentionally markets and leases their infrastructure to cybercriminals". It warns that blocking a whole AS "may be ineffective" -- filters cause collateral damage, BPH operators spread infrastructure across many ASes, and a BPH "can request a new ASN from an internet registry and receive it within two to five business days".
 
-### For Network Defenders (Enterprises & Government)
+> **How to read this section.** Each numbered item states what CISA recommends. Lines marked **CrimsonVector practice** are this repository's own hardening, not CISA text -- earlier versions blurred the two (notably the two-source rule, per-entry expiry, age-based deletion and 12-month log retention).
+
+### For Network Defenders (and ISPs)
 
 #### 1. Curate a High-Confidence Malicious Resource List
-- Aggregate indicators from commercial threat intelligence feeds (Recorded Future, CrowdStrike, Mandiant) and open-source feeds (abuse.ch, Spamhaus, Team Cymru)
-- Deduplicate and validate: each entry should have at least two independent sources or one high-confidence source
-- Organize by granularity: ASN-level, prefix-level, and individual IP-level entries
-- Assign confidence scores and expiration dates to every entry
-- **Do not rely on a single feed.** No single source has complete coverage.
+- **CISA:** build a "high confidence" list of malicious internet resources from commercial and open-source feeds and from public/private sharing channels (CISA names COMM-ISAC). Free resources it cites include Spamhaus DROP, ThreatFox ASN reports (`https://threatfox.abuse.ch/asn/[ASN]`), ipapi.is's abusive-ASN and abusive-range lists, CIRA Canadian Shield and ASD's ACSC BPH paper.
+- **CrimsonVector practice:** require at least two independent sources, or one high-confidence source, per entry; record granularity (ASN / prefix / IP), confidence and a validity window; never rely on a single feed.
 
 #### 2. Conduct Traffic Analysis to Supplement the List
-- Analyze netflow/firewall logs for communication patterns with known BPH infrastructure
-- Identify outlier activity: unusual volumes, unusual ports, unusual times to/from suspicious ASNs
-- Use GreyNoise to contextualize scanning activity (benign vs. malicious)
-- Feed newly discovered malicious IPs back into the curated list
+- **CISA:** analyse traffic against a baseline to find outliers, and allowlist expected CDNs, whose behaviour can resemble fast flux.
+- **CrimsonVector practice:** use GreyNoise to separate opportunistic scanning from targeted activity, and feed confirmed discoveries back into the list.
 
 #### 3. Automate Regular Reviews of the Curated List
-- Set a review cadence: weekly for active-threat entries, monthly for watch-list entries
-- Automate staleness checks: remove entries that have not been revalidated within their expiration window
-- Track false positive rates: entries that triggered blocks on legitimate traffic must be investigated and either removed or confirmed
-- Version-control the list: maintain a changelog so analysts can understand why entries were added or removed
+- **CISA:** promptly add new malicious resources and **remove resources that are reallocated to legitimate infrastructure**; refresh ASN-to-IP mappings, because "IP addresses behind an ASN can change". The removal trigger is **reallocation, not age.**
+- **CrimsonVector practice:** weekly review of active-threat entries, monthly for watch-list entries; track false positives; version-control the list. Entries that pass their validity window leave the *blocking* tier but are kept for alerting and hunting (Section 8) -- do not delete them.
 
 #### 4. Share Threat Intelligence with the Community
-- Participate in ISACs (sector-specific Information Sharing and Analysis Centers)
-- Contribute validated indicators to community platforms (abuse.ch, MISP instances)
-- Share sanitized case studies: describe the TTPs without revealing proprietary detection methods
-- Engage with CISA's Automated Indicator Sharing (AIS) program
+- **CISA:** share threat intelligence through public and private channels.
+- **CrimsonVector practice:** participate in sector ISACs, contribute validated indicators to abuse.ch and MISP communities, and use CISA's Automated Indicator Sharing (AIS).
 
 #### 5. Configure Centralized Event Logging
-- Ensure all network border devices (firewalls, proxies, DNS resolvers) log connections to/from the curated malicious list
-- Forward these logs to the SIEM with enrichment (ASN, org name, threat density score)
-- Create dashboards: "Connections to BPH Infrastructure -- Last 7 Days"
-- Set retention: minimum 12 months for logs involving BPH-listed infrastructure
+- **CISA:** log the ASNs and IP addresses of connections, alert on matches against the list, and always use the latest list version.
+- **CrimsonVector practice:** enrich SIEM events with ASN, organisation, registry holder and threat-density context; keep **at least 12 months** of logs for connections involving BPH-listed infrastructure (CISA sets no retention period). Listing lags activity by about three weeks on average, so every new listing should trigger a 30-90-day look-back.
 
 #### 6. Implement Filters at the Network Border
-- **Granularity decision matrix:**
-  - ASN-level block: appropriate for T1-T2 Pure BPH providers where the entire ASN is malicious
-  - Prefix-level block: appropriate for mixed-use ASNs where specific prefixes are malicious
-  - Individual IP block: appropriate for targeted C2 addresses within otherwise-clean ranges
-- Deploy at multiple layers: firewall, web proxy, DNS resolver (RPZ/sinkhole), email gateway
-- Log all blocked connections for retrospective analysis
+- **CISA:** decide *whether* and at what granularity to filter through a risk analysis; keep an **audit log** recording when and why each filter was applied, with change control; refresh ASN-to-IP mappings regularly.
+- **CrimsonVector practice (granularity matrix):**
+  - ASN-level block: T1-T2 pure BPH where the entire ASN is malicious -- and only after confirming the current registry holder (Section 8.3)
+  - Prefix-level block: mixed-use ASNs where specific prefixes are malicious
+  - Individual IP block: targeted C2 addresses in otherwise-clean ranges
+  - Deploy at several layers (firewall, web proxy, DNS RPZ/sinkhole, email gateway) and log every blocked connection
 
 #### 7. Develop Filter Feedback Processes
-- Create a process for internal users and external parties to inquire about blocked resources
-- Provide a mechanism for legitimate entities to request unblocking (with verification)
-- Track block-related inquiries: a spike in complaints about a specific block may indicate a false positive or a BPH provider migrating legitimate customers as cover
+- **CISA:** give internal users and external parties a way to ask about blocked resources, with standardised inquiry data and trend tracking.
+- **CrimsonVector practice:** a spike in unblock requests for one range can mean a false positive -- or a BPH provider moving legitimate customers in as cover.
+
+#### 8. Use Upstream Providers That Follow Secure by Design Principles
+- **CISA (defenders and ISPs):** ask your upstreams how they handle requests about blocked resources, whether an unblock applies to one customer or all, and take a risk-informed approach to unblock requests.
+- **CrimsonVector practice:** write abuse-handling SLAs and null-route rights into transit and peering contracts.
 
 ### For ISPs and Hosting Providers
 
-#### 8. Use Upstream Providers That Follow Secure by Design Principles
-- Vet your own upstream providers for BPH adjacency
-- Contractually require abuse handling SLAs in peering and transit agreements
-- Reserve the right to null-route prefixes that are sources of sustained abuse
-
-#### 9. Notify Customers About Malicious Lists
-- Proactively inform customers when their IP addresses appear on community blocklists
-- Provide remediation guidance and a timeline for compliance
-- Enforce consequences: progressive warnings, traffic throttling, contract termination
+#### 9. Notify Customers About the Lists and Filters You Apply
+- **CISA:** tell customers which malicious-resource lists and filters the ISP applies, so they understand possible incidents or availability impacts, and consider opt-outs for customers with different risk tolerances.
+- **CrimsonVector practice:** proactively notify customers whose own addresses appear on community blocklists, with remediation timelines and escalating consequences.
 
 #### 10. Create Customer-Facing Filters
-- Offer customers the option to enable BPH-based filtering on their traffic
-- Provide DNS-based filtering using community blocklists (Spamhaus, abuse.ch)
+- **CISA:** offer filters that customers can choose to apply (e.g. DNS-based filtering using community blocklists).
 
-#### 11. Establish KYC Capabilities
-- Implement identity verification for all new customers (government ID, verified payment method)
-- Maintain records sufficient to respond to law enforcement requests
-- Flag accounts that fail or refuse KYC for enhanced monitoring
+#### 11. Form Standards and Norms for ISP Accountability
+- **CISA:** agree a sector-wide code of conduct, binding in peering contracts. Consider a time-boxed block (e.g. **90 days**) of all malicious IP ranges managed under an AS, then ask the AS operator or its upstream to confirm the abusers were removed; repeat the block if nothing was done.
 
-#### 12. Implement Internet Routing Security Best Practices
-- Deploy RPKI (Resource Public Key Infrastructure) for BGP route origin validation
-- Implement BCP38/BCP84 (network ingress filtering) to prevent IP spoofing
-- Participate in MANRS (Mutually Agreed Norms for Routing Security)
-- Monitor for unauthorized route announcements (BGP hijacking)
+#### 12. Establish KYC Capabilities
+- **CISA:** require authenticated proof of identity, banking details (e.g. a one-cent test payment) and a Legal Entity Identifier where applicable. Because BPH operators cycle receive-only email addresses and phone numbers, require the customer to **send** a verification code to the provider rather than receive one. Collect only what privacy law allows.
+
+#### 13. Implement Internet Routing Security Best Practices
+- **CISA:** follow NCSC-UK's "Responsible Use of the Border Gateway Protocol (BGP) for ISP Interworking" and NIST SP 800-189 Rev. 1.
+- **CrimsonVector practice:** RPKI route-origin validation, BCP38/BCP84 ingress filtering, MANRS participation and hijack monitoring.
+
+---
+
+## 8. Infrastructure Reuse and Indicator Retention
+
+"Burned" IPs and domains are cheap for an adversary to abandon -- that is the point of Bianco's Pyramid of Pain -- but the pyramid measures the *pain of denial*, not the *value of detection*. This section sets out why published indicators keep value and how to retain them without causing collateral damage.
+
+### 8.1 What the evidence shows
+
+- **Listing lags activity.** Across 24 open feeds (1.38M indicators), indicators were listed on average **21 days** after activity began. Listed hosts often stayed active for weeks: for one feed, more than half were still active 79+ days later. Only **6.2%** of entries appeared on a second feed. (Griffioen et al., ACNS 2020)
+- **Vendors barely overlap.** Two leading commercial vendors shared only **2.5-4%** of indicators for the same 22 actors, with about a month's lag between them. (Bouwman et al., USENIX Security 2020)
+- **Burned domains come back.** About **8.7%** of blacklisted domains were listed *after* expiring and changing owner, and expired malicious domains are re-registered and re-weaponised. (Lever et al., IEEE S&P 2016)
+- **Reuse traces detect early.** Unit 42's detector for stockpiled domains, built on certificate-transparency and passive-DNS reuse features, caught malicious domains **~34 days** before VirusTotal vendors. (Unit 42, Dec 2023)
+- **Actor-level reuse happens at block and provider level.** Cl0p's MFT campaigns, 2020-2026:
+  - Exact IPs recurred only within about 0-12 months of exposure.
+  - The same **/22-/24 blocks and providers** recurred **18-36 months** later.
+  - HostZealot, Cl0p's most-reused provider, served 4 of 10 campaigns.
+  - A watchlist of providers named in earlier public IOC lists would have flagged 50-63% of the IOC IPs in later campaigns (MOVEit, SysAid, Cleo, Oracle EBS).
+  - See [`analysis/CL0P_HOSTZEALOT_REUSE.md`](../analysis/CL0P_HOSTZEALOT_REUSE.md).
+- **Counterpoints are concentrated in identifiable classes:**
+  - Cloud IPs are recycled quickly: in Pauley et al. (IEEE S&P 2022), an AWS IP released by a tenant had an 87% chance of being re-leased to the researchers during their 101-day study, which captured traffic still meant for previous tenants.
+  - Shared-hosting IPs carry large collateral damage.
+  - Compromised or residential hosts are victims.
+  - Fast-flux IPs rotate every 3-5 minutes (CISA AA25-093A).
+  - Some BPH providers expose "dummy" interfaces so only decoys get listed (CISA AA25-093A).
+
+### 8.2 Tiered retention model (CrimsonVector practice)
+
+| Tier | Contents | Validity | Action |
+|---|---|---|---|
+| **1 -- Block** | Corroborated, fresh indicators on BPH-owned or dedicated infrastructure | Short `valid_until` (30-120 days, in line with MISP's 120-day NIDS default), decaying from the last sighting | Automated blocking |
+| **2 -- Alert / Enrich** | Decayed indicators not shown to be reallocated; actor-preferred provider blocks (e.g. HostZealot's Cl0p-used /22s-/24s for 24-36 months) | Scored, never auto-blocked | SIEM enrichment, priority elevation, conditional challenges |
+| **3 -- Hunt / Archive** | Everything, indefinitely, with provenance: source and grade, first/last seen, sightings, and the ASN, prefix, organisation and hosting class *at time of observation* | Indefinite | Retro-hunting, clustering, pivoting |
+
+**Rules:**
+1. **Decay by hosting class, not one clock.**
+   - Cloud/CDN and residential/proxy IPs decay in days. Phishing domains decay in days too (MISP's phishing default is 3 days).
+   - BPH-owned prefix indicators decay slowly and stay tied to prefix and ASN lineage. A new ASN takes 2-5 days to obtain; IPv4 space is the scarce asset.
+   - Compromised hosts are never promoted to blocking without corroboration.
+2. **Remove from Tiers 1-2 on evidence of reallocation**, which is CISA's trigger:
+   - an RIR holder change
+   - a BGP origin change
+   - a match against a cloud range
+   - a passive-DNS ownership change
+
+   Keep the Tier 3 record.
+3. **Carry context on every record** (prefix, ASN, provider, upstream), so a quiet IP still informs about its block. Use Spamhaus ASN-DROP as an annotation and attribution anchor, not as an automatic block.
+4. **Re-hunt triggers:**
+   - Any new public report, designation or ASN-DROP addition: look back 30-90 days.
+   - An actor or provider resurfacing after dormancy (Cl0p between campaigns; Stark -> WorkTitans): re-run the full archived set and its pivots (certificates, RDP/VM hostnames, nameservers, prefix lineage).
+   - Any prefix transfer or origin-AS change for a tracked prefix.
+5. **Measure the cost.**
+   - Log every block with its reason and date (the CISA audit log).
+   - Record true- and false-positive sightings and feed them back into decay, as MISP's sightings model does.
+   - Review Tier-2 and Tier-3 hits separately from Tier 1.
+
+Standards support this split. STIX 2.1 indicators carry `valid_from`/`valid_until`. MISP decaying models flag attributes as *decayed* rather than deleting them: the NIDS model has a 120-day lifetime and threshold 30, and `excludeDecayed` exports only live indicators.
+
+### 8.3 ASN hygiene before any ASN-level action
+
+- **Check the current holder first.** Confirm the RIR/ipverse holder name and the announced prefixes. Registries re-issue returned ASNs to unrelated organisations; see taxonomy §3.9.
+- **Never block a historical ASN.** Treat any CSV ASN marked `historical; reassigned to X - do not block` as history only.
+- **Distrust unexplained dark ASNs.** When a tracked ASN goes dark, look for a sibling ASN under the same Spamhaus ASN-DROP `domain` field, and for the old prefixes reappearing under a new origin. Virtualine's AS214943 went dark while its ranges moved to OMEGATECH AS202412.
 
 ---
 
@@ -618,12 +671,14 @@ The guidance provides a framework for both **network defenders** and **ISPs/host
 
 | Pattern | Description | Example |
 |---------|-------------|---------|
-| **Phoenix Rebrand** | Provider is taken down or sanctioned, re-emerges under new name/ASN within weeks | Zservers --> XHOST --> subsequent entities |
+| **Phoenix Rebrand** | Provider is taken down or sanctioned, re-emerges under new name/ASN within days or weeks | Stark Industries --> PQ Hosting Plus / THE.Hosting --> WorkTitans B.V.; Aeza --> Hypercore / Datavice |
 | **Upstream Laundering** | BPH obtains transit from a "clean" upstream to avoid guilt-by-association | Multiple BPH providers routing through aurologic AS30823 |
-| **Corporate Carousel** | Rapid incorporation and dissolution of shell companies to hold ASN resources | UK LLP incorporated, ASN registered, LLP dissolved, ASN transferred to new LLP |
+| **Corporate Carousel** | Rapid incorporation and dissolution of shell companies to hold ASN resources | BtHoster's UK '[Word] Network LTD' shells. Constraints: RIPE transfer policy bars re-transferring IPv4 and 16-bit ASNs for 24 months, and RIPE NCC freezes the registrations of EU-sanctioned holders, so operators often abandon ASNs and move prefixes instead |
 | **Cloudflare Fronting** | Provider advises customers to place Cloudflare in front of their infrastructure to mask the hosting origin | Common advice on underground forums |
 | **Jurisdiction Shopping** | Registration in Country A, servers in Country B, ownership in Country C | UK registration, Netherlands servers, Russian beneficial owners |
-| **Sanctions Evasion via Transfer** | Sanctioned entity transfers ASN/prefix resources to an apparently unrelated new entity | Check RIPE DB transfer logs and compare entity details |
+| **Sanctions Evasion via Transfer** | Sanctioned entity transfers ASN/prefix resources to an apparently unrelated new entity | Stark's AS44477 moved to PQ Hosting Plus four days before the EU listing. Check RIPE DB transfer logs and compare maintainers (RF ties the Stark chain to one maintainer identity) |
+| **ASN Recycling** | A shell's ASN is returned and re-issued to an unrelated organisation while the operator moves on | Karina Rashkovska AS215789 --> BLIK; CrazyRDP AS394711 --> KorGrid LLC (see taxonomy §3.9) |
+| **Repeat Tenancy** | Capable actors return to the same non-bulletproof host across campaigns, renting fresh VPS in the same blocks | Cl0p and HostZealot, 2020-2024 (see `analysis/CL0P_HOSTZEALOT_REUSE.md`) |
 
 ## Appendix B: Glossary
 
