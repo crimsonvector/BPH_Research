@@ -10,7 +10,7 @@
 
 This repository is a comprehensive intelligence resource for tracking bullet-proof hosting (BPH) providers, threat activity enablers (TAEs), and the infrastructure that underpins modern cybercrime. It combines a structured provider database with analytical documents, an investigative playbook, and an organized source library.
 
-**Current scope:** 63 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
+**Current scope:** 64 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
 
 ---
 
@@ -42,6 +42,9 @@ BPH_Research/
 |-- tools/
 |   |-- build_dashboard_data.py  <-- Generates the public dashboard_data/ from the CSV +
 |   |                                 the private findings file, with denylist/defang gates
+|   |-- build_xlsx.py            <-- Regenerates BPH_Master.xlsx from the CSV
+|   |-- validate_repo.py         <-- Cross-file consistency checks (CSV, source index,
+|   |                                 workbook, appendices, stated counts)
 |   |-- denylist.example.txt     <-- Template for the (gitignored) publication denylist
 |
 |-- dashboard_data/              <-- Sanitized, public dashboard outputs (generated)
@@ -186,7 +189,8 @@ To add new intelligence to this repository:
 2. **New source:** Add to `sources/SOURCE_INDEX.md` with metadata and grade (update the Source Statistics counts), cross-reference the Source ID in the CSV `sources` column
 3. **Status change:** Update CSV status/tier, add a `TIMELINE.md` entry, update the ecosystem map if relationships changed
 4. **Sanctions update:** Add to timeline, update the CSV `sanctions_designations` field, check for evasion vehicles
-5. **After any CSV change:** regenerate `BPH_Master.xlsx` (single-sheet mirror) and re-run `tools/build_dashboard_data.py` so the workbook and `dashboard_data/` stay in sync. Appendices A/B of `ECOSYSTEM_MAP.md` are also CSV-derived — keep them consistent.
+5. **After any CSV change:** run `python tools/build_xlsx.py` (regenerates the single-sheet `BPH_Master.xlsx` mirror) and re-run `tools/build_dashboard_data.py` so the workbook and `dashboard_data/` stay in sync. Appendices A/B of `ECOSYSTEM_MAP.md` are also CSV-derived — keep them consistent.
+6. **Before committing:** run `python tools/validate_repo.py`. It fails on drift between the CSV and everything that restates it — uncatalogued Source IDs, a stale workbook, Appendix A/B gaps, and out-of-date tier or entity counts.
 
 ---
 

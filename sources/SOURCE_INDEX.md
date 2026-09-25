@@ -151,6 +151,17 @@ When adding a new source to this index:
 
 ---
 
+### First-Party Findings (CrimsonVector forward hunts)
+
+> Direct technical observations from CrimsonVector's own hunting, cited by CSV rows as evidence. They are single-source by construction, so they are graded **D** under this index's scheme even when the underlying observation is confirmed live. A tier that rests only on first-party findings sits below the taxonomy's minimum-evidence bar for T1/T2 (Grade A, or 2+ independent Grade B/C sources) until external reporting corroborates it. Published summaries appear in `dashboard_data/` only when a finding clears the pipeline's publish/confidence and OPSEC gates.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| CV-GSHELL-2026-07 | D | Unreported Gshell C2 cluster (July 2026 mapping; CTG pair still live Sept 2026) | CrimsonVector Research | CrimsonVector (first-party) | 2026-07-23 | — (published summary: `dashboard_data/finding/gshell-c2-cluster-ctg-2026-07.json`) | SHANGXING TECH LIMITED (AS400619) node pair; CTG Server Limited (AS152194); Gshell default TLS cert |
+| CV-OPENDIR-2026-09 | D | Open-directory hunt: mass web-exploitation workspaces on AS400619 (Fastmos :8889; AROSSCLOUD :9999) | CrimsonVector Research | CrimsonVector (first-party) | 2026-09 | — | SHANGXING TECH LIMITED / Fastmos Co Limited / AROSSCLOUD INC. (AS400619) |
+
+---
+
 ## Source Statistics
 
 | Grade | Count | Description |
@@ -158,9 +169,9 @@ When adding a new source to this index:
 | A — Government/Official | 23 | Sanctions notices, LE press releases, government advisories |
 | B — Established CTI Vendor | 30 | Published research from recognized threat intelligence firms |
 | C — Community/Independent | 22 | Independent researchers, community blocklists, investigative journalism |
-| D — Single Source / Unverified | 1 | Reputation/review platforms and single-source OSINT |
+| D — Single Source / Unverified | 3 | Reputation/review platforms, single-source OSINT, and first-party findings |
 | E — Self-Reported / Marketing | 1 | Forum advertising presence and provider marketing |
-| **Total** | **77** | |
+| **Total** | **79** | |
 
 ---
 

@@ -672,7 +672,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 
 ## Appendix A: Entity Quick Reference
 
-> Generated from `BPH_Master.csv` (63 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
+> Generated from `BPH_Master.csv` (64 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
 
 | Entity | ASN(s) | Tier | Status | Geographic Cluster | Primary Role |
 |--------|--------|------|--------|--------------------|--------------|
@@ -726,6 +726,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | QWINS LTD | AS213702 | T2 | Flagged | UK Shell | BPH |
 | Railnet / Virtualine | AS214943 | T2 | Flagged | aurologic downstream | BPH downstream |
 | Ramzinex | — | T3 | Sanctioned | Iran | Financial Enabler |
+| SHANGXING TECH LIMITED | AS400619 | T2 | Suspected | Hong Kong/US | HK reseller ASN (China-nexus C2 / exploitation staging) |
 | Shinjiru | AS45839; multiple regional ASNs | T4 | Active | Malaysia | BPH-Adjacent |
 | Silent Connection | AS215240 | T3 | Dissolved | UK Shell | Corporate Shell |
 | StarCloud Global | — | T3 | Flagged | APAC | FUNNULL front brand |
@@ -813,6 +814,8 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS216246 | Aeza International | T1 | Pure BPH; Russia / St. Petersburg |
 | AS216309 | Tnsecurity / EVILEMPIRE | T2 | BPH downstream; aurologic downstream |
 | AS394711 | CrazyRDP | T1 | RDP-as-a-service (seized); Netherlands |
+| AS400619 | SHANGXING TECH LIMITED | T2 | HK reseller ASN (China-nexus C2 / exploitation staging); Hong Kong/US |
+
 ---
 
 *This ecosystem map is a living analytical product. Update as new corporate relationships are identified, sanctions are issued, or infrastructure migrations are observed. Cross-reference all provider assessments against the risk tier definitions in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md).*

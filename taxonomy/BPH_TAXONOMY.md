@@ -53,7 +53,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block known malicious prefixes; consider ASN-level block with allowlisting for confirmed legitimate customers.
 
-**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 19 rows):** Femo IT/Defhost, Tnsecurity/EVILEMPIRE, Railnet/Virtualine, QWINS LTD, Karina Rashkovska, GCSAS, aurologic GmbH (upstream enabler), MIRhosting, PINSPB, SWISSNETWORK02/Global-Data, WAIcore, First Server Limited, UFO Hosting (evading), Asocks (proxy enabler, seized), NetNut/Alarum (proxy enabler, seized), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
+**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 20 rows):** Femo IT/Defhost, Tnsecurity/EVILEMPIRE, Railnet/Virtualine, QWINS LTD, Karina Rashkovska, GCSAS, aurologic GmbH (upstream enabler), MIRhosting, PINSPB, SWISSNETWORK02/Global-Data, WAIcore, First Server Limited, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks (proxy enabler, seized), NetNut/Alarum (proxy enabler, seized), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
 
 ---
 
