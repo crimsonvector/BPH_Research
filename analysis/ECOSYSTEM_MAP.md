@@ -7,7 +7,8 @@
 ---
 
 > **2026-09-25 audit:**
-> - **Appendices.** Appendices A and B were regenerated from `BPH_Master.csv` (71 rows), with every ASN re-checked against registry and Spamhaus ASN-DROP data.
+> - **Appendices.** Appendices A and B were regenerated from `BPH_Master.csv` (70 rows), with every ASN re-checked against registry and Spamhaus ASN-DROP data.
+> - **Follow-up decisions.** A new `dormant` status now marks ELITETEAM, HOSTYPE and SWISSNETWORK02/Global-Data. CDNCloud was removed as unsourced. Kaopu Cloud HK, PrivateAlps/Private Layer and MIRhosting were raised to T1 (see the taxonomy and each CSV row for the basis).
 > - **Narrative corrections.** Sections 1-6 were corrected where the audit found errors:
 >   - the Aeza hierarchy (§3.3);
 >   - the Zservers ASN history (§3.5);
@@ -144,7 +145,7 @@ BPH operations concentrate in specific geographic corridors, each offering disti
 | **Media Land LLC** | AS206728, AS215376 (ML Cloud) | T1 | Sanctioned (US/UK/AU Nov 2025; EU July 2026) | Yalishanda (Volosovik); DOJ indictment July 2026 ($62M+ losses) |
 | **PINSPB** | AS44050, AS34665 | T2 | Flagged | Long-running St. Petersburg hoster; Cl0p torrent seeder on AS34665 (Unit 42, 2023) |
 | **PROSPERO / Proton66** | AS200593, AS198953 | T1 | Flagged | Forum-advertised BPH (Intrinsec); both ASNs on Spamhaus ASN-DROP; 2026 tenants include ShinyHunters and a The Gentlemen affiliate |
-| **ELITETEAM / 1337TEAM** | AS51381, AS56873 | T1 | Active (network dark) | Seychelles registration; announces no prefixes as of Sept 2026 but still on ASN-DROP |
+| **ELITETEAM / 1337TEAM** | AS51381, AS56873 | T1 | Dormant (network dark) | Seychelles registration; announces no prefixes as of Sept 2026 but still on ASN-DROP |
 | **UFO Hosting LLC** | AS33993 | T2 | Evading | Russian prefix migration vehicle for Stark Industries; Spamhaus lists it under stark-industries.solutions |
 
 **Why St. Petersburg:** Proximity to technical talent pools, established underground forum communities (XSS, Exploit), permissive jurisdictional environment for hosting, limited Western LE cooperation, and an ecosystem of crypto payment processors. The city functions as a self-reinforcing cluster where providers share datacenter facilities, transit, and even customers.
@@ -202,7 +203,7 @@ Step 4: Operate; when flagged or dissolved, move on
 
 | Provider | ASN | Location | Risk Tier | Key Detail |
 |----------|-----|----------|-----------|------------|
-| **MIRhosting B.V.** | AS52000, AS206932 | Netherlands | T2 (T1 candidate) | Founded 2004 by Andrey Nesterenko (arrested in the May 2026 FIOD raid); WorkTitans' sole connectivity |
+| **MIRhosting B.V.** | AS52000, AS206932 | Netherlands | T1 | Founded 2004 by Andrey Nesterenko (arrested in the May 2026 FIOD raid); WorkTitans' sole connectivity |
 | **WorkTitans / THE.Hosting** | AS209847, AS213999 | Netherlands | T1 (sanctions evasion) | Owner Youssef Zinad; sole shareholder Fezzy B.V.; Stark successor; FIOD raid May 2026 |
 | **aurologic GmbH** | AS30823, AS43043 | Langen, DE | T2 (Upstream Enabler) | RF: transits ~70% of prominent high-risk TAE networks |
 
@@ -227,7 +228,7 @@ Step 4: Operate; when flagged or dissolved, move on
 |----------|-----|----------|-----------|------------|
 | **FUNNULL Technology** | (CDN, no ASN of its own) | Philippines (Taguig); Chinese administrator | T1 / Sanctioned | Liu Lizhi; >$200M US victim-reported losses; 548 CNAMEs -> 332,000+ domains (FBI) |
 | **CTG Server Limited** | AS152194 | Hong Kong | T1 (not designated) | Hosted FUNNULL points of presence; on Spamhaus ASN-DROP; ~6% of DCloud scam domains on BPH like CTG (Infoblox) |
-| **Kaopu Cloud HK** | AS138915, AS58854, AS154177 | Hong Kong | T2 | Three ASNs on ASN-DROP; RedHotel C2, ToolShell exploitation, GobRAT staging |
+| **Kaopu Cloud HK** | AS138915, AS58854, AS154177 | Hong Kong | T1 | RF 2025 Threat Density #4; three ASNs on ASN-DROP; RedHotel C2, ToolShell exploitation, GobRAT staging |
 | **Chang Way Technologies** | AS57523, AS59425, AS207566 (+2 shell ASNs) | Hong Kong | T2 | Proton66-linked rotating shell ASNs on ASN-DROP |
 | **SHANGXING TECH LIMITED** | AS400619 (AROSSCLOUD origin ASN) | Hong Kong / US | T2 (first-party) | China-nexus C2 and mass-exploitation staging |
 | **Shinjiru** | AS45839 | Malaysia | T4 | Long-running permissive hoster; "offshore" marketed |
@@ -351,7 +352,7 @@ AS214351   AS214943    AS209800     SWISS-   (reissued)  (live)   (reissued)
 | WAIcore | AS213887 | T2 | Live (29 IPv4 prefixes) |
 | Karina Rashkovska | AS215789 | T2 | ASN re-issued to BLIK -- defunct (Virtualine sub-network) |
 | Altawk | AS209946 | T2 | Live, on ASN-DROP (earlier AS203727 re-issued) |
-| SWISSNETWORK02 / Global-Data | AS34888 / AS42624 | T2 | Registered, no routes |
+| SWISSNETWORK02 / Global-Data | AS34888 / AS42624 | T2 | Registered, no routes (dormant) |
 | Aeza | AS210644 | T1 | Live, multi-homed |
 
 KPROHOST, previously listed here, peered with Pfcloud rather than aurologic and is a Virtualine network. Karina Rashkovska's aurologic link rests on bgp.tools only.
@@ -519,15 +520,17 @@ The BPH ecosystem contains several single points of failure where intervention w
     | Providers |   | Providers |   | Providers |
     +-----------+   +-----------+   +-----------+
     | Aeza      |   | GCSAS     |   | HostSlick |
-    | Media Land|   | QWINS     |   | PrivateAlps|
-    | PROSPERO  |   | WAIcore   |   | NECHAEVDS |
-    | Railnet/  |   | Altawk    |   | NETINNOV. |
-    |  Virtual. |   | KPROHOST  |   | Tiger Net |
-    | Femo IT   |   | Kaopu     |   | HostZealot|
-    | ELITETEAM*|   | Pfcloud   |   |  (T4)     |
-    | Zservers  |   | Chang Way |   |           |
-    | FUNNULL   |   | CTG**     |   |           |
+    | Media Land|   | QWINS     |   | NECHAEVDS |
+    | PROSPERO  |   | WAIcore   |   | NETINNOV. |
+    | Railnet/  |   | Altawk    |   | Tiger Net |
+    |  Virtual. |   | KPROHOST  |   | HostZealot|
+    | Femo IT   |   | Pfcloud   |   |  (T4)     |
+    | ELITETEAM*|   | Chang Way |   |           |
+    | Zservers  |   | CTG**     |   |           |
+    | FUNNULL   |   |           |   |           |
     | WorkTitans|   |           |   |           |
+    | Kaopu     |   |           |   |           |
+    |PrivateAlps|   |           |   |           |
     +-----------+   +-----------+   +-----------+
           |               |               |
           +---------------+---------------+
@@ -540,8 +543,9 @@ The BPH ecosystem contains several single points of failure where intervention w
                     Phishing operators
                     DDoS-for-hire
 
-    * ELITETEAM announces no prefixes as of 2026-09.
+    * ELITETEAM is dormant: it announces no prefixes as of 2026-09.
     ** CTG Server Limited is T1 in the CSV; shown here beside the Asian cluster.
+    MIRhosting (T1 since 2026-09-25) is shown in the upstream layer above.
 ```
 
 ### Peering Relationships of Note
@@ -729,7 +733,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 
 ## Appendix A: Entity Quick Reference
 
-> Generated from `BPH_Master.csv` (71 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
+> Generated from `BPH_Master.csv` (70 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
 
 | Entity | ASN(s) | Tier | Status | Geographic Cluster | Primary Role |
 |--------|--------|------|--------|--------------------|--------------|
@@ -743,7 +747,6 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Bitpin | — | T3 | Sanctioned | Iran | Financial Enabler |
 | BtHoster | AS213790; AS213388 (IIC RAIL LIMITED [GB]; downstream); AS214295 (dark); AS215476 (dead); AS198465 (predecessor, recycled to CN) | T1 | Active | Lithuania / Bulgaria (UK shells) | Pure BPH (AS-leasing) |
 | BuyVM / Frantech | AS53667 | T4 | Active | Canada / US / Luxembourg | BPH-Adjacent |
-| CDNCloud | — | T5 | Active | China (Alibaba-routed; unverified) | Watch list |
 | Chang Way Technologies | AS57523 (CHANGWAY-AS; no routes); AS59425 (HORIZONMSK-AS; no routes); AS207566 (LD007-AS; no routes); AS201738 (UFO TECHNOLOGIES LIMITED [GB]; Spamhaus-attributed via changway.hk); AS211663 (GALEON LLC [RU]; Spamhaus-attributed via changway.hk) | T2 | Flagged | Hong Kong (UK/RU shells) | Pure BPH shell ring (Proton66-linked) |
 | Cloudzy / abrNOC | AS14956; AS200038 (Cloudzy A I Information Technology L.L.C [AE]; registered, no routes) | T3 | Exposed | Iran | BPH-Adjacent (front) |
 | CrazyRDP | AS394711 (historical; Limenet; reassigned to KorGrid LLC [US] - do not block); AS211252 (historical; Delis LLC; reassigned to Marushin K.K. [JP] - do not block) | T1 | Seized | Netherlands (servers) | RDP-as-a-service (seized) |
@@ -752,7 +755,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Datavice MCHJ | — | T1 | Sanctioned | Uzbekistan (Tashkent) | Sanctions Evasion (Aeza) |
 | DDoS-Guard | AS57724 (DDOS-GUARD); AS49612 (COGNITIVE-CLOUD-NET handle; 1 prefix) | T5 | Active | Russia | Dual-use / Peering |
 | Dolphon 1337 | AS215208 (historical; reassigned to PT Citra Celebas Multimedia [ID] - do not block) | T5 | Dissolved | UK Shell | Corporate Shell (ASN recycled) |
-| ELITETEAM / 1337TEAM | AS51381 (registered; no routes); AS39770 (historical; deregistered); AS60424 (historical; deregistered); AS56873 (registered; no routes) | T1 | Active | Russia (Seychelles reg.) | Pure BPH (network dark) |
+| ELITETEAM / 1337TEAM | AS51381 (registered; no routes); AS39770 (historical; deregistered); AS60424 (historical; deregistered); AS56873 (registered; no routes) | T1 | Dormant | Russia (Seychelles reg.) | Pure BPH (dormant) |
 | Femo IT / Defhost | AS214351 | T1 | Flagged | aurologic downstream | Pure BPH (UK shell) |
 | Feo Prest SRL | AS208137 | T2 | Flagged | Romania | Mass-scanning / exploitation source |
 | First Server Limited | AS204997; AS50113; AS205090; AS200740; AS204339; AS204154; AS35196; AS214602 | T2 | Flagged | Russia-linked (UK reg.) | BPH (VMmanager fleet) |
@@ -764,16 +767,16 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Grinex | — | T1 | Sanctioned | Russia / Kyrgyzstan | Financial Enabler (Garantex successor) |
 | H-Pay Service PLC | — | T2 | Flagged | Cambodia | Financial Enabler (Huione successor) |
 | HostSlick | AS197170 (TECHTIES-AS, TechTies Inc. [SC]; Spamhaus ASN-DROP under hostslick.de); AS208046 (historical; ColocationX Ltd; reassigned to a French individual - do not block) | T3 | Flagged | Seychelles / Netherlands | BPH-Adjacent |
-| HOSTYPE | AS49217 (registered; no routes) | T5 | Active | US (Wyoming LLC) / Turkey | Watch list (dormant) |
+| HOSTYPE | AS49217 (registered; no routes) | T5 | Dormant | US (Wyoming LLC) / Turkey | Watch list (dormant) |
 | HostZealot (HZ Hosting) | AS59711 (HZ-EU-AS); AS202015 (HZ-US-AS); AS61046 (HZ-UK-AS); AS201525 (HZ-CA-AS) | T4 | Active | Bulgaria (servers NL/US/CA/EE and others) | BPH-Adjacent (Cl0p-preferred) |
 | Hypercore LTD | AS211522 (dark since ~2026-02) | T1 | Sanctioned | UK Shell | Sanctions Evasion (Aeza) |
 | IPIDEA | — | T2 | Exposed | Global exit nodes | Anonymization/Proxy Enabler (residential proxy) |
-| Kaopu Cloud HK | AS138915; AS58854 (Kaopu Cloud [CN]); AS154177 (LIGHT NODE LIMITED [HK]; Spamhaus-attributed via kaopuyun.com) | T2 | Flagged | Hong Kong/Global | APAC BPH cluster |
+| Kaopu Cloud HK | AS138915; AS58854 (Kaopu Cloud [CN]); AS154177 (LIGHT NODE LIMITED [HK]; Spamhaus-attributed via kaopuyun.com) | T1 | Flagged | Hong Kong/Global | APAC BPH cluster |
 | Karina Rashkovska | AS215789 (historical; reassigned to BLIK / Polski Standard Platnosci SA [PL] - do not block) | T2 | Dissolved | aurologic downstream | BPH downstream (defunct; Virtualine) |
 | KPROHOST | AS214940 (dark since ~2026-08) | T2 | Flagged | US Shell (Virtualine) | BPH downstream |
 | Media Land LLC | AS206728; AS215376 (ML Cloud Ltd); AS211805 (registered to Media Land LLC; no routes) | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
 | metaspinner-named AS209800 | AS209800 (historical; reassigned to ZEMA GbR [DE] - do not block) | T3 | Dissolved | aurologic downstream | BPH downstream (defunct; Virtualine) |
-| MIRhosting B.V. | AS52000; AS206932 (MIRHOSTING-NL) | T2 | Flagged | Netherlands | Infrastructure Pillar |
+| MIRhosting B.V. | AS52000; AS206932 (MIRHOSTING-NL) | T1 | Flagged | Netherlands | Infrastructure Pillar |
 | NECHAEVDS | AS213194 (NECHAEVDS-AS; 193[.]37[.]69[.]0/24) | T3 | Suspected | Russia | Zservers successor hop |
 | NETINNOVATIONLLC | AS62864 (NILAS; ARIN); AS23865; AS34985; AS149286 (APNIC; registered, no routes) | T3 | Flagged | US reg. / mixed APAC-ARIN space | BPH (ASN-DROP listed) |
 | NetNut (Alarum Technologies) | — | T2 | Seized | Israel / global exit nodes | Anonymization/Proxy Enabler (commercial, botnet-sourced) |
@@ -782,7 +785,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Phanes Networks / Flaunt7 | AS49042 (historical; deregistered) | T4 | Active | Netherlands (Urk) | BPH-Adjacent |
 | PINSPB | AS44050; AS34665 (PINDC-AS; Petersburg Internet Network Ltd) | T2 | Flagged | Russia / St. Petersburg | Pure BPH |
 | PQ Hosting Plus S.R.L. | AS44477 (historical; received 2025-05-16; withdrawn from routing ~2026-04 and deregistered) | T1 | Evading | Moldova | Sanctions Evasion (Stark) |
-| PrivateAlps / Private Layer | AS51852; AS52288 (PRIVATE-LAYER; registered, no routes) | T3 | Active | Panama reg. / Switzerland (marketed) | BPH-Adjacent |
+| PrivateAlps / Private Layer | AS51852; AS52288 (PRIVATE-LAYER; registered, no routes) | T1 | Active | Panama reg. / Switzerland (marketed) | Offshore BPH brand (RF top 10) |
 | PROSPERO / Proton66 | AS200593; AS198953 | T1 | Flagged | Russia / St. Petersburg | Pure BPH |
 | QTFY (QScan / QTRouter) | — | T1 | Seized | China | Anonymization/Proxy Enabler (state ORB; seized) |
 | QWINS LTD | AS213702; AS218731 (Spamhaus ASN-DROP under qwins.co; 35 IPv4 prefixes); AS214422 (NET67X; Spamhaus ASN-DROP under qwins.co; no routes) | T2 | Flagged | UK Shell | BPH |
@@ -793,7 +796,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Silent Connection | AS215240 (historical; re-registered to Microdex UG [DE]; no routes - do not block) | T3 | Dissolved | UK Shell | Corporate Shell |
 | StarCloud Global | AS140224 (historical; registry now 'Nebula Global LLC' [US]; no routes); AS149040 (STARCLOUD GLOBAL PTE. LTD.; no routes) | T3 | Flagged | Singapore / APAC | Triad Nexus front brand |
 | Stark Industries | AS44477 (historical; transferred to PQ Hosting Plus 2025-05-16; now deregistered) | T1 | Dissolved | UK Shell / Moldova | Pure BPH (historical) |
-| SWISSNETWORK02 / Global-Data | AS34888 (registered; no routes); AS42624 (registered; no routes) | T2 | Flagged | aurologic downstream (Seychelles reg.) | BPH downstream (network dark) |
+| SWISSNETWORK02 / Global-Data | AS34888 (registered; no routes); AS42624 (registered; no routes) | T2 | Dormant | aurologic downstream (Seychelles reg.) | BPH downstream (dormant) |
 | Tiger Network Limited | AS48589 (TIGER); AS211121 (INDIA) | T3 | Flagged | UK reg. / Asian address space | BPH (ASN-DROP listed) |
 | Tnsecurity / EVILEMPIRE | AS216309 (historical; reassigned to InvisionTech Group S.r.l. [IT] - do not block) | T2 | Dissolved | aurologic downstream (UK reg.) | BPH downstream (defunct) |
 | Tudou Guarantee | — | T2 | Flagged | SEA | Financial Enabler (public market ceased) |
@@ -836,14 +839,14 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS50113 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS51381 | ELITETEAM / 1337TEAM | T1 | registered; no routes |
 | AS51396 | Pfcloud UG | T2 | BPH downstream / upstream of Virtualine; Germany |
-| AS51852 | PrivateAlps / Private Layer | T3 | BPH-Adjacent; Panama reg. / Switzerland (marketed) |
-| AS52000 | MIRhosting B.V. | T2 | Infrastructure Pillar; Netherlands |
-| AS52288 | PrivateAlps / Private Layer | T3 | PRIVATE-LAYER; registered, no routes |
+| AS51852 | PrivateAlps / Private Layer | T1 | Offshore BPH brand (RF top 10); Panama reg. / Switzerland (marketed) |
+| AS52000 | MIRhosting B.V. | T1 | Infrastructure Pillar; Netherlands |
+| AS52288 | PrivateAlps / Private Layer | T1 | PRIVATE-LAYER; registered, no routes |
 | AS53667 | BuyVM / Frantech | T4 | BPH-Adjacent; Canada / US / Luxembourg |
 | AS56873 | ELITETEAM / 1337TEAM | T1 | registered; no routes |
 | AS57523 | Chang Way Technologies | T2 | CHANGWAY-AS; no routes |
 | AS57724 | DDoS-Guard | T5 | DDOS-GUARD |
-| AS58854 | Kaopu Cloud HK | T2 | Kaopu Cloud [CN] |
+| AS58854 | Kaopu Cloud HK | T1 | Kaopu Cloud [CN] |
 | AS59425 | Chang Way Technologies | T2 | HORIZONMSK-AS; no routes |
 | AS59711 | HostZealot (HZ Hosting) | T4 | HZ-EU-AS |
 | AS60424 | ELITETEAM / 1337TEAM | T1 | historical; deregistered |
@@ -852,14 +855,14 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS62864 | NETINNOVATIONLLC | T3 | NILAS; ARIN |
 | AS135388 | UAB Host Baltic | T2 | RPL-HK, RMP Protection Limited [HK]; Spamhaus-attributed via serveroffer.lt |
 | AS136452 | SHANGXING TECH LIMITED | T2 | SHANGXING TECH LIMITED; no routes |
-| AS138915 | Kaopu Cloud HK | T2 | APAC BPH cluster; Hong Kong/Global |
+| AS138915 | Kaopu Cloud HK | T1 | APAC BPH cluster; Hong Kong/Global |
 | AS140224 | StarCloud Global | T3 | historical; registry now 'Nebula Global LLC' [US]; no routes |
 | AS149040 | StarCloud Global | T3 | STARCLOUD GLOBAL PTE. LTD.; no routes |
 | AS149286 | NETINNOVATIONLLC | T3 | APNIC; registered, no routes |
 | AS151468 | SHANGXING TECH LIMITED | T2 | SHANGXING TECH LIMITED; no routes |
 | AS152194 | CTG Server Limited | T1 | FUNNULL hosting ASN; Hong Kong |
 | AS152194 | FUNNULL Technology | T1 | hosting ASN used; CTG Server Limited - not FUNNULL-owned |
-| AS154177 | Kaopu Cloud HK | T2 | LIGHT NODE LIMITED [HK]; Spamhaus-attributed via kaopuyun.com |
+| AS154177 | Kaopu Cloud HK | T1 | LIGHT NODE LIMITED [HK]; Spamhaus-attributed via kaopuyun.com |
 | AS197170 | HostSlick | T3 | TECHTIES-AS, TechTies Inc. [SC]; Spamhaus ASN-DROP under hostslick.de |
 | AS197414 | Zservers | T1 | historical; XHOST-INTERNET-SOLUTIONS; deregistered |
 | AS198465 | BtHoster | T1 | predecessor, recycled to CN |
@@ -880,7 +883,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS204997 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS205090 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS206728 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
-| AS206932 | MIRhosting B.V. | T2 | MIRHOSTING-NL |
+| AS206932 | MIRhosting B.V. | T1 | MIRHOSTING-NL |
 | AS207566 | Chang Way Technologies | T2 | LD007-AS; no routes |
 | AS207636 | AlexHost | T4 | ALEXHOST-SRL |
 | AS208046 | HostSlick | T3 | historical; ColocationX Ltd; reassigned to a French individual - do not block |

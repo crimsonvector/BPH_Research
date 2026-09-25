@@ -10,7 +10,7 @@
 
 This repository is a comprehensive intelligence resource for tracking bullet-proof hosting (BPH) providers, threat activity enablers (TAEs), and the infrastructure that underpins modern cybercrime. It combines a structured provider database with analytical documents, an investigative playbook, and an organized source library.
 
-**Current scope:** 71 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
+**Current scope:** 70 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
 
 ---
 
@@ -91,7 +91,7 @@ The CSV uses 25 columns. Key fields:
 | Column | Description |
 |--------|-------------|
 | `provider_name` | Primary name |
-| `status` | active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed |
+| `status` | active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed / dormant (network still held but silent for 6+ months) |
 | `risk_tier` | T1-Confirmed BPH through T5-Watch List (see taxonomy) |
 | `primary_asn` | Primary Autonomous System Number. Qualifiers matter: an ASN marked `historical; reassigned to X - do not block` now belongs to an unrelated organisation |
 | `sanctions_designations` | OFAC / EU / UK / AU designations with dates |
@@ -131,6 +131,10 @@ Full schema documented in the CSV header row.
 
 ### Data-quality note (2026-09-25 audit)
 - Every ASN in the CSV was re-checked against registry and Spamhaus ASN-DROP data. Two had never belonged to the named entity (AS216071 for Zservers, AS215552 for Hypercore) and three Media Land ASNs were unrelated; they were removed. Twelve more have been re-issued to unrelated organisations and are now marked `historical; reassigned ... - do not block`. **Never build an ASN blocklist from the CSV without reading those qualifiers.**
+- Follow-up decisions (2026-09-25):
+  - A new `dormant` status covers networks that are still registered to the entity but have announced nothing, with no new reporting, for 6+ months: ELITETEAM/1337TEAM, HOSTYPE and SWISSNETWORK02/Global-Data. Their tiers are unchanged.
+  - CDNCloud was removed: no ASN, registry record, blocklist entry or CTI report could be found for it.
+  - Kaopu Cloud HK and PrivateAlps/Private Layer were raised to T1 on Recorded Future's 2025 Threat Density top 10 (#4 and #6), with the taxonomy's three-independent-source minimum met. MIRhosting was raised to T1 because its founder was arrested in the FIOD action against WorkTitans, whose only upstream it was.
 
 ### Recent Enforcement
 - **Dutch police seize ~250 servers of a bulletproof host** Nov 12 2025 - press-attributed to **CrazyRDP**; police said the case is *not* part of Operation Endgame

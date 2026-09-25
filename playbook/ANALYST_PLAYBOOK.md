@@ -398,7 +398,7 @@ Copy this template for each new provider investigation. Fill in every field; mar
 - **First Observed:** [date of first CrimsonVector observation]
 
 ## Classification
-- **Status:** [active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed]
+- **Status:** [active / flagged / suspected / sanctioned / evading / seized / dissolved / exposed / dormant]
 - **Risk Tier:** [T1 / T2 / T3 / T4 / T5]
 - **Provider Type:** [Pure BPH / BPH-Adjacent / Upstream Enabler / Financial Enabler / Corporate Shell / Sanctions-Evasion Vehicle / Anonymization/Proxy Enabler]
 
@@ -664,6 +664,7 @@ Standards support this split. STIX 2.1 indicators carry `valid_from`/`valid_unti
 - **Check the current holder first.** Confirm the RIR/ipverse holder name and the announced prefixes. Registries re-issue returned ASNs to unrelated organisations; see taxonomy §3.9.
 - **Never block a historical ASN.** Treat any CSV ASN marked `historical; reassigned to X - do not block` as history only.
 - **Distrust unexplained dark ASNs.** When a tracked ASN goes dark, look for a sibling ASN under the same Spamhaus ASN-DROP `domain` field, and for the old prefixes reappearing under a new origin. Virtualine's AS214943 went dark while its ranges moved to OMEGATECH AS202412.
+- **Mark silent networks `dormant`, not closed.** If an entity's ASNs are still registered to it but have announced nothing, with no new reporting, for 6+ months, set its status to `dormant` and keep its tier (taxonomy §5). Keep watch rules on the ASNs, move blocks on its old prefixes to the hunt tier (§8.2), and reassess as soon as anything is re-announced or the ASN changes hands. ELITETEAM's AS51381 and AS56873 are the reference case: still registered and still on ASN-DROP, but unrouted.
 
 ---
 

@@ -102,7 +102,7 @@ When adding a new source to this index:
 | CHAINALYSIS-A7A5 | B | A7A5/Grinex and the Russian Crypto Economy (OFAC Aug 2025) | Chainalysis | Chainalysis | 2025-08 | — | Grinex; A7A5; Old Vector; Garantex successor rails |
 | TRM-A7A5-2026 | B | 2026 Crypto Crime Report (A7A5/Grinex laundering rails) | TRM Labs | TRM Labs | 2026 | — | A7A5; Grinex; sanctions-evasion stablecoin rails |
 | INFOBLOX-DCLOUD | B | From San Pedro to Salinas: How a Chinese Framework (DCloud Uni-App) Powers a Global Scam Economy | Infoblox Threat Intel | Infoblox | 2026-06 | — | DCloud Uni-App (236k+ scam SLDs); CTG Server Limited (AS152194); RainbowEx |
-| RUDIS-BPH-WATCH | C | Weekly Bulletproof Hosting Watch (honeypot ASN telemetry) | hrbrmstr (Bob Rudis) | ai.rud.is | 2026-06 | — | Pfcloud UG (AS51396); 26 tracked BPH ASNs |
+| RUDIS-BPH-WATCH | C | Weekly Bulletproof Hosting Watch (honeypot ASN telemetry) | hrbrmstr (Bob Rudis) | ai.rud.is | 2026-06 to 2026-09 (weekly) | — | Pfcloud UG (AS51396); Private Layer INC (PLI-AS, AS51852; hostedby.privatelayer.com); 26 tracked BPH ASNs |
 | SECURITYONLINE-BTHOSTER | C | Unmasking BtHoster: the bulletproof host fueling global cyberattacks | securityonline.info | 2025 | — | BtHoster; AS213790 = BTCloud; shells |
 | RIPE-AAWG-BTHOSTER | B | RIPE anti-abuse-wg thread — BtHoster LTD (AS198465) abuse report + advertised pricing | RIPE NCC mailing list | 2023-11-01 | — | AS198465 predecessor; SS-NET cluster; 2023 pricing |
 
@@ -231,8 +231,11 @@ When adding a new source to this index:
 | KREBS-POPA-2026 | C | Popa botnet linked to publicly traded Israeli firm | Brian Krebs | Krebs on Security | 2026-06-18 | — | Popa botnet; NetNut; Alarum Technologies |
 | BG-COMMREG-HZ | C | Bulgarian Commercial Register data for HZ HOSTING LTD. (EIK 203391232), via registry aggregators | Registry aggregators | papagal.bg and similar | 2026-09 | — | HostZealot corporate identity; conflicting ownership records |
 | THN-WINDCHILL-2026 | C | PTC Windchill/FlexPLM CVE-2026-12569 exploitation and Cl0p-linked web shell (PTC and Ransom-ISAC IoCs as reported) | The Hacker News | The Hacker News | 2026-06-26 to 2026-08-19 | — | Cl0p / Hazy Scorpius; Windchill IoC IPs (none in HZ space) |
+| BOLSTER-BPH | C | The Bulletproof Hosting and Phishing Epidemic | Bolster AI research | Bolster AI | n.d. (read via search excerpts, 2026-09-25) | — | Private Alps / PrivateAlps (BPH popular on underground forums for VPS/RDP/VPN hosting); FlyHosting; Warez-Host |
+| DCD-FIOD-2026 | C | Dutch police arrest pair accused of violating Russia sanctions, raids two data centers | DatacenterDynamics | DCD | 2026-05 | — | FIOD action of 2026-05-18 (Dronten and Schiphol-Rijk data centres; 800+ servers); WorkTitans owner and MIRhosting founder arrested (names press-reported) |
 | WOODWARD-CLOP-SANKEY | D | Cl0p campaign -> ASN -> country Sankey dataset (8 campaigns, 84 ASN labels) | Eli Woodward | GitHub Pages / LinkedIn | 2026-09 | — | HostZealot in 5 of 8 campaigns (24 flows); no IP-level data |
 | CONTI-LEAKS-2020 | D | Leaked Conti/TrickBot operator chats (2020 excerpts, English translation) | Leaked (ContiLeaks) | GitHub mirror | 2022 leak of 2020 chats | — | HostZealot passport-KYC exchange; TrickBot/Conti server 79[.]141[.]167[.]25 |
+| BHW-PRIVATEALPS | E | Abuse & DMCA ignore - PrivateAlps.net offshore hosting (marketplace sales thread, now marked permanently closed) | PrivateAlps (self-advertisement) | BlackHatWorld | n.d. | — | PrivateAlps: abuse- and DMCA-ignored offshore Linux/Windows servers; Tor; crypto payment |
 
 ---
 
@@ -242,10 +245,10 @@ When adding a new source to this index:
 |-------|-------|-------------|
 | A — Government/Official | 39 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
 | B — Established CTI Vendor | 66 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 33 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
+| C — Community/Independent | 35 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
 | D — Single Source / Unverified | 5 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
-| E — Self-Reported / Marketing | 1 | Forum advertising presence and provider marketing |
-| **Total** | **144** | |
+| E — Self-Reported / Marketing | 2 | Forum advertising presence and provider marketing |
+| **Total** | **147** | |
 
 ---
 

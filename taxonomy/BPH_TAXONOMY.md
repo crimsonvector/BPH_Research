@@ -35,7 +35,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block at CIDR/ASN level. Monitor for prefix migration.
 
-**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 21 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (network dark), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine, Femo IT/Defhost, CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector (financial enablers)
+**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 24 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (dormant), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine, Femo IT/Defhost, Kaopu Cloud HK, PrivateAlps/Private Layer, MIRhosting (WorkTitans' upstream), CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector (financial enablers)
 
 ---
 
@@ -53,7 +53,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block known malicious prefixes; consider ASN-level block with allowlisting for confirmed legitimate customers.
 
-**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 27 rows):** Tnsecurity/EVILEMPIRE (defunct), QWINS LTD, GCSAS, Karina Rashkovska (defunct), KPROHOST, Altawk, aurologic GmbH and UAB Host Baltic (upstream enablers), MIRhosting, PINSPB, SWISSNETWORK02/Global-Data, WAIcore, First Server Limited, Kaopu Cloud HK, Pfcloud UG, Chang Way Technologies, VPSVault.host, Feo Prest, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks / NetNut-Alarum / IPIDEA (proxy enablers), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
+**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 25 rows):** Tnsecurity/EVILEMPIRE (defunct), QWINS LTD, GCSAS, Karina Rashkovska (defunct), KPROHOST, Altawk, aurologic GmbH and UAB Host Baltic (upstream enablers), PINSPB, SWISSNETWORK02/Global-Data (dormant), WAIcore, First Server Limited, Pfcloud UG, Chang Way Technologies, VPSVault.host, Feo Prest, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks / NetNut-Alarum / IPIDEA (proxy enablers), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
 
 ---
 
@@ -71,7 +71,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Monitor and alert. Block specific confirmed-malicious IPs. Reassess quarterly.
 
-**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative — 12 rows):** Cloudzy/abrNOC, metaspinner-named AS209800 (defunct Virtualine front), HostSlick, PrivateAlps/Private Layer, StarCloud Global, NECHAEVDS, NETINNOVATIONLLC, Tiger Network Limited, Silent Connection (dissolved), Wallex / Bitpin / Ramzinex (financial enablers)
+**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative — 11 rows):** Cloudzy/abrNOC, metaspinner-named AS209800 (defunct Virtualine front), HostSlick, StarCloud Global, NECHAEVDS, NETINNOVATIONLLC, Tiger Network Limited, Silent Connection (dissolved), Wallex / Bitpin / Ramzinex (financial enablers)
 
 ---
 
@@ -106,7 +106,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** No blocking. Passive monitoring. Reassess upon new intelligence.
 
-**Current T5 entities (illustrative; `BPH_Master.csv` is authoritative — 5 rows):** CDNCloud (unsourced; removal candidate), HOSTYPE (dormant), 1GSERVERS, DDoS-Guard, Dolphon 1337 (ASN recycled)
+**Current T5 entities (illustrative; `BPH_Master.csv` is authoritative — 4 rows):** HOSTYPE (dormant), 1GSERVERS, DDoS-Guard, Dolphon 1337 (ASN recycled)
 
 ---
 
@@ -124,6 +124,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 | Sanctions lifted or LE clears entity | De-escalate, case-by-case | (No current examples) |
 | Corporate dissolution with network still live | No de-escalation — reclassify as "dissolved" status | Stark Industries Solutions (dissolved 2025-09-16; network lives on as WorkTitans/THE.Hosting) |
 | ASN returned and re-issued to an unrelated holder | Mark the ASN `historical; reassigned to X - do not block` in the CSV; if no successor network is identifiable, set status `dissolved` (network defunct) and keep the tier as a historical record | Karina Rashkovska (AS215789 now BLIK); Tnsecurity (AS216309); CrazyRDP (AS394711, AS211252) |
+| Network announces nothing for 6+ months with no new reporting, and the entity is not dissolved, sanctioned or seized | No de-escalation — set status `dormant` and keep the tier; re-announcement or an ASN transfer means reassessing and restoring an operating status | ELITETEAM/1337TEAM (AS51381, AS56873 registered but unrouted); HOSTYPE (AS49217); SWISSNETWORK02/Global-Data |
 
 ---
 
@@ -338,7 +339,7 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 
 **Observed in (2026-09-25 audit):** AS215789 (Karina Rashkovska → BLIK); AS216309 (Tnsecurity → InvisionTech); AS209800 (metaspinner front → ZEMA GbR); AS208046 (HostSlick/ColocationX → a French individual); AS203727 (Altawk → byon); AS210281, AS202973, AS206425 (WAIcore); AS215208 (Dolphon 1337 → an Indonesian ISP); AS215240 (Silent Connection → Microdex UG); AS394711 and AS211252 (CrazyRDP); AS198465 (BtHoster). Separately, two ASNs in this database had simply been mis-attributed (AS216071 for Zservers is VDSina; AS215552 for Hypercore is a Romanian individual).
 
-**Handling:** Keep the ASN in the CSV only with a `historical; reassigned to X - do not block` qualifier, verify every ASN against the registry and `asndrop.json` before publishing blocklists, and treat Spamhaus's `domain` field as an attribution anchor for successor ASNs.
+**Handling:** Keep the ASN in the CSV only with a `historical; reassigned to X - do not block` qualifier, verify every ASN against the registry and `asndrop.json` before publishing blocklists, and treat Spamhaus's `domain` field as an attribution anchor for successor ASNs. An ASN still registered to the tracked entity but announcing nothing has not been recycled: keep it attributed, and when all of an entity's ASNs have been in that state for 6+ months with no new reporting, set its status to `dormant` (§5).
 
 ### 3.10 Actor-Preferred Mainstream-Adjacent Providers (Repeat Tenancy)
 
@@ -438,7 +439,7 @@ Each provider carries a **status** reflecting its current operational and legal 
                                  +-------------+
 ```
 
-> **Auxiliary states** are also used in the database alongside the core lifecycle above: `seized` (law-enforcement seizure of infrastructure, whole or partial) and `exposed` (publicly identified as a malicious operation or front by credible research/media, but not yet formally sanctioned or seized). Both can co-occur with a risk tier.
+> **Auxiliary states** are also used in the database alongside the core lifecycle above: `seized` (law-enforcement seizure of infrastructure, whole or partial), `exposed` (publicly identified as a malicious operation or front by credible research/media, but not yet formally sanctioned or seized) and `dormant` (network resources still held, but nothing announced and no new reporting for 6+ months; added 2026-09-25). All three can co-occur with any risk tier. When a `dormant` network re-announces prefixes or its ASN changes hands, reassess and restore an operating status (`active`, `flagged` or `suspected`) or apply §3.9.
 
 ### Status Definitions
 
@@ -452,6 +453,7 @@ Each provider carries a **status** reflecting its current operational and legal 
 | `dissolved` | Corporate entity dissolved, struck off, or otherwise legally defunct. Network infrastructure may still be operational. | Monitor for network persistence; track ASN/prefix fate |
 | `seized` | Law-enforcement seizure of the entity's infrastructure (whole or partial). Operations halted or materially degraded; a clearnet storefront or re-enrollment path may persist. | Confirm infrastructure offline; track operator re-emergence; preserve seizure as an attribution anchor |
 | `exposed` | Publicly identified/outed as a malicious operation or front company by credible research or media, but not (yet) formally sanctioned or seized. | Treat as high-confidence malicious; monitor for sanctions/LE follow-through and rebranding |
+| `dormant` | Entity still holds its network resources (ASN registered to it; company not dissolved) but announces no prefixes and has drawn no new reporting for 6+ months, and no dissolution, sanction or seizure explains the silence. The risk tier is kept. | Keep ASN watch rules for re-announcement or transfer; move historical-prefix blocks to the hunt tier (Playbook §8.2); reassess before any de-escalation |
 
 ---
 

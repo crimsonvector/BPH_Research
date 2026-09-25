@@ -1,24 +1,25 @@
 {
   "totals": {
-    "providers": 71,
+    "providers": 70,
     "sanctioned": 18,
     "seized_or_takedown": 5,
-    "active": 15
+    "active": 12
   },
   "by_tier": {
-    "T2": 27,
-    "T1": 21,
-    "T3": 12,
+    "T2": 25,
+    "T1": 24,
+    "T3": 11,
     "T4": 6,
-    "T5": 5
+    "T5": 4
   },
   "by_status": {
-    "flagged": 25,
-    "active": 15,
+    "flagged": 24,
     "sanctioned": 13,
+    "active": 12,
     "dissolved": 6,
     "evading": 4,
     "seized": 4,
+    "dormant": 3,
     "exposed": 2,
     "suspected": 2
   },
@@ -48,14 +49,14 @@
     "24)": 1,
     "AS215436 (peers)": 1,
     "AS218878": 1,
-    "Alibaba Cloud": 1,
     "Arelion": 1,
     "Aug 2025)": 1,
     "Cogent": 1,
     "ColocationX was the AS holder": 1,
     "DDoS-Guard (AS49612)": 1,
     "Des Capital B.V. (colocation": 1,
-    "Historical (2020-22): Crex Fex Pex (AS3555)": 1
+    "Historical (2020-22): Crex Fex Pex (AS3555)": 1,
+    "Historical: WorldStream (AS49981)": 1
   },
   "top_malware": {
     "RedLine": 7,

@@ -49,7 +49,7 @@ EXPECTED_COLUMNS = [
     "rf_threat_density_score", "sources", "notes", "description",
 ]
 STATUSES = {"active", "flagged", "suspected", "sanctioned", "evading",
-            "dissolved", "seized", "exposed"}
+            "dissolved", "seized", "exposed", "dormant"}
 ID_RE = re.compile(r"^[A-Z0-9][A-Z0-9-]+$")
 ASN_RE = re.compile(r"AS(\d+)")
 
