@@ -3,7 +3,7 @@
   "title": "Live Gshell C2 nodes on CTG Server (HK), China-nexus fraud",
   "date": "2026-09-10",
   "first_observed": "2026-07-23",
-  "last_verified": "2026-09-25",
+  "last_verified": "2026-09-26",
   "category": "c2",
   "family": "Gshell C2 (Go-based Chinese C2 framework)",
   "confidence": "confirmed",
@@ -17,12 +17,12 @@
   "iocs": [
     {
       "type": "ip",
-      "value": "134[[.]]122[[.]]204[[.]]86",
+      "value": "134[.]122[.]204[.]86",
       "role": "Gshell C2 (CTG, HK), live 2026-09-10 on 8080/8089; co-managed pair (shared cert AEE548... + SSH d5:94:a4:a1:bc:db:10)"
     },
     {
       "type": "ip",
-      "value": "134[[.]]122[[.]]204[[.]]106",
+      "value": "134[.]122[.]204[.]106",
       "role": "Gshell C2 (CTG, HK), live 2026-09-10; co-managed pair"
     },
     {
@@ -32,19 +32,19 @@
     },
     {
       "type": "domain",
-      "value": "kellyservicess[[.]]net",
+      "value": "kellyservicess[.]net",
       "role": "fraud domain on CTG node (Kelly Services staffing typosquat)"
     },
     {
       "type": "domain",
-      "value": "sgx-business[[.]]com",
+      "value": "sgx-business[.]com",
       "role": "finance-lure domain on CTG node"
     }
   ],
   "references": [
     {
       "label": "Hunt[.]io - Chinese Operators, Claude Code + DeepSeek government intrusion",
-      "url": "hxxps://hunt[[.]]io/blog/chinese-operators-claude-deepseek-government-intrusion"
+      "url": "hxxps://hunt[.]io/blog/chinese-operators-claude-deepseek-government-intrusion"
     }
   ],
   "tags": [
@@ -56,6 +56,6 @@
     "cert-pivot"
   ],
   "last_seen_utc": "2026-09-22",
-  "stale_days": 3,
+  "stale_days": 4,
   "vt_malicious": 4
 }

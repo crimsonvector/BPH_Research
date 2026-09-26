@@ -3,7 +3,7 @@
   "title": "Live Vshell C2 operator 'newsakaye' - 4-node HK cluster",
   "date": "2026-09-10",
   "first_observed": "2026-07-23",
-  "last_verified": "2026-09-25",
+  "last_verified": "2026-09-26",
   "category": "c2",
   "family": "Vshell C2 (Chinese framework)",
   "confidence": "confirmed",
@@ -17,39 +17,39 @@
   "iocs": [
     {
       "type": "ip",
-      "value": "52[[.]]128[[.]]224[[.]]234",
+      "value": "52[.]128[.]224[.]234",
       "role": "Vshell C2, live 2026-09-10; backs scam domains + exposes MariaDB :3306"
     },
     {
       "type": "ip",
-      "value": "52[[.]]128[[.]]224[[.]]236",
+      "value": "52[.]128[.]224[.]236",
       "role": "Vshell C2 (:8084), live 2026-09-10 - shared cert"
     },
     {
       "type": "ip",
-      "value": "52[[.]]128[[.]]224[[.]]237",
+      "value": "52[.]128[.]224[.]237",
       "role": "Vshell C2, live 2026-09-10 - shared cert"
     },
     {
       "type": "ip",
-      "value": "52[[.]]128[[.]]224[[.]]238",
+      "value": "52[.]128[.]224[.]238",
       "role": "Vshell C2 (:8084), live 2026-09-10 - shared cert"
     },
     {
       "type": "domain",
-      "value": "newsakaye[[.]]com",
+      "value": "newsakaye[.]com",
       "role": "operator tooling domain (GoDaddy, reg 2025-07-18, privacy-protected)"
     },
     {
       "type": "domain",
-      "value": "vshell[[.]]newsakaye[[.]]com",
+      "value": "vshell[.]newsakaye[.]com",
       "role": "Vshell C2 subdomain (shared cert across the 4 nodes)"
     }
   ],
   "references": [
     {
       "label": "Hunt[.]io - Chinese Operators, Claude Code + DeepSeek government intrusion",
-      "url": "hxxps://hunt[[.]]io/blog/chinese-operators-claude-deepseek-government-intrusion"
+      "url": "hxxps://hunt[.]io/blog/chinese-operators-claude-deepseek-government-intrusion"
     }
   ],
   "tags": [
@@ -62,6 +62,6 @@
     "cert-pivot"
   ],
   "last_seen_utc": "2026-09-24",
-  "stale_days": 1,
+  "stale_days": 2,
   "vt_malicious": 15
 }

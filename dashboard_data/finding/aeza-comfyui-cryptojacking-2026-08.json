@@ -3,7 +3,7 @@
   "title": "GPU/AI-host (ComfyUI) cryptojacking run from sanctioned Aeza",
   "date": "2026-09-10",
   "first_observed": "2026-08-17",
-  "last_verified": "2026-09-25",
+  "last_verified": "2026-09-26",
   "category": "cryptojacking",
   "family": "GPU/AI-host cryptojacking (mass ComfyUI scanning + miners)",
   "confidence": "high",
@@ -17,7 +17,7 @@
   "iocs": [
     {
       "type": "ip",
-      "value": "176[[.]]124[[.]]207[[.]]93",
+      "value": "176[.]124[.]207[.]93",
       "role": "ComfyUI/GPU cryptojacking scan+miner staging (Aeza, AS210644), live 2026-09-10 on 8080/8081"
     }
   ],
@@ -31,6 +31,6 @@
     "sanctioned"
   ],
   "last_seen_utc": "2026-09-21",
-  "stale_days": 3,
+  "stale_days": 4,
   "vt_malicious": 4
 }
