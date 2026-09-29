@@ -347,6 +347,9 @@ FEED_SUMMARY_FIELDS = [
     "id", "title", "date", "first_observed", "category", "family",
     "confidence", "status", "asn", "provider", "bph_link", "vt", "summary",
     "tags",
+    # Stamped daily by ops/verify_freshness.py. Dates and a day count only; they let the page show that a
+    # finding was re-verified today rather than looking frozen at its publication date.
+    "last_verified", "last_seen_utc", "stale_days",
 ]
 
 
