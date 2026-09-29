@@ -21,7 +21,10 @@
       "netsec",
       "fraud",
       "cert-pivot"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-27",
+    "stale_days": 1
   },
   {
     "id": "kaopu-byovd-c2-2026-08",
@@ -45,7 +48,10 @@
       "mssql-rce",
       "kaopu",
       "suspected-bph"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-28",
+    "stale_days": 0
   },
   {
     "id": "gshell-c2-cluster-ctg-2026-07",
@@ -68,7 +74,10 @@
       "ctg-server",
       "fraud",
       "cert-pivot"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-27",
+    "stale_days": 1
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -91,7 +100,10 @@
       "gpu",
       "aeza",
       "sanctioned"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-29",
+    "stale_days": 0
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -114,7 +126,10 @@
       "aeza",
       "sanctioned",
       "dns-on-bph"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-28",
+    "stale_days": 0
   },
   {
     "id": "darkseller-carding-market-2026-07",
@@ -138,7 +153,10 @@
       "cybercrime-forum",
       "vdsina",
       "cloudflare-fronted"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-28",
+    "stale_days": 0
   },
   {
     "id": "aeza-hosted-dns-pattern-2026-07",
@@ -161,7 +179,10 @@
       "dns-infrastructure",
       "takedown-resistance",
       "proxy"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-18",
+    "stale_days": 10
   },
   {
     "id": "remcos-virtuo-194-59-31-39-2026-06",
@@ -184,7 +205,10 @@
       "infostealer",
       "aeza",
       "malspam"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-16",
+    "stale_days": 12
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -207,7 +231,10 @@
       "procurement-lure",
       "aeza",
       "novel-sample"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-23",
+    "stale_days": 5
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -228,6 +255,9 @@
       "rmm-abuse",
       "aeza",
       "remote-access"
-    ]
+    ],
+    "last_verified": "2026-09-29",
+    "last_seen_utc": "2026-09-23",
+    "stale_days": 5
   }
 ]
