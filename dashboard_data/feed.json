@@ -77,7 +77,7 @@
     ],
     "last_verified": "2026-09-29",
     "last_seen_utc": "2026-09-27",
-    "stale_days": 1
+    "stale_days": 2
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -128,7 +128,7 @@
       "dns-on-bph"
     ],
     "last_verified": "2026-09-29",
-    "last_seen_utc": "2026-09-28",
+    "last_seen_utc": "2026-09-29",
     "stale_days": 0
   },
   {

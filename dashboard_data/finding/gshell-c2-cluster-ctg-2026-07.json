@@ -56,6 +56,6 @@
     "cert-pivot"
   ],
   "last_seen_utc": "2026-09-27",
-  "stale_days": 1,
+  "stale_days": 2,
   "vt_malicious": 4
 }
