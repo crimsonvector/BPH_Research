@@ -22,7 +22,7 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-01",
+    "last_verified": "2026-10-02",
     "last_seen_utc": "2026-10-01",
     "stale_days": 0
   },
@@ -49,9 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-01",
-    "last_seen_utc": "2026-09-28",
-    "stale_days": 2
+    "last_verified": "2026-10-02",
+    "last_seen_utc": "2026-10-01",
+    "stale_days": 0
   },
   {
     "id": "gshell-c2-cluster-ctg-2026-07",
@@ -75,9 +75,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-01",
+    "last_verified": "2026-10-02",
     "last_seen_utc": "2026-09-27",
-    "stale_days": 4
+    "stale_days": 5
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -101,8 +101,8 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-01",
-    "last_seen_utc": "2026-10-01",
+    "last_verified": "2026-10-02",
+    "last_seen_utc": "2026-10-02",
     "stale_days": 0
   },
   {
@@ -127,8 +127,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-01",
-    "last_seen_utc": "2026-10-01",
+    "last_verified": "2026-10-02",
+    "last_seen_utc": "2026-10-02",
     "stale_days": 0
   },
   {
@@ -154,9 +154,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-01",
+    "last_verified": "2026-10-02",
     "last_seen_utc": "2026-09-28",
-    "stale_days": 2
+    "stale_days": 3
   },
   {
     "id": "aeza-hosted-dns-pattern-2026-07",
@@ -180,35 +180,9 @@
       "takedown-resistance",
       "proxy"
     ],
-    "last_verified": "2026-10-01",
+    "last_verified": "2026-10-02",
     "last_seen_utc": "2026-09-18",
-    "stale_days": 12
-  },
-  {
-    "id": "remcos-virtuo-194-59-31-39-2026-06",
-    "title": "Active Remcos / AgentTesla C2 tied to Aeza staging",
-    "date": "2026-06-30",
-    "first_observed": "2026-06-29",
-    "category": "c2",
-    "family": "Remcos + AgentTesla (\"Taskun\")",
-    "confidence": "confirmed",
-    "status": "active",
-    "asn": "AS399486",
-    "provider": "Virtuo Networks (France)",
-    "bph_link": "Aeza International Ltd",
-    "vt": "multi-sample",
-    "summary": "A Windows C2 server running Remcos, AgentTesla and a \"Taskun\" panel, fed by RFQ/quotation malspam. A UAC-bypass ChromeElevator loader staged on Aeza beacons here, linking the Aeza open-directory staging dir to an active info-stealer operation.",
-    "tags": [
-      "remcos",
-      "agenttesla",
-      "chromeelevator",
-      "infostealer",
-      "aeza",
-      "malspam"
-    ],
-    "last_verified": "2026-10-01",
-    "last_seen_utc": "2026-09-16",
-    "stale_days": 14
+    "stale_days": 13
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -232,9 +206,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-01",
+    "last_verified": "2026-10-02",
     "last_seen_utc": "2026-09-23",
-    "stale_days": 7
+    "stale_days": 8
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -256,8 +230,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-01",
+    "last_verified": "2026-10-02",
     "last_seen_utc": "2026-09-29",
-    "stale_days": 2
+    "stale_days": 3
   }
 ]
