@@ -22,9 +22,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-03",
-    "last_seen_utc": "2026-10-01",
-    "stale_days": 1
+    "last_verified": "2026-10-04",
+    "last_seen_utc": "2026-10-03",
+    "stale_days": 0
   },
   {
     "id": "kaopu-byovd-c2-2026-08",
@@ -49,9 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-03",
+    "last_verified": "2026-10-04",
     "last_seen_utc": "2026-10-01",
-    "stale_days": 1
+    "stale_days": 2
   },
   {
     "id": "gshell-c2-cluster-ctg-2026-07",
@@ -75,9 +75,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-03",
+    "last_verified": "2026-10-04",
     "last_seen_utc": "2026-09-27",
-    "stale_days": 6
+    "stale_days": 7
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -101,9 +101,9 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-03",
+    "last_verified": "2026-10-04",
     "last_seen_utc": "2026-10-02",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -127,8 +127,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-03",
-    "last_seen_utc": "2026-10-03",
+    "last_verified": "2026-10-04",
+    "last_seen_utc": "2026-10-04",
     "stale_days": 0
   },
   {
@@ -154,35 +154,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-03",
-    "last_seen_utc": "2026-10-03",
+    "last_verified": "2026-10-04",
+    "last_seen_utc": "2026-10-04",
     "stale_days": 0
-  },
-  {
-    "id": "aeza-hosted-dns-pattern-2026-07",
-    "title": "93 domains self-hosting authoritative DNS inside sanctioned Aeza",
-    "date": "2026-07-06",
-    "first_observed": "2026-07-05",
-    "category": "sanctioned-infrastructure",
-    "family": "Sanctioned-hosted DNS infrastructure",
-    "confidence": "high",
-    "status": "active",
-    "asn": "AS210644",
-    "provider": "Aeza International Ltd",
-    "bph_link": "Aeza International Ltd",
-    "vt": "n/a",
-    "summary": "A Certificate-Transparency-derived sweep found 93 distinct domains running their own authoritative nameservers inside the OFAC-sanctioned bulletproof host Aeza (AS210644 / AS216246, both verified currently Aeza) — proxy/tunnel, VPN, delivery-phishing and generic-scam themes co-located on the sanctioned operator's DNS, a takedown-resistance pattern.",
-    "tags": [
-      "sanctioned",
-      "bulletproof",
-      "aeza",
-      "dns-infrastructure",
-      "takedown-resistance",
-      "proxy"
-    ],
-    "last_verified": "2026-10-03",
-    "last_seen_utc": "2026-09-18",
-    "stale_days": 14
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -206,9 +180,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-03",
+    "last_verified": "2026-10-04",
     "last_seen_utc": "2026-10-02",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -230,8 +204,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-03",
+    "last_verified": "2026-10-04",
     "last_seen_utc": "2026-09-29",
-    "stale_days": 4
+    "stale_days": 5
   }
 ]
