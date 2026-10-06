@@ -22,8 +22,8 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-05",
-    "last_seen_utc": "2026-10-04",
+    "last_verified": "2026-10-06",
+    "last_seen_utc": "2026-10-06",
     "stale_days": 0
   },
   {
@@ -49,9 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-05",
+    "last_verified": "2026-10-06",
     "last_seen_utc": "2026-10-05",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "gshell-c2-cluster-ctg-2026-07",
@@ -75,9 +75,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-05",
+    "last_verified": "2026-10-06",
     "last_seen_utc": "2026-09-27",
-    "stale_days": 8
+    "stale_days": 9
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -101,8 +101,8 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-05",
-    "last_seen_utc": "2026-10-04",
+    "last_verified": "2026-10-06",
+    "last_seen_utc": "2026-10-05",
     "stale_days": 0
   },
   {
@@ -127,8 +127,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-05",
-    "last_seen_utc": "2026-10-05",
+    "last_verified": "2026-10-06",
+    "last_seen_utc": "2026-10-06",
     "stale_days": 0
   },
   {
@@ -154,9 +154,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-05",
+    "last_verified": "2026-10-06",
     "last_seen_utc": "2026-10-04",
-    "stale_days": 1
+    "stale_days": 2
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -180,8 +180,8 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-05",
-    "last_seen_utc": "2026-10-04",
+    "last_verified": "2026-10-06",
+    "last_seen_utc": "2026-10-05",
     "stale_days": 0
   },
   {
@@ -204,8 +204,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-05",
+    "last_verified": "2026-10-06",
     "last_seen_utc": "2026-09-29",
-    "stale_days": 6
+    "stale_days": 7
   }
 ]
