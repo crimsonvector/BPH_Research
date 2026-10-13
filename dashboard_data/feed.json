@@ -22,9 +22,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-12",
+    "last_verified": "2026-10-13",
     "last_seen_utc": "2026-10-11",
-    "stale_days": 1
+    "stale_days": 2
   },
   {
     "id": "kaopu-byovd-c2-2026-08",
@@ -49,9 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-12",
+    "last_verified": "2026-10-13",
     "last_seen_utc": "2026-10-12",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "gshell-c2-cluster-ctg-2026-07",
@@ -75,9 +75,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-12",
+    "last_verified": "2026-10-13",
     "last_seen_utc": "2026-10-07",
-    "stale_days": 5
+    "stale_days": 6
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -101,7 +101,7 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-12",
+    "last_verified": "2026-10-13",
     "last_seen_utc": "2026-10-12",
     "stale_days": 0
   },
@@ -127,7 +127,7 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-12",
+    "last_verified": "2026-10-13",
     "last_seen_utc": "2026-10-12",
     "stale_days": 0
   },
@@ -154,9 +154,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-12",
-    "last_seen_utc": "2026-10-09",
-    "stale_days": 2
+    "last_verified": "2026-10-13",
+    "last_seen_utc": "2026-10-13",
+    "stale_days": 0
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -180,9 +180,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-12",
-    "last_seen_utc": "2026-10-11",
-    "stale_days": 1
+    "last_verified": "2026-10-13",
+    "last_seen_utc": "2026-10-13",
+    "stale_days": 0
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -204,8 +204,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-12",
+    "last_verified": "2026-10-13",
     "last_seen_utc": "2026-10-10",
-    "stale_days": 2
+    "stale_days": 3
   }
 ]
