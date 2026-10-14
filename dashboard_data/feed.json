@@ -22,9 +22,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-13",
-    "last_seen_utc": "2026-10-11",
-    "stale_days": 2
+    "last_verified": "2026-10-14",
+    "last_seen_utc": "2026-10-14",
+    "stale_days": 0
   },
   {
     "id": "kaopu-byovd-c2-2026-08",
@@ -49,9 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-13",
+    "last_verified": "2026-10-14",
     "last_seen_utc": "2026-10-12",
-    "stale_days": 1
+    "stale_days": 2
   },
   {
     "id": "gshell-c2-cluster-ctg-2026-07",
@@ -75,9 +75,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-13",
+    "last_verified": "2026-10-14",
     "last_seen_utc": "2026-10-07",
-    "stale_days": 6
+    "stale_days": 7
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -101,8 +101,8 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-13",
-    "last_seen_utc": "2026-10-12",
+    "last_verified": "2026-10-14",
+    "last_seen_utc": "2026-10-13",
     "stale_days": 0
   },
   {
@@ -127,8 +127,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-13",
-    "last_seen_utc": "2026-10-12",
+    "last_verified": "2026-10-14",
+    "last_seen_utc": "2026-10-13",
     "stale_days": 0
   },
   {
@@ -154,8 +154,8 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-13",
-    "last_seen_utc": "2026-10-13",
+    "last_verified": "2026-10-14",
+    "last_seen_utc": "2026-10-14",
     "stale_days": 0
   },
   {
@@ -180,8 +180,8 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-13",
-    "last_seen_utc": "2026-10-13",
+    "last_verified": "2026-10-14",
+    "last_seen_utc": "2026-10-14",
     "stale_days": 0
   },
   {
@@ -204,8 +204,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-13",
-    "last_seen_utc": "2026-10-10",
-    "stale_days": 3
+    "last_verified": "2026-10-14",
+    "last_seen_utc": "2026-10-13",
+    "stale_days": 0
   }
 ]
