@@ -22,8 +22,8 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-21",
-    "last_seen_utc": "2026-10-20",
+    "last_verified": "2026-10-22",
+    "last_seen_utc": "2026-10-21",
     "stale_days": 0
   },
   {
@@ -49,35 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-21",
+    "last_verified": "2026-10-22",
     "last_seen_utc": "2026-10-12",
-    "stale_days": 9
-  },
-  {
-    "id": "gshell-c2-cluster-ctg-2026-07",
-    "title": "Live Gshell C2 nodes on CTG Server (HK), China-nexus fraud",
-    "date": "2026-09-10",
-    "first_observed": "2026-07-23",
-    "category": "c2",
-    "family": "Gshell C2 (Go-based Chinese C2 framework)",
-    "confidence": "confirmed",
-    "status": "active",
-    "asn": "AS152194",
-    "provider": "CTG Server Limited (AS152194, HK)",
-    "bph_link": "CTG Server Limited",
-    "vt": "3-4 malicious per node; 1 communicating sample on a since-offline outlier",
-    "summary": "Two co-managed Gshell C2 servers (Go-based Chinese framework) remain live on CTG Server (AS152194, HK), verified 2026-09-10 on ports 8080/8089. Co-management is proven by a shared TLS cert serial and a shared SSH host key. The wider cluster first mapped in July (SHANGXING, NTT, SpeedVM, Globenet nodes) has largely gone dark, leaving CTG as the persistent host. Passive DNS ties the nodes to a financially-motivated fraud domain web.",
-    "tags": [
-      "gshell",
-      "c2",
-      "china-nexus",
-      "ctg-server",
-      "fraud",
-      "cert-pivot"
-    ],
-    "last_verified": "2026-10-21",
-    "last_seen_utc": "2026-10-07",
-    "stale_days": 14
+    "stale_days": 10
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -101,8 +75,8 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-21",
-    "last_seen_utc": "2026-10-21",
+    "last_verified": "2026-10-22",
+    "last_seen_utc": "2026-10-22",
     "stale_days": 0
   },
   {
@@ -127,8 +101,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-21",
-    "last_seen_utc": "2026-10-21",
+    "last_verified": "2026-10-22",
+    "last_seen_utc": "2026-10-22",
     "stale_days": 0
   },
   {
@@ -154,9 +128,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-21",
-    "last_seen_utc": "2026-10-19",
-    "stale_days": 2
+    "last_verified": "2026-10-22",
+    "last_seen_utc": "2026-10-22",
+    "stale_days": 0
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -180,9 +154,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-21",
+    "last_verified": "2026-10-22",
     "last_seen_utc": "2026-10-18",
-    "stale_days": 2
+    "stale_days": 3
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -204,8 +178,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-21",
-    "last_seen_utc": "2026-10-21",
+    "last_verified": "2026-10-22",
+    "last_seen_utc": "2026-10-22",
     "stale_days": 0
   }
 ]
