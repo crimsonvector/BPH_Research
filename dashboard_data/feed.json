@@ -22,8 +22,8 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-25",
-    "last_seen_utc": "2026-10-25",
+    "last_verified": "2026-10-26",
+    "last_seen_utc": "2026-10-26",
     "stale_days": 0
   },
   {
@@ -49,9 +49,9 @@
       "kaopu",
       "suspected-bph"
     ],
-    "last_verified": "2026-10-25",
+    "last_verified": "2026-10-26",
     "last_seen_utc": "2026-10-12",
-    "stale_days": 13
+    "stale_days": 14
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -75,8 +75,8 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-25",
-    "last_seen_utc": "2026-10-24",
+    "last_verified": "2026-10-26",
+    "last_seen_utc": "2026-10-26",
     "stale_days": 0
   },
   {
@@ -101,8 +101,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-25",
-    "last_seen_utc": "2026-10-25",
+    "last_verified": "2026-10-26",
+    "last_seen_utc": "2026-10-26",
     "stale_days": 0
   },
   {
@@ -128,8 +128,8 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-25",
-    "last_seen_utc": "2026-10-24",
+    "last_verified": "2026-10-26",
+    "last_seen_utc": "2026-10-26",
     "stale_days": 0
   },
   {
@@ -154,8 +154,8 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-25",
-    "last_seen_utc": "2026-10-25",
+    "last_verified": "2026-10-26",
+    "last_seen_utc": "2026-10-26",
     "stale_days": 0
   },
   {
@@ -178,8 +178,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-25",
+    "last_verified": "2026-10-26",
     "last_seen_utc": "2026-10-24",
-    "stale_days": 0
+    "stale_days": 1
   }
 ]
