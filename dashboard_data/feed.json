@@ -22,36 +22,9 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-10-26",
-    "last_seen_utc": "2026-10-26",
+    "last_verified": "2026-10-27",
+    "last_seen_utc": "2026-10-27",
     "stale_days": 0
-  },
-  {
-    "id": "kaopu-byovd-c2-2026-08",
-    "title": "Hands-on intrusion / custom C2 with BYOVD EDR evasion on Kaopu Cloud HK",
-    "date": "2026-09-10",
-    "first_observed": "2026-08-17",
-    "category": "c2",
-    "family": "Custom Python C2 + BYOVD EDR evasion (hands-on intrusion)",
-    "confidence": "high",
-    "status": "active",
-    "asn": "AS138915",
-    "provider": "Kaopu Cloud HK Limited (AS138915)",
-    "bph_link": "Kaopu Cloud HK Limited",
-    "vt": "0 (not externally flagged; verified live via exposure)",
-    "summary": "A hands-on-keyboard intrusion operation staged on the suspected-BPH host Kaopu Cloud HK (AS138915), still Shodan-visible as of 2026-09-10 (ports 22/80). The host held a custom Python C2 with accumulated live implant state, an MSSQL RCE chain, a Windows privilege-escalation suite, a bring-your-own-vulnerable-driver EDR-evasion kit, and a chisel tunneller. Not flagged by public feeds, so assessed on first-party evidence.",
-    "tags": [
-      "c2",
-      "byovd",
-      "edr-evasion",
-      "hands-on-keyboard",
-      "mssql-rce",
-      "kaopu",
-      "suspected-bph"
-    ],
-    "last_verified": "2026-10-26",
-    "last_seen_utc": "2026-10-12",
-    "stale_days": 14
   },
   {
     "id": "aeza-comfyui-cryptojacking-2026-08",
@@ -75,8 +48,8 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-10-26",
-    "last_seen_utc": "2026-10-26",
+    "last_verified": "2026-10-27",
+    "last_seen_utc": "2026-10-27",
     "stale_days": 0
   },
   {
@@ -101,8 +74,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-10-26",
-    "last_seen_utc": "2026-10-26",
+    "last_verified": "2026-10-27",
+    "last_seen_utc": "2026-10-27",
     "stale_days": 0
   },
   {
@@ -128,9 +101,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-10-26",
+    "last_verified": "2026-10-27",
     "last_seen_utc": "2026-10-26",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -154,9 +127,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-10-26",
+    "last_verified": "2026-10-27",
     "last_seen_utc": "2026-10-26",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -178,8 +151,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-10-26",
-    "last_seen_utc": "2026-10-24",
-    "stale_days": 1
+    "last_verified": "2026-10-27",
+    "last_seen_utc": "2026-10-27",
+    "stale_days": 0
   }
 ]
