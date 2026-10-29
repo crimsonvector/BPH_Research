@@ -1,6 +1,6 @@
 # Source Index
 
-> **Last Updated:** 2026-09-25 | **Maintainer:** CrimsonVector Research
+> **Last Updated:** 2026-10-29 | **Maintainer:** CrimsonVector Research
 >
 > All sources used in the BPH Research repository are cataloged here. Source IDs are referenced in the `sources` column of BPH_Master.csv.
 
@@ -239,16 +239,34 @@ When adding a new source to this index:
 
 ---
 
+### Additional Sources (Added 2026-10-29)
+
+> Operation Omegaline: the FBI-led seizure of Virtualine (2026-10-27) and the routing and registry checks made afterwards. The DOJ release sits behind a bot-check page; its wording was read through verbatim quotations in THN-VIRTUALINE-2026, THERECORD-VIRTUALINE-2026, CHAINALYSIS-VIRTUALINE-2026 and the LowEndSpirit thread. Grade shown inline.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| DOJ-VIRTUALINE-2026 | A | Bulletproof Website Domain Seized in International Law Enforcement Operation (justice.gov/usao-edva/pr/bulletproof-website-domain-seized-international-law-enforcement-operation) | USAO E.D. Va.; FBI Washington Field Office | US DOJ | 2026-10-27 | — | Virtualine aka Secury, Massgod, Spamhouse, Lanedo, Omegatech; virtualine[.]net; 'Vendor 1' CSAM forum; 'BTC [NO-AML]'; Polizei Hessen; Politie Midden-Nederland; NCA; OverRIPE; Lumen |
+| POLITIE-VIRTUALINE-2026 | A | Internationale politieactie tegen bulletproof hoster | Politie Midden-Nederland (Team Cybercrime) | Politie | 2026-10-28 | — | Unnamed BPH (Virtualine by date and partners): dozens of physical servers seized in Limburg; hundreds of VPS offline; data on 3,000+ customers; concurrent FBI and German actions against suspects and crypto |
+| SILENTPUSH-OMEGATECH-2026 | B | Omegatech Is Disrupted, and the Pressure on Bulletproof Hosting Keeps Building | Silent Push | Silent Push | 2026-10-27 | — | Railnet AS214943 -> Omegatech AS202412 shift (2026-02-11); low post-seizure routing visibility; virtualine[.]org open letter; GHOSTYNETWORKS/AnonRDP SPF overlap |
+| CHAINALYSIS-VIRTUALINE-2026 | B | International Law Enforcement Seizes Domain of Virtualine Bulletproof Hosting Service | Chainalysis Team | Chainalysis | 2026-10-27 | — | Virtualine unhosted BTC addresses; exposure to ransomware, infostealers, Russian-language forums, illicit shops, scams; OverRIPE collaboration |
+| TRM-VIRTUALINE-2026 | B | FBI Seizes Virtualine Domain After Provider Led Bulletproof Hosting Sector in Illicit Inflows | TRM Team | TRM Labs | 2026-10-28 | — | Virtualine inflows (~44% Russian drug market, ~17% sextortion, ~13% mixer, ~5% ransomware); StealC; Volhav (BPH); Exploit.in join 2024-08-28 |
+| THERECORD-VIRTUALINE-2026 | C | FBI seizes 'bulletproof' hosting site accused of facilitating child abuse, money laundering | Alexander Martin | Recorded Future News | 2026-10-28 | — | Virtualine; DOJ allegations; no operators named or charged |
+| THN-VIRTUALINE-2026 | C | FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering | Ravie Lakshmanan | The Hacker News | 2026-10-28 | — | DOJ quotations; Virtualine price list; operator's open letter; Spamhaus Sept 2025 note on Virtualine's AS209800 expansion via aurologic |
+| REGISTRY-SNAPSHOT-2026-10 | C | RIPEstat routing, neighbour and whois data; RIPE DB organisation objects; Verisign RDAP; Spamhaus ASN-DROP and DROP (asndrop.json, drop_v4.json) - checked 2026-10-29 | RIPE NCC; Verisign; The Spamhaus Project | RIPEstat / RDAP / Spamhaus | 2026-10-29 | — | AS202412 (1 of 323 RIS peers; neighbours AS51396, AS213382; 27 historical /24s, all on DROP); AS219199 GENYUS SOFT LTD (genyus.sc); AS403005 BLATANTHOST (blatant.host); virtualine[.]net and anonrdp[.]com on FBI seizure nameservers |
+| LES-VIRTUALINE-2026 | D | FBI seizes Virtualine.net (Omegatech LTD) hosting provider in "Operation OMEGALINE" (forum thread) | treesmokah and other users | LowEndSpirit | 2026-10-27 to 2026-10-28 | — | AS219199 claim; aurologic DDoS-protection tunnel traceroute (RIPE Atlas); SkyLink / Tube-Hosting / Pfcloud claim for the Limburg servers; anonrdp[.]com seizure; AS403005 Blatant Technologies |
+
+---
+
 ## Source Statistics
 
 | Grade | Count | Description |
 |-------|-------|-------------|
-| A — Government/Official | 39 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
-| B — Established CTI Vendor | 66 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 35 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
-| D — Single Source / Unverified | 5 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
+| A — Government/Official | 41 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
+| B — Established CTI Vendor | 69 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 38 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
+| D — Single Source / Unverified | 6 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
 | E — Self-Reported / Marketing | 2 | Forum advertising presence and provider marketing |
-| **Total** | **147** | |
+| **Total** | **156** | |
 
 ---
 

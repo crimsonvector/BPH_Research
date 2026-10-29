@@ -1,6 +1,6 @@
 # BPH & Threat Activity Enabler (TAE) Taxonomy Framework
 
-> **Version:** 1.3 | **Last Updated:** 2026-09-25 | **Maintainer:** CrimsonVector Research
+> **Version:** 1.4 | **Last Updated:** 2026-10-29 | **Maintainer:** CrimsonVector Research
 >
 > This document defines the classification system used across the BPH Research repository. All provider assessments, risk ratings, and analytical products reference this taxonomy.
 
@@ -35,7 +35,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block at CIDR/ASN level. Monitor for prefix migration.
 
-**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 24 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (dormant), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine, Femo IT/Defhost, Kaopu Cloud HK, PrivateAlps/Private Layer, MIRhosting (WorkTitans' upstream), CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector (financial enablers)
+**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 24 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (dormant), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine (seized), Femo IT/Defhost, Kaopu Cloud HK, PrivateAlps/Private Layer, MIRhosting (WorkTitans' upstream), CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector (financial enablers)
 
 ---
 
@@ -253,7 +253,7 @@ These are the recurring operational techniques observed across BPH and TAE netwo
 - Identical BGP routing patterns, peering relationships, or upstreams post-transfer
 - Shared technical fingerprints (RDP hostnames, TLS certificates, server configurations)
 
-**Observed in:** Stark Industries → THE.Hosting (RDP hostname WIN-J9D866ESIJ2 reuse); Virtualine → metaspinner-named AS209800 → OMEGATECH (AS202412); Garantex → Grinex
+**Observed in:** Stark Industries → THE.Hosting (RDP hostname WIN-J9D866ESIJ2 reuse); Virtualine → metaspinner-named AS209800 → OMEGATECH (AS202412); Garantex → Grinex. Virtualine even sold rebranding as a customer product: its March 2026 "additional protection plan" moved a customer's server to an unaffiliated shell company after a police request (DOJ, Oct 2026)
 
 ### 3.3 Sub-Sub-Leasing (Infrastructure Nesting)
 

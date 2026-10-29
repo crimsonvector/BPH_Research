@@ -1,7 +1,7 @@
 # BPH Sanctions & Enforcement Timeline
 
-**Version:** 1.3
-**Last Updated:** 2026-09-25
+**Version:** 1.4
+**Last Updated:** 2026-10-29
 **Maintainer:** CrimsonVector Research
 
 ---
@@ -21,6 +21,12 @@
 ---
 
 ## 2026
+
+**2026-10-27** | **LE Operation** | **Operation Omegaline: FBI Seizes Virtualine (Omegatech) Bulletproof Hosting**
+> The FBI Washington Field Office seized virtualine[.]net under a warrant from the US District Court for the Eastern District of Virginia, with Germany's Polizei Hessen, the Netherlands' Politie Midden-Nederland, the UK NCA and private partners OverRIPE and Lumen (Chainalysis also supported). DOJ names the aliases Secury, Massgod, Spamhouse, Lanedo and Omegatech, and alleges Virtualine knowingly hosted "Vendor 1" -- a forum selling child sexual abuse material and non-consensual intimate images, with a hack-for-hire service -- despite notices from German, Canadian and Australian police, NCMEC and a victim's attorney from January 2026, and laundered customer payments taken through unhosted "BTC [NO-AML]" addresses. In March 2026 it had sold an "additional protection plan" that moved a customer's server to an unaffiliated shell company after a police request. On 2026-10-28 Dutch police said they had seized dozens of physical servers in a Limburg data centre (hundreds of virtual servers offline; data on more than 3,000 customers) and that the FBI and German police acted against suspects and crypto at the same time; DOJ named no operators and announced no charges. Routing: OMEGATECH AS202412 dropped to 1 of 323 RIS peers on 2026-10-27; every /24 it had originated since January is on Spamhaus DROP. TRM says Virtualine took more illicit-attributed crypto than any other bulletproof host it labels in 2026 (about 44% of direct inflows from a Russian drug market, 5% from ransomware). The operator posted an open letter on virtualine[.]org denying the allegations and saying it could rebrand in "a day, perhaps even less". A Seychelles ASN, AS219199 (GENYUS SOFT LTD), withdrew its four prefixes the same morning; a community post ties it to Virtualine and it once carried a /24 from AS202412, but the link is unconfirmed. The Railnet/Virtualine row is now `seized`. [Sources: DOJ-VIRTUALINE-2026 (A); POLITIE-VIRTUALINE-2026 (A); SILENTPUSH-OMEGATECH-2026 (B); CHAINALYSIS-VIRTUALINE-2026 (B); TRM-VIRTUALINE-2026 (B); THERECORD-VIRTUALINE-2026 (C); THN-VIRTUALINE-2026 (C); REGISTRY-SNAPSHOT-2026-10 (C); LES-VIRTUALINE-2026 (D)]
+
+**2026-10-27** | **LE Operation** | **anonrdp[.]com Moved to FBI Seizure Nameservers**
+> The registry record for anonrdp[.]com was changed at 13:13 UTC on the day of the Virtualine seizure and now points to NS1/NS2.FBI.SEIZED.GOV; no seizure page or DOJ statement had appeared by 2026-10-29. AnonRDP was previously linked by Intrinsec to OPTIBOUNCE and GHOSTYNETWORKS (AS205759, now dark), and Silent Push found the same SPF addresses on anonrdp[.]com and ghostynetworks[.]com. A community post names Blatant Technologies (AS403005, Spamhaus ASN-DROP under blatant.host, still announcing nine prefixes) as AnonRDP's current network -- a lead, not yet attributed. Not yet a CSV row. [Sources: REGISTRY-SNAPSHOT-2026-10 (C); SILENTPUSH-OMEGATECH-2026 (B); LES-VIRTUALINE-2026 (D)] *Headline-level.*
 
 **2026-09-22** | **Private-sector disruption + LE Operation** | **Microsoft Takes Down EvilTokens Device-Code PhaaS; Two Arrested in the UK**
 > Microsoft disrupted "EvilTokens", a device-code phishing-as-a-service kit tied to about 12,000 Microsoft account compromises; UK police arrested two people. Phishing infrastructure enabler; moderate BPH relevance. [Sources: [Microsoft](https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/) (B); [The Record](https://therecord.media/two-arrested-in-uk-after-microsoft-takedown-eviltokens) (C)] *Headline-level.*
@@ -514,8 +520,8 @@
 | Metric | Count | Notes |
 |--------|-------|-------|
 | **Tracked entities under designation** | 15 | 13 with `status=sanctioned` in `BPH_Master.csv` (Aeza, Zservers, Media Land, FUNNULL, Hypercore, Datavice, Grinex, A7A5/Old Vector, Nobitex, Wallex, Bitpin, Ramzinex, 1VPNS) plus Stark Industries (`dissolved`) and Garantex (`evading`), whose designations stand. PQ Hosting Plus, CTG Server and StarCloud are **not** designated |
-| **Providers seized/disrupted by LE** | 20+ | Garantex; LockBit (Cronos); Operation Talent incl. StarkRDP; XSS; breachforums.hn; Phobos/8Base; Zservers (127 servers); the press-attributed CrazyRDP seizure; Cryptomixer.io; eXch; Archetyp; NoName057(16); Endgame (2024; Apr, May, Nov 2025; June 2026); Huione backend infrastructure; the Asocks-attributed botnet; THE.Hosting/WorkTitans (FIOD); 1VPNS (Saffron); NetNut domains; QScan/QTRouter; Sality; NightmareStresser; Xinbi |
-| **Providers that evaded via rebranding** | 6+ | Stark -> PQ Hosting Plus / THE.Hosting / WorkTitans B.V. / UFO Hosting; Garantex -> Grinex; Aeza -> Hypercore / Smart Digital Ideas / Datavice; Virtualine -> metaspinner-named AS209800 -> OMEGATECH; Huione -> Tudou -> H-Pay Service PLC / Xinbi; Proton66 -> Chang Way shell ASNs (likely) |
+| **Providers seized/disrupted by LE** | 20+ | Garantex; LockBit (Cronos); Operation Talent incl. StarkRDP; XSS; breachforums.hn; Phobos/8Base; Zservers (127 servers); the press-attributed CrazyRDP seizure; Cryptomixer.io; eXch; Archetyp; NoName057(16); Endgame (2024; Apr, May, Nov 2025; June 2026); Huione backend infrastructure; the Asocks-attributed botnet; THE.Hosting/WorkTitans (FIOD); 1VPNS (Saffron); NetNut domains; QScan/QTRouter; Sality; NightmareStresser; Xinbi; Virtualine/Omegatech (Operation Omegaline; Dutch servers seized); anonrdp[.]com domain |
+| **Providers that evaded via rebranding** | 6+ | Stark -> PQ Hosting Plus / THE.Hosting / WorkTitans B.V. / UFO Hosting; Garantex -> Grinex; Aeza -> Hypercore / Smart Digital Ideas / Datavice; Virtualine -> metaspinner-named AS209800 -> OMEGATECH (seized Oct 2026; successor not yet identified); Huione -> Tudou -> H-Pay Service PLC / Xinbi; Proton66 -> Chang Way shell ASNs (likely) |
 | **Individuals sanctioned (tracked providers)** | 25+ | Mishin, A. Bolshakov, Sidorov, D. Bolshakov, Odintsov, Ananev (Zservers); Neculiti x2 (Stark); Penzev, Bozoyan, Gast, Knyazev, Makarov, Zakirov (Aeza); Volosovik, Zatolokin, Pankova, Kozlov (Media Land); Liu Lizhi (FUNNULL); Mira Serda, Mendeleev, Karavatsky (Garantex/Grinex); four Nobitex executives; Hu Xiaowei (Prince Group/Huione); Rashevskyi, Silayev (1VPNS) |
 
 ### Evasion Velocity: Time from Sanctions/LE Action to Successor Entity
