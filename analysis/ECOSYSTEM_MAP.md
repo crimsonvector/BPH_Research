@@ -6,7 +6,7 @@
 
 ---
 
-> **2026-10-29 update (Operation Omegaline):** Virtualine/Omegatech was seized on 2026-10-27. §3.2 and §3.7, the peering table and Appendices A and B now show Railnet/Virtualine as `seized` and AS202412 as disrupted rather than live. AS219199 (GENYUS SOFT LTD) is recorded in §3.7 as an unconfirmed lead, not an attribution.
+> **2026-10-29 update (Operation Omegaline):** Virtualine/Omegatech was seized on 2026-10-27. §3.2 and §3.7, the peering table and Appendices A and B now show Railnet/Virtualine as `seized` and AS202412 as disrupted rather than live. AS219199 (GENYUS SOFT LTD) is recorded in §3.7 as an unconfirmed lead, not an attribution. AnonRDP / Blatant Technologies (AS403005, with the deregistered GHOSTYNETWORKS AS205759) was added as a T1 row; its anonrdp[.]com domain went to FBI seizure nameservers the same day.
 
 > **2026-09-25 audit:**
 > - **Appendices.** Appendices A and B were regenerated from `BPH_Master.csv` (70 rows), with every ASN re-checked against registry and Spamhaus ASN-DROP data.
@@ -562,6 +562,7 @@ The BPH ecosystem contains several single points of failure where intervention w
 | aurologic (AS30823) | Transit | Femo IT (AS214351) | Sole upstream (RF) |
 | aurologic (AS30823) / Pfcloud (AS51396) | Transit | Railnet (AS214943) | ~95% / one /24 (Aug 2025) |
 | Pfcloud (AS51396) / PEERYX (AS213382) | Neighbours | OMEGATECH (AS202412) | The only neighbours at the Oct 2026 seizure (RIPEstat) |
+| SMARTNET Germany (AS203446) | Sole transit | AnonRDP / Blatant Technologies (AS403005) | Only neighbour of an ASN whose nine /24s are all on Spamhaus DROP (Oct 2026); a community post says the servers sit with UAB Host Baltic in Lithuania |
 | MIRhosting (AS52000) | Sole connectivity | WorkTitans (AS209847) | First peer in AS209847's aut-num; Krebs: "solely through MIRhosting" |
 | UAB Host Baltic (AS209605), Tube-Hosting (AS49581) | Transit | BtHoster (AS213790) | Transit ASNs themselves on ASN-DROP |
 | Fastmos (AS138644) | Shared /16 | AROSSCLOUD (AS400619) | The two tile 191[.]124[.]0[.]0/16 exactly -- reseller relationship |
@@ -739,7 +740,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 
 ## Appendix A: Entity Quick Reference
 
-> Generated from `BPH_Master.csv` (70 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
+> Generated from `BPH_Master.csv` (71 rows). The CSV is authoritative: if this table disagrees with it, the CSV wins and this table is stale.
 
 | Entity | ASN(s) | Tier | Status | Geographic Cluster | Primary Role |
 |--------|--------|------|--------|--------------------|--------------|
@@ -747,6 +748,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | A7A5 / Old Vector | — | T1 | Sanctioned | Russia / Kyrgyzstan | Financial Enabler (sanctions-evasion stablecoin) |
 | Aeza International / Aeza Group | AS210644; AS216246; AS203273 (NetCrafters OU [EE]; Spamhaus ASN-DROP under aeza.net) | T1 | Sanctioned | Russia / St. Petersburg (UK front) | Pure BPH |
 | AlexHost | AS200019; AS207636 (ALEXHOST-SRL) | T4 | Active | Moldova | BPH-Adjacent |
+| AnonRDP / Blatant Technologies | AS403005 (BLATANTHOST; Blatant Technologies, LLC [SC/ARIN], registered 2026-09-25; Spamhaus ASN-DROP under blatant.host); AS205759 (historical; GHOSTYNETWORKS [US-KY]; deregistered) | T1 | Seized | Seychelles shell / Lithuania, Netherlands (servers) | Pure BPH |
 | Altawk | AS209946 (ALINDA LLC [UA]; Spamhaus ASN-DROP under altawk.com); AS203727 (historical; reassigned to byon GmbH [DE] - do not block); AS215826 (Partner Hosting LTD [GB]; listed under altawk.com in Dec 2025, delisted) | T2 | Flagged | aurologic downstream | BPH downstream |
 | Asocks | — | T2 | Seized | Netherlands (servers) / global | Residential-proxy TAE |
 | aurologic GmbH | AS30823; AS43043 (AUROLOGIC-CLOUD) | T2 | Active | Germany/Netherlands | Upstream Enabler |
@@ -888,6 +890,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS204339 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS204997 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS205090 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
+| AS205759 | AnonRDP / Blatant Technologies | T1 | historical; GHOSTYNETWORKS [US-KY]; deregistered |
 | AS206728 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
 | AS206932 | MIRhosting B.V. | T1 | MIRHOSTING-NL |
 | AS207566 | Chang Way Technologies | T2 | LD007-AS; no routes |
@@ -936,6 +939,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS394711 | CrazyRDP | T1 | historical; Limenet; reassigned to KorGrid LLC [US] - do not block |
 | AS400328 | Pfcloud UG | T2 | Intelligence Hosting LLC [NL/ARIN]; Spamhaus-attributed via pfcloud.io |
 | AS400619 | SHANGXING TECH LIMITED | T2 | origin ASN; registry holder AROSSCLOUD INC. [US] |
+| AS403005 | AnonRDP / Blatant Technologies | T1 | BLATANTHOST; Blatant Technologies, LLC [SC/ARIN], registered 2026-09-25; Spamhaus ASN-DROP under blatant.host |
 
 ---
 
