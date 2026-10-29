@@ -1,10 +1,12 @@
 # BPH & TAE Ecosystem Map
 
-> **Version:** 1.3 | **Last Updated:** 2026-09-25 | **Maintainer:** CrimsonVector Research
+> **Version:** 1.4 | **Last Updated:** 2026-10-29 | **Maintainer:** CrimsonVector Research
 >
 > This document maps the bullet-proof hosting (BPH) and Threat Activity Enabler (TAE) ecosystem, charting the supply chain from bare metal to criminal end-user, the geographic clusters where these operations concentrate, the corporate relationship networks that sustain them, and the financial infrastructure that monetizes them. Risk tier references follow the classification system defined in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md). The Appendix A/B reference tables are generated from `BPH_Master.csv` and are authoritative; the narrative sections 1–6 are hand-maintained and may lag the CSV.
 
 ---
+
+> **2026-10-29 update (Operation Omegaline):** Virtualine/Omegatech was seized on 2026-10-27. §3.2 and §3.7, the peering table and Appendices A and B now show Railnet/Virtualine as `seized` and AS202412 as disrupted rather than live. AS219199 (GENYUS SOFT LTD) is recorded in §3.7 as an unconfirmed lead, not an attribution.
 
 > **2026-09-25 audit:**
 > - **Appendices.** Appendices A and B were regenerated from `BPH_Master.csv` (70 rows), with every ASN re-checked against registry and Spamhaus ASN-DROP data.
@@ -333,10 +335,10 @@ aurologic GmbH (AS30823, plus AS43043) operates from the Tornado Datacenter in L
 Femo IT    Railnet /   metaspinner  Global-  Tnsecurity  WAIcore  Altawk
 Defhost    Virtualine  -named       Data     AS216309    AS213887 AS203727
 AS214351   AS214943    AS209800     SWISS-   (reissued)  (live)   (reissued)
-(T1, live) (T1, dark;  (reissued)   NETWORK  -> dark     T2       -> AS209946
-           live net =               AS34888/                      live, T2
-           AS202412)                AS42624
-                                    (dark)
+(T1, live) (T1,       (reissued)   NETWORK  -> dark     T2       -> AS209946
+           seized Oct              AS34888/                      live, T2
+           2026; net =              AS42624
+           AS202412)                (dark)
         |
       Aeza (~50% of prefixes via aurologic, Nov 2025)
 ```
@@ -346,9 +348,9 @@ AS214351   AS214943    AS209800     SWISS-   (reissued)  (live)   (reissued)
 | Downstream | ASN | Tier | State today |
 |-----------|-----|------|-------------|
 | Femo IT / Defhost | AS214351 | T1 | Live; 4 /24s on Spamhaus DROP |
-| Railnet / Virtualine | AS214943 -> AS202412 | T1 | AS214943 dark; live network is OMEGATECH AS202412 |
+| Railnet / Virtualine | AS214943 -> AS202412 | T1 | Seized 2026-10-27 (Operation Omegaline); AS214943 dark, AS202412 seen by 1 of 323 RIS peers |
 | Tnsecurity / EVILEMPIRE | AS216309 | T2 | ASN re-issued to an Italian company -- defunct |
-| metaspinner-named front | AS209800 | T3 | ASN re-issued -- defunct; ranges now on AS202412 |
+| metaspinner-named front | AS209800 | T3 | ASN re-issued -- defunct; ranges moved to AS202412, which was seized in Oct 2026 |
 | WAIcore | AS213887 | T2 | Live (29 IPv4 prefixes) |
 | Karina Rashkovska | AS215789 | T2 | ASN re-issued to BLIK -- defunct (Virtualine sub-network) |
 | Altawk | AS209946 | T2 | Live, on ASN-DROP (earlier AS203727 re-issued) |
@@ -359,7 +361,7 @@ KPROHOST, previously listed here, peered with Pfcloud rather than aurologic and 
 
 **The Hofmann Denial:** aurologic's CEO has publicly denied a contractual relationship with Aeza, yet routing data showed Aeza prefixes transiting aurologic. Whether the relationship is direct or mediated through an intermediary (taxonomy Pattern 3.3, Sub-Sub-Leasing), the routing dependency is observable.
 
-**Leverage:** depeering aurologic would now hit fewer live networks than in 2025 -- several downstreams have already collapsed or moved (Virtualine to OMEGATECH). Monitor where the survivors move rather than assuming the cluster is static.
+**Leverage:** depeering aurologic would now hit fewer live networks than in 2025 -- several downstreams have already collapsed or moved, and Virtualine's OMEGATECH network was seized in October 2026. Monitor where the survivors move rather than assuming the cluster is static.
 
 ---
 
@@ -473,17 +475,20 @@ HZ runs KYC and is not on Spamhaus ASN-DROP, so it is tracked at T4 as an actor-
 
 ### 3.7 The Virtualine Identity Chain
 
-Virtualine Technologies is the clearest case of an operator outliving its number resources. It has used at least five identities:
+Virtualine Technologies is the clearest case of an operator outliving its number resources. It has used at least five identities, and on 2026-10-27 the FBI-led Operation Omegaline seized its domain and, with Dutch police, its servers in Limburg:
 
-| Identity | ASN | State (2026-09) |
+| Identity | ASN | State (2026-10-29) |
 |----------|-----|-----------------|
 | Railnet LLC (Kentucky) | AS214943 | Registered; dark since ~Feb 2026; delisted from ASN-DROP |
 | KPROHOST LLC (Kentucky) | AS214940 | Dark since ~Aug 2026; listed under virtualine.org in Dec 2025 |
 | Karina Rashkovska (likely) | AS215789 | Re-issued to BLIK |
 | "metaspinner" front | AS209800 | Re-issued to ZEMA GbR; ranges moved to OMEGATECH |
-| OMEGATECH / Omegatech LTD (Seychelles) | AS202412 | **Live**; 15 /24s, 13 on Spamhaus DROP; ASN-DROP under virtualine.org |
+| OMEGATECH / Omegatech LTD (Seychelles) | AS202412 | **Disrupted** 2026-10-27: seen by 1 of 323 RIS peers since; had 24 /24s in its last two weeks, all on Spamhaus DROP; ASN-DROP under virtualine.org |
+| *Lead:* GENYUS SOFT LTD (Seychelles) | AS219199 | Not attributed. Announced four broker-leased /24s from 2026-10-22 (one previously on AS202412) and withdrew them the morning of the seizure; Spamhaus lists it under genyus.sc |
 
-The reported upstreams were aurologic (~95%) and Pfcloud (one /24) as of August 2025. RF ranked Virtualine #1 by Threat Density for 2025, and Intrinsec (May 2026) tied the live OMEGATECH network to forum advertising and malspam infrastructure. The Railnet/Virtualine row is now T1.
+The reported upstreams were aurologic (~95%) and Pfcloud (one /24) as of August 2025; at the seizure AS202412's only neighbours were Pfcloud (AS51396) and PEERYX (AS213382), and a community traceroute still showed traffic reaching it through an aurologic DDoS-protection tunnel. RF ranked Virtualine #1 by Threat Density for 2025, and Intrinsec (May 2026) tied OMEGATECH to forum advertising and malspam infrastructure. DOJ's alias list (Secury, Massgod, Spamhouse, Lanedo, Omegatech) confirms two links this section had drawn from routing data: Omegatech, and the LANEDONET name on AS209800.
+
+The chain is likely to grow. Virtualine sold shell-company migration as a service (its March 2026 "additional protection plan"), and after the seizure the operator wrote that it could rebrand in "a day, perhaps even less". Watch Spamhaus ASN-DROP for new ASNs under `virtualine.org`, new Seychelles or Kentucky shells taking the DROP-listed ranges in the CSV row, and new neighbours of Pfcloud. The Railnet/Virtualine row is T1 with status `seized`.
 
 ---
 
@@ -556,6 +561,7 @@ The BPH ecosystem contains several single points of failure where intervention w
 | aurologic (AS30823) | Transit | Aeza (AS210644) | ~50% of Aeza prefixes (Nov 2025); relationship disputed by aurologic's CEO |
 | aurologic (AS30823) | Transit | Femo IT (AS214351) | Sole upstream (RF) |
 | aurologic (AS30823) / Pfcloud (AS51396) | Transit | Railnet (AS214943) | ~95% / one /24 (Aug 2025) |
+| Pfcloud (AS51396) / PEERYX (AS213382) | Neighbours | OMEGATECH (AS202412) | The only neighbours at the Oct 2026 seizure (RIPEstat) |
 | MIRhosting (AS52000) | Sole connectivity | WorkTitans (AS209847) | First peer in AS209847's aut-num; Krebs: "solely through MIRhosting" |
 | UAB Host Baltic (AS209605), Tube-Hosting (AS49581) | Transit | BtHoster (AS213790) | Transit ASNs themselves on ASN-DROP |
 | Fastmos (AS138644) | Shared /16 | AROSSCLOUD (AS400619) | The two tile 191[.]124[.]0[.]0/16 exactly -- reseller relationship |
@@ -789,7 +795,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | PROSPERO / Proton66 | AS200593; AS198953 | T1 | Flagged | Russia / St. Petersburg | Pure BPH |
 | QTFY (QScan / QTRouter) | — | T1 | Seized | China | Anonymization/Proxy Enabler (state ORB; seized) |
 | QWINS LTD | AS213702; AS218731 (Spamhaus ASN-DROP under qwins.co; 35 IPv4 prefixes); AS214422 (NET67X; Spamhaus ASN-DROP under qwins.co; no routes) | T2 | Flagged | UK Shell | BPH |
-| Railnet / Virtualine | AS214943 (registered to Railnet LLC; dark since ~2026-02); AS202412 (OMEGATECH / Omegatech LTD [SC]; live Virtualine network, Spamhaus ASN-DROP under virtualine.org) | T1 | Flagged | aurologic downstream (US LLC) | Pure BPH |
+| Railnet / Virtualine | AS214943 (registered to Railnet LLC; dark since ~2026-02); AS202412 (OMEGATECH / Omegatech LTD [SC]; Virtualine network until the Oct 2026 seizure - seen by 1 of 323 RIS peers since 2026-10-27; Spamhaus ASN-DROP under virtualine.org) | T1 | Seized | aurologic downstream (US LLC) | Pure BPH |
 | Ramzinex | — | T3 | Sanctioned | Iran | Financial Enabler |
 | SHANGXING TECH LIMITED | AS400619 (origin ASN; registry holder AROSSCLOUD INC. [US]); AS136452 (SHANGXING TECH LIMITED; no routes); AS151468 (SHANGXING TECH LIMITED; no routes) | T2 | Suspected | Hong Kong/US | HK reseller ASN (China-nexus C2 / exploitation staging) |
 | Shinjiru | AS45839; multiple regional ASNs | T4 | Active | Malaysia | BPH-Adjacent |
@@ -875,7 +881,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS201525 | HostZealot (HZ Hosting) | T4 | HZ-CA-AS |
 | AS201738 | Chang Way Technologies | T2 | UFO TECHNOLOGIES LIMITED [GB]; Spamhaus-attributed via changway.hk |
 | AS202015 | HostZealot (HZ Hosting) | T4 | HZ-US-AS |
-| AS202412 | Railnet / Virtualine | T1 | OMEGATECH / Omegatech LTD [SC]; live Virtualine network, Spamhaus ASN-DROP under virtualine.org |
+| AS202412 | Railnet / Virtualine | T1 | OMEGATECH / Omegatech LTD [SC]; Virtualine network until the Oct 2026 seizure - seen by 1 of 323 RIS peers since 2026-10-27; Spamhaus ASN-DROP under virtualine.org |
 | AS203273 | Aeza International / Aeza Group | T1 | NetCrafters OU [EE]; Spamhaus ASN-DROP under aeza.net |
 | AS203727 | Altawk | T2 | historical; reassigned to byon GmbH [DE] - do not block |
 | AS204154 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |

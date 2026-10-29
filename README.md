@@ -2,7 +2,7 @@
 
 > **Bullet-Proof Hosting, Threat Activity Enablers & Cybercrime Infrastructure Intelligence**
 >
-> Maintained by CrimsonVector Research | Last Updated: 2026-09-25
+> Maintained by CrimsonVector Research | Last Updated: 2026-10-29
 
 ---
 
@@ -124,7 +124,7 @@ Full schema documented in the CSV header row.
 > **Note on legal basis vs. lifecycle status:** OFAC/EU/UK *designation* is a `sanctioned` status regardless of tier; being sanctioned on non-cyber grounds (e.g. the Iranian exchanges, designated for terror finance) does not auto-escalate an entity to tier T1. See `taxonomy/BPH_TAXONOMY.md`.
 
 ### Critical Infrastructure Node
-- **aurologic GmbH (AS30823)** — Central upstream for the European BPH cluster; Recorded Future says it transits about 70% of the most prominent high-risk TAE networks. RF names Aeza, Femo IT/Defhost, Railnet/Virtualine, the metaspinner-named front and SWISSNETWORK02/Global-Data as downstreams; Qurium adds Tnsecurity, WAIcore and Altawk. By Sept 2026 several of those downstream ASNs had gone dark or been re-issued - the live Virtualine network is now OMEGATECH (AS202412).
+- **aurologic GmbH (AS30823)** — Central upstream for the European BPH cluster; Recorded Future says it transits about 70% of the most prominent high-risk TAE networks. RF names Aeza, Femo IT/Defhost, Railnet/Virtualine, the metaspinner-named front and SWISSNETWORK02/Global-Data as downstreams; Qurium adds Tnsecurity, WAIcore and Altawk. By Sept 2026 several of those downstream ASNs had gone dark or been re-issued, and Virtualine had moved to OMEGATECH (AS202412) - which was itself seized in Operation Omegaline in Oct 2026.
 
 ### Cl0p and HostZealot (Sept 2026)
 - **HostZealot / HZ Hosting Ltd (Bulgaria)** appears in **4 of 10 Cl0p mass-exploitation campaigns** (Accellion 2020, GoAnywhere and MOVEit 2023, Cleo 2024) - 21 HZ addresses in CISA, Mandiant, Lumen and Huntress IOC lists. Reuse is block-level: one exact IP recurs, while 79[.]141[.]160[.]0/22 and 5[.]149[.]248[.]0/23 recur over 18-27 months. No published indicator supports HZ use in the June 2026 Windchill campaign. Tracked at T4 (repeatedly abused, not shown to enable). See [`analysis/CL0P_HOSTZEALOT_REUSE.md`](analysis/CL0P_HOSTZEALOT_REUSE.md).
@@ -149,6 +149,7 @@ Full schema documented in the CSV header row.
 - **Media Land/ML.Cloud** July 2026 - EU sanctions (July 13) and the DOJ indictment under FBI Operation Riptide (July 14)
 - **QScan/QTRouter (PRC "QTFY" proxy/ORB platform)** domains seized Aug 26 2026 (DOJ/FBI with Lumen)
 - **Xinbi Guarantee** disrupted Sept 9 2026 (OFAC + DOJ Scam Center Strike Force; $52.8M USDT frozen)
+- **Operation Omegaline - Virtualine/Omegatech** Oct 27 2026: FBI seized virtualine[.]net (E.D. Va. warrant) with Polizei Hessen, Politie Midden-Nederland, the NCA, OverRIPE and Lumen; Dutch police seized dozens of servers in Limburg (data on 3,000+ customers). DOJ alleges CSAM hosting and money laundering; no operators named or charged. OMEGATECH AS202412 is now near-invisible in routing. RF's 2025 Threat Density #1 - the repo had already tied Omegatech to Virtualine (May 2026). Same day: anonrdp[.]com moved to FBI seizure nameservers
 
 ---
 

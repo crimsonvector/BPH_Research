@@ -1,7 +1,7 @@
 # BPH & TAE Analyst Playbook
 
-**Version:** 1.3
-**Last Updated:** 2026-09-25
+**Version:** 1.4
+**Last Updated:** 2026-10-29
 **Maintainer:** CrimsonVector Research
 
 > *A practitioner's guide to identifying, investigating, and tracking bullet-proof hosting providers and threat activity enablers.*
@@ -664,6 +664,7 @@ Standards support this split. STIX 2.1 indicators carry `valid_from`/`valid_unti
 - **Check the current holder first.** Confirm the RIR/ipverse holder name and the announced prefixes. Registries re-issue returned ASNs to unrelated organisations; see taxonomy §3.9.
 - **Never block a historical ASN.** Treat any CSV ASN marked `historical; reassigned to X - do not block` as history only.
 - **Distrust unexplained dark ASNs.** When a tracked ASN goes dark, look for a sibling ASN under the same Spamhaus ASN-DROP `domain` field, and for the old prefixes reappearing under a new origin. Virtualine's AS214943 went dark while its ranges moved to OMEGATECH AS202412.
+- **Watch for the successor after a seizure.** A domain or server seizure rarely retires the number resources. After Operation Omegaline (2026-10-27) took Virtualine's domain and Dutch servers, AS202412 fell to one RIS peer but stayed registered, and the operator said it could rebrand within a day. For the next few weeks, watch Spamhaus ASN-DROP for new ASNs under the seized operator's `domain` value, check who next originates its DROP-listed prefixes, and look for new downstreams of its last neighbours. Treat an ASN that goes dark at the same moment (Virtualine: AS219199) as a lead until the registry or Spamhaus links it.
 - **Mark silent networks `dormant`, not closed.** If an entity's ASNs are still registered to it but have announced nothing, with no new reporting, for 6+ months, set its status to `dormant` and keep its tier (taxonomy §5). Keep watch rules on the ASNs, move blocks on its old prefixes to the hunt tier (§8.2), and reassess as soon as anything is re-announced or the ASN changes hands. ELITETEAM's AS51381 and AS56873 are the reference case: still registered and still on ASN-DROP, but unrouted.
 
 ---
