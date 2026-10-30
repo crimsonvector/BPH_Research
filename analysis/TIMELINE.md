@@ -39,6 +39,9 @@
 **2026-10-13** | **Provider Event** | **Companies House Strike-Off Notices for Four Tracked UK Shells**
 > First Gazette notices for compulsory strike-off were issued the same day for FEMO IT SOLUTIONS LIMITED (15885164; an earlier notice had been discontinued in January), FIRST SERVER LIMITED (14459750), WAICORE LTD (15668439) and TIGER NETWORK LIMITED (11161830) -- the last three matched to the RIPE orgs by name. Dissolution would not by itself end the networks. [Source: UK-COMPANIES-HOUSE (A)]
 
+**2026-10-08** | **Provider Event** | **Drone Strikes on Yandex Data Centres Disrupt the A7A5 Exchange Service**
+> Ukrainian drones hit Yandex data centres in Sasovo (Ryazan) on 2026-10-08 and in Kaluga the same week. Elliptic's Tom Robinson says A7A5's exchange service runs there -- the token itself lives on Tron and Ethereum -- and crypto press citing him and on-chain data report daily A7A5 transfers falling from about 600 to about 61, mostly DEX swaps, with holders unpaid interest since 2026-10-09. [Sources: ALJAZEERA-YANDEX-2026 (C); CRYPTOPOLITAN-A7A5-2026 (C)] *Transfer figures are secondary reporting of Elliptic's analysis.*
+
 **2026-10-08** | **Sanctions** | **UK Designates Cryptomus/Heleket and Grinex Front TokenSpot**
 > Among 38 Russia-regime additions, the UK designated Xeltox Enterprises Ltd (RUS3755; name variations Certa Payments, Cryptomus, Heleket), TokenSpot CJSC (RUS3758), OJSC Processing KG and Tsunami Payments LLC. Chainalysis calls Cryptomus/Heleket the payment rails of choice for Zservers, Stark, First VPN and Aeza; Femo IT/Defhost uses Heleket. Two days earlier TRM assessed with high confidence that TokenSpot and Grinex share wallet infrastructure. Both added to the database. [Sources: FCDO-UK-SANCTIONS-LIST (A); CHAINALYSIS-CRYPTOMUS-2026 (B); TRM-TOKENSPOT-2026 (B); KREBS-CRYPTOMUS-2026 (C)]
 
@@ -97,7 +100,7 @@
 > Designated for funding Iran's IRGC; Aban Tether had processed transactions with Nobitex, Wallex, Bitpin and Ramzinex. Follows OFAC's 2026-07-16 addition of four Central Bank of Iran crypto wallets to the SDN list (Tether froze ~$131M). [Sources: [Treasury sb0598](https://home.treasury.gov/news/press-releases/sb0598) (A); [CoinDesk](https://www.coindesk.com/policy/2026/08/07/u-s-widens-iran-crypto-crackdown-with-sanctions-on-two-exchanges) (C)]
 
 **2026-07-23** | **Sanctions** | **EU 21st Russia Package -- Third-Country Crypto Tool**
-> 218 listings; transaction bans on 11 crypto-asset service providers (effective 2026-08-23); a new legal tool for full bans on third-country crypto-asset services; further A7-network listings. Extends the 20th package's category approach to corridors outside Russia. [Source: EU-21ST-PACKAGE]
+> 218 listings; transaction ban extended to 14 crypto-related service platforms in Georgia, Panama, the UAE, the Marshall Islands, Kyrgyzstan and Belarus (*corrected 2026-10-30 from 11*); a new legal tool for full bans on third-country crypto-asset services; four further A7-network designations, including A7 Nigeria and A7 Africa (TRM). Extends the 20th package's category approach to corridors outside Russia. [Sources: EU-21ST-PACKAGE; TRM-EU21-2026 (B)]
 
 **2026-07-21** | **LE Operation** | **Kratos Phishing-as-a-Service Dismantled**
 > US and German law enforcement took down the Kratos Microsoft 365 adversary-in-the-middle PhaaS kit (reported 2026-07-23). [Source: [The Hacker News](https://thehackernews.com/2026/07/police-dismantle-kratos-phishing-kit.html) (C)] *Headline-level.*

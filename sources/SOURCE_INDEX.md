@@ -97,7 +97,7 @@ When adding a new source to this index:
 | NCSC-NL-ASOCKS | A | Joint police/NCSC operation takes down major residential-proxy botnet | NCSC-NL; Politie | NCSC-NL | 2026-05-28 | — | Asocks (press-attributed); 17M-device botnet; >200 NL backend servers (a subset seized) |
 | INTRINSEC-BTHOSTER | B | BtHoster: Identifying noisy networks emitting malicious traffic via masscan servers | Intrinsec | Intrinsec | 2025-06-10 | — | BtHoster; Skynet Network Ltd (AS214295); Inside Network LTD (AS215476); UAB Host Baltic (AS209605) |
 | RF-GUARANTEE-2026 | B | Evolution of Chinese-Language Guarantee Telegram Marketplaces | Insikt Group | Recorded Future | ~2026-04 (relayed 2026-04-23) | — | Dabai Guarantee (大白担保); Tudou; Xinbi; Huione successors |
-| ELLIPTIC-TUDOU | B | Tudou Guarantee Winds Down After $12B in Transactions | Elliptic | Elliptic | 2026-01 | — | Tudou Guarantee; Huione; Chen Zhi/Prince Group |
+| ELLIPTIC-TUDOU | B | Tudou Guarantee Winds Down After $12B in Transactions | Elliptic | Elliptic | 2026-01 | — | Tudou Guarantee; Huione (30% stake acquired Dec 2024); Chen Zhi/Prince Group |
 | SILENTPUSH-CHINESEVPN | B | Traffic Origin Data Uncovers Suspicious Chinese VPN | Silent Push | Silent Push | 2026-02-09 | — | Asocks; LVCHA VPN (lvcha.in); residential-proxy IOCs |
 | CHAINALYSIS-A7A5 | B | A7A5/Grinex and the Russian Crypto Economy (OFAC Aug 2025) | Chainalysis | Chainalysis | 2025-08 | — | Grinex; A7A5; Old Vector; Garantex successor rails |
 | TRM-A7A5-2026 | B | 2026 Crypto Crime Report (A7A5/Grinex laundering rails) | TRM Labs | TRM Labs | 2026 | — | A7A5; Grinex; sanctions-evasion stablecoin rails |
@@ -183,7 +183,7 @@ When adding a new source to this index:
 | FINCEN-HPAY-2026 | A | Definition of Huione Group - proposed rule adding H-Pay Service PLC (Federal Register 2026-12794) | FinCEN | Federal Register | 2026-06-25 | — | H-Pay Service PLC; Huione Group Section 311 special measure |
 | OFAC-PRINCE-2025 | A | Prince Group TCO designations; Chen Zhi indictment (E.D.N.Y.); FinCEN Section 311 final rule on Huione Group | US Treasury OFAC; US DOJ; FinCEN | US Government | 2025-10-14 | — | Prince Group (146 targets); Chen Zhi; 127,271 BTC forfeiture action; Huione Group |
 | OFAC-XINBI-2026 | A | OFAC designation and DOJ Scam Center Strike Force action against Xinbi Guarantee | US Treasury OFAC; US DOJ; US Secret Service | US Government | 2026-09-09 | — | Xinbi Guarantee; $52.8M USDT frozen across 52 wallets; Telegram channels seized |
-| EU-21ST-PACKAGE | A | 21st package of sanctions: EU hits Russian energy, financial services and crypto hard | Council of the EU | EU Council | 2026-07-23 | — | 218 listings; transaction bans on 11 crypto-asset service providers; third-country crypto-ban tool; A7 network |
+| EU-21ST-PACKAGE | A | 21st package of sanctions: EU hits Russian energy, financial services and crypto hard | Council of the EU | EU Council | 2026-07-23 | — | 218 listings; transaction ban extended to 14 crypto-related service platforms (Georgia, Panama, UAE, Marshall Islands, Kyrgyzstan, Belarus); third-country crypto-ban tool; A7 network designations incl. new links to Africa |
 | WH-PM-2026-08-12 | A | Presidential Memorandum: Expanding Capabilities to Combat Transnational Cyber-Enabled Crime | The White House | The White House | 2026-08-12 | — | NCC 'Participating Companies'; cyber effects operations against foreign cyber-enabled TCOs; builds on E.O. 14390 |
 | HUNTIO-EE-2026 | B | Eastern Europe malicious infrastructure report | Hunt.io | Hunt.io | 2026-07-16 | — | Proton66 (CVE-2026-35273 / ShinyHunters); 3,900+ servers across 302 providers |
 | HUNTIO-GENTLEMEN-2026 | B | The Gentlemen ransomware toolkit on a Russian Proton66 server | Hunt.io | Hunt.io | 2026-03 (reported 2026-06-11) | — | Proton66 AS198953; 176[.]120[.]22[.]127 open directory |
@@ -287,6 +287,9 @@ When adding a new source to this index:
 | BRUSSELSTIMES-EU-HYBRID-2026 | C | EU extends sanctions for Russia-linked hybrid threats to 2027 (the Council release sits behind a browser check) | Brussels Times | Brussels Times | 2026-10-08 | — | EU hybrid-threats regime renewed to 2027-10-09 (80 individuals, 20 entities) |
 | AMNEZIA-HOSTING-2026 | D | Cascading hosting issues, May-June 2026 (Russian-language blog) | Amnezia | amnezia.org | 2026-06 | — | MIRhosting equipment; nLighten power cut; THE.Hosting closure |
 | PQHOSTING-PR-2026 | E | PQ HOSTING Announces Withdrawal from European Markets (press release) | PQ HOSTING | Newsfile | 2026-03-13 | — | PQ Hosting self-reported exit from Europe |
+| TRM-EU21-2026 | B | EU's 21st Package Extends Crypto Sanctions to Third Countries | TRM Labs | TRM Labs | 2026-07 | — | 14 platforms named (Rapira, Aifory Pro, ABCeX, WhiteBird, NoOnecrypto, Tradex, Monease, BitPapa, Exnode, HTX, EXMO, PilotFinance); A7 Nigeria; A7 Africa |
+| CRYPTOPOLITAN-A7A5-2026 | C | A7A5 holders miss interest as daily transfers fall to 61 (citing Elliptic's Tom Robinson and on-chain data) | Cryptopolitan | Cryptopolitan | 2026-10 | — | A7A5 exchange service hit by Yandex data-centre strikes; ~600 -> ~61 daily transfers; no interest since 2026-10-09 |
+| ALJAZEERA-YANDEX-2026 | C | Ukraine takes aim at Russia's AI data infrastructure | Al Jazeera | Al Jazeera | 2026-10-09 | — | Drone strikes on Yandex data centres in Sasovo (Ryazan) and Kaluga |
 | HOSTSLICK-PR-2026 | E | HostSlick Strategic Update: Full Focus on Dedicated & Bare-Metal (announcement) | HostSlick | hostslick.com | 2026-02-17 | — | End of new VPS sales; claimed GTT and TATA transit |
 
 ---
@@ -296,11 +299,11 @@ When adding a new source to this index:
 | Grade | Count | Description |
 |-------|-------|-------------|
 | A — Government/Official | 45 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
-| B — Established CTI Vendor | 78 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 47 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
+| B — Established CTI Vendor | 79 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 49 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
 | D — Single Source / Unverified | 8 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
 | E — Self-Reported / Marketing | 5 | Forum advertising presence and provider marketing |
-| **Total** | **183** | |
+| **Total** | **186** | |
 
 ---
 
