@@ -1,0 +1,43 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T4: no blanket blocking (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "b0ad21d5-7122-53b3-80f9-033dbabc896e",
+    "value": "AS45839"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T4\""
+   },
+   {
+    "name": "bph-research:status=\"active\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Shinjiru (T4-Gray Zone)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "4",
+  "timestamp": "1793318400",
+  "uuid": "e80ef6fb-02c3-5068-ba82-b60443af0b81"
+ }
+}

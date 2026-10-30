@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "76bbe5ea-8b24-53ac-8e8d-843ed230407a",
+    "value": "AS207713"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP (no routes now; pre-emptive)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "ad35f4b9-48b1-5d0c-8186-50cd0327e1b5",
+    "value": "AS203319"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T1\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Global Internet Solutions LLC (GIR / 4VPS) (T1-Confirmed BPH)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "1",
+  "timestamp": "1793318400",
+  "uuid": "8f8c0d77-b54c-55a4-ac7f-6513ad08f418"
+ }
+}

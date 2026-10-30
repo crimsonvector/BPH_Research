@@ -1,0 +1,71 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Zservers successor hop (Intrinsec) on a third-party ASN; block the relevant prefix only",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "09261dd8-898e-534f-be1a-aad2796d6148",
+    "value": "AS61336"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Zservers successor hop (Intrinsec) on an individual-registered ASN; block the relevant prefixes only",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "0f288a24-61c8-5a09-8f9b-9b9d9f8b71a5",
+    "value": "AS213010"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Individual-registered Zservers successor hop (Intrinsec); block its announced prefix rather than the ASN",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "877b0b5d-f066-50e7-b8f4-db1e590aa46b",
+    "value": "AS213194"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T1\""
+   },
+   {
+    "name": "bph-research:status=\"sanctioned\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Zservers (T1-Confirmed BPH)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "1",
+  "timestamp": "1793318400",
+  "uuid": "ea8bc34d-30e0-5fd9-9e48-6186a08fc852"
+ }
+}

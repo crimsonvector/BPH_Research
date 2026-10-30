@@ -1,0 +1,99 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "163aa83d-79d5-548e-812b-cc09f51af016",
+    "value": "62.60.226.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "2042ae7c-937d-5137-808d-8388ee9dcacf",
+    "value": "AS214351"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "462cd138-3e9b-58de-bc95-1e6956be2f59",
+    "value": "196.251.122.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "4f038121-ed76-57da-8131-622d6541fd6a",
+    "value": "192.162.199.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "dd960011-1a0a-5967-baa4-3d0ff8cb5ce9",
+    "value": "196.251.107.0/24"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T1\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Femo IT Solutions Ltd (Defhost) (T1-Confirmed BPH)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "1",
+  "timestamp": "1793318400",
+  "uuid": "58cea8cd-3c34-5023-a2a2-51f4b2a2a757"
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "3df2fe17-cfd7-57d6-baaa-f6fe1eae7efe",
+    "value": "93.152.223.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "7b1caacc-ab2f-57f6-8fa8-71ae14ba9987",
+    "value": "AS209605"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "7f0abf2f-e47f-5d02-aafb-91e5652f7330",
+    "value": "AS135388"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "a21e55fd-b05a-5b67-8727-bf07dd3d43ed",
+    "value": "185.36.81.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Registered but announcing nothing: watch for re-announcement",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "b30557b1-bdb2-552c-a08f-610b28f39484",
+    "value": "AS211872"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "cd09eca9-3775-575d-852e-6ec7fbd98639",
+    "value": "141.98.8.0/22"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "e0e8567d-e219-5ffb-995b-cce479923ce2",
+    "value": "94.26.0.0/24"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: UAB Host Baltic (serveroffer.lt) (T2-High Risk (Upstream Enabler))",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "88af4cef-59f8-51ae-a3ed-cce4bb91b964"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T5: passive monitoring (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "7fbf5d8c-61e2-506d-b52c-6ebe7d7aa066",
+    "value": "AS214729"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Registered but announcing nothing: watch for re-announcement",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "98070e38-4b28-5b97-bfc9-45ae302fc063",
+    "value": "AS49037"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T5\""
+   },
+   {
+    "name": "bph-research:status=\"active\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Prostie Reshenia LLC (WebRocket) (T5-Watch List (Upstream Enabler))",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "4",
+  "timestamp": "1793318400",
+  "uuid": "e415a4a5-7692-5731-9f4d-fbdf86dba655"
+ }
+}

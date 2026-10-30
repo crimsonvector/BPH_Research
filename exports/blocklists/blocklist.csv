@@ -1,0 +1,106 @@
+type,value,entity,tier,recommendation,basis,as_of,valid_until
+asn,AS14956,Cloudzy / abrNOC,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS23865,NETINNOVATIONLLC,T3,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS33993,UFO Hosting LLC,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS34985,NETINNOVATIONLLC,T3,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS48589,Tiger Network Limited (Tiger Net),T3,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS51381,ELITETEAM / 1337TEAM LIMITED,T1,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS51396,Pfcloud UG,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS51852,PrivateAlps / Private Layer,T1,block,T1: block at CIDR/ASN level (taxonomy),2026-10-30,2026-11-29
+asn,AS56873,ELITETEAM / 1337TEAM LIMITED,T1,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS57523,Chang Way Technologies Co. Limited,T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS58854,Kaopu Cloud HK Limited,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS59425,Chang Way Technologies Co. Limited,T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS62864,NETINNOVATIONLLC,T3,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS135388,UAB Host Baltic (serveroffer.lt),T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS138915,Kaopu Cloud HK Limited,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS149286,NETINNOVATIONLLC,T3,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS152194,CTG Server Limited,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS152194,FUNNULL Technology Inc.,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS154177,Kaopu Cloud HK Limited,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS197170,HostSlick,T3,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS198953,PROSPERO OOO / Proton66,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS200593,PROSPERO OOO / Proton66,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS201738,Chang Way Technologies Co. Limited,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS202412,Railnet LLC / Virtualine Technologies,T1,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS203273,Aeza International Ltd,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS203319,Global Internet Solutions LLC (GIR / 4VPS),T1,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS205329,Pfcloud UG,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS206728,Media Land LLC,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS207566,Chang Way Technologies Co. Limited,T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS207713,Global Internet Solutions LLC (GIR / 4VPS),T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS208137,Feo Prest SRL,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS209605,UAB Host Baltic (serveroffer.lt),T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS209847,WorkTitans B.V. / THE.Hosting,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS209946,Altawk (Daniil Yevchenko),T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS210644,Aeza International Ltd,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS211121,Tiger Network Limited (Tiger Net),T3,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS211663,Chang Way Technologies Co. Limited,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS213388,BtHoster,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS213702,QWINS LTD,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS213790,BtHoster,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS213999,WorkTitans B.V. / THE.Hosting,T1,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS214351,Femo IT Solutions Ltd (Defhost),T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS214422,QWINS LTD,T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS215310,Pfcloud UG,T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS215376,Media Land LLC,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS215540,GCSAS (Global Connectivity Solutions LLP),T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS216246,Aeza International Ltd,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS218731,QWINS LTD,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS218974,Chang Way Technologies Co. Limited,T2,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+asn,AS400328,Pfcloud UG,T2,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30,2026-11-29
+asn,AS403005,AnonRDP / Blatant Technologies,T1,block,On Spamhaus ASN-DROP,2026-10-30,2026-11-29
+cidr,103.112.97.0/24,SHANGXING TECH LIMITED,T2,block-prefixes,Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,103.239.0.0/22,Tiger Network Limited (Tiger Net),T3,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,109.238.86.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,112.143.0.0/20,Tiger Network Limited (Tiger Net),T3,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,112.143.30.0/23,Tiger Network Limited (Tiger Net),T3,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,124.68.32.0/19,Tiger Network Limited (Tiger Net),T3,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,141.98.6.0/24,QWINS LTD,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,141.98.8.0/22,UAB Host Baltic (serveroffer.lt),T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,157.228.156.0/23,First Server Limited,T2,block-prefixes,Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,157.228.176.0/23,First Server Limited,T2,block-prefixes,Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,172.94.9.0/24,BtHoster,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,176.120.22.0/24,PROSPERO OOO / Proton66,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,176.98.187.0/24,Media Land LLC,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,185.11.61.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,185.36.81.0/24,UAB Host Baltic (serveroffer.lt),T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,185.81.68.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,185.93.89.0/24,BtHoster,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,192.162.199.0/24,Femo IT Solutions Ltd (Defhost),T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,192.253.248.0/24,BtHoster,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,193.143.1.0/24,PROSPERO OOO / Proton66,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,193.178.158.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,193.24.123.0/24,PROSPERO OOO / Proton66,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,193.37.69.0/24,NECHAEVDS,T3,block-prefixes,Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,196.251.100.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,196.251.102.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,196.251.107.0/24,Femo IT Solutions Ltd (Defhost),T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,196.251.121.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,196.251.122.0/24,Femo IT Solutions Ltd (Defhost),T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,213.177.179.0/24,Feo Prest SRL,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,213.209.159.0/24,Feo Prest SRL,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,31.56.19.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,36.255.97.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,37.72.140.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,37.77.150.0/24,PROSPERO OOO / Proton66,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,43.228.157.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,43.255.16.0/22,Tiger Network Limited (Tiger Net),T3,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,45.141.85.0/24,Media Land LLC,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,45.142.193.0/24,BtHoster,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,45.194.92.0/24,VPSVAULT.HOST LTD,T2,block-prefixes,Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,45.198.224.0/24,VPSVAULT.HOST LTD,T2,block-prefixes,Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,45.93.20.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,46.151.182.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,62.204.41.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,62.60.226.0/24,Femo IT Solutions Ltd (Defhost),T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,64.89.160.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,64.89.161.0/24,AnonRDP / Blatant Technologies,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,77.90.185.0/24,BtHoster,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,91.202.233.0/24,PROSPERO OOO / Proton66,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,91.215.85.0/24,PROSPERO OOO / Proton66,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,91.220.163.0/24,Media Land LLC,T1,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,91.240.118.0/24,Chang Way Technologies Co. Limited,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,93.123.39.0/24,QWINS LTD,T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,93.152.223.0/24,UAB Host Baltic (serveroffer.lt),T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29
+cidr,94.26.0.0/24,UAB Host Baltic (serveroffer.lt),T2,block,Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes),2026-10-30,2026-11-29

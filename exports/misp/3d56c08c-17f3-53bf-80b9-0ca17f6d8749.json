@@ -1,0 +1,85 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T4: no blanket blocking (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "116bbd8e-e5d8-5421-bd6c-012c11a1645f",
+    "value": "AS61046"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T4: no blanket blocking (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "39da1f4d-5f04-5097-94d8-e82caed1d902",
+    "value": "AS202015"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T4: no blanket blocking (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "c0ac9a4f-d99f-58f8-a31c-7266bb243963",
+    "value": "AS59711"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T4: no blanket blocking (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "dc9f6a41-3985-5dff-9d71-33bc7c022ba0",
+    "value": "AS201525"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T4\""
+   },
+   {
+    "name": "bph-research:status=\"active\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: HostZealot (HZ Hosting Ltd) (T4-Gray Zone)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "4",
+  "timestamp": "1793318400",
+  "uuid": "3d56c08c-17f3-53bf-80b9-0ca17f6d8749"
+ }
+}

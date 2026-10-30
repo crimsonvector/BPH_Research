@@ -1,0 +1,127 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "15ead7b4-8d5a-5300-8da6-8d6b27c678be",
+    "value": "112.143.0.0/20"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "3f65b842-2c4b-53f9-a8f3-41e3f127269c",
+    "value": "43.255.16.0/22"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "4f9f7a73-10c3-55c4-a0e7-772a9cf9969b",
+    "value": "AS48589"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "7e305f80-2ed1-508e-82fb-83684f398d66",
+    "value": "112.143.30.0/23"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "966de0c2-0cae-5e86-a0a8-9e55ce863e05",
+    "value": "103.239.0.0/22"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "d8dbe495-25fe-5ffc-b935-e663ca77fa53",
+    "value": "AS211121"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "dabde67f-2868-5e0d-9ac7-978006778fe6",
+    "value": "124.68.32.0/19"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T3\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Tiger Network Limited (Tiger Net) (T3-Suspected)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "3",
+  "timestamp": "1793318400",
+  "uuid": "039158ca-3f3d-5ef6-9ad3-a67c83d9987c"
+ }
+}

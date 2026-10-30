@@ -1,0 +1,43 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Registered but announcing nothing: watch for re-announcement",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "43e545eb-4666-51da-9741-2e1d597debbd",
+    "value": "AS206336"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T1\""
+   },
+   {
+    "name": "bph-research:status=\"sanctioned\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Datavice MCHJ (T1-Confirmed BPH)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "1",
+  "timestamp": "1793318400",
+  "uuid": "b9bb041b-8139-5ea9-846e-f4db15d04faf"
+ }
+}

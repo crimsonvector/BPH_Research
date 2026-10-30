@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP (no routes now; pre-emptive)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "2fd2a8aa-f36e-55ea-b555-84cc8d395a90",
+    "value": "AS209946"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: No current registry holder: watch for re-issue and re-check before any block",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "fdb3a3e0-36b5-5714-a518-2c36f2ea7841",
+    "value": "AS215826"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: Altawk (Daniil Yevchenko) (T2-High Risk)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "1c4156dd-f9c0-58fe-9938-ed0b6988d230"
+ }
+}

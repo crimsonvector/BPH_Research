@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: aurologic BYOIP ASN: upstream carrier, not a BPH network",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "9c2725d6-70a2-5aa0-b5a1-10d2fabc5513",
+    "value": "AS43043"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Upstream carrier: an ASN-level block would cut many legitimate customers; block the downstream BPH ASNs instead",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "b927f02a-ab3c-5ec4-bf5f-0ad674036d1c",
+    "value": "AS30823"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"active\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: aurologic GmbH (T2-High Risk (Upstream Enabler))",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "48fbc8ba-b06c-5779-949e-9147773657c5"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Registered but announcing nothing: watch for re-announcement",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "4fbaf586-4b64-538a-af8c-72dd054040f6",
+    "value": "AS219262"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "f894f016-d3a0-5ae5-aeb7-31978ca0eecb",
+    "value": "AS213887"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: WAIcore Hosting Ltd (T2-High Risk)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "80d5ec59-52b2-5273-8946-2bc9ec894309"
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "0ec9daa8-2279-5b5b-a223-b3d13fb739d0",
+    "value": "AS218731"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "b72c2150-322f-5f7d-86dc-89ba2ffd6a01",
+    "value": "93.123.39.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP (no routes now; pre-emptive)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "bccdf426-0ee2-500a-8da9-fedc4e4bd07c",
+    "value": "AS214422"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "bf4e6278-16c9-5076-b5c2-45b8fe3edf13",
+    "value": "141.98.6.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "d02ce84b-d4a8-565b-8677-194df9cf67f3",
+    "value": "AS213702"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"dissolved\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: QWINS LTD (T2-High Risk)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "6ff94986-d8d5-5689-91d9-c34fe46c0d15"
+ }
+}

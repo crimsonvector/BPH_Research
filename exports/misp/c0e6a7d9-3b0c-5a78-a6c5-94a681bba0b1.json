@@ -1,0 +1,169 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "10437628-1988-5880-8bd2-bb6b9e508447",
+    "value": "64.89.160.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "1341a2df-4c23-5c82-9a92-02612dd2f2a6",
+    "value": "31.56.19.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "46a6bc93-8c58-548e-aa2f-d72a813e648b",
+    "value": "43.228.157.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "48adfd2d-2358-5e09-9f1c-943c8068b6de",
+    "value": "64.89.161.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "89705c50-18fc-5015-9154-7538dbb03971",
+    "value": "196.251.121.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "ac4c3873-0ff2-5755-b020-a0cfb15c843c",
+    "value": "46.151.182.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: On Spamhaus ASN-DROP",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "AS",
+    "uuid": "b90638af-6317-5d44-8cff-408ab4eb3f4b",
+    "value": "AS403005"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "c10a0e5b-9b6c-5e9c-97cc-cc468454c1c3",
+    "value": "196.251.102.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "cf04c5d7-39bf-5731-9d3d-a41c4ee99be9",
+    "value": "196.251.100.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block: Known prefix of an entity with a live block ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "fe1567a3-bee7-58e5-9036-10a63974cfde",
+    "value": "36.255.97.0/24"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T1\""
+   },
+   {
+    "name": "bph-research:status=\"seized\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: AnonRDP / Blatant Technologies (T1-Confirmed BPH)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "1",
+  "timestamp": "1793318400",
+  "uuid": "c0e6a7d9-3b0c-5a78-a6c5-94a681bba0b1"
+ }
+}

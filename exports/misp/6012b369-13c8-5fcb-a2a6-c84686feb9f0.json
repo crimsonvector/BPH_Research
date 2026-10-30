@@ -1,0 +1,183 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "094a85fd-1cd9-514e-91ed-e615994a0482",
+    "value": "AS35196"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "2ce866d5-6738-5653-b624-576f0202d1af",
+    "value": "AS204154"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "2ea04856-9c68-5bcb-a07c-d41eb46b5976",
+    "value": "AS204997"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "5a850656-c1b9-57f3-a81f-0836f7cf4c87",
+    "value": "AS50113"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "602e093e-2f4d-5459-8c22-02b69b9c7e95",
+    "value": "157.228.156.0/23"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Registered but announcing nothing: watch for re-announcement",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "7637bb7d-3280-5a87-8b81-99193a978d70",
+    "value": "AS214602"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "793769a7-8b73-58ec-acc9-651588c69ade",
+    "value": "157.228.176.0/23"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "a8d29b55-412a-56c7-b32b-3eec803e3f90",
+    "value": "AS200740"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "c2dd7e8d-b598-5d41-a7c8-456f42a9b7c1",
+    "value": "AS205090"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "ddac8fb8-f4d1-5269-9e4e-e7c09b9bc6e2",
+    "value": "AS197703"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "e67d890b-afec-57d7-afd2-272fe53a60cd",
+    "value": "AS204339"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: First Server Limited (T2-High Risk)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "6012b369-13c8-5fcb-a2a6-c84686feb9f0"
+ }
+}

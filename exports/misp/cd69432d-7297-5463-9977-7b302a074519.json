@@ -1,0 +1,43 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"hunt\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "hunt: T3: monitor and block specific confirmed-malicious IPs (taxonomy)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "b27c2ed0-4598-513d-9be4-cfb6a0974c23",
+    "value": "AS399629"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T3\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: BL Networks (BitLaunch) (T3-Suspected)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "3",
+  "timestamp": "1793318400",
+  "uuid": "cd69432d-7297-5463-9977-7b302a074519"
+ }
+}

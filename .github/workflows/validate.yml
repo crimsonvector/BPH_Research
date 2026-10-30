@@ -18,7 +18,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install openpyxl==3.1.5
+        run: pip install openpyxl==3.1.5 stix2-validator==3.2.0
 
       - name: Generated blocks are up to date
         run: python tools/generate_docs.py --check
@@ -26,5 +26,11 @@ jobs:
       - name: Cross-file consistency
         run: python tools/validate_repo.py
 
-      - name: Monitor unit tests (offline)
+      - name: Unit tests (offline)
         run: python -m unittest discover -s tests -v
+
+      - name: Exports are up to date
+        run: python tools/build_exports.py --check
+
+      - name: STIX bundle is valid STIX 2.1
+        run: stix2_validator exports/stix/bph-bundle.json > stix-validation.txt || { cat stix-validation.txt; exit 1; }

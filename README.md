@@ -68,6 +68,9 @@ BPH_Research/
 |   |-- ROADMAP.md               <-- Improvement plan and status (phases 1-4, registrar module)
 |   |-- MONITORING.md            <-- What the weekly monitor checks and how to act on findings
 |   |-- DATA_HEALTH.md           <-- Generated: sources without URLs, grade deviations, oldest checks
+|   |-- EXPORTS.md               <-- Blocklists, STIX 2.1 and MISP exports: rules, formats, caveats
+|
+|-- exports/                     <-- Generated: blocklists/, stix/bph-bundle.json, misp/ feed
 |
 |-- .github/workflows/
 |   |-- validate.yml             <-- CI: generated-block check, validator, monitor unit tests
@@ -79,6 +82,7 @@ BPH_Research/
 |   |-- build_xlsx.py            <-- Regenerates BPH_Master.xlsx from the CSV
 |   |-- generate_docs.py         <-- Regenerates ECOSYSTEM_MAP Appendices A/B, tier and entity
 |   |                                 counts and source statistics from the data
+|   |-- build_exports.py         <-- Builds exports/ (blocklists, STIX 2.1, MISP) from the data
 |   |-- monitor.py               <-- Compares live routing, Spamhaus, RIPE DB, RDAP and Companies
 |   |                                 House state with the data; reports differences as findings
 |   |-- validate_repo.py         <-- Cross-file consistency checks (CSV schema, ASN register,
@@ -107,6 +111,10 @@ BPH_Research/
 1. Start with **`BPH_Master.csv`** to look up a specific provider, ASN, or alias
 2. Use **`taxonomy/BPH_TAXONOMY.md`** to understand risk tier definitions and classification criteria
 3. Reference **`playbook/ANALYST_PLAYBOOK.md`** for investigation workflows and OSINT pivoting techniques
+
+### For defenders
+1. Take **`exports/blocklists/`** (ASN and CIDR lists), **`exports/stix/bph-bundle.json`** (STIX 2.1) or subscribe to **`exports/misp/`** as a MISP feed
+2. Read **`docs/EXPORTS.md`** first: what is included, why `do-not-block` ASNs never appear, and when indicators expire (30 days after the data was last checked)
 
 ### For understanding the ecosystem
 1. Read **`analysis/ECOSYSTEM_MAP.md`** for the big picture: who connects to whom, geographic clusters, corporate shell networks
@@ -266,7 +274,7 @@ To add new intelligence to this repository:
 3. **Status change:** Update CSV status/tier, add a `TIMELINE.md` entry, update the ecosystem map if relationships changed
 4. **Sanctions update:** Add to timeline, update the CSV `sanctions_designations` field, check for evasion vehicles
 5. **ASN changes:** add or update the matching row in `data/asns.csv` (one row per ASN and entity, with a `block_recommendation`).
-6. **After any data change:** run `python tools/generate_docs.py` (rebuilds Appendices A/B, tier and entity counts and source statistics - never edit those blocks by hand), `python tools/build_xlsx.py` (workbook mirror), and `tools/build_dashboard_data.py` where you hold the private inputs.
+6. **After any data change:** run `python tools/generate_docs.py` (rebuilds Appendices A/B, tier and entity counts and source statistics - never edit those blocks by hand), `python tools/build_xlsx.py` (workbook mirror), `python tools/build_exports.py` (exports/), and `tools/build_dashboard_data.py` where you hold the private inputs.
 7. **Before committing:** run `python tools/validate_repo.py`. CI runs it, plus `generate_docs.py --check` and the monitor's offline tests, on every push and pull request. It fails on schema or ASN-register errors, uncatalogued Source IDs, a stale workbook, stale generated blocks, and any historical ASN not marked `do-not-block`.
 8. **Claims and relationships:** a new fact about an entity goes into `data/claims.csv` (with its Source IDs and status) as well as the row's notes; a new link between organisations goes into `data/relationships.csv`. Mark anything a source does not confirm as `unverified`; it then appears in `docs/DATA_HEALTH.md` and, after 90 days, in the weekly monitor issue.
 9. **Monitor findings:** the weekly [monitor](docs/MONITORING.md) keeps one open "Monitor findings" issue. Resolve each finding by updating the data (it disappears on the next run) or acknowledge it in `monitor/acknowledged.csv` with a reason.

@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "583a2187-00c5-5551-8b46-426ab7d5490a",
+    "value": "193.37.69.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Individual-registered Zservers successor hop (Intrinsec); block its announced prefix rather than the ASN",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "dd4890b3-1627-575f-9460-5f487e331486",
+    "value": "AS213194"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T3\""
+   },
+   {
+    "name": "bph-research:status=\"suspected\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: NECHAEVDS (T3-Suspected)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "3",
+  "timestamp": "1793318400",
+  "uuid": "aa12dd33-48b2-5023-a49b-bfed8dc5ac12"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: DDoS-Guard handle with one prefix; dual-use provider (T5)",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "13ac55a9-2b01-52ca-b4a4-81f141f07e4a",
+    "value": "AS49612"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: Dual-use DDoS protection/hosting (T5); not a BPH network",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "c0ca13e3-cb65-5502-9657-cc3ba5f22574",
+    "value": "AS57724"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T5\""
+   },
+   {
+    "name": "bph-research:status=\"active\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: DDoS-Guard (T5-Watch List)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "4",
+  "timestamp": "1793318400",
+  "uuid": "84ca5e1c-8585-5c4c-940d-b82e656cadc6"
+ }
+}
