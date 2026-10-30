@@ -10,7 +10,7 @@
 
 This repository is a comprehensive intelligence resource for tracking bullet-proof hosting (BPH) providers, threat activity enablers (TAEs), and the infrastructure that underpins modern cybercrime. It combines a structured provider database with analytical documents, an investigative playbook, and an organized source library.
 
-**Current scope:** 73 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
+**Current scope:** 79 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
 
 ---
 
@@ -143,6 +143,7 @@ Full schema documented in the CSV header row.
 - Companies House: Aeza International Ltd and Hypercore Ltd are dissolved; QWINS' company was dissolved (row now `dissolved`, network still live); Femo IT, First Server, WAIcore and Tiger Network received strike-off notices on 2026-10-13.
 - Corrections: Cloudzy's operator is Hannan (not Hassan) Nozari and the EvilProxy link is restored; the 1VPNS operation produced an interview, not an arrest; Intel 471's Media Land figures (80% of *active* domains); the AlexHost phishing wave was 2023 and impersonated AlexHost; 'Dolphon 1337' is registered as Dolphin 1337 Limited; FUNNULL's 175+ CNAME figure is Silent Push's.
 - Tier changes: Cloudzy T3 -> T2 (ASN-DROP escalation rule). New rows: TokenSpot CJSC (T1) and Xeltox Enterprises / Cryptomus-Heleket (T2).
+- Follow-up (same day): **GCSAS raised to T1** - Recorded Future's 2025 top-10 '4VPS' (#7) is GCSAS plus its Sevastopol sister **Global Internet Solutions (GIR, AS207713)**, now a T1 row; Intrinsec, eSentire and RF all classify the pair as BPH/TAE. New rows: BL Networks/BitLaunch (T3; top DDoSia C2 host per RF) and watch-list rows for Zomro, Evoxt and the Aeza IPv4 suppliers Andwase and Prostie Reshenia. Most older 'unverified' caveats are now sourced or removed; the Silent Push BPH whitepaper had been mislabelled as Spamhaus's.
 
 ### Recent Enforcement
 - **Dutch police seize ~250 servers of a bulletproof host** Nov 12 2025 - press-attributed to **CrazyRDP**; police said the case is *not* part of Operation Endgame

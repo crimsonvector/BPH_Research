@@ -466,7 +466,7 @@ This section operationalizes Recorded Future's Threat Activity Enabler (TAE) con
 
 The Threat Density Score measures **validated malicious activity as a proportion of total IP prefixes announced by an ASN.** It answers the question: "What fraction of this network's address space is being used for malicious purposes?"
 
-**Interpretation benchmarks (CrimsonVector heuristics).** Recorded Future publishes rankings, not these bands; the thresholds below are this repository's working assumptions and should be tuned. RF's 2025 top ten by Threat Density was Virtualine, CrazyRDP, Stark Industries, Kaopu Cloud HK, Aeza, PrivateAlps, 4VPS, Defhost, Silent Connection and DolphinHost (relayed; verify against CTA-2026-0319).
+**Interpretation benchmarks (CrimsonVector heuristics).** Recorded Future publishes rankings, not these bands; the thresholds below are this repository's working assumptions and should be tuned. RF's 2025 top ten by Threat Density was Virtualine, CrazyRDP, Stark Industries, Kaopu Cloud HK, Aeza, PrivateAlps, 4VPS, Defhost, Silent Connection and DolphinHost (verified against CTA-2026-0319 on 2026-10-30; RF's '4VPS' is the GCSAS AS215540 plus GIR AS207713 cluster).
 
 
 | Score Range | Interpretation | Analyst Action |

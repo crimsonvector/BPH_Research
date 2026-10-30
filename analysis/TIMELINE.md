@@ -141,6 +141,9 @@
 **2026-06-10** | **LE Operation** | **AudiA6 Crypto Cash-Out Service Dismantled**
 > Europol, DOJ, the Secret Service and Georgian authorities took down AudiA6, a cash-out service for ransomware actors (~10,333 BTC processed); administrators Ruslan Tkachuk and Alexander Ledenev were arrested in Georgia. [Source: [The Hacker News](https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html) (C)]
 
+**2026-06-02** | **Provider Event** | **nLighten Cuts Power to MIRhosting Equipment**
+> The nLighten data centre in the Netherlands disconnected power to MIRhosting equipment without notice, taking its colocation customers -- including Russian hosting and VPN providers -- offline. nLighten said it had co-operated with the Dutch investigations into MIRhosting and terminated the relationship. Two weeks earlier MIRhosting had said it "temporarily suspended" service to WorkTitans after the FIOD raid. [Sources: DCD-NLIGHTEN-2026 (C); KOMMERSANT-NLIGHTEN-2026 (C); MIRHOSTING-STMT-2026 (E)]
+
 **2026-06-02** | **Sanctions** | **OFAC "Economic Fury" -- Iranian Cryptocurrency Exchanges**
 > OFAC (sb0519) designated four Iranian exchanges -- Nobitex, Wallex, Bitpin and Ramzinex -- which together handled about $7.7B, roughly 78% of Iran's attributed 2025 crypto volume. Nobitex was designated under counterterrorism E.O. 13224 (material support to the IRGC) and E.O. 13902, together with four of its executives; the others under the Iran financial-sector authority. [Source: OFAC-IRAN-FURY]
 
@@ -198,7 +201,7 @@
 > The OFAC-designated UK front of Aeza Group was struck off the Companies House register (first Gazette notice 2026-01-06). Aeza's networks continued to operate. [Source: UK-COMPANIES-HOUSE (A)]
 
 **2026-03-19** | **Intelligence** | **Recorded Future Insikt -- 2025 Year in Review: Malicious Infrastructure**
-> Introduces the Threat Density List ranking hosting providers by malicious-activity concentration. The 2025 top ten: Virtualine, CrazyRDP, Stark Industries, Kaopu Cloud HK, Aeza, PrivateAlps, 4VPS, Defhost, Silent Connection, DolphinHost. [Source: RF-INFRA-2025]
+> Introduces the Threat Density List ranking hosting providers by malicious-activity concentration. The 2025 top ten: Virtualine, CrazyRDP, Stark Industries, Kaopu Cloud HK, Aeza, PrivateAlps, 4VPS (GCSAS AS215540 plus GIR AS207713), Defhost, Silent Connection, DolphinHost. [Source: RF-INFRA-2025]
 >
 > *The top-ten order is relayed from secondary summaries of RF CTA-2026-0319 and should be checked against the primary report.*
 
