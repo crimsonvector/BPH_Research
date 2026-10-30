@@ -1,0 +1,125 @@
+asn,provider_name,relation,qualifier,holder,routing_state,v4_prefixes,asndrop_listed,asndrop_domain,block_recommendation,recommendation_basis,last_checked
+AS14315,1GSERVERS LLC,primary,,"1GSERVERS - 1GSERVERS, LLC",live,54,no,,monitor,T5: passive monitoring (taxonomy),2026-10-30
+AS14956,Cloudzy / abrNOC,primary,,ROUTERHOSTING - RouterHosting LLC,live,159,yes,cloudzy.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS23865,NETINNOVATIONLLC,additional,,NETINNOVATIONLLC-AS-AP - Net Innovation LLC,live,6,yes,netinnovation.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS30823,aurologic GmbH,primary,,AUROLOGIC aurologic GmbH,live,31,no,,monitor,Upstream carrier: an ASN-level block would cut many legitimate customers; block the downstream BPH ASNs instead,2026-10-30
+AS33993,UFO Hosting LLC,primary,,UFO-AS UFO Hosting LLC,live,34,yes,stark-industries.solutions,block,On Spamhaus ASN-DROP,2026-10-30
+AS34665,PINSPB (Petersburg Internet Network Ltd),additional,PINDC-AS; Petersburg Internet Network Ltd,PINDC-AS Petersburg Internet Network ltd.,live,163,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS34888,Global-Data System IT Corp (SWISSNETWORK02),primary,registered; no routes,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS34985,NETINNOVATIONLLC,additional,,NETINNOVATIONLLC-AS-AP - Net Innovation LLC,live,11,yes,netinnovation.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS35196,First Server Limited,additional,,IH-TRANSIT-AS FIRST SERVER LIMITED,live,1,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS39770,ELITETEAM / 1337TEAM LIMITED,additional,historical; deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS42624,Global-Data System IT Corp (SWISSNETWORK02),primary,registered; no routes,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS43043,aurologic GmbH,additional,AUROLOGIC-BYOIP; formerly AUROLOGIC-CLOUD,AUROLOGIC-BYOIP aurologic GmbH,dark,0,no,,monitor,"aurologic BYOIP ASN: upstream carrier, not a BPH network",2026-10-30
+AS44050,PINSPB (Petersburg Internet Network Ltd),primary,,PIN-AS Petersburg Internet Network ltd.,live,100,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS44477,PQ Hosting Plus S.R.L.,primary,historical; received 2025-05-16; withdrawn from routing ~2026-04 and deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS44477,Stark Industries Solutions,primary,historical; transferred to PQ Hosting Plus 2025-05-16; now deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS45839,Shinjiru,primary,,SHINJIRU-MY-AS-AP - Shinjiru Technology Sdn Bhd,live,37,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS48589,Tiger Network Limited (Tiger Net),primary,TIGER,TIGER Tiger Network Limited,live,11,yes,imtigernet,block,On Spamhaus ASN-DROP,2026-10-30
+AS49037,Prostie Reshenia LLC (WebRocket),primary,A1-TELECOM; no routes since 2025-02-12,A1-TELECOM Prostie Reshenia LLC,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS49042,Phanes Networks,primary,historical; deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS49217,HOSTYPE,primary,registered; no routes,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS49612,DDoS-Guard,additional,COGNITIVE-CLOUD-NET handle; 1 prefix,COGNITIVE-CLOUD-NET DDOS-GUARD LTD,live,1,no,,monitor,DDoS-Guard handle with one prefix; dual-use provider (T5),2026-10-30
+AS50113,First Server Limited,additional,,SuperServersDatacenter FIRST SERVER LIMITED,live,15,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS51381,ELITETEAM / 1337TEAM LIMITED,primary,registered; no routes,ELITETEAM-PEERING-AZ1 1337TEAM LIMITED,dark,0,yes,eliteteam.to,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS51396,Pfcloud UG,primary,,PFCLOUD Pfcloud UG (haftungsbeschrankt),live,30,yes,pfcloud.io,block,On Spamhaus ASN-DROP,2026-10-30
+AS51852,PrivateAlps / Private Layer,primary,,PLI-AS Private Layer INC,live,100,no,,block,T1: block at CIDR/ASN level (taxonomy),2026-10-30
+AS52000,MIRhosting B.V.,primary,no routes since 2026-10-19,MIRhosting MIRhosting B.V.,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS52288,PrivateAlps / Private Layer,additional,"PRIVATE-LAYER; registered, no routes",AS52288 - PRIVATE LAYER INC,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS53667,BuyVM / Frantech Solutions,primary,,PONYNET - FranTech Solutions,live,41,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS56873,ELITETEAM / 1337TEAM LIMITED,additional,registered; no routes,ELITETEAM-ANTIDDOS 1337TEAM LIMITED,dark,0,yes,eliteteam.to,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS57523,Chang Way Technologies Co. Limited,primary,CHANGWAY-AS; no routes,changway-as Chang Way Technologies Co. Limited,dark,0,yes,changway.hk,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS57724,DDoS-Guard,primary,DDOS-GUARD,DDOS-GUARD DDOS-GUARD LTD,live,34,no,,monitor,Dual-use DDoS protection/hosting (T5); not a BPH network,2026-10-30
+AS58854,Kaopu Cloud HK Limited,additional,Kaopu Cloud [CN],kaopy - Kaopu Cloud,live,11,yes,kaopuyun.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS59425,Chang Way Technologies Co. Limited,additional,HORIZONMSK-AS; no routes,HORIZONMSK-AS Chang Way Technologies Co. Limited,dark,0,yes,changway.hk,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS59711,HostZealot (HZ Hosting Ltd),primary,HZ-EU-AS,HZ-EU-AS HZ Hosting Ltd,live,162,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS60424,ELITETEAM / 1337TEAM LIMITED,additional,historical; deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS61046,HostZealot (HZ Hosting Ltd),additional,HZ-UK-AS,HZ-UK-AS HZ Hosting Ltd,live,7,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS61336,Zservers,additional,successor hop,IslandServers-AS Island Servers LTD,live,1,no,,block-prefixes,Zservers successor hop (Intrinsec) on a third-party ASN; block the relevant prefix only,2026-10-30
+AS62864,NETINNOVATIONLLC,primary,NILAS; ARIN,NILAS - net innovation llc,live,21,yes,netinnovation.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS135388,UAB Host Baltic (serveroffer.lt),additional,"RPL-HK, RMP Protection Limited [HK]; Spamhaus-attributed via serveroffer.lt",RPL-HK - RMP Protection Limited,live,2,yes,serveroffer.lt,block,On Spamhaus ASN-DROP,2026-10-30
+AS136452,SHANGXING TECH LIMITED,additional,SHANGXING TECH LIMITED; no routes,SHANGXING1-AS-AP - SHANGXING TECH LIMITED,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS138915,Kaopu Cloud HK Limited,primary,,KAOPU-HK - Kaopu Cloud HK Limited,live,354,yes,kaopuyun.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS140224,StarCloud Global (Triad Nexus),primary,historical; registry now 'Nebula Global LLC' [US]; no routes,NEBULA - Nebula Global LLC,dark,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS149040,StarCloud Global (Triad Nexus),additional,STARCLOUD GLOBAL PTE. LTD.; no routes,"SGPL-AS-AP - STARCLOUD GLOBAL PTE., LTD.",dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS149286,NETINNOVATIONLLC,additional,"APNIC; registered, no routes",NETINNOVATIONLLC-AS-AP - net innovation llc,dark,0,yes,netinnovation.net,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS149440,Evoxt Enterprise,primary,EVOXTSDNBHD-AS-AP,EVOXTSDNBHD-AS-AP - Evoxt Sdn. Bhd.,live,181,no,,monitor,T5: passive monitoring (taxonomy),2026-10-30
+AS151468,SHANGXING TECH LIMITED,additional,SHANGXING TECH LIMITED; no routes,SHANGXING1-AS-AP - SHANGXING TECH LIMITED,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS152194,CTG Server Limited,primary,,CTGSERVERLIMITED-AS-AP - CTG Server Limited,live,656,yes,ctgserver.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS152194,FUNNULL Technology Inc.,additional,hosting ASN used; CTG Server Limited - not FUNNULL-owned,CTGSERVERLIMITED-AS-AP - CTG Server Limited,live,656,yes,ctgserver.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS154177,Kaopu Cloud HK Limited,additional,LIGHT NODE LIMITED [HK]; Spamhaus-attributed via kaopuyun.com,LIGHT4-AS-AP - LIGHT NODE LIMITED,live,324,yes,kaopuyun.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS197170,HostSlick,primary,"TECHTIES-AS, TechTies Inc. [SC]; Spamhaus ASN-DROP under hostslick.de",TECHTIES-AS TechTies Inc.,live,13,yes,hostslick.de,block,On Spamhaus ASN-DROP,2026-10-30
+AS197414,Zservers,primary,historical; XHOST-INTERNET-SOLUTIONS; deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS198465,BtHoster,additional,"predecessor, recycled to CN",,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS198953,PROSPERO OOO / Proton66,additional,,proton66 Proton66 OOO,live,3,yes,proton66.ru,block,On Spamhaus ASN-DROP,2026-10-30
+AS200019,AlexHost,primary,,AlexHost ALEXHOST S.R.L.,live,138,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS200038,Cloudzy / abrNOC,additional,"Cloudzy A I Information Technology L.L.C [AE]; registered, no routes",Cloudzy CLOUDZY A I INFORMATION TECHNOLOGY L.L.C,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS200593,PROSPERO OOO / Proton66,primary,,PROSPERO-AS PROSPERO OOO,live,3,yes,pro-spero.ru,block,On Spamhaus ASN-DROP,2026-10-30
+AS200651,FlokiNET,primary,,FlokiNET FlokiNET ehf,live,36,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS200740,First Server Limited,additional,,FIRST-SERVER-EU-AS FIRST SERVER LIMITED,live,59,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS201525,HostZealot (HZ Hosting Ltd),additional,HZ-CA-AS,HZ-CA-AS HZ Hosting Ltd,live,8,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS201738,Chang Way Technologies Co. Limited,additional,UFO TECHNOLOGIES LIMITED [GB]; Spamhaus-attributed via changway.hk,UFO-TECHNOLOGIES-LIMITED UFO TECHNOLOGIES LIMITED,live,8,yes,changway.hk,block,On Spamhaus ASN-DROP,2026-10-30
+AS202015,HostZealot (HZ Hosting Ltd),additional,HZ-US-AS,HZ-US-AS HZ Hosting Ltd,live,53,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS202412,Railnet LLC / Virtualine Technologies,additional,OMEGATECH / Omegatech LTD [SC]; Virtualine network until the Oct 2026 seizure - seen by 1 of 323 RIS peers since 2026-10-27; Spamhaus ASN-DROP under virtualine.org,OMEGATECH-AS Omegatech LTD,dark,0,yes,virtualine.org,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS203273,Aeza International Ltd,additional,NetCrafters OU [EE]; Spamhaus ASN-DROP under aeza.net,NetCraftersOU NetCrafters OU,live,171,yes,aeza.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS203727,Altawk (Daniil Yevchenko),additional,historical; reassigned to byon GmbH [DE] - do not block,byon byon GmbH,reassigned,0,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS204154,First Server Limited,additional,,FIRST-SERVER-US-AS FIRST SERVER LIMITED,live,7,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS204339,First Server Limited,additional,,FIRSTSERVER-FL-AS FIRST SERVER LIMITED,live,53,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS204997,First Server Limited,primary,,FIRSTBYTE-AS FIRST SERVER LIMITED,live,64,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS205090,First Server Limited,additional,,FIRST-SERVER-EUROPE FIRST SERVER LIMITED,live,68,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS205329,Pfcloud UG,additional,Muilties Network; individual registrant [DE/RIPE]; Spamhaus-attributed via pfcloud.io,[individual registrant],live,2,yes,pfcloud.io,block,On Spamhaus ASN-DROP,2026-10-30
+AS205759,AnonRDP / Blatant Technologies,additional,historical; GHOSTYNETWORKS [US-KY]; deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
+AS206336,Datavice MCHJ,additional,Datavice; registered to DATAVICE MCHJ [UZ] since 2025-07-18; no routes,Datavice DATAVICE MCHJ,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS206728,Media Land LLC,primary,,MEDIALAND-AS Media Land LLC,live,2,yes,sshvps.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS206932,MIRhosting B.V.,additional,MIRHOSTING-NL; no routes since 2026-09-29,MIRHOSTING-NL MIRhosting B.V.,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS207566,Chang Way Technologies Co. Limited,additional,LD007-AS; no routes,LD007-AS Chang Way Technologies Co. Limited,dark,0,yes,changway.hk,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS207636,AlexHost,additional,ALEXHOST-SRL,ALEXHOST_SRL ALEXHOST S.R.L.,live,1,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
+AS207713,Global Internet Solutions LLC (GIR / 4VPS),primary,GIR-AS; Spamhaus ASN-DROP under gir.network,GIR-AS GLOBAL INTERNET SOLUTIONS LLC,live,37,yes,gir.network,block,On Spamhaus ASN-DROP,2026-10-30
+AS208046,HostSlick,additional,historical; ColocationX Ltd; reassigned to a French individual - do not block,[individual registrant],reassigned,0,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS208137,Feo Prest SRL,primary,,FPS12 Feo Prest SRL,live,2,yes,feoprest.info,block,On Spamhaus ASN-DROP,2026-10-30
+AS209605,UAB Host Baltic (serveroffer.lt),primary,HOSTBALTIC,hostbaltic UAB Host Baltic,live,9,yes,serveroffer.lt,block,On Spamhaus ASN-DROP,2026-10-30
+AS209800,metaspinner-named AS209800 (Virtualine front),primary,historical; reassigned to ZEMA GbR [DE] - do not block,ZEMAGG [individual registrant],reassigned,1,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS209847,WorkTitans B.V. / THE.Hosting,primary,,THE WorkTitans B.V.,live,2,yes,stark-industries.solutions,block,On Spamhaus ASN-DROP,2026-10-30
+AS209946,Altawk (Daniil Yevchenko),primary,ALINDA LLC [UA]; Spamhaus ASN-DROP under altawk.com; no routes since 2026-10-02,ALINDA-AS ALINDA LLC,dark,0,yes,altawk.com,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS210281,WAIcore Hosting Ltd,additional,historical; reassigned to EcoConnect LLC [RU] - do not block,EcoConnect EcoConnect LLC,reassigned,3,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS210644,Aeza International Ltd,primary,,AEZA-AS AEZA GROUP LLC,live,316,yes,aeza.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS211121,Tiger Network Limited (Tiger Net),additional,INDIA,"India Toko Communications Co., Ltd.",live,5,yes,imtigernet,block,On Spamhaus ASN-DROP,2026-10-30
+AS211252,CrazyRDP,additional,historical; Delis LLC; reassigned to Marushin K.K. [JP] - do not block,AKARI-AS-JP Marushin K.K.,reassigned,2,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS211522,Hypercore LTD,primary,dark since ~2026-02,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS211663,Chang Way Technologies Co. Limited,additional,GALEON LLC [RU]; Spamhaus-attributed via changway.hk,GALEON-AS GALEON LLC,live,1,yes,changway.hk,block,On Spamhaus ASN-DROP,2026-10-30
+AS211805,Media Land LLC,additional,registered to Media Land LLC; no routes,MediaLandLLC-RU Media Land LLC,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS211872,UAB Host Baltic (serveroffer.lt),additional,ALPHA-NETWORKS; no routes,ALPHA-NETWORKS UAB Host Baltic,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS213010,Zservers,additional,successor hop,GENING-AS [individual registrant],live,3,no,,block-prefixes,Zservers successor hop (Intrinsec) on an individual-registered ASN; block the relevant prefixes only,2026-10-30
+AS213194,NECHAEVDS,primary,NECHAEVDS-AS; 193.37.69.0/24,NECHAEVDS-AS [individual registrant],live,1,no,,block-prefixes,Individual-registered Zservers successor hop (Intrinsec); block its announced prefix rather than the ASN,2026-10-30
+AS213194,Zservers,additional,successor hop,NECHAEVDS-AS [individual registrant],live,1,no,,block-prefixes,Individual-registered Zservers successor hop (Intrinsec); block its announced prefix rather than the ASN,2026-10-30
+AS213388,BtHoster,additional,IIC RAIL LIMITED [GB]; downstream,IIC-AS IIC RAIL LIMITED,live,1,yes,iic-rail,block,On Spamhaus ASN-DROP,2026-10-30
+AS213702,QWINS LTD,primary,,QWINS-LTD QWINS LTD,live,2,yes,qwins.co,block,On Spamhaus ASN-DROP,2026-10-30
+AS213790,BtHoster,primary,,LimitedNetwork-AS Limited Network LTD,live,4,yes,btcloud.ro,block,On Spamhaus ASN-DROP,2026-10-30
+AS213887,WAIcore Hosting Ltd,primary,,WAICORE-LTD WAIcore Ltd,live,62,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS213999,WorkTitans B.V. / THE.Hosting,additional,"THE-CLIENTS; registered, no routes",THE-CLIENTS WorkTitans B.V.,dark,0,yes,stark-industries.solutions,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS214295,BtHoster,additional,dark,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS214351,Femo IT Solutions Ltd (Defhost),primary,,FEMOIT FEMO IT SOLUTIONS LIMITED,live,4,yes,as214351.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS214422,QWINS LTD,additional,NET67X; Spamhaus ASN-DROP under qwins.co; no routes,NET67X [individual registrant],dark,0,yes,qwins.co,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS214602,First Server Limited,additional,"no routes, Oct 2026",DATACENTER-CLUSTER-FL-AS FIRST SERVER LIMITED,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS214729,Prostie Reshenia LLC (WebRocket),additional,FreedomCommunications; Prostie Reshenia LLC,FreedomCommunications Prostie Reshenia LLC,live,1,no,,monitor,T5: passive monitoring (taxonomy),2026-10-30
+AS214940,KPROHOST,primary,dark since ~2026-08,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS214943,Railnet LLC / Virtualine Technologies,primary,registered to Railnet LLC; dark since ~2026-02,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS215208,Dolphon 1337 Ltd,primary,historical; reassigned to PT Citra Celebas Multimedia [ID] - do not block,PT-Citra-Celebas-Multimedia PT Citra Celebas Multimedia,reassigned,3,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS215240,Silent Connection Ltd,primary,historical; re-registered to Microdex UG [DE]; no routes - do not block,MICRODEX-AS Microdex UG (haftungsbeschraenkt),reassigned,0,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS215310,Pfcloud UG,additional,USERCLOUD; Pfcloud UG,USERCLOUD Pfcloud UG (haftungsbeschrankt),dark,0,yes,pfcloud.io,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS215376,Media Land LLC,additional,ML Cloud Ltd,mlcloud ML Cloud Ltd,live,1,yes,sshvps.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS215476,BtHoster,additional,dead,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS215540,GCSAS (Global Connectivity Solutions LLP),primary,,GCS-AS GLOBAL CONNECTIVITY SOLUTIONS LLP,live,237,yes,globconnex.com,block,On Spamhaus ASN-DROP,2026-10-30
+AS215789,Karina Rashkovska,primary,historical; reassigned to BLIK / Polski Standard Platnosci SA [PL] - do not block,BLIK Polski Standard Platnosci SA,reassigned,0,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS215826,Altawk (Daniil Yevchenko),additional,"Partner Hosting LTD [GB]; listed under altawk.com in Dec 2025, delisted",,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30
+AS215925,VPSVAULT.HOST LTD,primary,,VPSVAULTHOST VPSVAULT.HOST LTD,live,3,yes,vpsvault.host,block-prefixes,"On ASN-DROP, but GreyNoise advises against an ASN-level block (shared tenancy); block the listed prefixes",2026-10-30
+AS216246,Aeza International Ltd,additional,,RU-AEZA-AS Aeza Group LLC,live,58,yes,aeza.net,block,On Spamhaus ASN-DROP,2026-10-30
+AS216309,Tnsecurity Ltd (EVILEMPIRE),primary,historical; reassigned to InvisionTech Group S.r.l. [IT] - do not block,INVISIONTECH-GROUP-SRL InvisionTech Group S.r.l.,reassigned,1,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS218731,QWINS LTD,additional,Spamhaus ASN-DROP under qwins.co; 35 IPv4 prefixes,[individual registrant],live,39,yes,qwins.co,block,On Spamhaus ASN-DROP,2026-10-30
+AS218974,Chang Way Technologies Co. Limited,additional,UFO TECHNOLOGIES LIMITED [HK]; Spamhaus-attributed via changway.hk,UFO-TECHNOLOGIES-LIMITED UFO TECHNOLOGIES LIMITED,live,1,yes,changway.hk,block,On Spamhaus ASN-DROP,2026-10-30
+AS219262,WAIcore Hosting Ltd,additional,"WAICORE-RUSSIA; registered, no routes",WAICORE-RUSSIA [individual registrant],dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
+AS394711,CrazyRDP,primary,historical; Limenet; reassigned to KorGrid LLC [US] - do not block,"KORGRID - KorGrid, LLC",reassigned,1,no,,do-not-block,Historical ASN: re-issued to an unrelated holder - never block it as this entity; re-check before any use,2026-10-30
+AS399629,BL Networks (BitLaunch),primary,BLNWX,BLNWX - BL Networks,live,68,no,,hunt,T3: monitor and block specific confirmed-malicious IPs (taxonomy),2026-10-30
+AS400328,Pfcloud UG,additional,Intelligence Hosting LLC [NL/ARIN]; Spamhaus-attributed via pfcloud.io,INTELLIGENCE - Intelligence Hosting LLC,dark,0,yes,pfcloud.io,block,On Spamhaus ASN-DROP (no routes now; pre-emptive),2026-10-30
+AS400619,SHANGXING TECH LIMITED,primary,origin ASN; registry holder AROSSCLOUD INC. [US],AROSS-AS - AROSSCLOUD INC.,live,360,no,,block-prefixes,T2: block known malicious prefixes; ASN-level block with allowlisting optional (taxonomy),2026-10-30
+AS403005,AnonRDP / Blatant Technologies,primary,"BLATANTHOST; Blatant Technologies, LLC [SC/ARIN], registered 2026-09-25; Spamhaus ASN-DROP under blatant.host",BLATANTHOST - Blatant,live,9,yes,blatant.host,block,On Spamhaus ASN-DROP,2026-10-30
