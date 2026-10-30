@@ -244,6 +244,31 @@ class CompanyRules(unittest.TestCase):
         self.assertNotIn("Smith", m.filing_label("XX01", "Something about Mr John Smith"))
 
 
+class RegistrarRules(unittest.TestCase):
+    PAGE = ('<h3>2026 Notices</h3><h4>Termination</h4><div id="2026-Termination"><div class="compliance-notice" data-id="28-08-2026" '
+            'id="notice-1369">28 August 2026&#58;&nbsp;<a href="/uploads/compliance_notice/attachment/1369/x.pdf">ICANN Sends Notice of '
+            'Termination to Registrar</a>&nbsp;(Example Names Ltd (IANA #3765))&nbsp;<span class="action"><p>&nbsp;</p></span></div>'
+            '<h4>Breach</h4><div class="compliance-notice" data-id="01-05-2014" id="notice-9">1 May 2014&#58;&nbsp;<a href="/y.pdf">'
+            'ICANN Sends Notice of Breach to Registrar</a>&nbsp;(Old Registrar, Inc.)</div>')
+
+    def test_parse_notices(self):
+        n = m.parse_icann_notices(self.PAGE)
+        self.assertEqual(n, [{"id": "1369", "iana_id": "3765", "registrar": "Example Names Ltd", "date": "2026-08-28",
+                              "kind": "termination", "url": "https://www.icann.org/uploads/compliance_notice/attachment/1369/x.pdf"}])
+
+    def test_new_notice_and_accreditation_change(self):
+        dom = {"domain": "a.example", "entities": "X", "registrar": "Example Names Ltd", "iana_registrar_id": "3765"}
+        reg = {"iana_id": "1362", "registrar": "Regtime", "accreditation": "Accredited", "icann_notices": "2025-01-02 breach"}
+        data = m.index_data([], [], domains=[dom], registrars=[reg])
+        obs = {"iana": {"3765": {"status": "Accredited"}, "1362": {"status": "Terminated"}},
+               "notices": [{"iana_id": "3765", "date": "2026-08-28", "kind": "termination", "url": "u"},
+                           {"iana_id": "3765", "date": "2020-01-01", "kind": "breach", "url": "u"},   # before the window
+                           {"iana_id": "1362", "date": "2025-01-02", "kind": "breach", "url": "u"}]}  # already recorded
+        f = {x["key"]: x for x in m.compare_registrars(data, obs, dt.date(2026, 8, 1))}
+        self.assertEqual(set(f), {"registrar:3765:notice:2026-08-28:termination", "registrar:1362:accreditation"})
+        self.assertEqual(f["registrar:3765:notice:2026-08-28:termination"]["severity"], "high")
+
+
 class ReportRules(unittest.TestCase):
     def test_acks_keys_and_defang(self):
         f1 = m.finding("prefix", "medium", "AS1", "now 10.1.2.0/24", ["X"], "10.1.2.0/24", aspect="origin:x")

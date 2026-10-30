@@ -24,6 +24,9 @@ Checks (--checks, default all):
              hosting ASN of every domain in data/domains.csv
   company    status and new filings at Companies House for data/companies.csv
              (uses the API when COMPANIES_HOUSE_API_KEY is set, else the public site)
+  registrar  IANA accreditation status and new ICANN Contractual Compliance notices
+             (breach, suspension, termination) for every registrar in data/domains.csv
+             and data/registrars.csv
 
 Usage:
   python tools/monitor.py [--checks asn,prefix,...] [--out DIR] [--previous REPORT.md]
@@ -39,6 +42,7 @@ import argparse
 import base64
 import collections
 import concurrent.futures as cf
+import csv
 import datetime as dt
 import html
 import ipaddress
@@ -58,7 +62,7 @@ sys.path.insert(0, HERE)
 from generate_docs import defang, load_csv  # noqa: E402
 
 USER_AGENT = "BPH_Research-monitor/1.0 (+https://github.com/crimsonvector/BPH_Research)"
-CHECKS = ["asn", "drop", "prefix", "withdrawn", "asndrop", "ripe", "domain", "company"]
+CHECKS = ["asn", "drop", "prefix", "withdrawn", "asndrop", "ripe", "domain", "company", "registrar"]
 SEVERITY_ORDER = {"high": 0, "medium": 1, "low": 2}
 CHECK_TITLES = {
     "asn": "ASN register (`data/asns.csv`)",
@@ -69,6 +73,7 @@ CHECK_TITLES = {
     "ripe": "RIPE objects of tracked handles (`data/registry_handles.csv`)",
     "domain": "Domains (`data/domains.csv`)",
     "company": "Companies House (`data/companies.csv`)",
+    "registrar": "Registrars: IANA accreditation and ICANN compliance notices",
 }
 WITHDRAWN_CAP = 40  # withdrawn prefixes checked per ASN per run
 KEYS_MARK = "monitor-keys:"
@@ -264,14 +269,15 @@ def load_repo(root: str) -> dict:
             sys.exit(4)
     rows = load_csv(p("BPH_Master.csv"))
     asns = load_csv(p("data", "asns.csv"))
-    ack_path = p("monitor", "acknowledged.csv")
+    optional = lambda *x: load_csv(p(*x)) if os.path.exists(p(*x)) else []
     return index_data(rows, asns, load_csv(p("data", "domains.csv")), load_csv(p("data", "companies.csv")),
-                      load_csv(p("data", "registry_handles.csv")), load_csv(ack_path) if os.path.exists(ack_path) else [])
+                      load_csv(p("data", "registry_handles.csv")), optional("monitor", "acknowledged.csv"),
+                      optional("data", "registrars.csv"))
 
 
-def index_data(rows: list[dict], asns: list[dict], domains=(), companies=(), handles=(), acks=()) -> dict:
+def index_data(rows: list[dict], asns: list[dict], domains=(), companies=(), handles=(), acks=(), registrars=()) -> dict:
     data = {"rows": {r["provider_name"]: r for r in rows}, "asns": list(asns), "domains": list(domains),
-            "companies": list(companies), "handles": list(handles), "acks": list(acks)}
+            "companies": list(companies), "handles": list(handles), "acks": list(acks), "registrars": list(registrars)}
     data["tracked_asns"] = {asn_int(a["asn"]) for a in asns}
     data["entity_asns"] = collections.defaultdict(set)
     data["asn_entities"] = collections.defaultdict(set)
@@ -855,6 +861,89 @@ def compare_companies(data: dict, obs: dict) -> list[dict]:
     return out
 
 
+# --------------------------------------------------------------------------- check: registrar
+
+def parse_icann_notices(page: str) -> list[dict]:
+    """Formal enforcement notices from https://www.icann.org/compliance/notices (server-rendered list)."""
+    out, kind = [], ""
+    for m in re.finditer(r'<h4>([^<]+)</h4>|<div class="compliance-notice[^"]*" data-id="[^"]*" id="notice-(\d+)">(.*?)</div>', page, re.S):
+        if m.group(1):
+            kind = m.group(1).strip().lower()
+            continue
+        text = html.unescape(re.sub(r"<[^>]+>", " ", m.group(3)))
+        who = re.search(r"\(([^()]*(?:\([^()]*\))?[^()]*?)\s*\(IANA\s*#\s*(\d+)\)\)", text)
+        date = re.match(r"\s*(\d{1,2} \w+ \d{4})", text)
+        link = re.search(r'href="([^"]+)"', m.group(3))
+        if not (who and date):
+            continue  # registry notices and old entries without an IANA ID
+        try:
+            iso = dt.datetime.strptime(date.group(1), "%d %B %Y").date().isoformat()
+        except ValueError:
+            continue
+        url = link.group(1) if link else ""
+        out.append({"id": m.group(2), "iana_id": who.group(2), "registrar": who.group(1).strip(), "date": iso, "kind": kind,
+                    "url": ("https://www.icann.org" + url) if url.startswith("/") else url})
+    return out
+
+
+def tracked_registrars(data: dict) -> dict[str, dict]:
+    """IANA ID -> {name, entities, recorded notices, recorded accreditation} for every registrar the repo cites."""
+    out: dict[str, dict] = {}
+    for d in data["domains"]:
+        if d["iana_registrar_id"].isdigit():
+            r = out.setdefault(d["iana_registrar_id"], {"name": d["registrar"], "entities": set(), "notices": None, "accreditation": "Accredited"})
+            r["entities"].update(re.sub(r"\s*\(lead:[^)]*\)$", "", e).strip() for e in d["entities"].split(";"))
+    for g in data.get("registrars", []):
+        r = out.setdefault(g["iana_id"], {"name": g["registrar"], "entities": set(), "notices": None, "accreditation": ""})
+        r.update(name=g["registrar"], accreditation=g["accreditation"],
+                 notices={tuple(x.strip().split(" ", 1)) for x in g["icann_notices"].split(";") if x.strip()})
+    return out
+
+
+def observe_registrars(ctx: Ctx, data: dict) -> dict:
+    code, body = ctx.http.get("https://www.iana.org/assignments/registrar-ids/registrar-ids-1.csv", accept="text/csv")
+    iana = {}
+    if body is None:
+        ctx.error("registrar", "IANA registrar IDs", f"HTTP {code}")
+    else:
+        for r in csv.DictReader(body.decode("utf-8", "replace").splitlines()):
+            iana[r.get("ID", "").strip('"')] = {"name": r.get("Registrar Name", ""), "status": r.get("Status", "")}
+    code, page = ctx.http.get("https://www.icann.org/compliance/notices", accept="text/html")
+    notices = None
+    if page is None:
+        ctx.error("registrar", "ICANN compliance notices", f"HTTP {code}")
+    else:
+        notices = parse_icann_notices(page.decode("utf-8", "replace"))
+        if not notices:
+            ctx.error("registrar", "ICANN compliance notices", "page parsed to zero notices - layout changed?")
+            notices = None
+    tracked = tracked_registrars(data)
+    return {"iana": {i: iana[i] for i in tracked if i in iana} if iana else None,
+            "notices": [n for n in notices if n["iana_id"] in tracked] if notices is not None else None}
+
+
+def compare_registrars(data: dict, obs: dict, since: dt.date) -> list[dict]:
+    out = []
+    tracked = tracked_registrars(data)
+    for i, r in sorted(tracked.items(), key=lambda x: int(x[0])):
+        ents = sorted(e for e in r["entities"] if e)
+        live = (obs.get("iana") or {}).get(i)
+        if obs.get("iana") is not None and live and r["accreditation"] and live["status"] != r["accreditation"]:
+            out.append(finding("registrar", "high", i, f"{r['name']} (IANA {i}): accreditation recorded {r['accreditation']}, now {live['status']}",
+                               ents, live["status"], "https://www.iana.org/assignments/registrar-ids/", "accreditation"))
+        for n in (obs.get("notices") or []):
+            if n["iana_id"] != i:
+                continue
+            recorded = r["notices"] is not None and (n["date"], n["kind"]) in r["notices"]
+            # registrars only in domains.csv have no notice history: report notices inside the lookback window
+            if recorded or (r["notices"] is None and n["date"] < since.isoformat()):
+                continue
+            sev = "high" if n["kind"] in ("termination", "suspension") else "medium"
+            out.append(finding("registrar", sev, i, f"{r['name']} (IANA {i}): ICANN notice of {n['kind']} dated {n['date']}",
+                               ents, n["date"], n["url"], f"notice:{n['date']}:{n['kind']}"))
+    return out
+
+
 # --------------------------------------------------------------------------- acknowledgements and report
 
 def apply_acks(findings: list[dict], acks: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -964,6 +1053,10 @@ def run(data: dict, checks: list[str], ctx: Ctx) -> list[dict]:
         cobs = observe_companies(ctx, data)
         ctx.snapshot["companies"] = cobs
         findings += compare_companies(data, cobs)
+    if "registrar" in checks:
+        gobs = observe_registrars(ctx, data)
+        ctx.snapshot["registrars"] = gobs
+        findings += compare_registrars(data, gobs, ctx.since)
     return merge(findings)
 
 
@@ -985,7 +1078,7 @@ def main() -> int:
         return 4
     root = os.path.abspath(args.repo_root)
     today = dt.date.fromisoformat(args.today) if args.today else today_utc()
-    http = Http({"rest.db.ripe.net": 0.3, "find-and-update.company-information.service.gov.uk": 1.0,
+    http = Http({"rest.db.ripe.net": 0.3, "www.icann.org": 1.0, "find-and-update.company-information.service.gov.uk": 1.0,
                  "api.company-information.service.gov.uk": 0.6, "dns.google": 0.05})
     ctx = Ctx(root, today, args.lookback, http, args.workers)
     data = load_repo(root)

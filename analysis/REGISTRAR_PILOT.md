@@ -86,5 +86,5 @@ The ccTLD gap is not random. Russian-market operators use .ru and .su (Proton66,
 ## Next steps
 
 1. ~~Retry the eight rate-limited lookups, and add RDAP coverage to the Phase 2 monitor.~~ Done 2026-10-30: `tools/monitor.py --checks domain` re-checks every domain weekly (registration, registrar, status, nameservers including seizure banners) - see `docs/MONITORING.md`.
-2. Draft the R2 taxonomy section: provider type "Registrar / DNS Enabler", its subtypes, tier criteria and evidence floor.
-3. Evaluate the candidates above against external abuse data before any row is created.
+2. ~~Draft the R2 taxonomy section.~~ Done: taxonomy section 2.8.
+3. ~~Evaluate the candidates against external abuse data.~~ Done: [`REGISTRAR_EVALUATION.md`](REGISTRAR_EVALUATION.md) - NiceNIC T2, CNOBIN and Eranet T3, Regtime and Bizcn not rated.
