@@ -1,76 +1,77 @@
 {
   "totals": {
-    "providers": 70,
-    "sanctioned": 18,
-    "seized_or_takedown": 5,
-    "active": 12
+    "providers": 79,
+    "sanctioned": 22,
+    "seized_or_takedown": 8,
+    "active": 16
   },
   "by_tier": {
-    "T2": 25,
-    "T1": 24,
-    "T3": 11,
-    "T4": 6,
-    "T5": 4
+    "T1": 28,
+    "T2": 27,
+    "T3": 10,
+    "T5": 8,
+    "T4": 6
   },
   "by_status": {
     "flagged": 24,
-    "sanctioned": 13,
-    "active": 12,
-    "dissolved": 6,
-    "evading": 4,
-    "seized": 4,
+    "active": 16,
+    "sanctioned": 15,
+    "dissolved": 7,
+    "seized": 7,
     "dormant": 3,
+    "evading": 3,
     "exposed": 2,
     "suspected": 2
   },
   "by_country": {
-    "Russia": 6,
+    "Russia": 8,
+    "Netherlands": 7,
     "Iran": 5,
-    "Netherlands": 4,
     "Russia (St. Petersburg)": 4,
+    "US": 4,
     "China": 3,
-    "US": 3,
     "EU-hosted infrastructure": 2,
+    "FR": 2,
     "Germany": 2,
+    "Global": 2,
     "HK": 2,
-    "Hong Kong": 2,
-    "Lithuania": 2,
-    "Moldova": 2
+    "Hong Kong": 2
   },
   "by_authority": {
     "OFAC": 15,
-    "UK": 6,
+    "UK": 8,
     "EU": 5,
+    "Other": 4,
     "AU": 2,
-    "Other": 2
+    "Canada": 1
   },
   "top_upstreams": {
     "aurologic GmbH (AS30823)": 8,
-    "24)": 1,
+    "Oct 2026)": 3,
+    "Pfcloud UG (AS51396)": 2,
+    "ADCDATA.COM (AS135330)": 1,
     "AS215436 (peers)": 1,
     "AS218878": 1,
     "Arelion": 1,
-    "Aug 2025)": 1,
+    "Aug 2025": 1,
     "Cogent": 1,
     "ColocationX was the AS holder": 1,
     "DDoS-Guard (AS49612)": 1,
-    "Des Capital B.V. (colocation": 1,
-    "Historical (2020-22): Crex Fex Pex (AS3555)": 1,
-    "Historical: WorldStream (AS49981)": 1
+    "Des Capital B.V. (colocation": 1
   },
   "top_malware": {
     "RedLine": 7,
+    "Cobalt Strike": 5,
     "Lumma": 5,
     "Amadey": 4,
-    "Cobalt Strike": 4,
+    "PlugX": 3,
     "QuasarRAT": 3,
+    "Remcos": 3,
     "Rhadamanthys": 3,
     "AsyncRAT": 2,
+    "DDoSia": 2,
     "GootLoader": 2,
-    "Latrodectus": 2,
-    "LockBit": 2,
-    "Mallox": 2,
-    "Meduza": 2
+    "Latrodectus": 2
   },
   "timeline": [
     {
@@ -154,7 +155,7 @@
         "EU",
         "UK"
       ],
-      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
     },
     {
       "date": "2025-05-20",
@@ -163,7 +164,7 @@
       "authorities": [
         "EU"
       ],
-      "detail": "EU May 20 2025: Council Implementing Regulation (EU) 2025/965 under the hybrid-threats regime Reg. (EU) 2024/2642 (not the 17th Russia package) - Stark Industries Solutions Ltd; Iurie Neculiti; Ivan Neculiti"
+      "detail": "EU May 20 2025: Council Implementing Regulation (EU) 2025/965 under the hybrid-threats regime Reg. (EU) 2024/2642 (not the 17th Russia package) - Stark Industries Solutions Ltd; Iurie Neculiti; Ivan Neculiti; EU renewed the hybrid-threats regime on Oct 8 2026 to Oct 9 2027 (80 individuals, 20 entities; Stark entries not individually re-checked)"
     },
     {
       "date": "2025-05-29",
@@ -193,7 +194,7 @@
         "EU",
         "UK"
       ],
-      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
     },
     {
       "date": "2025-08-14",
@@ -225,7 +226,7 @@
         "EU",
         "UK"
       ],
-      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
     },
     {
       "date": "2025-08-20",
@@ -247,7 +248,17 @@
         "EU",
         "UK"
       ],
-      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
+    },
+    {
+      "date": "2025-10-01",
+      "date_label": "Oct 2025",
+      "provider": "Xeltox Enterprises Ltd (Cryptomus / Heleket)",
+      "authorities": [
+        "UK",
+        "Canada"
+      ],
+      "detail": "UK Oct 8 2026 (RUS3755, Russia regime; asset freeze, trust-services and director-disqualification sanctions); FINTRAC (Canada) penalty Oct 2025"
     },
     {
       "date": "2025-10-23",
@@ -269,7 +280,7 @@
         "EU",
         "UK"
       ],
-      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
     },
     {
       "date": "2025-11-12",
@@ -373,7 +384,7 @@
         "EU",
         "UK"
       ],
-      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC)"
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
     },
     {
       "date": "2026-06-02",
@@ -455,6 +466,17 @@
       "detail": "OFAC Nov 19 2025 (sb0319): Media Land LLC, ML[.]Cloud LLC, Media Land Technology, Data Center Kirishi + Volosovik, Zatolokin, Pankova; UK Nov 19 2025 (Cyber regime): Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin, Pankova, Andrei Kozlov; Australia Nov 20 2025: Media Land LLC, ML[.]Cloud LLC, Volosovik, Zatolokin; EU July 13 2026 (Impl. Reg. (EU) 2026/1714): Media Land LLC, ML[.]Cloud, Volosovik; New Zealand Aug 8 2026: Volosovik; DOJ N.D. Ohio indictment (returned Dec 5 2024, unsealed July 14 2026)"
     },
     {
+      "date": "2026-07-23",
+      "date_label": "Jul 23 2026",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
+    },
+    {
       "date": "2026-08-08",
       "date_label": "Aug 8 2026",
       "provider": "Media Land LLC",
@@ -474,6 +496,92 @@
         "Other"
       ],
       "detail": "DOJ/FBI court-authorised seizure of QScan and QTRouter domains, Aug 26 2026"
+    },
+    {
+      "date": "2026-10-01",
+      "date_label": "Oct 1 2026",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
+    },
+    {
+      "date": "2026-10-01",
+      "date_label": "Oct 1 2026",
+      "provider": "A7A5 / Old Vector",
+      "authorities": [
+        "OFAC",
+        "EU",
+        "UK"
+      ],
+      "detail": "UK May 2025 (A7) and Aug 20 2025 (Old Vector LLC); EU July 2025 (A7) and 19th package Oct 23 2025 (full A7A5 transaction ban from Nov 25 2025); EU 21st package Jul 23 2026 (four A7-network designations incl. A7 Nigeria and A7 Africa; transaction ban on 14 crypto platforms); OFAC Aug 14 2025 (Old Vector LLC, A7 LLC, A71 LLC, A7 Agent LLC); OFAC Oct 1 2026: whole A7 Network designated a significant transnational criminal organization (E.O. 13581; Operation Economic Outcast); FinCEN Oct 1 2026: section 9714(a) proposed rule against A7 Network Sub-Agents plus an Alert"
+    },
+    {
+      "date": "2026-10-08",
+      "date_label": "Oct 8 2026",
+      "provider": "Stark Industries Solutions",
+      "authorities": [
+        "EU"
+      ],
+      "detail": "EU May 20 2025: Council Implementing Regulation (EU) 2025/965 under the hybrid-threats regime Reg. (EU) 2024/2642 (not the 17th Russia package) - Stark Industries Solutions Ltd; Iurie Neculiti; Ivan Neculiti; EU renewed the hybrid-threats regime on Oct 8 2026 to Oct 9 2027 (80 individuals, 20 entities; Stark entries not individually re-checked)"
+    },
+    {
+      "date": "2026-10-08",
+      "date_label": "Oct 8 2026",
+      "provider": "TokenSpot CJSC",
+      "authorities": [
+        "UK"
+      ],
+      "detail": "UK Oct 8 2026 (RUS3758, Russia regime; asset freeze and trust-services sanctions)"
+    },
+    {
+      "date": "2026-10-08",
+      "date_label": "Oct 8 2026",
+      "provider": "Xeltox Enterprises Ltd (Cryptomus / Heleket)",
+      "authorities": [
+        "UK",
+        "Canada"
+      ],
+      "detail": "UK Oct 8 2026 (RUS3755, Russia regime; asset freeze, trust-services and director-disqualification sanctions); FINTRAC (Canada) penalty Oct 2025"
+    },
+    {
+      "date": "2026-10-27",
+      "date_label": "Oct 27 2026",
+      "provider": "Railnet LLC / Virtualine Technologies",
+      "authorities": [
+        "Other"
+      ],
+      "detail": "FBI seizure of virtualine[.]net under an E.D. Va. warrant (Operation Omegaline), announced Oct 27 2026; Politie Midden-Nederland seized dozens of physical servers in Limburg (hundreds of VPS offline; data on 3,000+ customers); concurrent FBI and German police actions against suspects and crypto - no operators named or charges announced"
+    },
+    {
+      "date": "2026-10-27",
+      "date_label": "Oct 27 2026",
+      "provider": "AnonRDP / Blatant Technologies",
+      "authorities": [
+        "Other"
+      ],
+      "detail": "anonrdp[.]com moved to FBI seizure nameservers (NS1/NS2.FBI.SEIZED.GOV) Oct 27 2026, the day of Operation Omegaline - no seizure page or DOJ statement as of Oct 29 2026"
+    },
+    {
+      "date": "2026-10-29",
+      "date_label": "Oct 29 2026",
+      "provider": "AnonRDP / Blatant Technologies",
+      "authorities": [
+        "Other"
+      ],
+      "detail": "anonrdp[.]com moved to FBI seizure nameservers (NS1/NS2.FBI.SEIZED.GOV) Oct 27 2026, the day of Operation Omegaline - no seizure page or DOJ statement as of Oct 29 2026"
+    },
+    {
+      "date": "2027-10-09",
+      "date_label": "Oct 9 2027",
+      "provider": "Stark Industries Solutions",
+      "authorities": [
+        "EU"
+      ],
+      "detail": "EU May 20 2025: Council Implementing Regulation (EU) 2025/965 under the hybrid-threats regime Reg. (EU) 2024/2642 (not the 17th Russia package) - Stark Industries Solutions Ltd; Iurie Neculiti; Ivan Neculiti; EU renewed the hybrid-threats regime on Oct 8 2026 to Oct 9 2027 (80 individuals, 20 entities; Stark entries not individually re-checked)"
     }
   ]
 }
