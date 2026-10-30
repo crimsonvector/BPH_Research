@@ -765,7 +765,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | CrazyRDP | AS394711 (historical; Limenet; reassigned to KorGrid LLC [US] - do not block); AS211252 (historical; Delis LLC; reassigned to Marushin K.K. [JP] - do not block) | T1 | Seized | Netherlands (servers) | RDP-as-a-service (seized) |
 | CTG Server Limited | AS152194 | T1 | Flagged | Hong Kong | FUNNULL hosting ASN |
 | Dabai Guarantee | — | T2 | Active | SEA / China | Financial Enabler (guarantee marketplace) |
-| Datavice MCHJ | — | T1 | Sanctioned | Uzbekistan (Tashkent) | Sanctions Evasion (Aeza) |
+| Datavice MCHJ | AS206336 (Datavice; registered to DATAVICE MCHJ [UZ] since 2025-07-18; no routes) | T1 | Sanctioned | Uzbekistan (Tashkent) | Sanctions Evasion (Aeza) |
 | DDoS-Guard | AS57724 (DDOS-GUARD); AS49612 (COGNITIVE-CLOUD-NET handle; 1 prefix) | T5 | Active | Russia | Dual-use / Peering |
 | Dolphon 1337 | AS215208 (historical; reassigned to PT Citra Celebas Multimedia [ID] - do not block) | T5 | Dissolved | UK Shell | Corporate Shell (ASN recycled) |
 | ELITETEAM / 1337TEAM | AS51381 (registered; no routes); AS39770 (historical; deregistered); AS60424 (historical; deregistered); AS56873 (registered; no routes) | T1 | Dormant | Russia (Seychelles reg.) | Pure BPH (dormant) |
@@ -899,6 +899,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS205090 | First Server Limited | T2 | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS205329 | Pfcloud UG | T2 | Muilties Network; individual registrant [DE/RIPE]; Spamhaus-attributed via pfcloud.io |
 | AS205759 | AnonRDP / Blatant Technologies | T1 | historical; GHOSTYNETWORKS [US-KY]; deregistered |
+| AS206336 | Datavice MCHJ | T1 | Datavice; registered to DATAVICE MCHJ [UZ] since 2025-07-18; no routes |
 | AS206728 | Media Land LLC | T1 | Pure BPH; Russia / St. Petersburg |
 | AS206932 | MIRhosting B.V. | T1 | MIRHOSTING-NL; no routes since 2026-09-29 |
 | AS207566 | Chang Way Technologies | T2 | LD007-AS; no routes |
