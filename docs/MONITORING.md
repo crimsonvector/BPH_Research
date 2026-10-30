@@ -27,6 +27,7 @@ There is no hidden state between runs, so the issue always shows exactly what th
 | `ripe` | aut-num and route/route6 objects created or changed in the lookback window that are maintained by (`mnt-by`) or registered to (`org`) a tracked RIPE handle, and point at an untracked ASN; route objects grouped per origin | `data/registry_handles.csv` | medium |
 | `domain` | Registration (RDAP 404 / re-registration), registrar (IANA ID), RDAP status, nameservers (seizure banners flagged), A-record ASN (skipped for CDN-fronted domains) | `data/domains.csv` | high: seized, dropped, re-registered, hold status · medium: registrar change · low: other status, nameserver and hosting changes; a lookup that now answers |
 | `company` | Company status and filings dated after the recorded latest filing | `data/companies.csv` | high: status change · medium: new filing · low: accounts |
+| `registrar` | IANA accreditation status (IANA registrar-ID list) and ICANN Contractual Compliance notices of breach, suspension or termination, for every registrar cited in `data/domains.csv` or rated in `data/registrars.csv`. For registrars only cited in `domains.csv`, notices inside the lookback window are reported; for rated registrars, notices missing from `icann_notices` | `data/domains.csv`, `data/registrars.csv` | high: accreditation change, suspension, termination · medium: breach notice |
 
 Every finding has a stable **key**, `check:subject:aspect`, for example `asn:AS209946:state`, `prefix:AS6461:origin:railnet-llc-virtualine-technologies`, `company:14459750:filing:2026-10-14:CS01`. The issue embeds the keys of the previous run, so each run marks its **new** findings and posts them as a comment.
 
@@ -127,6 +128,7 @@ Of the 30 that remained, a rule change resolved one: other ASNs' /48s inside Hos
 
 ## Limits
 
+- **ICANN notices page.** The registrar check parses ICANN's server-rendered notices page. If the layout changes and nothing parses, the run reports a fetch error rather than silence. Registry (not registrar) notices and old entries without an IANA ID are ignored.
 - **RIPE region only.** Handles are watched in the RIPE database only. ARIN and APNIC operators (AnonRDP's AS403005, FUNNULL, Kaopu) are covered through routing and ASN-DROP, not through registry objects.
 - **No RDAP for 17 domains.** These are ccTLD domains without an RDAP service (including .ru and .su), so only their nameservers and hosting are checked.
 - **Routing view.** Routing data comes from RIPE RIS. Announced-prefix history ignores prefixes seen by fewer than 10 RIS peers, so very low-visibility announcements can be missed.

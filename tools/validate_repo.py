@@ -12,6 +12,9 @@ Errors (exit 1):
     block_recommendation, gives each ASN one recommendation, and never recommends
     anything but do-not-block for a historical / reassigned / recycled ASN
   - data/domains.csv names only entities that exist in the CSV, once per domain
+  - data/registrars.csv (rated registrar / DNS enablers, taxonomy 2.8): unique IANA IDs, known
+    subtype, tier and accreditation values, tier_basis starting with the tier, ISO-dated ICANN
+    notices, existing linked entities and catalogued Source IDs
   - data/companies.csv and data/registry_handles.csv (monitor watchlists) are well formed,
     unique and name only existing entities; monitor/acknowledged.csv entries have a
     known check prefix, a reason and an ISO date
@@ -280,6 +283,29 @@ def main() -> int:
             if h["kind"] not in ("mntner", "organisation") or h["registry"] != "RIPE":
                 errors.append(f"data/registry_handles.csv: {h['handle']} has kind/registry {h['kind']}/{h['registry']} (expected mntner|organisation / RIPE)")
             errors += [f"data/registry_handles.csv: {h['handle']} names unknown entity {e!r}" for e in (x.strip() for x in h["entities"].split(";")) if e not in names]
+
+    regs = load_opt("data", "registrars.csv")
+    if regs is not None:
+        seen = collections.Counter(g["iana_id"] for g in regs)
+        errors += [f"data/registrars.csv: IANA {i} listed {k} times" for i, k in seen.items() if k > 1]
+        for g in regs:
+            who = f"data/registrars.csv: {g['registrar']} ({g['iana_id']})"
+            if g["subtype"] not in ("registrar", "reseller", "privacy-proxy", "cctld", "dns-fronting"):
+                errors.append(f"{who}: unknown subtype {g['subtype']!r}")
+            if g["subtype"] == "registrar" and not g["iana_id"].isdigit():
+                errors.append(f"{who}: an accredited registrar needs a numeric IANA ID")
+            if g["accreditation"] not in ("Accredited", "Terminated", "Reserved", "n/a"):
+                errors.append(f"{who}: accreditation {g['accreditation']!r} (expected IANA status or n/a)")
+            if not re.fullmatch(r"T[1-5]", g["tier"]) or not g["tier_basis"].startswith(g["tier"]):
+                errors.append(f"{who}: tier {g['tier']!r} missing or tier_basis does not start with it")
+            for n in (x.strip() for x in g["icann_notices"].split(";") if x.strip()):
+                d, _, kind = n.partition(" ")
+                if not iso(d) or kind not in ("breach", "suspension", "termination", "non-renewal"):
+                    errors.append(f"{who}: ICANN notice {n!r} is not 'YYYY-MM-DD kind'")
+            errors += [f"{who}: linked entity {e!r} is not in the CSV" for e in (x.strip() for x in g["linked_entities"].split(";")) if e and e not in names]
+            errors += [f"{who}: source {s} is not in SOURCE_INDEX.md" for s in (x.strip() for x in g["sources"].split(";")) if s and s not in grades]
+            if not iso(g["last_verified"]):
+                errors.append(f"{who}: last_verified is not an ISO date")
 
     acks = load_opt("monitor", "acknowledged.csv")
     if acks is not None:
