@@ -35,7 +35,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block at CIDR/ASN level. Monitor for prefix migration.
 
-**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 25 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (dormant), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting, Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine (seized), AnonRDP/Blatant Technologies (domain seized), Femo IT/Defhost, Kaopu Cloud HK, PrivateAlps/Private Layer, MIRhosting (WorkTitans' upstream), CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector (financial enablers)
+**Current T1 entities (illustrative; `BPH_Master.csv` is authoritative — 26 rows):** Aeza International / Aeza Group, Stark Industries Solutions (dissolved), Zservers/XHOST, Media Land LLC, FUNNULL Technology, CTG Server Limited (FUNNULL hosting ASN), ELITETEAM/1337TEAM (dormant), PROSPERO OOO/Proton66, WorkTitans/THE.Hosting (seized), Hypercore, Datavice, PQ Hosting Plus (evading; not itself listed), Railnet/Virtualine (seized), AnonRDP/Blatant Technologies (domain seized), Femo IT/Defhost, Kaopu Cloud HK, PrivateAlps/Private Layer, MIRhosting (WorkTitans' upstream), CrazyRDP (seized), BtHoster, First VPN Service/1VPNS and QTFY/QTRouter (anonymization enablers), Garantex / Grinex / A7A5-Old Vector / TokenSpot (financial enablers)
 
 ---
 
@@ -53,7 +53,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Block known malicious prefixes; consider ASN-level block with allowlisting for confirmed legitimate customers.
 
-**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 26 rows):** Tnsecurity/EVILEMPIRE (defunct), QWINS LTD, GCSAS, Karina Rashkovska (defunct), KPROHOST, metaspinner-named AS209800 (defunct Virtualine front), Altawk, aurologic GmbH and UAB Host Baltic (upstream enablers), PINSPB, SWISSNETWORK02/Global-Data (dormant), WAIcore, First Server Limited, Pfcloud UG, Chang Way Technologies, VPSVault.host, Feo Prest, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks / NetNut-Alarum / IPIDEA (proxy enablers), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC (financial enablers)
+**Current T2 entities (illustrative; `BPH_Master.csv` is authoritative — 28 rows):** Tnsecurity/EVILEMPIRE (defunct), QWINS LTD (company dissolved), Cloudzy/abrNOC, GCSAS, Karina Rashkovska (defunct), KPROHOST, metaspinner-named AS209800 (defunct Virtualine front), Altawk, aurologic GmbH and UAB Host Baltic (upstream enablers), PINSPB, SWISSNETWORK02/Global-Data (dormant), WAIcore, First Server Limited, Pfcloud UG, Chang Way Technologies, VPSVault.host, Feo Prest, SHANGXING TECH LIMITED (HK reseller ASN), UFO Hosting (evading), Asocks / NetNut-Alarum / IPIDEA (proxy enablers), Nobitex / Dabai Guarantee / Tudou Guarantee / H-Pay Service PLC / Xeltox Enterprises (Cryptomus/Heleket) (financial enablers)
 
 ---
 
@@ -71,7 +71,7 @@ Providers are assigned to one of five risk tiers based on the weight and recency
 
 **Blocking Recommendation:** Monitor and alert. Block specific confirmed-malicious IPs. Reassess quarterly.
 
-**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative — 10 rows):** Cloudzy/abrNOC, HostSlick, StarCloud Global, NECHAEVDS, NETINNOVATIONLLC, Tiger Network Limited, Silent Connection (dissolved), Wallex / Bitpin / Ramzinex (financial enablers)
+**Current T3 entities (illustrative; `BPH_Master.csv` is authoritative — 9 rows):** HostSlick, StarCloud Global, NECHAEVDS, NETINNOVATIONLLC, Tiger Network Limited, Silent Connection (dissolved), Wallex / Bitpin / Ramzinex (financial enablers)
 
 ---
 
