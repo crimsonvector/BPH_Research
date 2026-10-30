@@ -269,6 +269,17 @@ class RegistrarRules(unittest.TestCase):
         self.assertEqual(f["registrar:3765:notice:2026-08-28:termination"]["severity"], "high")
 
 
+class StaleRules(unittest.TestCase):
+    def test_stale_records(self):
+        rows = [dict(row("Old"), last_verified="2026-06-01"), dict(row("Fresh"), last_verified="2026-10-30")]
+        asns = [dict(asn(1, "Old"), last_checked="2026-05-01"), dict(asn(2, "Fresh"), last_checked="2026-10-30")]
+        claims = [{"claim_id": "old-01", "entity": "Old", "claim": "x", "status": "unverified", "verified_date": "2026-01-01"},
+                  {"claim_id": "old-02", "entity": "Old", "claim": "y", "status": "verified", "verified_date": "2026-01-01"}]
+        data = m.index_data(rows, asns, claims=claims)
+        keys = {f["key"] for f in m.compare_stale(data, dt.date(2026, 10, 30))}
+        self.assertEqual(keys, {"stale:entities-2026-06-01:entities", "stale:asns-2026-05-01:asn-register", "stale:old-01:claim"})
+
+
 class ReportRules(unittest.TestCase):
     def test_acks_keys_and_defang(self):
         f1 = m.finding("prefix", "medium", "AS1", "now 10.1.2.0/24", ["X"], "10.1.2.0/24", aspect="origin:x")
