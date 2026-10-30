@@ -11,6 +11,7 @@ Errors (exit 1):
   - data/asns.csv lists exactly the (ASN, entity) pairs cited in the CSV, uses a known
     block_recommendation, gives each ASN one recommendation, and never recommends
     anything but do-not-block for a historical / reassigned / recycled ASN
+  - data/domains.csv names only entities that exist in the CSV, once per domain
   - generated blocks (tools/generate_docs.py) are up to date
   - status is one of the taxonomy's lifecycle/auxiliary states
   - risk_tier starts with T1..T5
@@ -222,6 +223,19 @@ def main() -> int:
         for asn, rs in recs.items():
             if len(rs) > 1:
                 errors.append(f"data/asns.csv: {asn} has conflicting recommendations {sorted(rs)}")
+
+    # ---- domain register (registrar pilot) ----
+    dom_path = os.path.join(root, "data", "domains.csv")
+    if os.path.exists(dom_path):
+        names = {r["provider_name"] for r in rows}
+        with open(dom_path, encoding="utf-8", newline="") as f:
+            doms = list(csv.DictReader(f))
+        seen = collections.Counter(d["domain"] for d in doms)
+        errors += [f"data/domains.csv: {d} listed {n} times" for d, n in seen.items() if n > 1]
+        for d in doms:
+            for ent in (re.sub(r"\s*\(lead:[^)]*\)$", "", e).strip() for e in d["entities"].split(";")):
+                if ent and ent not in names:
+                    errors.append(f"data/domains.csv: {d['domain']} names unknown entity {ent!r}")
 
     # ---- generated blocks ----
     try:
