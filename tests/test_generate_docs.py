@@ -44,6 +44,7 @@ class TierEvidence(unittest.TestCase):
         self.assertEqual(self.check("T3-Suspected", [claim("E", "V1")]), [])
         self.assertEqual(len(self.check("T3-Suspected", [claim("E", "J1")])), 1)
         self.assertEqual(len(self.check("T5-Watch", [])), 1)
+        self.assertEqual(self.check("T5-Watch", [claim("E", "J1", status="unverified")]), [])   # single-source watch-list claim
 
 
 class Diagrams(unittest.TestCase):

@@ -201,7 +201,7 @@ def data_health(root: str, rows: list[dict], asns: list[dict], sources: list[dic
         weak = tier_evidence(rows, claims, sources)
         out += ["", "### Tier evidence check", "",
                 "Entities whose verified, tier-relevant claims do not reach the minimum in taxonomy section 6 for their tier "
-                "(T1: a Grade A source or 3+ independent B/C; T2: 2+ B/C; T3: 1 B or 2 C; T4: any B/C/E; T5: any). "
+                "(T1: a Grade A source or 3+ independent B/C; T2: 2+ B/C; T3: 1 B or 2 C; T4: any B/C/E; T5: any, unverified included). "
                 "Publishers stand in for independence. Each is a prompt to add the missing claim or source, or to review the tier."]
         if weak:
             out += ["", "| Entity | Tier | Evidence in claims |", "|--------|------|--------------------|"]
@@ -225,9 +225,36 @@ def load_optional(root: str, *parts: str) -> list[dict]:
     return load_csv(path) if os.path.exists(path) else []
 
 
-def relationship_diagrams(rows: list[dict], rels: list[dict]) -> str:
-    """One Mermaid flowchart per connected cluster of relationships; tracked entities coloured by tier."""
-    tiers = {r["provider_name"]: r["risk_tier"][:2] for r in rows}
+FAMILIES = [("Corporate structure", "who operates, fronts for, succeeds or shares ownership with whom"),
+            ("Network supply", "upstream transit and IP-space suppliers"),
+            ("Financial layer", "payment rails and the financial enablers")]
+
+
+def edge_family(e: dict, financial: set[str]) -> str:
+    if e["type"] == "payment-rail-of" or e["from"] in financial or e["to"] in financial:
+        return "Financial layer"
+    if e["type"] in ("upstream-of", "ip-supplier-of"):
+        return "Network supply"
+    return "Corporate structure"
+
+
+def mermaid(es: list[dict], tiers: dict[str, str]) -> list[str]:
+    ids, lines = {}, ["```mermaid", "flowchart LR"]
+    for e in sorted(es, key=lambda e: (e["from"].lower(), e["type"], e["to"].lower())):
+        for name in (e["from"], e["to"]):
+            if name not in ids:
+                ids[name] = f"n{len(ids) + 1}"
+                label = name.replace('"', "#quot;")
+                lines.append(f'  {ids[name]}["{label}"]:::{tiers.get(name, "ext").lower()}')
+        label = ("former " if e["status"] == "superseded" else "") + e["type"] + (" ?" if e["status"] in ("unverified", "disputed") else "")
+        arrow = "-->" if e["status"] == "verified" else "-.->"
+        lines.append(f"  {ids[e['from']]} {arrow}|{label}| {ids[e['to']]}")
+    used = {tiers.get(x, "ext") for x in ids}
+    lines += [f"  classDef {k.lower()} {v}" for k, v in TIER_STYLE.items() if k in used]
+    return lines + ["```"]
+
+
+def clusters_of(edges: list[dict]) -> list[list[dict]]:
     parent = {}
 
     def find(x):
@@ -236,48 +263,50 @@ def relationship_diagrams(rows: list[dict], rels: list[dict]) -> str:
             parent[x] = parent[parent[x]]
             x = parent[x]
         return x
-    for e in rels:
+    for e in edges:
         parent[find(e["from"])] = find(e["to"])
-    clusters = collections.defaultdict(list)
-    for e in rels:
-        clusters[find(e["from"])].append(e)
-    ordered = sorted(clusters.values(), key=lambda es: (-len(es), min(x["from"].lower() for x in es)))
-    big = [es for es in ordered if len(es) >= 2]
-    small = [e for es in ordered if len(es) < 2 for e in es]
-    if small:
-        big.append(small)
-    legend = ("> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read "
-              "*from → to* with the relationship type as label; solid = verified, dashed = unverified or disputed, "
-              "\"former\" = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are "
-              f"external parties. {len(rels)} relationships, {len(set(e['from'] for e in rels) | set(e['to'] for e in rels))} parties.")
-    out = [legend]
-    for n, es in enumerate(big, 1):
-        title = "Other single links" if es is small else f"Cluster {n}: " + ", ".join(
-            sorted({x for e in es for x in (e["from"], e["to"]) if x in tiers}, key=lambda x: (tiers[x], x.lower()))[:4])
-        ids, lines = {}, ["```mermaid", "flowchart LR"]
-        for e in sorted(es, key=lambda e: (e["from"].lower(), e["type"], e["to"].lower())):
-            for name in (e["from"], e["to"]):
-                if name not in ids:
-                    ids[name] = f"n{len(ids) + 1}"
-                    label = name.replace('"', "#quot;")
-                    lines.append(f'  {ids[name]}["{label}"]:::{tiers.get(name, "ext").lower()}')
-            label = ("former " if e["status"] == "superseded" else "") + e["type"] + (" ?" if e["status"] in ("unverified", "disputed") else "")
-            arrow = "-->" if e["status"] == "verified" else "-.->"
-            lines.append(f"  {ids[e['from']]} {arrow}|{label}| {ids[e['to']]}")
-        used = {tiers.get(x, "ext") for x in ids}
-        lines += [f"  classDef {k.lower()} {v}" for k, v in TIER_STYLE.items() if k in used]
-        lines.append("```")
-        out += ["", f"#### {title}", ""] + lines
+    groups = collections.defaultdict(list)
+    for e in edges:
+        groups[find(e["from"])].append(e)
+    return sorted(groups.values(), key=lambda es: (-len(es), min(x["from"].lower() for x in es)))
+
+
+def relationship_diagrams(rows: list[dict], rels: list[dict]) -> str:
+    """Mermaid flowcharts of data/relationships.csv in three views (corporate, network, financial), one chart per
+    connected cluster within a view; tracked entities coloured by tier."""
+    tiers = {r["provider_name"]: r["risk_tier"][:2] for r in rows}
+    financial = {r["provider_name"] for r in rows if "Financial" in r["risk_tier"]}
+    parties = set(e["from"] for e in rels) | set(e["to"] for e in rels)
+    out = ["> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read "
+           "*from → to* with the relationship type as label; solid = verified, dashed with `?` = unverified or disputed, "
+           "`former` = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are "
+           f"external parties. {len(rels)} relationships among {len(parties)} parties, shown in three views; an entity "
+           "can appear in more than one."]
+    for fam, what in FAMILIES:
+        es = [e for e in rels if edge_family(e, financial) == fam]
+        out += ["", f"### {fam}", "", f"{len(es)} relationships: {what}."]
+        groups = clusters_of(es)
+        big = [g for g in groups if len(g) >= 2]
+        small = [e for g in groups if len(g) < 2 for e in g]
+        for g in big:
+            names = sorted({x for e in g for x in (e["from"], e["to"]) if x in tiers}, key=lambda x: (tiers[x], x.lower()))
+            title = ", ".join(names[:4]) + (f" and {len(names) - 4} more" if len(names) > 4 else "")
+            out += ["", f"#### {title}", ""] + mermaid(g, tiers)
+        if small:
+            out += ["", "#### Other single links", ""] + mermaid(small, tiers)
     return "\n".join(out)
 
 
 def tier_evidence(rows: list[dict], claims: list[dict], sources: list[dict]) -> list[tuple[dict, str]]:
     """Entities whose verified, tier-relevant claims do not meet the taxonomy section 6 minimum for their tier.
-    Independence is approximated by distinct publishers."""
+    Independence is approximated by distinct publishers; for T5 (a watch list) unverified single-source claims count."""
     by_id = {s["id"]: s for s in sources}
     ev = collections.defaultdict(lambda: collections.defaultdict(set))
+    tier_of = {r["provider_name"]: r["risk_tier"][:2] for r in rows}
     for c in claims:
-        if c["status"] != "verified" or c["tier_relevant"] != "yes":
+        # T5 is a watch list: one credible, single-source claim is enough, so unverified claims count there
+        allowed = ("verified", "unverified") if tier_of.get(c["entity"]) == "T5" else ("verified",)
+        if c["status"] not in allowed or c["tier_relevant"] != "yes":
             continue
         for sid in (x.strip() for x in c["source_ids"].split(";") if x.strip()):
             s = by_id.get(sid)

@@ -61,6 +61,147 @@ The ten rows whose `last_verified` is oldest. The weekly monitor reports any old
 | aurologic GmbH | T2 | 2026-10-30 |
 | Bitpin | T3 | 2026-10-30 |
 
+### Claims
+
+643 claims (verified 457, unverified 116, disputed 7, superseded 63); 174 relationships. Open claims (unverified or disputed), oldest first:
+
+| Claim | Entity | Status | Since | Claim text |
+|-------|--------|--------|-------|------------|
+| eliteteam-1337team-limited-06 | ELITETEAM / 1337TEAM LIMITED | unverified | 2026-09-25 | No dissolution, sanction or seizure of 1337TEAM LIMITED is documented; the row was set to 'dormant' on 2026-09-25 with the T1 tier kept. |
+| anonrdp-blatant-technologies-02 | AnonRDP / Blatant Technologies | unverified | 2026-10-29 | No seizure page or DOJ statement on anonrdp.com had appeared by 2026-10-29, so official confirmation of a law-enforcement seizure is pending |
+| 1gservers-llc-01 | 1GSERVERS LLC | unverified | 2026-10-30 | The Intel Insights 'Bulletproof Hosting Hunt' post of 2025-07-27 lists one 1GSERVERS address, 104[.]251[.]123[.]89, among ten Lumma-communic |
+| a7a5-old-vector-03 | A7A5 / Old Vector | unverified | 2026-10-30 | The EU designated A7 in July 2025 and, in its 19th package of 2025-10-23, imposed a full A7A5 transaction ban effective 2025-11-25. |
+| a7a5-old-vector-08 | A7A5 / Old Vector | unverified | 2026-10-30 | The record lists the A7 network (A7 LLC, A71 LLC, A7 Agent LLC) as A7A5's parent, owned by an individual and Promsvyazbank. |
+| a7a5-old-vector-12 | A7A5 / Old Vector | unverified | 2026-10-30 | A7A5's on-chain volume reportedly collapsed after Grinex suspended in April 2026; the '~96%' decline figure is attributed to Elliptic only i |
+| a7a5-old-vector-13 | A7A5 / Old Vector | unverified | 2026-10-30 | Ukrainian drone strikes on Yandex data centres (Sasovo, 2026-10-08, and Kaluga the same week) disrupted A7A5's exchange service, which an El |
+| a7a5-old-vector-14 | A7A5 / Old Vector | unverified | 2026-10-30 | Crypto press citing Elliptic and Etherscan/Tronscan data reports A7A5 daily transfers falling from about 600 to about 61, mostly DEX swaps,  |
+| aeza-international-ltd-05 | Aeza International Ltd | unverified | 2026-10-30 | Aeza's owners and two staff were detained by Russian authorities in early April 2025 in a Russian drug-market case, not a Western action. |
+| aeza-international-ltd-06 | Aeza International Ltd | unverified | 2026-10-30 | AS210644 still announces 176 IPv4 prefixes despite the sanctions. |
+| aeza-international-ltd-14 | Aeza International Ltd | unverified | 2026-10-30 | Qurium (Oct 2026, single source) traces about two-thirds of the Aeza/NetCrafters estate to eleven LIRs, including Andwase Limited (BVI), Pro |
+| alexhost-09 | AlexHost | unverified | 2026-10-30 | AlexHost describes its Chisinau data centre (opened 2013) as a bomb shelter about 5 m underground in a former Soviet military factory. |
+| alexhost-10 | AlexHost | unverified | 2026-10-30 | No law-enforcement action against AlexHost is recorded. |
+| altawk-daniil-yevchenko-06 | Altawk (Daniil Yevchenko) | unverified | 2026-10-30 | PARTNER HOSTING LTD (15332944), the likely GB holder behind the former AS215826, was dissolved on 2026-01-20 (name match). |
+| altawk-daniil-yevchenko-08 | Altawk (Daniil Yevchenko) | unverified | 2026-10-30 | Since 2026-09-22, AS218688 (WULDI LLC, registered 2026-09-11) has originated all five prefixes AS209946 announced before going dark (185[.]1 |
+| andwase-limited-ex-network-management-ip-02 | Andwase Limited (ex-Network Management / IP4MARKET) | unverified | 2026-10-30 | Qurium (Oct 2026) names Andwase as an IPv4 supplier to Aeza and First Server; it is the only report naming Andwase. |
+| andwase-limited-ex-network-management-ip-03 | Andwase Limited (ex-Network Management / IP4MARKET) | unverified | 2026-10-30 | Qurium says the estate of Network Management Ltd / IP4MARKET began moving to Andwase on 2025-07-04, three days after Aeza's OFAC designation |
+| andwase-limited-ex-network-management-ip-05 | Andwase Limited (ex-Network Management / IP4MARKET) | unverified | 2026-10-30 | At least 4,864 Andwase-sourced addresses appeared across Aeza and related networks over time, 256 of them still announced via NetCrafters (Q |
+| andwase-limited-ex-network-management-ip-06 | Andwase Limited (ex-Network Management / IP4MARKET) | unverified | 2026-10-30 | Qurium found that more than half of 15 Network Management prefixes later assigned to Aeza had first been used by NTX Technologies and First  |
+| anonrdp-blatant-technologies-11 | AnonRDP / Blatant Technologies | unverified | 2026-10-30 | A community post says AnonRDP's Lithuanian servers sit with UAB Host Baltic (AS209605), but none of AS403005's prefixes geolocate to Lithuan |
+| asocks-03 | Asocks | unverified | 2026-10-30 | NL Times reported that the dismantled botnet was Asocks (asocks.com); the record carries a name-linkage caveat. |
+| asocks-04 | Asocks | unverified | 2026-10-30 | HUMAN Satori (Mar 2024) believed PROXYLIB apps were monetized through Asocks. |
+| asocks-05 | Asocks | unverified | 2026-10-30 | Silent Push tied the Mandarin-language LVCHA VPN (lvcha.in) to residential-proxy IOCs; the specific Asocks-IP tie is not in the available su |
+| asocks-09 | Asocks | unverified | 2026-10-30 | The Asocks storefront reportedly remained live after the seizure. |
+| bl-networks-bitlaunch-07 | BL Networks (BitLaunch) | unverified | 2026-10-30 | BitLaunch says abuse affects about 1% of its servers. |
+| bthoster-09 | BtHoster | unverified | 2026-10-30 | A sibling-looking AS214018 'IIC-AS' (INTERNET INTELLIGENCE COMPANY LTD) is also on Spamhaus ASN-DROP. |
+| bthoster-10 | BtHoster | unverified | 2026-10-30 | A Securonix DanaBot IOC, 45[.]129[.]14[.]157, resolved to 157.hosted-by.bthoster.com. |
+| buyvm-frantech-solutions-02 | BuyVM / Frantech Solutions | unverified | 2026-10-30 | BuyVM's AUP formally prohibits malicious content, but its abuse response is slow. |
+| buyvm-frantech-solutions-05 | BuyVM / Frantech Solutions | unverified | 2026-10-30 | No law-enforcement action against BuyVM is recorded. |
+| buyvm-frantech-solutions-07 | BuyVM / Frantech Solutions | unverified | 2026-10-30 | BuyVM's website footer reads 'A division of Cloudzy' (checked 2026-10-30), while AS53667 is still registered to FranTech Solutions at ARIN. |
+| chang-way-technologies-co-limited-07 | Chang Way Technologies Co. Limited | unverified | 2026-10-30 | The tracked prefixes 45[.]93[.]20[.]0/24, 62[.]204[.]41[.]0/24, 91[.]240[.]118[.]0/24, 109[.]238[.]86[.]0/24, 185[.]11[.]61[.]0/24, 185[.]81 |
+| chang-way-technologies-co-limited-08 | Chang Way Technologies Co. Limited | unverified | 2026-10-30 | A link between UFO Technologies Limited and Stark's UFO Hosting rests only on name similarity and is not established. |
+| crazyrdp-02 | CrazyRDP | unverified | 2026-10-30 | Police did not name the hoster; sources told BleepingComputer it was CrazyRDP, which went offline. |
+| crazyrdp-07 | CrazyRDP | unverified | 2026-10-30 | Serverion / Des Capital B.V. is recorded as CrazyRDP's colocation upstream on community-sourced, weak evidence. |
+| dabai-guarantee-04 | Dabai Guarantee | unverified | 2026-10-30 | Flare counts more than 30 guarantee marketplaces that emerged after Huione Guarantee ceased operations in May 2025. |
+| dabai-guarantee-08 | Dabai Guarantee | unverified | 2026-10-30 | The RF guarantee-marketplace report appears to date from about April 2026 (the relaying digest is dated 2026-04-23), not February as earlier |
+| dolphon-1337-ltd-01 | Dolphon 1337 Ltd | unverified | 2026-10-30 | Dolphon 1337 Ltd's historical association with abuse rests on a single source, Excedo. |
+| dolphon-1337-ltd-05 | Dolphon 1337 Ltd | unverified | 2026-10-30 | AS215208 was reportedly registered on 2024-03-28. |
+| dolphon-1337-ltd-07 | Dolphon 1337 Ltd | unverified | 2026-10-30 | A '1337' naming link between Dolphon 1337 Ltd and ELITETEAM is speculative. |
+| evoxt-enterprise-01 | Evoxt Enterprise | unverified | 2026-10-30 | Evoxt Sdn. Bhd. is a Malaysian budget VPS provider with no bulletproof marketing. |
+| evoxt-enterprise-05 | Evoxt Enterprise | unverified | 2026-10-30 | XNNET LLC (AS6134) is noted rather than tracked because it rests on a single source and has no identifiable entity. |
+| femo-it-solutions-ltd-defhost-04 | Femo IT Solutions Ltd (Defhost) | unverified | 2026-10-30 | Femo IT hosts C2 and loader infrastructure for 15+ malware families. |
+| first-server-limited-08 | First Server Limited | unverified | 2026-10-30 | Former Hypercore prefixes now originate from First Server's AS205090 and AS200740. |
+| first-server-limited-09 | First Server Limited | unverified | 2026-10-30 | FIRST SERVER LIMITED (Companies House 14459750) received a first Gazette notice for compulsory strike-off on 2026-10-13 and filed a confirma |
+| first-vpn-service-1vpns-05 | First VPN Service (1VPNS) | unverified | 2026-10-30 | 1VPNS ran ~32 exit nodes in ~27 countries used by at least 25 ransomware groups (FBI FLASH-20260521-001). |
+| flokinet-02 | FlokiNET | unverified | 2026-10-30 | FlokiNET is a commercialized free-speech hosting brand with a multi-jurisdiction presence (Romania, Finland, Iceland) and explicit uncensore |
+| flokinet-05 | FlokiNET | unverified | 2026-10-30 | No law-enforcement action against FlokiNET is recorded. |
+| funnull-technology-inc-03 | FUNNULL Technology Inc. | unverified | 2026-10-30 | FUNNULL is a Taguig (Philippines) company run by a Chinese national. |
+| funnull-technology-inc-08 | FUNNULL Technology Inc. | unverified | 2026-10-30 | Whether the 'CTGCDN' front brand relates to CTG Server Limited is not established. |
+| global-internet-solutions-llc-gir-4vps-04 | Global Internet Solutions LLC (GIR / 4VPS) | unverified | 2026-10-30 | NCCC said GIR's Sevastopol location may point to links with the FSB in Crimea. |
+| global-internet-solutions-llc-gir-4vps-08 | Global Internet Solutions LLC (GIR / 4VPS) | unverified | 2026-10-30 | eSentire associates Storm-1575 with GIR, together with GCS, at moderate confidence. |
+| grinex-03 | Grinex | unverified | 2026-10-30 | The EU listed Grinex in its 19th sanctions package on 2025-10-23 as an A7A5-ecosystem trading platform. |
+| grinex-07 | Grinex | unverified | 2026-10-30 | Chainalysis raised the possibility that the April 2026 Grinex drain was a false-flag exit. |
+| grinex-12 | Grinex | unverified | 2026-10-30 | Exved is a separately designated company, not a Grinex alias. |
+| h-pay-service-plc-05 | H-Pay Service PLC | unverified | 2026-10-30 | The comment period was extended in July 2026 after a portal outage, and the rule is not yet final. |
+| hostslick-03 | HostSlick | unverified | 2026-10-30 | HostSlick's classification rests on only one independent B/C source, so it is held at T3 although ASN-DROP inclusion would normally escalate |
+| hostslick-05 | HostSlick | unverified | 2026-10-30 | HostSlick announced on 2026-02-17 that it had stopped new VPS sales to focus on dedicated and bare-metal servers, claiming GTT and TATA tran |
+| hostype-03 | HOSTYPE | disputed | 2026-10-30 | The registry gives HOSTYPE's country as US while Spamhaus gives TR. |
+| hostype-04 | HOSTYPE | unverified | 2026-10-30 | A relayed Silent Push 2025 table calls HOSTYPE a Wyoming shell with a Gmail abuse contact, DGA usage and a 30-day abuse response. |
+| hostzealot-hz-hosting-ltd-04 | HostZealot (HZ Hosting Ltd) | disputed | 2026-10-30 | A Cl0p campaign dataset shows HZ in 5 of 8 campaigns, adding PTC Windchill (June 2026), but that addition is not reproducible from the publi |
+| hostzealot-hz-hosting-ltd-11 | HostZealot (HZ Hosting Ltd) | unverified | 2026-10-30 | HZ's reputation density is comparable to mainstream hosts, with many hits being Tor relays or VPN/proxy exits. |
+| hostzealot-hz-hosting-ltd-12 | HostZealot (HZ Hosting Ltd) | disputed | 2026-10-30 | Bulgarian registry aggregators disagree on HZ Hosting's owner. |
+| hypercore-ltd-07 | Hypercore LTD | unverified | 2026-10-30 | Former Hypercore prefixes now originate from First Server Limited ASNs (45[.]142[.]122[.]0/24 via AS205090; 185[.]174[.]136[.]0/24 via AS200 |
+| ipidea-residential-proxy-network-04 | IPIDEA residential-proxy network | unverified | 2026-10-30 | A Google executive reportedly named APT28, Sandworm and Volt Typhoon among the threat groups using IPIDEA. |
+| ipidea-residential-proxy-network-09 | IPIDEA residential-proxy network | unverified | 2026-10-30 | iTnews reports that IPIDEA is part of Jiangsu Aidi Information Technology Co., Ltd. |
+| ipidea-residential-proxy-network-10 | IPIDEA residential-proxy network | unverified | 2026-10-30 | IPIDEA's code-signing certificates belong to Hong Kong-registered companies. |
+| kaopu-cloud-hk-limited-09 | Kaopu Cloud HK Limited | unverified | 2026-10-30 | Arctic Wolf reported malicious FortiGate SSO logins from Kaopu in Dec 2025. |
+| kaopu-cloud-hk-limited-11 | Kaopu Cloud HK Limited | unverified | 2026-10-30 | The record lists Cogent, Arelion, NTT, Level3 and PCCW Global as Kaopu's upstream providers. |
+| karina-rashkovska-02 | Karina Rashkovska | unverified | 2026-10-30 | Intrinsec (via a third party) ties AS215789 to Virtualine's UAC-0050 spam, and the network is assessed as part of the Virtualine cluster. |
+| karina-rashkovska-05 | Karina Rashkovska | unverified | 2026-10-30 | The network's former prefixes now originate from SYSECT D.O.O. (AS202799, ME; 147[.]45[.]44[.]0/24) and PSB Hosting Ltd (AS214927; 82[.]115[ |
+| metaspinner-named-as209800-virtualine-fr-04 | metaspinner-named AS209800 (Virtualine front) | unverified | 2026-10-30 | Spamhaus (Sept 2025) reported Virtualine's expansion onto AS209800. |
+| mirhosting-b-v-03 | MIRhosting B.V. | unverified | 2026-10-30 | Whether MIRhosting-owned equipment was among the 800+ servers seized by FIOD is unconfirmed: the FIOD release names no companies and only a  |
+| mirhosting-b-v-06 | MIRhosting B.V. | unverified | 2026-10-30 | Only a Russian-language blog (grade D) also mentions German sites in connection with MIRhosting's 2026 disruption. |
+| mirhosting-b-v-07 | MIRhosting B.V. | unverified | 2026-10-30 | De Volkskrant data showed WorkTitans and MIRhosting as the most-used networks in pro-Russian attacks on Danish bodies (Nov 2025). |
+| mirhosting-b-v-08 | MIRhosting B.V. | unverified | 2026-10-30 | A researcher attributes the 2008 StopGeorgia.ru hosting to the related Innovation IT Solutions Corp; MIRhosting's founder said he could not  |
+| nechaevds-03 | NECHAEVDS | unverified | 2026-10-30 | A relayed Silent Push 2025 table flags AS213194 for 100% DGA domains and a TutaMail abuse contact. |
+| netinnovationllc-03 | NETINNOVATIONLLC | unverified | 2026-10-30 | A relayed Silent Push 2025 table flags AS34985 for a Gmail abuse contact, DGA usage and an 18-day abuse response. |
+| netinnovationllc-04 | NETINNOVATIONLLC | disputed | 2026-10-30 | The registry places NETINNOVATIONLLC in the United States (ARIN) while Spamhaus gives cc JP; its space is mixed APNIC/ARIN/AFRINIC with no e |
+| netnut-alarum-technologies-05 | NetNut (Alarum Technologies) | unverified | 2026-10-30 | Popa was first flagged by QiAnXin XLab in March 2025 as an Android component of the Vo1d botnet. |
+| netnut-alarum-technologies-08 | NetNut (Alarum Technologies) | unverified | 2026-10-30 | GTIG cites reporting that NetNut has been used to spread Mirai variants. |
+| netnut-alarum-technologies-09 | NetNut (Alarum Technologies) | unverified | 2026-10-30 | NetNut is not sanctioned. |
+| nobitex-04 | Nobitex | unverified | 2026-10-30 | The four designated Iranian exchanges handled about $7.7B, roughly 78% of Iran's attributed 2025 crypto volume. |
+| nobitex-05 | Nobitex | unverified | 2026-10-30 | OFAC added Central Bank of Iran wallets on 2026-07-16 and on 2026-08-07 designated the exchanges Shelbit and Aban Tether, the latter for tra |
+| pfcloud-ug-09 | Pfcloud UG | unverified | 2026-10-30 | A Sept 2026 D-grade community note describes a Pfcloud open directory staging FortiGate 60F exploit modules on an IP previously listed as As |
+| pfcloud-ug-10 | Pfcloud UG | unverified | 2026-10-30 | A community post says the Dutch servers seized in Limburg were Tube-Hosting (AS49581) hardware resold to Virtualine through Pfcloud. |
+| phanes-networks-04 | Phanes Networks | unverified | 2026-10-30 | Phanes Networks is a Dutch hoster that rebranded from its predecessor Flaunt7; its reported address is Keteldiep 15, Urk. |
+| pq-hosting-plus-s-r-l-08 | PQ Hosting Plus S.R.L. | unverified | 2026-10-30 | Successor capacity to PQ Hosting Plus sits with WorkTitans/THE.Hosting and UFO Hosting. |
+| privatealps-private-layer-05 | PrivateAlps / Private Layer | unverified | 2026-10-30 | The rud.is weekly Bulletproof Hosting Watch tracks PLI-AS among about 25 curated BPH ASNs (25 in the week of 2026-10-26) and names it one of |
+| privatealps-private-layer-06 | PrivateAlps / Private Layer | unverified | 2026-10-30 | A Bolster AI phishing study names Private Alps among high-profile BPH providers popular on underground forums for VPS/RDP/VPN hosting. |
+| prospero-ooo-proton66-09 | PROSPERO OOO / Proton66 | unverified | 2026-10-30 | Chang Way Technologies (HK) is likely related to Proton66, based on IP shifts and a re-themed panel seen by SpiderLabs, and is tracked as it |
+| prostie-reshenia-llc-webrocket-02 | Prostie Reshenia LLC (WebRocket) | unverified | 2026-10-30 | Qurium (Oct 2026), the only report naming it, says subnets of 46[.]226[.]160[.]0/21, 92[.]246[.]132[.]0-92[.]246[.]143[.]255 and 89[.]169[.] |
+| prostie-reshenia-llc-webrocket-03 | Prostie Reshenia LLC (WebRocket) | unverified | 2026-10-30 | Qurium says Prostie Reshenia accounts for more than 8,000 addresses (about 6%) of the current Aeza/NetCrafters estate. |
+| qtfy-qscan-qtrouter-05 | QTFY (QScan / QTRouter) | unverified | 2026-10-30 | Reported QTRouter victims include NASA, the Federal Reserve, DOE, DOJ, HHS, NIH and the US Senate. |
+| qtfy-qscan-qtrouter-07 | QTFY (QScan / QTRouter) | unverified | 2026-10-30 | No ASN of QTFY's own has been published. |
+| qwins-ltd-04 | QWINS LTD | unverified | 2026-10-30 | QWINS LTD was reportedly incorporated on 2024-11-11. |
+| qwins-ltd-07 | QWINS LTD | unverified | 2026-10-30 | The link between QWINS and the Aeza UK-shell network remains single-source. |
+| railnet-llc-virtualine-technologies-05 | Railnet LLC / Virtualine Technologies | unverified | 2026-10-30 | Karina Rashkovska (AS215789) is likely also part of the Virtualine operation. |
+| railnet-llc-virtualine-technologies-10 | Railnet LLC / Virtualine Technologies | unverified | 2026-10-30 | Virtualine advertised on Exploit.in from 2024-08-28 ('all illegal/black hat activities ... except for child contents and terrorism') and on  |
+| railnet-llc-virtualine-technologies-13 | Railnet LLC / Virtualine Technologies | unverified | 2026-10-30 | The operator posted an open letter on virtualine.org denying the allegations and saying it could rebrand in 'a day, perhaps even less'. |
+| railnet-llc-virtualine-technologies-14 | Railnet LLC / Virtualine Technologies | unverified | 2026-10-30 | AS219199 (GENYUS SOFT LTD [SC], created 2026-07-15) announced four broker-leased /24s from 2026-10-22, including 172[.]111[.]246[.]0/24 prev |
+| railnet-llc-virtualine-technologies-15 | Railnet LLC / Virtualine Technologies | unverified | 2026-10-30 | 94[.]26[.]38[.]0/24, registered to the RIPE org RetryHost (maintained by VIRTUALINE-MNT), got a new route object on 2026-10-28 and has since |
+| shangxing-tech-limited-09 | SHANGXING TECH LIMITED | unverified | 2026-10-30 | Community RAT feeds list several 103.112.97.x hosts. |
+| shinjiru-04 | Shinjiru | unverified | 2026-10-30 | Spamhaus flagged an unnamed Malaysia-based ISP matching Shinjiru's profile. |
+| shinjiru-06 | Shinjiru | unverified | 2026-10-30 | No law-enforcement action against Shinjiru is recorded. |
+| silent-connection-ltd-06 | Silent Connection Ltd | unverified | 2026-10-30 | Another German UG holds a second ASN under the same MICRODEX-AS handle, a possible re-homing by the same operator. |
+| starcloud-global-triad-nexus-01 | StarCloud Global (Triad Nexus) | unverified | 2026-10-30 | A relayed Silent Push 2025 table lists AS140224 'STARCLOUD GLOBAL SG' as Triad Nexus infrastructure, with a residential Colorado address and |
+| starcloud-global-triad-nexus-02 | StarCloud Global (Triad Nexus) | unverified | 2026-10-30 | A phishing-ASN ranking put AS140224 at #13 (237,056 routed IPv4; 3,032 phishing attacks). |
+| stark-industries-solutions-02 | Stark Industries Solutions | unverified | 2026-10-30 | The EU renewed the hybrid-threats regime on Oct 8 2026 to Oct 9 2027 (80 individuals, 20 entities); the Stark entries were not individually  |
+| tiger-network-limited-tiger-net-03 | Tiger Network Limited (Tiger Net) | disputed | 2026-10-30 | A relayed Silent Push 2025 table lists 'AS48589 SOW-A-AS (Tiger Net) - Ukraine, Gmail, DGA', reporting the operator as Ukraine-linked. |
+| tiger-network-limited-tiger-net-05 | Tiger Network Limited (Tiger Net) | unverified | 2026-10-30 | TIGER NETWORK LIMITED (Companies House 11161830, incorporated 2018-01-22) files dormant accounts and received a first Gazette notice for com |
+| tnsecurity-ltd-evilempire-06 | Tnsecurity Ltd (EVILEMPIRE) | unverified | 2026-10-30 | Companies House shows a TNSECURITY LTD (15103352, incorporated 2023-08-29) dissolved on 2025-02-04, a name match to the RIPE org that is not |
+| tudou-guarantee-07 | Tudou Guarantee | unverified | 2026-10-30 | Tudou's gambling operations continue, and Elliptic says it remains to be seen whether the Jan 2026 wind-down is a full shutdown or a pivot. |
+| uab-host-baltic-serveroffer-lt-06 | UAB Host Baltic (serveroffer.lt) | unverified | 2026-10-30 | An Oct 2026 community post says AnonRDP's Lithuanian 'bulletproof' servers are hosted at Host Baltic and tunnelled through SMARTNET Germany. |
+| ufo-hosting-llc-05 | UFO Hosting LLC | unverified | 2026-10-30 | Russian-language sources (D-grade) report THE.Hosting, UFO.Hosting and GEO.Hosting customers losing VPSs around the May 2026 raid; GEO.Hosti |
+| vpsvault-host-ltd-07 | VPSVAULT.HOST LTD | unverified | 2026-10-30 | The ASN holder matches the Scottish company VPSVAULT.HOST LTD (Companies House SC832751, incorporated 2024-12-30) by exact name only. |
+| waicore-hosting-ltd-08 | WAIcore Hosting Ltd | unverified | 2026-10-30 | Besides aurologic, the record lists RoyaleHosting BV, iFog GmbH and Netshield LTD as WAIcore's upstream providers. |
+| worktitans-b-v-the-hosting-05 | WorkTitans B.V. / THE.Hosting | unverified | 2026-10-30 | WorkTitans B.V. was formed in 2019 as a recruitment firm, and Fezzy B.V. is its sole shareholder. |
+| worktitans-b-v-the-hosting-08 | WorkTitans B.V. / THE.Hosting | disputed | 2026-10-30 | Reports on the raid's impact conflict: ELLIO saw scanning back near pre-raid levels more than a week later, one telemetry source reports a 9 |
+| xeltox-enterprises-ltd-cryptomus-heleket-03 | Xeltox Enterprises Ltd (Cryptomus / Heleket) | unverified | 2026-10-30 | The record lists a FINTRAC (Canada) penalty of Oct 2025 against the entity. |
+| xeltox-enterprises-ltd-cryptomus-heleket-07 | Xeltox Enterprises Ltd (Cryptomus / Heleket) | unverified | 2026-10-30 | The Femo IT Solutions Ltd (Defhost) row records Heleket as Defhost's payment processor. |
+| xeltox-enterprises-ltd-cryptomus-heleket-08 | Xeltox Enterprises Ltd (Cryptomus / Heleket) | disputed | 2026-10-30 | Krebs (2026-10-14) reports that Heleket's support denies any Cryptomus affiliation. |
+| zomro-b-v-01 | Zomro B.V. | unverified | 2026-10-30 | Zomro B.V. (KvK 75862662) is a Dutch VPS provider based in Enschede. |
+| zomro-b-v-06 | Zomro B.V. | unverified | 2026-10-30 | Zomro's AUP forbids malware and C2. |
+
+### Tier evidence check
+
+Entities whose verified, tier-relevant claims do not reach the minimum in taxonomy section 6 for their tier (T1: a Grade A source or 3+ independent B/C; T2: 2+ B/C; T3: 1 B or 2 C; T4: any B/C/E; T5: any, unverified included). Publishers stand in for independence. Each is a prompt to add the missing claim or source, or to review the tier.
+
+| Entity | Tier | Evidence in claims |
+|--------|------|--------------------|
+| Karina Rashkovska | T2 | A 0 · B 1 · C 0 · D 0 · E 0 (distinct publishers) |
+| PrivateAlps / Private Layer | T1 | A 0 · B 1 · C 1 · D 0 · E 1 (distinct publishers) |
+| Dabai Guarantee | T2 | A 0 · B 1 · C 0 · D 0 · E 0 (distinct publishers) |
+| IPIDEA residential-proxy network | T2 | A 0 · B 1 · C 0 · D 0 · E 0 (distinct publishers) |
+
 ### ASN register check dates
 
 | last_checked | Rows |

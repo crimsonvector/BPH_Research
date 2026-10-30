@@ -977,7 +977,629 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 Every relationship between tracked entities and the parties around them (operators, fronts, successors, upstreams, IP suppliers, payment rails, sister companies), drawn from `data/relationships.csv` with its sources. The hand-drawn diagrams earlier in this document give the narrative; these are complete and regenerated whenever the data changes.
 
 <!-- generated:appendix-c:start -->
-> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read *from → to* with the relationship type as label; solid = verified, dashed = unverified or disputed, "former" = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are external parties. 0 relationships, 0 parties.
+> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read *from → to* with the relationship type as label; solid = verified, dashed with `?` = unverified or disputed, `former` = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are external parties. 174 relationships among 171 parties, shown in three views; an entity can appear in more than one.
+
+### Corporate structure
+
+93 relationships: who operates, fronts for, succeeds or shares ownership with whom.
+
+#### Aeza International Ltd, Datavice MCHJ, GCSAS (Global Connectivity Solutions LLP), Global Internet Solutions LLC (GIR / 4VPS) and 8 more
+
+```mermaid
+flowchart LR
+  n1["AS213010"]:::ext
+  n2["Zservers"]:::t1
+  n1 -->|successor-of| n2
+  n3["AS213194"]:::ext
+  n3 -->|successor-of| n2
+  n4["AS61336"]:::ext
+  n4 -->|successor-of| n2
+  n5["Datavice MCHJ"]:::t1
+  n6["Aeza International Ltd"]:::t1
+  n5 -->|front-of| n6
+  n7["First Server Limited"]:::t2
+  n8["Hypercore LTD"]:::t1
+  n7 -.->|associated-with ?| n8
+  n9["IHOR HOSTING LTD"]:::ext
+  n7 -->|associated-with| n9
+  n10["First Server, SL (AS199685)"]:::ext
+  n7 -->|sister-of| n10
+  n11["GCSAS (Global Connectivity Solutions LLP)"]:::t1
+  n11 -->|associated-with| n6
+  n11 -->|associated-with| n2
+  n12["Global Internet Solutions LLC (GIR / 4VPS)"]:::t1
+  n11 -->|front-of| n12
+  n11 -->|sister-of| n12
+  n12 -->|associated-with| n6
+  n8 -->|front-of| n6
+  n13["PINSPB (Petersburg Internet Network Ltd)"]:::t2
+  n9 -->|associated-with| n13
+  n14["NECHAEVDS"]:::t3
+  n14 -->|successor-of| n2
+  n15["Prostie Reshenia LLC (WebRocket)"]:::t5
+  n15 -->|associated-with| n5
+  n16["Megalink / PG-19"]:::ext
+  n15 -->|successor-of| n16
+  n17["QWINS LTD"]:::t2
+  n17 -.->|associated-with ?| n6
+  n18["Smart Digital Ideas DOO"]:::ext
+  n18 -->|front-of| n6
+  n19["Tnsecurity Ltd (EVILEMPIRE)"]:::t2
+  n19 -->|associated-with| n6
+  n20["XHOST Internet Solutions LP"]:::ext
+  n20 -->|front-of| n2
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef t3 fill:#b45309,color:#fff,stroke:#78350f
+  classDef t5 fill:#94a3b8,color:#000,stroke:#475569
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### MIRhosting B.V., PQ Hosting Plus S.R.L., Stark Industries Solutions, WorkTitans B.V. / THE.Hosting and 1 more
+
+```mermaid
+flowchart LR
+  n1["Fezzy B.V."]:::ext
+  n2["WorkTitans B.V. / THE.Hosting"]:::t1
+  n1 -.->|operator-of ?| n2
+  n3["Innovation IT Solutions Corp"]:::ext
+  n4["MIRhosting B.V."]:::t1
+  n3 -.->|sister-of ?| n4
+  n5["Stark Industries Solutions"]:::t1
+  n4 -->|associated-with| n5
+  n6["nLighten"]:::ext
+  n6 -.->|former associated-with| n4
+  n7["PQ Hosting Plus S.R.L."]:::t1
+  n8["PQ.Hosting"]:::ext
+  n7 -.->|successor-of ?| n8
+  n7 -->|successor-of| n5
+  n8 -.->|operator-of ?| n7
+  n8 -->|operator-of| n5
+  n9["ServerKing B.V. (AS48729)"]:::ext
+  n9 -->|associated-with| n4
+  n5 -->|front-of| n7
+  n10["StormWall s.r.o."]:::ext
+  n10 -.->|associated-with ?| n5
+  n11["UFO Hosting LLC"]:::t2
+  n11 -.->|successor-of ?| n7
+  n11 -->|successor-of| n5
+  n2 -.->|successor-of ?| n7
+  n2 -->|successor-of| n5
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Railnet LLC / Virtualine Technologies, Karina Rashkovska, KPROHOST, metaspinner-named AS209800 (Virtualine front) and 1 more
+
+```mermaid
+flowchart LR
+  n1["GENYUS SOFT LTD (AS219199)"]:::ext
+  n2["Railnet LLC / Virtualine Technologies"]:::t1
+  n1 -.->|associated-with ?| n2
+  n3["Homaye Jahan Nama Co. (AS51130)"]:::ext
+  n3 -.->|associated-with ?| n2
+  n4["metaspinner-named AS209800 (Virtualine front)"]:::t2
+  n4 -->|front-of| n2
+  n5["Pfcloud UG"]:::t2
+  n5 -.->|associated-with ?| n2
+  n6["PSB Hosting Ltd (AS214927)"]:::ext
+  n7["Karina Rashkovska"]:::t2
+  n6 -.->|successor-of ?| n7
+  n2 -.->|operator-of ?| n7
+  n8["KPROHOST"]:::t2
+  n2 -->|operator-of| n8
+  n9["RetryHost"]:::ext
+  n2 -->|operator-of| n9
+  n2 -->|successor-of| n4
+  n10["SYSECT D.O.O. (AS202799)"]:::ext
+  n10 -.->|successor-of ?| n7
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### CTG Server Limited, FUNNULL Technology Inc.
+
+```mermaid
+flowchart LR
+  n1["Bole CDN"]:::ext
+  n2["FUNNULL Technology Inc."]:::t1
+  n1 -->|front-of| n2
+  n3["CDN1.ai"]:::ext
+  n3 -->|front-of| n2
+  n4["CDN5.com"]:::ext
+  n4 -->|front-of| n2
+  n5["CTG Server Limited"]:::t1
+  n5 -->|associated-with| n2
+  n6["CTGCDN"]:::ext
+  n6 -->|front-of| n2
+  n7["Yunray.ai"]:::ext
+  n7 -->|front-of| n2
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### BL Networks (BitLaunch)
+
+```mermaid
+flowchart LR
+  n1["BL Networks (BitLaunch)"]:::t3
+  n2["DigitalOcean"]:::ext
+  n1 -->|associated-with| n2
+  n3["Liber Systems Ltd"]:::ext
+  n1 -->|associated-with| n3
+  n4["Linode"]:::ext
+  n1 -->|associated-with| n4
+  n5["Vultr"]:::ext
+  n1 -->|associated-with| n5
+  classDef t3 fill:#b45309,color:#fff,stroke:#78350f
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### aurologic GmbH
+
+```mermaid
+flowchart LR
+  n1["aurologic GmbH"]:::t2
+  n2["Tube-Hosting (AS49581)"]:::ext
+  n1 -.->|associated-with ?| n2
+  n3["combahton GmbH"]:::ext
+  n1 -->|successor-of| n3
+  n4["NEON CORE NETWORK LLC (AS205775)"]:::ext
+  n4 -.->|former associated-with| n1
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### PrivateAlps / Private Layer, Global-Data System IT Corp (SWISSNETWORK02)
+
+```mermaid
+flowchart LR
+  n1["Global-Data System IT Corp (SWISSNETWORK02)"]:::t2
+  n2["PrivateAlps / Private Layer"]:::t1
+  n1 -->|associated-with| n2
+  n3["Simple Carrier LLC"]:::ext
+  n1 -->|successor-of| n3
+  n2 -->|associated-with| n1
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Media Land LLC
+
+```mermaid
+flowchart LR
+  n1["Media Land LLC"]:::t1
+  n2["Data Center Kirishi"]:::ext
+  n1 -->|operator-of| n2
+  n3["Media Land Technology"]:::ext
+  n1 -->|operator-of| n3
+  n4["ML.Cloud LLC"]:::ext
+  n1 -->|sister-of| n4
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### QTFY (QScan / QTRouter)
+
+```mermaid
+flowchart LR
+  n1["Nanjing Xinjiuwei Network Technology Co."]:::ext
+  n2["QTFY (QScan / QTRouter)"]:::t1
+  n1 -->|associated-with| n2
+  n3["PRC MSS"]:::ext
+  n2 -->|associated-with| n3
+  n4["PRC PLA"]:::ext
+  n2 -->|associated-with| n4
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### AnonRDP / Blatant Technologies, UAB Host Baltic (serveroffer.lt)
+
+```mermaid
+flowchart LR
+  n1["AnonRDP / Blatant Technologies"]:::t1
+  n2["OPTIBOUNCE"]:::ext
+  n1 -->|associated-with| n2
+  n3["UAB Host Baltic (serveroffer.lt)"]:::t2
+  n3 -.->|associated-with ?| n1
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Kaopu Cloud HK Limited
+
+```mermaid
+flowchart LR
+  n1["BEDGE CO LIMITED (AS63139)"]:::ext
+  n2["Kaopu Cloud HK Limited"]:::t1
+  n1 -->|associated-with| n2
+  n3["ANY DIGITAL PTE. LTD. (AS140666)"]:::ext
+  n2 -.->|former associated-with| n3
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### PROSPERO OOO / Proton66, Chang Way Technologies Co. Limited
+
+```mermaid
+flowchart LR
+  n1["Chang Way Technologies Co. Limited"]:::t2
+  n2["PROSPERO OOO / Proton66"]:::t1
+  n1 -->|associated-with| n2
+  n2 -.->|associated-with ?| n1
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+```
+
+#### DDoS-Guard
+
+```mermaid
+flowchart LR
+  n1["DDoS-Guard"]:::t5
+  n2["8kun"]:::ext
+  n1 -->|associated-with| n2
+  n3["Parler"]:::ext
+  n1 -->|associated-with| n3
+  classDef t5 fill:#94a3b8,color:#000,stroke:#475569
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### CrazyRDP
+
+```mermaid
+flowchart LR
+  n1["Delis LLC"]:::ext
+  n2["CrazyRDP"]:::t1
+  n1 -->|operator-of| n2
+  n3["Limenet LLC"]:::ext
+  n3 -->|operator-of| n2
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Phanes Networks
+
+```mermaid
+flowchart LR
+  n1["Phanes Networks"]:::t4
+  n2["Flaunt7"]:::ext
+  n1 -.->|successor-of ?| n2
+  n3["SKB Enterprise B.V."]:::ext
+  n3 -->|operator-of| n1
+  classDef t4 fill:#475569,color:#fff,stroke:#1e293b
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Tiger Network Limited (Tiger Net)
+
+```mermaid
+flowchart LR
+  n1["Tiger Network Limited (Tiger Net)"]:::t3
+  n2["Delta Ltd (AS213220)"]:::ext
+  n1 -->|associated-with| n2
+  n3["Haruka Network Limited (AS197860)"]:::ext
+  n1 -->|associated-with| n3
+  classDef t3 fill:#b45309,color:#fff,stroke:#78350f
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Other single links
+
+```mermaid
+flowchart LR
+  n1["Alarum Technologies Ltd"]:::ext
+  n2["NetNut (Alarum Technologies)"]:::t2
+  n1 -->|operator-of| n2
+  n3["Andwase Limited (ex-Network Management / IP4MARKET)"]:::t5
+  n4["Network Management Ltd / IP4MARKET"]:::ext
+  n3 -.->|successor-of ?| n4
+  n5["Asocks"]:::t2
+  n6["LVCHA VPN (lvcha.in)"]:::ext
+  n5 -.->|associated-with ?| n6
+  n7["BtHoster"]:::t1
+  n8["INTERNET INTELLIGENCE COMPANY LTD (AS214018)"]:::ext
+  n7 -.->|associated-with ?| n8
+  n9["Cloudzy / abrNOC"]:::t2
+  n10["BuyVM / Frantech Solutions"]:::t4
+  n9 -.->|operator-of ?| n10
+  n11["Dolphon 1337 Ltd"]:::t5
+  n12["ELITETEAM / 1337TEAM LIMITED"]:::t1
+  n11 -.->|associated-with ?| n12
+  n13["Jiangsu Aidi Information Technology Co., Ltd."]:::ext
+  n14["IPIDEA residential-proxy network"]:::t2
+  n13 -.->|operator-of ?| n14
+  n15["SHANGXING TECH LIMITED"]:::t2
+  n16["Fastmos Co Limited (AS138644)"]:::ext
+  n15 -.->|associated-with ?| n16
+  n17["StarCloud Global (Triad Nexus)"]:::t3
+  n18["Triad Nexus"]:::ext
+  n17 -.->|front-of ?| n18
+  n19["WAIcore Ltd"]:::ext
+  n20["WAIcore Hosting Ltd"]:::t2
+  n19 -->|operator-of| n20
+  n21["WULDI LLC (AS218688)"]:::ext
+  n22["Altawk (Daniil Yevchenko)"]:::t2
+  n21 -.->|successor-of ?| n22
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef t3 fill:#b45309,color:#fff,stroke:#78350f
+  classDef t4 fill:#475569,color:#fff,stroke:#1e293b
+  classDef t5 fill:#94a3b8,color:#000,stroke:#475569
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+### Network supply
+
+54 relationships: upstream transit and IP-space suppliers.
+
+#### Aeza International Ltd, BtHoster, Femo IT Solutions Ltd (Defhost), Railnet LLC / Virtualine Technologies and 13 more
+
+```mermaid
+flowchart LR
+  n1["Andwase Limited (ex-Network Management / IP4MARKET)"]:::t5
+  n2["Aeza International Ltd"]:::t1
+  n1 -->|ip-supplier-of| n2
+  n3["First Server Limited"]:::t2
+  n1 -->|ip-supplier-of| n3
+  n4["NTX Technologies"]:::ext
+  n1 -->|ip-supplier-of| n4
+  n5["AS215436"]:::ext
+  n6["KPROHOST"]:::t2
+  n5 -.->|former upstream-of| n6
+  n7["AS43641"]:::ext
+  n7 -.->|former upstream-of| n6
+  n8["aurologic GmbH"]:::t2
+  n8 -->|upstream-of| n2
+  n9["Altawk (Daniil Yevchenko)"]:::t2
+  n8 -->|upstream-of| n9
+  n10["Femo IT Solutions Ltd (Defhost)"]:::t1
+  n8 -->|upstream-of| n10
+  n11["Global-Data System IT Corp (SWISSNETWORK02)"]:::t2
+  n8 -->|upstream-of| n11
+  n12["Karina Rashkovska"]:::t2
+  n8 -.->|former upstream-of| n12
+  n13["metaspinner-named AS209800 (Virtualine front)"]:::t2
+  n8 -.->|former upstream-of| n13
+  n14["Railnet LLC / Virtualine Technologies"]:::t1
+  n8 -->|upstream-of| n14
+  n15["Tnsecurity Ltd (EVILEMPIRE)"]:::t2
+  n8 -->|upstream-of| n15
+  n16["WAIcore Hosting Ltd"]:::t2
+  n8 -->|upstream-of| n16
+  n17["Axiom Asia Services"]:::ext
+  n17 -.->|ip-supplier-of ?| n2
+  n18["iFog GmbH"]:::ext
+  n18 -.->|upstream-of ?| n16
+  n19["IROST"]:::ext
+  n19 -.->|ip-supplier-of ?| n2
+  n20["Netshield LTD"]:::ext
+  n20 -.->|upstream-of ?| n16
+  n21["PEERYX NETWORK SAS (AS213382)"]:::ext
+  n21 -.->|former upstream-of| n14
+  n22["Pfcloud UG"]:::t2
+  n22 -.->|former upstream-of| n6
+  n22 -->|upstream-of| n14
+  n23["Plant Holding"]:::ext
+  n23 -.->|ip-supplier-of ?| n2
+  n24["Prostie Reshenia LLC (WebRocket)"]:::t5
+  n24 -.->|ip-supplier-of ?| n2
+  n25["RapidSeedbox"]:::ext
+  n25 -.->|ip-supplier-of ?| n2
+  n26["RoyaleHosting BV"]:::ext
+  n26 -.->|upstream-of ?| n16
+  n27["SS-NET (AS204428) / 4Vendeta"]:::ext
+  n28["BtHoster"]:::t1
+  n27 -->|upstream-of| n28
+  n29["Technology Enriched Company FZCO"]:::ext
+  n29 -.->|ip-supplier-of ?| n2
+  n30["Tube-Hosting (AS49581)"]:::ext
+  n30 -->|upstream-of| n28
+  n30 -->|upstream-of| n22
+  n31["UAB Host Baltic (serveroffer.lt)"]:::t2
+  n31 -->|upstream-of| n28
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef t5 fill:#94a3b8,color:#000,stroke:#475569
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Kaopu Cloud HK Limited
+
+```mermaid
+flowchart LR
+  n1["Arelion"]:::ext
+  n2["Kaopu Cloud HK Limited"]:::t1
+  n1 -.->|upstream-of ?| n2
+  n3["Cogent"]:::ext
+  n3 -.->|upstream-of ?| n2
+  n4["Level3"]:::ext
+  n4 -.->|upstream-of ?| n2
+  n5["NTT"]:::ext
+  n5 -.->|upstream-of ?| n2
+  n6["PCCW Global"]:::ext
+  n6 -.->|upstream-of ?| n2
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### ELITETEAM / 1337TEAM LIMITED, DDoS-Guard
+
+```mermaid
+flowchart LR
+  n1["Crex Fex Pex (AS3555)"]:::ext
+  n2["ELITETEAM / 1337TEAM LIMITED"]:::t1
+  n1 -.->|former upstream-of| n2
+  n3["DDoS-Guard"]:::t5
+  n3 -.->|former upstream-of| n2
+  n4["Filanco (AS3175)"]:::ext
+  n2 -.->|former upstream-of| n4
+  n5["Infolika (AS203804)"]:::ext
+  n5 -.->|former upstream-of| n2
+  n6["RAIT TELECOM (AS213254)"]:::ext
+  n6 -.->|former upstream-of| n2
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t5 fill:#94a3b8,color:#000,stroke:#475569
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### MIRhosting B.V., WorkTitans B.V. / THE.Hosting
+
+```mermaid
+flowchart LR
+  n1["ADCDATA.COM (AS135330)"]:::ext
+  n2["WorkTitans B.V. / THE.Hosting"]:::t1
+  n1 -->|upstream-of| n2
+  n3["FBW Networks (AS49434)"]:::ext
+  n3 -->|upstream-of| n2
+  n4["MIRhosting B.V."]:::t1
+  n4 -.->|former upstream-of| n2
+  n5["PIXOOF TEKNOLOJI (AS51722)"]:::ext
+  n2 -->|ip-supplier-of| n5
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### HostSlick
+
+```mermaid
+flowchart LR
+  n1["GTT"]:::ext
+  n2["HostSlick"]:::t3
+  n1 -.->|upstream-of ?| n2
+  n3["TATA"]:::ext
+  n3 -.->|upstream-of ?| n2
+  n4["WorldStream (AS49981)"]:::ext
+  n4 -.->|former upstream-of| n2
+  classDef t3 fill:#b45309,color:#fff,stroke:#78350f
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Chang Way Technologies Co. Limited
+
+```mermaid
+flowchart LR
+  n1["Chang Way Technologies Co. Limited"]:::t2
+  n2["B2 Net Solutions / ServerMania (AS55286)"]:::ext
+  n1 -->|ip-supplier-of| n2
+  n3["OVH"]:::ext
+  n3 -->|upstream-of| n1
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Other single links
+
+```mermaid
+flowchart LR
+  n1["NovoServe B.V. (AS204601)"]:::ext
+  n2["Zomro B.V."]:::t5
+  n1 -->|upstream-of| n2
+  n3["Serverion / Des Capital B.V."]:::ext
+  n4["CrazyRDP"]:::t1
+  n3 -.->|upstream-of ?| n4
+  n5["SMARTNET (AS203446)"]:::ext
+  n6["AnonRDP / Blatant Technologies"]:::t1
+  n5 -->|upstream-of| n6
+  n7["SpectraIP (AS62068/AS218878)"]:::ext
+  n8["Phanes Networks"]:::t4
+  n7 -->|upstream-of| n8
+  n9["Voxility"]:::ext
+  n10["AlexHost"]:::t4
+  n9 -.->|upstream-of ?| n10
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t4 fill:#475569,color:#fff,stroke:#1e293b
+  classDef t5 fill:#94a3b8,color:#000,stroke:#475569
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+### Financial layer
+
+27 relationships: payment rails and the financial enablers.
+
+#### A7A5 / Old Vector, Aeza International Ltd, Femo IT Solutions Ltd (Defhost), First VPN Service (1VPNS) and 11 more
+
+```mermaid
+flowchart LR
+  n1["A7 Network"]:::ext
+  n2["Nobitex"]:::t2
+  n1 -->|associated-with| n2
+  n3["A7A5 / Old Vector"]:::t1
+  n1 -->|operator-of| n3
+  n4["Grinex"]:::t1
+  n3 -->|associated-with| n4
+  n5["Aban Tether"]:::ext
+  n6["Bitpin"]:::t3
+  n5 -.->|associated-with ?| n6
+  n5 -.->|associated-with ?| n2
+  n7["Ramzinex"]:::t3
+  n5 -.->|associated-with ?| n7
+  n8["Wallex"]:::t3
+  n5 -.->|associated-with ?| n8
+  n9["Garantex"]:::t1
+  n9 -->|associated-with| n3
+  n10["Exved"]:::ext
+  n9 -->|associated-with| n10
+  n11["InDeFi Bank"]:::ext
+  n9 -->|associated-with| n11
+  n12["Aeza International Ltd"]:::t1
+  n9 -->|payment-rail-of| n12
+  n13["Media Land LLC"]:::t1
+  n9 -->|payment-rail-of| n13
+  n14["Zservers"]:::t1
+  n9 -->|payment-rail-of| n14
+  n4 -->|successor-of| n9
+  n15["MKAN Coin"]:::ext
+  n15 -->|associated-with| n9
+  n16["TokenSpot CJSC"]:::t1
+  n16 -->|front-of| n4
+  n17["Xeltox Enterprises Ltd (Cryptomus / Heleket)"]:::t2
+  n17 -->|payment-rail-of| n12
+  n18["Femo IT Solutions Ltd (Defhost)"]:::t1
+  n17 -.->|payment-rail-of ?| n18
+  n19["First VPN Service (1VPNS)"]:::t1
+  n17 -->|payment-rail-of| n19
+  n20["Stark Industries Solutions"]:::t1
+  n17 -->|payment-rail-of| n20
+  n17 -->|payment-rail-of| n14
+  n21["Yandex"]:::ext
+  n21 -.->|associated-with ?| n3
+  classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef t3 fill:#b45309,color:#fff,stroke:#78350f
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### Dabai Guarantee, Tudou Guarantee
+
+```mermaid
+flowchart LR
+  n1["Dabai Guarantee"]:::t2
+  n2["Huione Guarantee (Haowang Guarantee)"]:::ext
+  n1 -->|successor-of| n2
+  n3["Tudou Guarantee"]:::t2
+  n2 -->|associated-with| n3
+  n3 -->|successor-of| n2
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
+#### H-Pay Service PLC
+
+```mermaid
+flowchart LR
+  n1["H-Pay Service PLC"]:::t2
+  n2["Huione Pay"]:::ext
+  n1 -->|successor-of| n2
+  n3["Huione Group"]:::ext
+  n3 -->|operator-of| n1
+  classDef t2 fill:#c2410c,color:#fff,stroke:#7c2d12
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
 <!-- generated:appendix-c:end -->
 
 ---

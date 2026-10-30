@@ -1,0 +1,175 @@
+from,type,to,status,source_ids,since,notes
+A7 Network,associated-with,Nobitex,verified,OFAC-A7-NETWORK-2026,,Treasury (2026-10-01) states the A7 Network has been linked to Nobitex; nature not specified.
+A7 Network,operator-of,A7A5 / Old Vector,verified,OFAC-GARANTEX; CHAINALYSIS-A7A5,,parent_entity field; A7 LLC is the token's creator. Record does not attribute the sentence to a specific source.
+A7A5 / Old Vector,associated-with,Grinex,verified,CHAINALYSIS-A7A5; TRM-A7A5-2026,,A7A5's economy ran through Grinex; A7A5 minted via Old Vector was used in the Garantex-to-Grinex asset migration.
+Aban Tether,associated-with,Bitpin,unverified,,,No catalogued source; the record states this as fact. OFAC designated Aban Tether (2026-08-07) for transactions with Bitpin; stated in the Nobitex record; no catalogued source.
+Aban Tether,associated-with,Nobitex,unverified,,,No catalogued source; the record states this as fact. OFAC designated Aban Tether (2026-08-07) for transactions with Nobitex; stated in the Nobitex record; no catalogued source.
+Aban Tether,associated-with,Ramzinex,unverified,,,No catalogued source; the record states this as fact. OFAC designated Aban Tether (2026-08-07) for transactions with Ramzinex; stated in the Nobitex record; no catalogued source.
+Aban Tether,associated-with,Wallex,unverified,,,No catalogued source; the record states this as fact. OFAC designated Aban Tether (2026-08-07) for transactions with Wallex; stated in the Nobitex record; no catalogued source.
+ADCDATA.COM (AS135330),upstream-of,WorkTitans B.V. / THE.Hosting,verified,REGISTRY-SNAPSHOT-2026-10,2026-10,"Upstream of AS209847 as of Oct 2026, after MIRhosting went dark."
+Alarum Technologies Ltd,operator-of,NetNut (Alarum Technologies),verified,KREBS-POPA-2026; KREBS-NETNUT,,NASDAQ-listed parent (ALAR) operates NetNut and disputes the allegations.
+Andwase Limited (ex-Network Management / IP4MARKET),ip-supplier-of,Aeza International Ltd,verified,QURIUM-AEZA-2026,,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate."
+Andwase Limited (ex-Network Management / IP4MARKET),ip-supplier-of,First Server Limited,verified,QURIUM-AEZA-2026,,Qurium: Network Management/IP4MARKET prefixes later assigned to Aeza were first used by First Server (tier_basis: 'Qurium IP-supply link').
+Andwase Limited (ex-Network Management / IP4MARKET),ip-supplier-of,NTX Technologies,verified,QURIUM-AEZA-2026,,Qurium: some of those prefixes were first used by NTX Technologies.
+Andwase Limited (ex-Network Management / IP4MARKET),successor-of,Network Management Ltd / IP4MARKET,unverified,QURIUM-AEZA-2026,2025-07-04,Qurium (single report): the Network Management / IP4MARKET estate began moving to Andwase on 2025-07-04.
+AnonRDP / Blatant Technologies,associated-with,OPTIBOUNCE,verified,INTRINSEC-OMEGATECH-2026,,Earlier network previously tied to AnonRDP (Intrinsec).
+Arelion,upstream-of,Kaopu Cloud HK Limited,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+AS213010,successor-of,Zservers,verified,INTRINSEC-UAC-2025,,Intrinsec (high confidence): Zservers prefixes moved to this ASN ('successor hop'); small footprint still announced; not on ASN-DROP.
+AS213194,successor-of,Zservers,verified,INTRINSEC-UAC-2025,,Intrinsec (high confidence): Zservers prefixes moved to this ASN ('successor hop'); small footprint still announced; not on ASN-DROP.
+AS215436,upstream-of,KPROHOST,superseded,REGISTRY-SNAPSHOT-2026-09,,Former upstream/peer of AS214940 (record: 'its upstreams were'); ASN dark since ~2026-08-12.
+AS43641,upstream-of,KPROHOST,superseded,REGISTRY-SNAPSHOT-2026-09,,Former upstream/peer of AS214940 (record: 'its upstreams were'); ASN dark since ~2026-08-12. IPv6 only.
+AS61336,successor-of,Zservers,verified,INTRINSEC-UAC-2025,,Intrinsec (high confidence): Zservers prefixes moved to this ASN ('successor hop'); small footprint still announced; not on ASN-DROP.
+Asocks,associated-with,LVCHA VPN (lvcha.in),unverified,SILENTPUSH-CHINESEVPN,,Record lists 'LVCHA VPN-linked'; Silent Push tied LVCHA VPN to residential-proxy IOCs but the Asocks-IP tie is not in the available summary.
+aurologic GmbH,associated-with,Tube-Hosting (AS49581),unverified,,,No catalogued source; the record states this as fact. The BtHoster record labels AS49581 '(aurologic)'; the exact link is unstated and no source is given.
+aurologic GmbH,successor-of,combahton GmbH,verified,RF-AUROLOGIC,2023,Formed in 2023 following the transition of combahton's fastpipe (announced Nov 2023); combahton is listed as the predecessor network.
+aurologic GmbH,upstream-of,Aeza International Ltd,verified,RF-AUROLOGIC; QURIUM-AEZA-2026,,AS30823 carried ~half of Aeza prefixes (Nov 2025) and was still an AS210644 upstream on 2026-09-22.
+aurologic GmbH,upstream-of,Altawk (Daniil Yevchenko),verified,QURIUM-DOPPELGANGER,,"Qurium: Russia-linked infrastructure behind aurologic (servers at Tornado DC, Langen); the aurologic row credits Qurium. AS209946 has had no routes since 2026-10-02."
+aurologic GmbH,upstream-of,Femo IT Solutions Ltd (Defhost),verified,RF-AUROLOGIC,,RF names Femo IT/Defhost as an aurologic downstream.
+aurologic GmbH,upstream-of,Global-Data System IT Corp (SWISSNETWORK02),verified,RF-AUROLOGIC,,RF names it as an aurologic downstream.
+aurologic GmbH,upstream-of,Karina Rashkovska,superseded,RF-AUROLOGIC,,Historical upstream of AS215789; registration defunct.
+aurologic GmbH,upstream-of,metaspinner-named AS209800 (Virtualine front),superseded,RF-AUROLOGIC,,AS209800 was announced solely via aurologic; ASN since re-issued to ZEMA GbR.
+aurologic GmbH,upstream-of,Railnet LLC / Virtualine Technologies,verified,RF-AUROLOGIC,,~95% of Virtualine prefixes (Aug 2025); still a DDoS-protection tunnel hop in a community traceroute (Oct 2026).
+aurologic GmbH,upstream-of,Tnsecurity Ltd (EVILEMPIRE),verified,QURIUM-DOPPELGANGER,,Historical; network defunct. The aurologic row says Qurium adds Tnsecurity to RF's downstream list.
+aurologic GmbH,upstream-of,WAIcore Hosting Ltd,verified,QURIUM-DOPPELGANGER; RF-AUROLOGIC,,Qurium names WAIcore as an aurologic downstream; the Qurium report is not specified and no Qurium ID is in this row's sources.
+Axiom Asia Services,ip-supplier-of,Aeza International Ltd,unverified,QURIUM-AEZA-2026,,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate."
+BEDGE CO LIMITED (AS63139),associated-with,Kaopu Cloud HK Limited,verified,REGISTRY-SNAPSHOT-2026-10,2026-08,Originates six former AS138915 prefixes since late Aug-early Sep 2026; nature of the link not stated.
+BL Networks (BitLaunch),associated-with,DigitalOcean,verified,BUSHIDOTOKEN-BITLAUNCH-2025,,Reseller: BitLaunch resells DigitalOcean capacity (record's country_operations; BushidoToken notes mainstream-cloud reselling).
+BL Networks (BitLaunch),associated-with,Liber Systems Ltd,verified,QURIUM-DOPPELGANGER,,Qurium: BL Networks' routing is tied to UK company Liber Systems Ltd; the nature of the tie is not specified.
+BL Networks (BitLaunch),associated-with,Linode,verified,BUSHIDOTOKEN-BITLAUNCH-2025,,Reseller: BitLaunch resells Linode capacity.
+BL Networks (BitLaunch),associated-with,Vultr,verified,BUSHIDOTOKEN-BITLAUNCH-2025,,Reseller: BitLaunch resells Vultr capacity.
+Bole CDN,front-of,FUNNULL Technology Inc.,verified,SILENTPUSH-TRIADNEXUS-2026; SILENTPUSH-FUNNULL,,Front brand per Silent Push. Launched before the May 2025 sanctions.
+BtHoster,associated-with,INTERNET INTELLIGENCE COMPANY LTD (AS214018),unverified,SPAMHAUS-ASNDROP-2026,,'Sibling-looking' ASN on ASN-DROP; lead only.
+CDN1.ai,front-of,FUNNULL Technology Inc.,verified,SILENTPUSH-TRIADNEXUS-2026; SILENTPUSH-FUNNULL,,Front brand per Silent Push. Launched before the May 2025 sanctions.
+CDN5.com,front-of,FUNNULL Technology Inc.,verified,SILENTPUSH-TRIADNEXUS-2026; SILENTPUSH-FUNNULL,,Front brand per Silent Push.
+Chang Way Technologies Co. Limited,associated-with,PROSPERO OOO / Proton66,verified,INTRINSEC-PROSPERO; TRUSTWAVE-PROSPERO,,Intrinsec calls Chang Way a 'likely related' network of PROSPERO/Proton66; SpiderLabs saw IP shifts from Proton66 to Chang Way ASNs and a shared panel re-themed CHANGWAY/HOSTWAY.
+Chang Way Technologies Co. Limited,ip-supplier-of,B2 Net Solutions / ServerMania (AS55286),verified,REGISTRY-SNAPSHOT-2026-10,2026-09-30,Route objects created by lir-hk-changway-1-MNT and UFOCORP-MNT (2026-09-30 to 2026-10-24) authorise AS55286 to originate four /24s.
+Cloudzy / abrNOC,operator-of,BuyVM / Frantech Solutions,unverified,BUYVM-SELF,,BuyVM's site footer says 'A division of Cloudzy' (2026-10-30); AS53667 is still registered to FranTech Solutions.
+Cogent,upstream-of,Kaopu Cloud HK Limited,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+Crex Fex Pex (AS3555),upstream-of,ELITETEAM / 1337TEAM LIMITED,superseded,,2020,Historical upstream (2020-22); record gives no source (TEAMCYMRU-ELITETEAM-2022 likeliest).
+CTG Server Limited,associated-with,FUNNULL Technology Inc.,verified,SILENTPUSH-FUNNULL,,AS152194 hosted FUNNULL points of presence in Silent Push's 2024 mapping (one of several ASNs); not FUNNULL's parent and not designated.
+CTGCDN,front-of,FUNNULL Technology Inc.,verified,SILENTPUSH-TRIADNEXUS-2026; SILENTPUSH-FUNNULL,,Front brand per Silent Push. Relation to CTG Server Limited not established.
+Dabai Guarantee,successor-of,Huione Guarantee (Haowang Guarantee),verified,RF-GUARANTEE-2026,,RF/Flare: one of the guarantee marketplaces that succeeded Huione Guarantee after it ceased in May 2025.
+Datavice MCHJ,front-of,Aeza International Ltd,verified,OFAC-MEDIALAND; REGISTRY-SNAPSHOT-2026-10,,"Uzbek evasion vehicle, OFAC-designated 2025-11-19."
+DDoS-Guard,associated-with,8kun,verified,KREBS-DDOSGUARD-2021,2020-10,"DDoS-protection fronting for 8kun/QAnon sites, not direct hosting (Krebs; Reuters)."
+DDoS-Guard,associated-with,Parler,verified,KREBS-DDOSGUARD-2021,2021-01,"DDoS-protection fronting for Parler, not direct hosting."
+DDoS-Guard,upstream-of,ELITETEAM / 1337TEAM LIMITED,superseded,TEAMCYMRU-ELITETEAM-2022,2020,Historical upstream (2020-22); record gives no source (TEAMCYMRU-ELITETEAM-2022 likeliest). AS49612.
+Delis LLC,operator-of,CrazyRDP,verified,SPAMHAUS-ASNDROP-2026,,Listed as an alias of the operator; AS211252 (delis.one) on the Feb 2024 ASN-DROP; community-sourced. ID not in record's sources.
+Dolphon 1337 Ltd,associated-with,ELITETEAM / 1337TEAM LIMITED,unverified,,,Speculative '1337' naming link only; record calls it speculative and gives no source.
+ELITETEAM / 1337TEAM LIMITED,upstream-of,Filanco (AS3175),superseded,,,Filanco (Datahouse.ru) was a historical downstream; corrected from 'upstream' on 2026-09-25; no source given.
+FBW Networks (AS49434),upstream-of,WorkTitans B.V. / THE.Hosting,verified,REGISTRY-SNAPSHOT-2026-10,2026-10,"Upstream of AS209847 as of Oct 2026, after MIRhosting went dark."
+Fezzy B.V.,operator-of,WorkTitans B.V. / THE.Hosting,unverified,,,No catalogued source; the record states this as fact. Sole shareholder of WorkTitans B.V.; record gives no source.
+First Server Limited,associated-with,Hypercore LTD,unverified,REGISTRY-SNAPSHOT-2026-09,,"Former Hypercore prefixes now originate from First Server ASNs AS205090 and AS200740; a lead, not proof of common control."
+First Server Limited,associated-with,IHOR HOSTING LTD,verified,REGISTRY-SNAPSHOT-2026-10,2026-10,Former AS50113 prefixes originated by IHOR HOSTING's AS207569 and AS209641 since mid-Oct 2026; nature of the link not stated.
+First Server Limited,sister-of,"First Server, SL (AS199685)",verified,QURIUM-AEZA-2026; REGISTRY-SNAPSHOT-2026-09,2026-03,Spanish affiliate (Alicante); appeared March 2026 per Qurium.
+Garantex,associated-with,A7A5 / Old Vector,verified,OFAC-GARANTEX,,"A7 network (A7 LLC, A71 LLC, A7 Agent LLC, Old Vector LLC) co-designated Aug 2025 as related entities, not aliases; mapped to the tracked A7A5 / Old Vector row."
+Garantex,associated-with,Exved,verified,OFAC-GARANTEX,,"Co-designated related entity (Mendeleev-linked payment firm), Aug 2025."
+Garantex,associated-with,InDeFi Bank,verified,OFAC-GARANTEX,,"Co-designated related entity (Mendeleev-linked payment firm), Aug 2025."
+Garantex,payment-rail-of,Aeza International Ltd,verified,CHAINALYSIS-BPH,,"Zservers, Aeza and Media Land proceeds moved through Garantex wallets; record does not attribute (CHAINALYSIS-BPH fits by title)."
+Garantex,payment-rail-of,Media Land LLC,verified,CHAINALYSIS-BPH,,"Zservers, Aeza and Media Land proceeds moved through Garantex wallets; record does not attribute (CHAINALYSIS-BPH fits by title)."
+Garantex,payment-rail-of,Zservers,verified,CHAINALYSIS-BPH,,"Zservers, Aeza and Media Land proceeds moved through Garantex wallets; record does not attribute (CHAINALYSIS-BPH fits by title)."
+GCSAS (Global Connectivity Solutions LLP),associated-with,Aeza International Ltd,verified,QURIUM-AEZA-2026,,Qurium: GCS repeatedly relays prefixes into and out of Aeza networks.
+GCSAS (Global Connectivity Solutions LLP),associated-with,Zservers,verified,INTRINSEC-UAC-2025,,"GCS shares its two Seychelles LLP officers with sanctioned Zservers (Intrinsec, Mar 2025)."
+GCSAS (Global Connectivity Solutions LLP),front-of,Global Internet Solutions LLC (GIR / 4VPS),verified,INTRINSEC-UAC-2025; ESENTIRE-GCS-2024; RF-INFRA-2025; INTRINSEC-FDN3-2025,,Intrinsec: GCS and GIR are 'legal fronts for the bulletproof hosting provider 4vps.su'; the 4VPS brand is tracked jointly in the GIR / 4VPS row.
+GCSAS (Global Connectivity Solutions LLP),sister-of,Global Internet Solutions LLC (GIR / 4VPS),verified,ESENTIRE-GCS-2024; INTRINSEC-FDN3-2025; INTRINSEC-UAC-2025; UK-COMPANIES-HOUSE,,Sister companies sharing a person with significant control (eSentire); managed by the same Russian individual (Intrinsec).
+GENYUS SOFT LTD (AS219199),associated-with,Railnet LLC / Virtualine Technologies,unverified,REGISTRY-SNAPSHOT-2026-10,,"LEAD, not attributed: announced four broker-leased /24s (one ex-AS202412) from 2026-10-22 and withdrew them on the seizure morning; only a community post calls it Virtualine."
+Global Internet Solutions LLC (GIR / 4VPS),associated-with,Aeza International Ltd,verified,QURIUM-AEZA-2026,,Stated in the GCSAS row: Qurium finds GIR repeatedly relaying prefixes into and out of Aeza networks.
+Global-Data System IT Corp (SWISSNETWORK02),associated-with,PrivateAlps / Private Layer,verified,RF-AUROLOGIC,,RF links it to PrivateAlps; nature of the link not stated.
+Global-Data System IT Corp (SWISSNETWORK02),successor-of,Simple Carrier LLC,verified,REGISTRY-SNAPSHOT-2026-09,2024-07,AS34888 and AS42624 transferred from predecessor Simple Carrier LLC.
+Grinex,successor-of,Garantex,verified,OFAC-GARANTEX; TRM-A7A5-2026,2024-12,"Kyrgyzstan, registered Dec 2024; became the successor after the March 2025 seizure; co-designated Aug 2025."
+GTT,upstream-of,HostSlick,unverified,HOSTSLICK-PR-2026,,"Self-reported transit claim (grade E), 2026-02-17."
+H-Pay Service PLC,successor-of,Huione Pay,verified,FINCEN-HPAY-2026,,FinCEN proposed rule covers H-Pay as the Huione successor.
+Homaye Jahan Nama Co. (AS51130),associated-with,Railnet LLC / Virtualine Technologies,unverified,REGISTRY-SNAPSHOT-2026-10,2026-10-28,"Announces the RetryHost block 94.26.38.0/24 via AS214329 (BGP Network LLC) since 2026-10-28; possible relocation, not attributed."
+Huione Group,operator-of,H-Pay Service PLC,verified,FINCEN-HPAY-2026,,Record lists Huione Group as parent_entity; FinCEN targets H-Pay to stop Huione circumventing the Section 311 cut-off.
+Huione Guarantee (Haowang Guarantee),associated-with,Tudou Guarantee,verified,ELLIPTIC-TUDOU; OFAC-PRINCE-2025,2024-12,Stake holder: Haowang announced buying a stake in Dec 2024 (30% per Elliptic); record lists it as parent_entity but a minority stake is not stated as control.
+Hypercore LTD,front-of,Aeza International Ltd,verified,OFAC-MEDIALAND; SILENTPUSH-AEZA-2025,2025-07-20,"OFAC-designated 2025-11-19 as an Aeza Group front; received 2,100+ Aeza IPs from 2025-07-20."
+iFog GmbH,upstream-of,WAIcore Hosting Ltd,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+IHOR HOSTING LTD,associated-with,PINSPB (Petersburg Internet Network Ltd),verified,REGISTRY-SNAPSHOT-2026-10,2026-07,IHOR HOSTING's AS209641 originates four former AS34665 prefixes since July 2026; nature of the link not stated.
+Infolika (AS203804),upstream-of,ELITETEAM / 1337TEAM LIMITED,superseded,,2020,Historical upstream (2020-22); record gives no source (TEAMCYMRU-ELITETEAM-2022 likeliest).
+Innovation IT Solutions Corp,sister-of,MIRhosting B.V.,unverified,,,No catalogued source; the record states this as fact. Record calls it a 'related company'; no source given.
+IROST,ip-supplier-of,Aeza International Ltd,unverified,QURIUM-AEZA-2026,,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate. About 9% of the estate."
+"Jiangsu Aidi Information Technology Co., Ltd.",operator-of,IPIDEA residential-proxy network,unverified,USPTO-IPIDEA; ITNEWS-IPIDEA-2026,,IPIDEA trademark applicant (USPTO) and reported parent (iTnews); GTIG names no operator.
+Kaopu Cloud HK Limited,associated-with,ANY DIGITAL PTE. LTD. (AS140666),superseded,SPAMHAUS-ASNDROP-2026,,AS140666 was formerly listed under kaopuyun.com on ASN-DROP and has been removed.
+Level3,upstream-of,Kaopu Cloud HK Limited,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+Limenet LLC,operator-of,CrazyRDP,verified,SPAMHAUS-ASNDROP-2026,,corporate_entity field; tie rests on community sources and the Feb 2024 ASN-DROP listing of AS394711 (limenet.io). ID not in record's sources.
+Media Land LLC,operator-of,Data Center Kirishi,verified,OFAC-MEDIALAND,,Subsidiary; OFAC-designated 2025-11-19.
+Media Land LLC,operator-of,Media Land Technology,verified,OFAC-MEDIALAND,,Subsidiary; OFAC-designated 2025-11-19.
+Media Land LLC,sister-of,ML.Cloud LLC,verified,OFAC-MEDIALAND,,"ML.Cloud is listed as a sister company; co-designated by OFAC, UK, AU and EU."
+metaspinner-named AS209800 (Virtualine front),front-of,Railnet LLC / Virtualine Technologies,verified,RF-TAE-2026; RF-AUROLOGIC; DOJ-VIRTUALINE-2026,2025-04-25,RF: AS209800 controlled by Virtualine-affiliated actors impersonating metaspinner net GmbH; DOJ alias 'Lanedo' matches LANEDONET; ASN created 2025-04-25.
+MIRhosting B.V.,associated-with,Stark Industries Solutions,verified,RF-STARK,,RF calls MIRhosting (NL) a key infrastructure partner; exact role not stated.
+MIRhosting B.V.,upstream-of,WorkTitans B.V. / THE.Hosting,superseded,KREBS-FIOD-STARK; REGISTRY-SNAPSHOT-2026-10; MIRHOSTING-STMT-2026,,"Former sole upstream (AS52000, per Krebs); MIRhosting went dark on 2026-10-19."
+MKAN Coin,associated-with,Garantex,verified,KHARON-MKAN-2023,,"Official partnership (Kharon, Apr 2023); founded after Garantex's CEO stepped down in April 2022."
+Nanjing Xinjiuwei Network Technology Co.,associated-with,QTFY (QScan / QTRouter),verified,DOJ-QTFY-2026,,Employer of the QTFY operators (listed as corporate_entity); not stated to operate the platform itself.
+NECHAEVDS,successor-of,Zservers,verified,INTRINSEC-UAC-2025,,Post-sanction hop: Intrinsec (high confidence) saw Zservers prefixes move to AS213194.
+NEON CORE NETWORK LLC (AS205775),associated-with,aurologic GmbH,superseded,INTERISLE-DROP-2026; REGISTRY-SNAPSHOT-2026-10,,Interisle flags it as an aurologic peer (direction not stated); AS205775 since deregistered.
+Netshield LTD,upstream-of,WAIcore Hosting Ltd,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+nLighten,associated-with,MIRhosting B.V.,superseded,DCD-NLIGHTEN-2026; KOMMERSANT-NLIGHTEN-2026,,Data-centre (colocation) provider; cut power on 2026-06-02 and terminated the relationship.
+NovoServe B.V. (AS204601),upstream-of,Zomro B.V.,verified,REGISTRY-SNAPSHOT-2026-10,,NovoServe announces Zomro's address space and presents Zomro as a customer; separate company at the same address.
+NTT,upstream-of,Kaopu Cloud HK Limited,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+OVH,upstream-of,Chang Way Technologies Co. Limited,verified,REGISTRY-SNAPSHOT-2026-10,2026-09-11,AS218974's one /24 is announced via OVH.
+PCCW Global,upstream-of,Kaopu Cloud HK Limited,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+PEERYX NETWORK SAS (AS213382),upstream-of,Railnet LLC / Virtualine Technologies,superseded,REGISTRY-SNAPSHOT-2026-10,,One of AS202412's last neighbours (Oct 2026) before it went dark on 2026-10-27.
+Pfcloud UG,associated-with,Railnet LLC / Virtualine Technologies,unverified,LES-VIRTUALINE-2026,,Hardware reseller: community post says Tube-Hosting (AS49581) servers seized in Limburg were resold to Virtualine through Pfcloud (unconfirmed).
+Pfcloud UG,upstream-of,KPROHOST,superseded,REGISTRY-SNAPSHOT-2026-09,,Former upstream/peer of AS214940 (record: 'its upstreams were'); ASN dark since ~2026-08-12.
+Pfcloud UG,upstream-of,Railnet LLC / Virtualine Technologies,verified,REGISTRY-SNAPSHOT-2026-10; RF-AUROLOGIC,,AS51396 was one of AS202412's last neighbours (Oct 2026) before it went dark on 2026-10-27.
+Phanes Networks,successor-of,Flaunt7,unverified,,,No catalogued source; the record states this as fact. Rebrand from predecessor Flaunt7 (aliases field); no source given.
+Plant Holding,ip-supplier-of,Aeza International Ltd,unverified,QURIUM-AEZA-2026,,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate. Aeza assignment objects re-modified in March and June 2026."
+PQ Hosting Plus S.R.L.,successor-of,PQ.Hosting,unverified,,,No catalogued source; the record states this as fact. aliases field: 'PQ.Hosting successor entity'; no source given.
+PQ Hosting Plus S.R.L.,successor-of,Stark Industries Solutions,verified,RF-STARK,2025-05-16,Received Stark's AS44477 four days before the EU listing; sanctions-evasion vehicle.
+PQ.Hosting,operator-of,PQ Hosting Plus S.R.L.,unverified,,,No catalogued source; the record states this as fact. parent_entity field names PQ.Hosting as parent; the record also calls PQ Hosting Plus its successor entity. No source given.
+PQ.Hosting,operator-of,Stark Industries Solutions,verified,RF-STARK,,RF: PQ.Hosting was Stark's parent.
+PrivateAlps / Private Layer,associated-with,Global-Data System IT Corp (SWISSNETWORK02),verified,RF-AUROLOGIC,,RF's aurologic report ties SWISSNETWORK02 to PrivateAlps; nature of the link not stated.
+PROSPERO OOO / Proton66,associated-with,Chang Way Technologies Co. Limited,unverified,TRUSTWAVE-PROSPERO,,Record says 'likely related' (SpiderLabs saw IP shifts and a re-themed panel); nature of link not stated; tracked as its own row.
+Prostie Reshenia LLC (WebRocket),associated-with,Datavice MCHJ,verified,REGISTRY-SNAPSHOT-2026-10,,Registry link: WEBROCKET-MNT is referenced by Datavice MCHJ's RIPE org object; no address assignment to Datavice found.
+Prostie Reshenia LLC (WebRocket),ip-supplier-of,Aeza International Ltd,unverified,QURIUM-AEZA-2026,2024-01,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate."
+Prostie Reshenia LLC (WebRocket),successor-of,Megalink / PG-19,verified,REGISTRY-SNAPSHOT-2026-10,,Holds the legacy Megalink (Taganrog) / PG-19 address estate.
+PSB Hosting Ltd (AS214927),successor-of,Karina Rashkovska,unverified,REGISTRY-SNAPSHOT-2026-09; REGISTRY-SNAPSHOT-2026-10,,"Originates former prefix 82.115.223.0/24; on ASN-DROP under psb.hosting; successor-watch lead, not attribution."
+QTFY (QScan / QTRouter),associated-with,PRC MSS,verified,DOJ-QTFY-2026,,Service provider to a customer: the MSS is among QTFY's customers.
+QTFY (QScan / QTRouter),associated-with,PRC PLA,verified,DOJ-QTFY-2026,,Service provider to a customer: the PLA is among QTFY's customers.
+QWINS LTD,associated-with,Aeza International Ltd,unverified,,,Link to the Aeza UK-shell network is single-source and the record names no source; nature of link not stated.
+Railnet LLC / Virtualine Technologies,operator-of,Karina Rashkovska,unverified,INTRINSEC-UAC-2025,,Virtualine row: 'likely'; Karina row: Intrinsec (via a third party) ties AS215789 to Virtualine's UAC-0050 spam. Endpoint is the tracked network row (AS215789).
+Railnet LLC / Virtualine Technologies,operator-of,KPROHOST,verified,INTRINSEC-FDN3-2025,,Intrinsec attributes AS214940 to Virtualine; Spamhaus listed it under virtualine.org in Dec 2025.
+Railnet LLC / Virtualine Technologies,operator-of,RetryHost,verified,REGISTRY-SNAPSHOT-2026-10,,RIPE org RetryHost is maintained by VIRTUALINE-MNT and is listed as a Virtualine alias.
+Railnet LLC / Virtualine Technologies,successor-of,metaspinner-named AS209800 (Virtualine front),verified,REGISTRY-SNAPSHOT-2026-10,,AS209800's three /22s later moved to AS202412 (same operator); the Railnet/Virtualine row says AS6461 has originated them since 2026-10-27.
+RAIT TELECOM (AS213254),upstream-of,ELITETEAM / 1337TEAM LIMITED,superseded,,2020,Historical upstream (2020-22); record gives no source (TEAMCYMRU-ELITETEAM-2022 likeliest).
+RapidSeedbox,ip-supplier-of,Aeza International Ltd,unverified,QURIUM-AEZA-2026,,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate. Commercial IP lessor; 17+ /24s originated by Aeza ASNs."
+RoyaleHosting BV,upstream-of,WAIcore Hosting Ltd,unverified,,,No catalogued source; the record states this as fact. upstream_providers field; no source given.
+Serverion / Des Capital B.V.,upstream-of,CrazyRDP,unverified,,,"Colocation; community-sourced, weak."
+ServerKing B.V. (AS48729),associated-with,MIRhosting B.V.,verified,REGISTRY-SNAPSHOT-2026-10,2026-09,Originates nine former AS52000 prefixes since Sept-Oct 2026; nature of the link not stated.
+SHANGXING TECH LIMITED,associated-with,Fastmos Co Limited (AS138644),unverified,REGISTRY-SNAPSHOT-2026-10,,Shared reseller relationship inferred from the two ASNs tiling 191.124.0.0/16 exactly; both are listed as aliases of the SHANGXING TECH LIMITED row.
+SKB Enterprise B.V.,operator-of,Phanes Networks,verified,REGISTRY-SNAPSHOT-2026-10,,corporate_entity field; SKB's AS64425 and Phanes' AS49042 carried the same prefixes (RIPEstat). No source is given for the corporate-entity statement itself.
+Smart Digital Ideas DOO,front-of,Aeza International Ltd,verified,OFAC-MEDIALAND,,"Serbian evasion vehicle, OFAC-designated 2025-11-19."
+SMARTNET (AS203446),upstream-of,AnonRDP / Blatant Technologies,verified,REGISTRY-SNAPSHOT-2026-10,,SMARTNET Germany GmbH is the sole upstream/neighbour of AS403005 (Oct 2026).
+SpectraIP (AS62068/AS218878),upstream-of,Phanes Networks,verified,SILENTPUSH-BPH-WP-2025,,Single peering partner per Silent Push; mapped ID not in record's sources.
+SS-NET (AS204428) / 4Vendeta,upstream-of,BtHoster,verified,REGISTRY-SNAPSHOT-2026-10,,Bulgarian backstop transit; itself on ASN-DROP.
+StarCloud Global (Triad Nexus),front-of,Triad Nexus,unverified,SILENTPUSH-FUNNULL,,Triad Nexus-affiliated front brand per Silent Push (relayed table); Triad Nexus is the FUNNULL-linked cluster in Silent Push's reporting.
+Stark Industries Solutions,front-of,PQ Hosting Plus S.R.L.,verified,RF-STARK,,"RF: Stark is a white-label front/pass-through for Moldova's PQ.Hosting; record names the brand PQ.Hosting, mapped here to the tracked row (which received AS44477 on 2025-05-16)."
+StormWall s.r.o.,associated-with,Stark Industries Solutions,unverified,,,No catalogued source; the record states this as fact. DDoS-protection fronting for Stark/PQ domains; explicitly not a BGP upstream (correction 2026-09-25). No source given.
+SYSECT D.O.O. (AS202799),successor-of,Karina Rashkovska,unverified,REGISTRY-SNAPSHOT-2026-09; REGISTRY-SNAPSHOT-2026-10,,"Originates former prefix 147.45.44.0/24; successor-watch lead, not attribution."
+TATA,upstream-of,HostSlick,unverified,HOSTSLICK-PR-2026,,"Self-reported transit claim (grade E), 2026-02-17."
+Technology Enriched Company FZCO,ip-supplier-of,Aeza International Ltd,unverified,QURIUM-AEZA-2026,,"Qurium supplier breakdown (Oct 2026), single source; supplies the Aeza/NetCrafters estate. 27 of 32 /24s in the upper half of 77.110.64.0/18 tied to Aeza."
+Tiger Network Limited (Tiger Net),associated-with,Delta Ltd (AS213220),verified,REGISTRY-SNAPSHOT-2026-10,2026-08,AS211121's maintainer TOKOWA-MNT created route objects for AS213220 in Aug-Sep 2026.
+Tiger Network Limited (Tiger Net),associated-with,Haruka Network Limited (AS197860),verified,REGISTRY-SNAPSHOT-2026-10,2026-08,AS211121's maintainer TOKOWA-MNT created route objects for AS197860 in Aug-Sep 2026.
+Tnsecurity Ltd (EVILEMPIRE),associated-with,Aeza International Ltd,verified,QURIUM-AEZA-2026,,Qurium places Tnsecurity in Aeza's satellite layer; nature of the link not stated.
+TokenSpot CJSC,front-of,Grinex,verified,TRM-TOKENSPOT-2026,,TRM high-confidence assessment (2026-10-06): shared wallet infrastructure.
+Tube-Hosting (AS49581),upstream-of,BtHoster,verified,REGISTRY-SNAPSHOT-2026-10,,Transit; the record labels it 'aurologic'; itself on ASN-DROP.
+Tube-Hosting (AS49581),upstream-of,Pfcloud UG,verified,REGISTRY-SNAPSHOT-2026-10,,RIS path 49581 51396 202412 observed 2026-10-30.
+Tudou Guarantee,successor-of,Huione Guarantee (Haowang Guarantee),verified,ELLIPTIC-TUDOU; OFAC-PRINCE-2025; OFAC-HUIONE-PRINCE,,Described as Huione's designated successor (FinCEN; Elliptic).
+UAB Host Baltic (serveroffer.lt),associated-with,AnonRDP / Blatant Technologies,unverified,LES-VIRTUALINE-2026,,Hosting provider: a community post says AnonRDP's Lithuanian servers are hosted at Host Baltic and tunnelled through SMARTNET Germany; none of AS403005's prefixes geolocate to Lithuania (checked 2026-10-30).
+UAB Host Baltic (serveroffer.lt),upstream-of,BtHoster,verified,REGISTRY-SNAPSHOT-2026-10; INTRINSEC-BTHOSTER,,Transit via AS209605; itself on ASN-DROP.
+UFO Hosting LLC,successor-of,PQ Hosting Plus S.R.L.,unverified,,,No catalogued source; the record states this as fact. Record: successor capacity sits with UFO Hosting; no source given.
+UFO Hosting LLC,successor-of,Stark Industries Solutions,verified,RF-STARK; SPAMHAUS-ASNDROP-2026,2025-04-13,AS33993 listed by ASN-DROP under stark-industries.solutions.
+Voxility,upstream-of,AlexHost,unverified,,,No catalogued source; the record states this as fact. DDoS-mitigation upstream; record gives no source.
+WAIcore Ltd,operator-of,WAIcore Hosting Ltd,verified,UK-COMPANIES-HOUSE,,"corporate_entity field; WAICORE LTD is Companies House 15668439. Companies House shows the company, not the ASN link."
+WorkTitans B.V. / THE.Hosting,ip-supplier-of,PIXOOF TEKNOLOJI (AS51722),verified,REGISTRY-SNAPSHOT-2026-10,2026-09-07,THE-HOSTING-MNT route objects (2026-09-07/10) authorise AS51722 to originate WorkTitans space; five former AS209847 prefixes announced from AS51722 since 2026-09-10.
+WorkTitans B.V. / THE.Hosting,successor-of,PQ Hosting Plus S.R.L.,unverified,,,No catalogued source; the record states this as fact. Record: successor capacity sits with WorkTitans/THE.Hosting; no source given.
+WorkTitans B.V. / THE.Hosting,successor-of,Stark Industries Solutions,verified,RF-STARK; GREYNOISE-STARK; CENSYS-BPH; SPAMHAUS-ASNDROP-2026,2025-05-28,"Post-sanctions successor: RIPE org ORG-THE3-RIPE created 2025-05-28, THE.Hosting rebrand 2025-05-29; ASN-DROP lists its ASNs under stark-industries.solutions."
+WorldStream (AS49981),upstream-of,HostSlick,superseded,,,Historical upstream; no source given.
+WULDI LLC (AS218688),successor-of,Altawk (Daniil Yevchenko),unverified,REGISTRY-SNAPSHOT-2026-10,2026-09-22,"Successor candidate, not yet attributed: originates all five former AS209946 prefixes."
+Xeltox Enterprises Ltd (Cryptomus / Heleket),payment-rail-of,Aeza International Ltd,verified,CHAINALYSIS-CRYPTOMUS-2026,,Chainalysis (Oct 2026) names Cryptomus/Heleket as an Aeza payment rail.
+Xeltox Enterprises Ltd (Cryptomus / Heleket),payment-rail-of,Femo IT Solutions Ltd (Defhost),unverified,,,"No catalogued source; the record states this as fact. Record: payment via Heleket.com, 'its payment processor Heleket'; no source is named for the payment link."
+Xeltox Enterprises Ltd (Cryptomus / Heleket),payment-rail-of,First VPN Service (1VPNS),verified,CHAINALYSIS-CRYPTOMUS-2026,,Chainalysis: a 'payment rail of choice' for First VPN.
+Xeltox Enterprises Ltd (Cryptomus / Heleket),payment-rail-of,Stark Industries Solutions,verified,CHAINALYSIS-CRYPTOMUS-2026,,Chainalysis: a 'payment rail of choice' for Stark Industries.
+Xeltox Enterprises Ltd (Cryptomus / Heleket),payment-rail-of,Zservers,verified,CHAINALYSIS-CRYPTOMUS-2026,,Chainalysis: a 'payment rail of choice' for Zservers.
+XHOST Internet Solutions LP,front-of,Zservers,verified,FCDO-UK-SANCTIONS-LIST,,UK front of Zservers; UK-designated 2025-02-11.
+Yandex,associated-with,A7A5 / Old Vector,unverified,CRYPTOPOLITAN-A7A5-2026,,A7A5's exchange service reportedly hosted in Yandex data centres (Elliptic analyst via crypto press).
+Yunray.ai,front-of,FUNNULL Technology Inc.,verified,SILENTPUSH-TRIADNEXUS-2026; SILENTPUSH-FUNNULL,,Front brand per Silent Push.
