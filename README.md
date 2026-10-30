@@ -10,7 +10,7 @@
 
 This repository is a comprehensive intelligence resource for tracking bullet-proof hosting (BPH) providers, threat activity enablers (TAEs), and the infrastructure that underpins modern cybercrime. It combines a structured provider database with analytical documents, an investigative playbook, and an organized source library.
 
-**Current scope:** 70 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
+**Current scope:** 71 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
 
 ---
 
@@ -149,7 +149,7 @@ Full schema documented in the CSV header row.
 - **Media Land/ML.Cloud** July 2026 - EU sanctions (July 13) and the DOJ indictment under FBI Operation Riptide (July 14)
 - **QScan/QTRouter (PRC "QTFY" proxy/ORB platform)** domains seized Aug 26 2026 (DOJ/FBI with Lumen)
 - **Xinbi Guarantee** disrupted Sept 9 2026 (OFAC + DOJ Scam Center Strike Force; $52.8M USDT frozen)
-- **Operation Omegaline - Virtualine/Omegatech** Oct 27 2026: FBI seized virtualine[.]net (E.D. Va. warrant) with Polizei Hessen, Politie Midden-Nederland, the NCA, OverRIPE and Lumen; Dutch police seized dozens of servers in Limburg (data on 3,000+ customers). DOJ alleges CSAM hosting and money laundering; no operators named or charged. OMEGATECH AS202412 is now near-invisible in routing. RF's 2025 Threat Density #1 - the repo had already tied Omegatech to Virtualine (May 2026). Same day: anonrdp[.]com moved to FBI seizure nameservers
+- **Operation Omegaline - Virtualine/Omegatech** Oct 27 2026: FBI seized virtualine[.]net (E.D. Va. warrant) with Polizei Hessen, Politie Midden-Nederland, the NCA, OverRIPE and Lumen; Dutch police seized dozens of servers in Limburg (data on 3,000+ customers). DOJ alleges CSAM hosting and money laundering; no operators named or charged. OMEGATECH AS202412 is now near-invisible in routing. RF's 2025 Threat Density #1 - the repo had already tied Omegatech to Virtualine (May 2026). Same day: anonrdp[.]com moved to FBI seizure nameservers; **AnonRDP** (self-styled bulletproof VPS/RDP and fast-flux host) moved to anonrdp[.]st and is now tracked at T1 on Blatant Technologies AS403005, whose nine /24s are all on Spamhaus DROP
 
 ---
 

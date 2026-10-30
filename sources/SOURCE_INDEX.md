@@ -159,6 +159,7 @@ When adding a new source to this index:
 |----|-------|-------|-----------|-----------|------|------------|--------------|
 | CV-GSHELL-2026-07 | D | Unreported Gshell C2 cluster (July 2026 mapping; CTG pair still live Sept 2026) | CrimsonVector Research | CrimsonVector (first-party) | 2026-07-23 | — (published summary: `dashboard_data/finding/gshell-c2-cluster-ctg-2026-07.json`) | SHANGXING TECH LIMITED (AS400619) node pair; CTG Server Limited (AS152194); Gshell default TLS cert |
 | CV-OPENDIR-2026-09 | D | Open-directory hunt: mass web-exploitation workspaces on AS400619 (Fastmos :8889; AROSSCLOUD :9999) | CrimsonVector Research | CrimsonVector (first-party) | 2026-09 | — | SHANGXING TECH LIMITED / Fastmos Co Limited / AROSSCLOUD INC. (AS400619) |
+| CV-ANONRDP-2026-10 | D | AnonRDP infrastructure tied to Blatant Technologies (AS403005) and GHOSTYNETWORKS through its own DNS records | CrimsonVector Research | CrimsonVector (first-party) | 2026-10-29 | — | solusvm and xmpp hosts under anonrdp[.]st in AS403005; smtp/smtp01 hosts on two ghostynetworks[.]com SPF addresses |
 
 ---
 
@@ -241,7 +242,7 @@ When adding a new source to this index:
 
 ### Additional Sources (Added 2026-10-29)
 
-> Operation Omegaline: the FBI-led seizure of Virtualine (2026-10-27) and the routing and registry checks made afterwards. The DOJ release sits behind a bot-check page; its wording was read through verbatim quotations in THN-VIRTUALINE-2026, THERECORD-VIRTUALINE-2026, CHAINALYSIS-VIRTUALINE-2026 and the LowEndSpirit thread. Grade shown inline.
+> Operation Omegaline: the FBI-led seizure of Virtualine (2026-10-27), the same-day action against AnonRDP's domain, and the routing and registry checks made afterwards. The DOJ release sits behind a bot-check page; its wording was read through verbatim quotations in THN-VIRTUALINE-2026, THERECORD-VIRTUALINE-2026, CHAINALYSIS-VIRTUALINE-2026 and the LowEndSpirit thread. Grade shown inline.
 
 | ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
 |----|-------|-------|-----------|-----------|------|------------|--------------|
@@ -252,8 +253,9 @@ When adding a new source to this index:
 | TRM-VIRTUALINE-2026 | B | FBI Seizes Virtualine Domain After Provider Led Bulletproof Hosting Sector in Illicit Inflows | TRM Team | TRM Labs | 2026-10-28 | — | Virtualine inflows (~44% Russian drug market, ~17% sextortion, ~13% mixer, ~5% ransomware); StealC; Volhav (BPH); Exploit.in join 2024-08-28 |
 | THERECORD-VIRTUALINE-2026 | C | FBI seizes 'bulletproof' hosting site accused of facilitating child abuse, money laundering | Alexander Martin | Recorded Future News | 2026-10-28 | — | Virtualine; DOJ allegations; no operators named or charged |
 | THN-VIRTUALINE-2026 | C | FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering | Ravie Lakshmanan | The Hacker News | 2026-10-28 | — | DOJ quotations; Virtualine price list; operator's open letter; Spamhaus Sept 2025 note on Virtualine's AS209800 expansion via aurologic |
-| REGISTRY-SNAPSHOT-2026-10 | C | RIPEstat routing, neighbour and whois data; RIPE DB organisation objects; Verisign RDAP; Spamhaus ASN-DROP and DROP (asndrop.json, drop_v4.json) - checked 2026-10-29 | RIPE NCC; Verisign; The Spamhaus Project | RIPEstat / RDAP / Spamhaus | 2026-10-29 | — | AS202412 (1 of 323 RIS peers; neighbours AS51396, AS213382; 27 historical /24s, all on DROP); AS219199 GENYUS SOFT LTD (genyus.sc); AS403005 BLATANTHOST (blatant.host); virtualine[.]net and anonrdp[.]com on FBI seizure nameservers |
+| REGISTRY-SNAPSHOT-2026-10 | C | RIPEstat routing, neighbour and whois data; RIPE DB organisation objects; ARIN and Verisign RDAP; Spamhaus ASN-DROP and DROP (asndrop.json, drop_v4.json) - checked 2026-10-29 | RIPE NCC; ARIN; Verisign; The Spamhaus Project | RIPEstat / RDAP / Spamhaus | 2026-10-29 | — | AS202412 (1 of 323 RIS peers; neighbours AS51396, AS213382; 27 historical /24s, all on DROP); AS219199 GENYUS SOFT LTD (genyus.sc); AS403005 BLATANTHOST (blatant.host; ARIN-registered 2026-09-25; sole upstream SMARTNET AS203446; nine /24s, all on DROP); AS205759 deregistered; virtualine[.]net and anonrdp[.]com on FBI seizure nameservers |
 | LES-VIRTUALINE-2026 | D | FBI seizes Virtualine.net (Omegatech LTD) hosting provider in "Operation OMEGALINE" (forum thread) | treesmokah and other users | LowEndSpirit | 2026-10-27 to 2026-10-28 | — | AS219199 claim; aurologic DDoS-protection tunnel traceroute (RIPE Atlas); SkyLink / Tube-Hosting / Pfcloud claim for the Limburg servers; anonrdp[.]com seizure; AS403005 Blatant Technologies |
+| ANONRDP-SELF-2026 | E | AnonRDP website (store pages) and Telegram announcements channel @anonrdpcom | AnonRDP (self-advertisement) | anonrdp[.]com / anonrdp[.]st; Telegram | 2025-11 to 2026-10-28 (read 2026-10-29) | — | 'Bulletproof' VPS/RDP and web hosting (Vilnius); 'Spamhaus Ignored' FastFlux CDN; scanning servers; Virtualine 'refugee offer' (2026-10-27); move to anonrdp[.]st and 'emergency kill switch' (2026-10-28) |
 
 ---
 
@@ -264,9 +266,9 @@ When adding a new source to this index:
 | A — Government/Official | 41 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
 | B — Established CTI Vendor | 69 | Published research from recognized threat intelligence firms |
 | C — Community/Independent | 38 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
-| D — Single Source / Unverified | 6 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
-| E — Self-Reported / Marketing | 2 | Forum advertising presence and provider marketing |
-| **Total** | **156** | |
+| D — Single Source / Unverified | 7 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
+| E — Self-Reported / Marketing | 3 | Forum advertising presence and provider marketing |
+| **Total** | **158** | |
 
 ---
 
