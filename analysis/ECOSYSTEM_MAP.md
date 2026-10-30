@@ -38,6 +38,7 @@
 4. [Upstream/Downstream Dependencies](#4-upstreamdownstream-dependencies)
 5. [Financial Infrastructure Overlay](#5-financial-infrastructure-overlay)
 6. [Cross-Reference with IOCTA 2026 Themes](#6-cross-reference-with-iocta-2026-themes)
+- Appendices: [A - Entity quick reference](#appendix-a-entity-quick-reference) · [B - ASN cross-reference](#appendix-b-asn-cross-reference-index) · [C - Relationship graph](#appendix-c-relationship-graph) (all generated from the data)
 
 ---
 
@@ -968,6 +969,16 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS400619 | SHANGXING TECH LIMITED | T2 | block-prefixes | origin ASN; registry holder AROSSCLOUD INC. [US] |
 | AS403005 | AnonRDP / Blatant Technologies | T1 | block | BLATANTHOST; Blatant Technologies, LLC [SC/ARIN], registered 2026-09-25; Spamhaus ASN-DROP under blatant.host |
 <!-- generated:appendix-b:end -->
+
+---
+
+## Appendix C: Relationship Graph
+
+Every relationship between tracked entities and the parties around them (operators, fronts, successors, upstreams, IP suppliers, payment rails, sister companies), drawn from `data/relationships.csv` with its sources. The hand-drawn diagrams earlier in this document give the narrative; these are complete and regenerated whenever the data changes.
+
+<!-- generated:appendix-c:start -->
+> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read *from → to* with the relationship type as label; solid = verified, dashed = unverified or disputed, "former" = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are external parties. 0 relationships, 0 parties.
+<!-- generated:appendix-c:end -->
 
 ---
 

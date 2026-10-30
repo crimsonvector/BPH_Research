@@ -24,8 +24,14 @@ Errors (exit 1):
   - every Source ID cited in the CSV `sources` column is catalogued in
     sources/sources.csv, once, with a grade, title, publisher, section and well-formed
     URL / retrieved fields (SOURCE_INDEX.md tables and statistics are generated from it)
+  - data/claims.csv: unique claim IDs, known entity, status and tier_relevant values, ISO
+    verified_date, catalogued Source IDs; every verified tier-relevant claim cites a source,
+    and every entity has at least one tier-relevant claim
+  - data/relationships.csv: known type and status, at least one tracked endpoint, no
+    self-links or duplicates, sister-of written once (from < to), catalogued Source IDs
 Warnings: a grade that differs from the publisher default in sources/publishers.csv
-  without a grade_note
+  without a grade_note; a tier whose verified tier-relevant claims miss the taxonomy
+  section 6 evidence minimum
   - BPH_Master.xlsx mirrors the CSV cell-for-cell (skipped if openpyxl is missing)
   - ECOSYSTEM_MAP Appendix A has one row per CSV entity; Appendix B lists exactly
     the ASNs cited in the CSV
@@ -294,6 +300,57 @@ def main() -> int:
             errors += [f"{who}: source {s} is not in sources/sources.csv" for s in (x.strip() for x in g["sources"].split(";")) if s and s not in grades]
             if not iso(g["last_verified"]):
                 errors.append(f"{who}: last_verified is not an ISO date")
+
+    claims = load_opt("data", "claims.csv")
+    statuses = ("verified", "unverified", "disputed", "superseded")
+    if claims is not None:
+        seen = collections.Counter(c["claim_id"] for c in claims)
+        errors += [f"data/claims.csv: claim ID {i} used {k} times" for i, k in seen.items() if k > 1]
+        covered = set()
+        for c in claims:
+            who = f"data/claims.csv: {c['claim_id']}"
+            if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*-\d{2,3}", c["claim_id"]):
+                errors.append(f"{who}: claim ID should be <entity-slug>-NN")
+            if c["entity"] not in names:
+                errors.append(f"{who}: unknown entity {c['entity']!r}")
+            if c["status"] not in statuses or c["tier_relevant"] not in ("yes", "no"):
+                errors.append(f"{who}: status {c['status']!r} / tier_relevant {c['tier_relevant']!r} not allowed")
+            if not iso(c["verified_date"]):
+                errors.append(f"{who}: verified_date {c['verified_date']!r} is not ISO")
+            if not c["claim"].strip():
+                errors.append(f"{who}: empty claim")
+            sids = [s.strip() for s in c["source_ids"].split(";") if s.strip()]
+            errors += [f"{who}: source {s} is not in sources/sources.csv" for s in sids if s not in grades]
+            if c["tier_relevant"] == "yes" and c["status"] == "verified" and not sids:
+                errors.append(f"{who}: a verified tier-relevant claim needs a source")
+            if c["tier_relevant"] == "yes":
+                covered.add(c["entity"])
+        errors += [f"data/claims.csv: {n} has no tier-relevant claim" for n in sorted(names - covered)]
+        try:
+            from generate_docs import tier_evidence
+            warnings += [f"data/claims.csv: {r['provider_name']} ({r['risk_tier'][:2]}) tier-relevant claims miss the section 6 minimum: {why}"
+                         for r, why in tier_evidence(rows, claims, catalogue)]
+        except SystemExit as e:
+            errors.append(f"tier evidence check could not run: {e}")
+
+    rels = load_opt("data", "relationships.csv")
+    if rels is not None:
+        types = ("operator-of", "front-of", "successor-of", "upstream-of", "ip-supplier-of", "payment-rail-of", "sister-of", "associated-with")
+        seen = collections.Counter((e["from"], e["type"], e["to"]) for e in rels)
+        errors += [f"data/relationships.csv: {f} {t_} {to} listed {k} times" for (f, t_, to), k in seen.items() if k > 1]
+        for e in rels:
+            who = f"data/relationships.csv: {e['from']} {e['type']} {e['to']}"
+            if e["type"] not in types or e["status"] not in statuses:
+                errors.append(f"{who}: type/status not allowed")
+            if e["from"] not in names and e["to"] not in names:
+                errors.append(f"{who}: neither end is a tracked entity")
+            if e["from"] == e["to"]:
+                errors.append(f"{who}: links an entity to itself")
+            if e["type"] == "sister-of" and e["from"].lower() > e["to"].lower():
+                errors.append(f"{who}: write sister-of once, alphabetically (from < to)")
+            if "|" in e["from"] + e["to"] + e["type"]:
+                errors.append(f"{who}: '|' breaks the generated diagrams")
+            errors += [f"{who}: source {s} is not in sources/sources.csv" for s in (x.strip() for x in e["source_ids"].split(";")) if s and s not in grades]
 
     acks = load_opt("monitor", "acknowledged.csv")
     if acks is not None:
