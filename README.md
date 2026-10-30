@@ -35,6 +35,7 @@ BPH_Research/
 |   |                                 defensive value of burned indicators
 |   |-- REGISTRAR_PILOT.md       <-- Registrar & DNS pilot (roadmap R1): which registrars and DNS
 |   |                                 providers tracked operators use; candidates for R2
+|   |-- REGISTRAR_EVALUATION.md  <-- Candidate registrars tested against outside evidence (R2-R3)
 |
 |-- playbook/
 |   |-- ANALYST_PLAYBOOK.md      <-- Investigation guide: identification indicators, OSINT
@@ -50,6 +51,8 @@ BPH_Research/
 |   |                                 provider and hosting for domains tied to tracked entities
 |   |-- companies.csv            <-- UK companies the monitor watches at Companies House
 |   |-- registry_handles.csv     <-- RIPE maintainers/organisations the monitor watches
+|   |-- registrars.csv           <-- Rated registrar / DNS enablers (taxonomy 2.8), kept apart from
+|   |                                 the CSV because they have no ASNs
 |
 |-- monitor/
 |   |-- acknowledged.csv         <-- Monitor findings reviewed and accepted, with reasons

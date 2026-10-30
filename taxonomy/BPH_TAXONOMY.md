@@ -240,9 +240,9 @@ Each entity is assigned one primary type and may carry secondary type tags where
 
 | Tier | Registrar / DNS reading (meet ANY, subject to the evidence floor below) |
 |------|-------------------------------------------------------------------------|
-| T1 | Sanctioned for enabling cyber operations; named by law enforcement as a facilitator (not merely the point where a seizure was executed); de-accredited by ICANN for abuse-related breaches while the operation continues through a successor accreditation or reseller; or self-advertised "bulletproof domains" / "abuse complaints ignored" with corroborating abuse data |
-| T2 | An ICANN breach or suspension notice about abuse handling, Whois accuracy or abuse-contact duties in the last 24 months, uncured; **or** an outlier abuse *rate* in 2+ independent measurement sources across 2+ periods, together with documented non-response to reports |
-| T3 | An outlier abuse rate in one measurement source or period; or one Grade B vendor documenting enablement with specific domains |
+| T1 | Sanctioned for enabling cyber operations; named by law enforcement as a facilitator (not merely the point where a seizure was executed); accreditation terminated by ICANN for failing its DNS-abuse duties (RAA 3.18); or self-advertised "bulletproof domains" / "abuse complaints ignored" with corroborating abuse data. If the operation continues through a successor accreditation or reseller, set status `evading` |
+| T2 | An ICANN notice of breach or suspension about abuse handling (RAA 3.18), Whois accuracy or abuse-contact duties dated in the last 24 months, cured or not; **or** a sustained outlier: in the top 20 by a normalised abuse rate in 2+ independent sources across 2+ periods, **and** either documented non-response to reports or a normalised measure showing abuse is a large part of the business (25%+ of its new registrations or of its domains under management - about 2.5x the market-wide 10% of 2025 gTLD registrations that Interisle found blocklisted) |
+| T3 | In the top 20 by a normalised abuse rate (registrars with 10,000+ domains under management) in one source, or in one period only, or sustained but without the T2 conditions; or one Grade B vendor documenting enablement with specific domains |
 | T4 | High absolute abuse counts explained by size; appears in un-normalised tables only; responds to reports |
 | T5 | Mainstream provider with a structural role worth tracking, e.g. a DNS/fronting provider used by many tracked operators |
 
@@ -250,11 +250,14 @@ Each entity is assigned one primary type and may carry secondary type tags where
 1. **Registrar of record is context, never evidence.** Neither is being the point where a registry executed a seizure. Clustering of tracked operators on a registrar (as in the pilot) only nominates it for evaluation.
 2. **Normalise by size.** Abuse counts must be read per domains under management. The largest registrars top every raw-count table. Use the source's normalised metric where it gives one, and say so where it does not.
 3. **Sustained means 2+ periods.** One report period, or one campaign, is a T3 signal at most.
-4. **Grades.** ICANN Contractual Compliance notices are Grade A (regulatory action by the accrediting body). Measurement studies with a published method (e.g. Interisle) are Grade B. Spamhaus reporting is Grade C, as elsewhere in this repository.
+4. **Grades.** ICANN Contractual Compliance notices are Grade A (regulatory action by the accrediting body). Measurement studies with a published method (e.g. Interisle) are Grade B. Spamhaus reporting and trade press are Grade C, as elsewhere in this repository. Reseller adverts on forums are Grade E and describe the reseller, not the registrar.
 5. **Rate the right party.** Where a vendor ties abuse to a reseller, rate the reseller; rate the registrar only if it failed to act once notified.
-6. **Cured notices decay.** An ICANN notice whose breaches were cured more than 24 months ago is history, not evidence.
+6. **Notices decay.** An ICANN notice dated more than 24 months ago is history, not evidence.
+7. **Statuses.** `status` follows section 5 (e.g. `exposed` for a registrar terminated after public enforcement); IANA accreditation is recorded separately.
 
 **Defensive use:** There is no network to block. A T1-T3 registrar is a risk-scoring input: weight newly registered domains from it more heavily, and prioritise its domains in hunting. Never block a registrar's whole namespace.
+
+**Current rated entities (`data/registrars.csv` is authoritative):** Trustname.com (T1, accreditation terminated 2026), NiceNIC International (T2), CNOBIN Information Technology and Eranet International (T3). Regtime and Bizcn were evaluated and not rated (`analysis/REGISTRAR_EVALUATION.md`).
 
 **Data:** Rated entities are listed in `data/registrars.csv`, separate from `BPH_Master.csv`, because they have no ASNs or prefixes. Candidates that do not meet the floor are documented in `analysis/REGISTRAR_EVALUATION.md` with the reason. Only `data/registrars.csv` rows carry a tier. The weekly monitor checks every registrar the repository cites for changes in IANA accreditation and for new ICANN enforcement notices.
 

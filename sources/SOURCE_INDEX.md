@@ -323,6 +323,24 @@ When adding a new source to this index:
 | SHINJIRU-SELF | E | Shinjiru website (company and offshore-location pages) | Shinjiru | shinjiru.com | read 2026-10-30 | — | Founded 2000; eight offshore locations |
 | 4VPS-SELF | E | 4vps.su website footer | 4VPS.SU | 4vps.su | read 2026-10-30 | — | Operator named as Global Internet Solutions LLC (Sevastopol); 'since 2017' |
 
+### Additional Sources (Added 2026-10-30, registrar module)
+
+> Sources for taxonomy section 2.8 and `data/registrars.csv` (roadmap R2-R3). Every figure below was read from the source itself; see `analysis/REGISTRAR_EVALUATION.md` for the full tables and URLs. Grade shown inline.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| ICANN-COMPLIANCE-NOTICES | A | Formal Enforcement Notices Issued by Contractual Compliance (breach, suspension, termination) | ICANN Contractual Compliance | icann.org | rolling (read 2026-10-30) | — | Trustname.com (IANA 4318): breach notices 2026-06-10, 06-26, 07-16 and 08-26, termination 2026-08-27 under RAA 3.18.1/3.18.2; Bizcn (471): 2014 breach, cured; no notices to NiceNIC, CNOBIN, Regtime or Eranet; checked weekly by `tools/monitor.py` |
+| ICANN-DNSABUSE-ADVISORY-2024 | A | Advisory: Compliance With DNS Abuse Obligations in the Registrar Accreditation Agreement and the Registry Agreement | ICANN | icann.org | 2024-02-05 | — | RAA 3.18.2 duty to mitigate actionable DNS abuse, from the amendments in force 5 April 2024 |
+| IANA-REGISTRAR-IDS | C | Registrar IDs registry (registrar-ids-1.csv) | IANA | iana.org | read 2026-10-30 | — | Accreditation status of every cited registrar; Trustname (4318) Terminated |
+| INTERISLE-PL-2024 | B | Phishing Landscape 2024 - registrar table (May 2023-April 2024) | Interisle Consulting Group | interisle.net / Cybercrime Information Center | 2024-07-23 | — | NiceNIC #1 by phishing domain score (4,490.9; 45,238 phishing domains, 100,732 under management); CNOBIN and Eranet not in the top 20 |
+| INTERISLE-PL-2025 | B | Phishing Landscape 2025 - registrar table (May 2024-April 2025) | Interisle Consulting Group | interisle.net / Cybercrime Information Center | 2025-09 | — | NiceNIC #1 (8,129.4; 114,493 of 140,839); CNOBIN #9 (284.9); Eranet #16 (150.6); GoDaddy 10.3 for reference |
+| INTERISLE-PL-2026 | B | Phishing activity in registrars, May 2025-April 2026 (Phishing Landscape 2026 tables) | Interisle Consulting Group | Cybercrime Information Center; interisle.substack.com | 2026-07 | — | NiceNIC #1 (11,471.1; 272,696 phishing domains against 237,724 under management); CNOBIN #12 (592.3); Eranet #13 (569.7); GoDaddy 11.0 |
+| INTERISLE-MR-2026 | B | Malicious Registrations in the Domain Name Market (sent to the ICANN Board, 2026-06-26) | Interisle Consulting Group | ICANN correspondence | 2026-06 | — | 10% of all 2025 gTLD registrations blocklisted; NiceNIC 87.6% of its 2025 registrations (157,970 of 180,404; #1 by share); Eranet 17.8% (145,455 of 815,751) |
+| SPAMHAUS-BTU-2024-2026 | C | Botnet Threat Update, editions July-December 2024, January-June 2025, July-December 2025 and January-June 2026 | Spamhaus Malware Labs | Spamhaus | 2025-01 to 2026-07 | — | Most-abused registrars by botnet C&C domains: NiceNIC #1 (1,636, +757%), #3 (614, -62%, 'great efforts'), #4 (738), #4 (1,514, +105%); CNOBIN new entry #13 (159) in July-December 2025 |
+| DNW-TRUSTNAME-2026 | C | ICANN de-accredits "bulletproof" domain registrar | Domain Name Wire | Domain Name Wire | 2026-08-28 | — | Trustname.com (Fewmoretaps OU, Estonia) termination after repeated abuse-handling breaches |
+| DOMAININCITE-TRUSTNAME-2026 | C | "Bulletproof" registrar takes a bullet to the head | Domain Incite | Domain Incite | 2026-09-01 | — | Trustname 'claimed it offered "bulletproof" domain registrations'; slow responses to bank and tax-agency impersonation reports |
+| BITCOINTALK-BPDOMAINS | E | Reseller adverts and reviews for "bulletproof domains" (topics 5385828, 2022-02-15, and 5553500, 2025-08-09) | Forum users (SecuredNet; anonymous reviewer) | bitcointalk.org | 2022-02 / 2025-08 | — | Third-party resellers sell CNOBIN/BiZCN, Eranet and R01 registrations as bulletproof ('DMCA ignored'); the 2025 review calls Trustname '99.99% bulletproof' and advises avoiding NiceNIC as 'overly abused' |
+
 ---
 
 ## Source Statistics
@@ -330,12 +348,12 @@ When adding a new source to this index:
 <!-- generated:source-stats:start -->
 | Grade | Count | Description |
 |-------|-------|-------------|
-| A — Government/Official | 48 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
-| B — Established CTI Vendor | 90 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 54 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
+| A — Government/Official | 50 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
+| B — Established CTI Vendor | 94 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 58 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
 | D — Single Source / Unverified | 8 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
-| E — Self-Reported / Marketing | 10 | Forum advertising presence and provider marketing |
-| **Total** | **210** | |
+| E — Self-Reported / Marketing | 11 | Forum advertising presence and provider marketing |
+| **Total** | **221** | |
 <!-- generated:source-stats:end -->
 
 ---
