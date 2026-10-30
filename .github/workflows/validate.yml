@@ -25,3 +25,6 @@ jobs:
 
       - name: Cross-file consistency
         run: python tools/validate_repo.py
+
+      - name: Monitor unit tests (offline)
+        run: python -m unittest discover -s tests -v

@@ -775,13 +775,13 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Evoxt Enterprise | AS149440 (EVOXTSDNBHD-AS-AP) | T5 | Active | Malaysia | Actor-preferred VPS (repeat tenancy) |
 | Femo IT Solutions Ltd (Defhost) | AS214351 | T1 | Flagged | aurologic downstream | Pure BPH (UK shell) |
 | Feo Prest SRL | AS208137 | T2 | Flagged | Romania | Mass-scanning / exploitation source |
-| First Server Limited | AS204997; AS50113; AS205090; AS200740; AS204339; AS204154; AS35196; AS214602 (no routes, Oct 2026) | T2 | Flagged | Russia-linked (UK reg.) | BPH (VMmanager fleet) |
+| First Server Limited | AS204997; AS50113; AS205090; AS200740; AS204339; AS204154; AS35196; AS214602 (no routes, Oct 2026); AS197703 (FIRST-SERVER-AE; IP MARKET - FZCO [AE]; route objects maintained by FIRST-SERVER-MNT since 2026-09) | T2 | Flagged | Russia-linked (UK reg.) | BPH (VMmanager fleet) |
 | First VPN Service (1VPNS) | — | T1 | Sanctioned | Ukrainian admin / ~27 countries | Anonymization/Proxy Enabler (criminal VPN) |
 | FlokiNET | AS200651 | T4 | Active | Iceland / Romania / Finland | BPH-Adjacent |
 | FUNNULL Technology Inc. | AS152194 (hosting ASN used; CTG Server Limited - not FUNNULL-owned) | T1 | Sanctioned | APAC / Triad Nexus (Philippines) | Infrastructure Laundering |
 | Garantex | — | T1 | Evading | Russia (Estonia-registered) | Financial Enabler |
 | GCSAS (Global Connectivity Solutions LLP) | AS215540 | T1 | Flagged | UK Shell | Corporate Shell / BPH (4VPS front) |
-| Global Internet Solutions LLC (GIR / 4VPS) | AS207713 (GIR-AS; Spamhaus ASN-DROP under gir.network) | T1 | Flagged | Russia (Sevastopol, occupied Crimea) | Pure BPH (4VPS front) |
+| Global Internet Solutions LLC (GIR / 4VPS) | AS207713 (GIR-AS; Spamhaus ASN-DROP under gir.network); AS203319 (GIR-AS-1; registered to Global Internet Solutions LLC; Spamhaus ASN-DROP under gir.network; no routes) | T1 | Flagged | Russia (Sevastopol, occupied Crimea) | Pure BPH (4VPS front) |
 | Global-Data System IT Corp (SWISSNETWORK02) | AS34888 (registered; no routes); AS42624 (registered; no routes) | T2 | Dormant | aurologic downstream (Seychelles reg.) | BPH downstream (dormant) |
 | Grinex | — | T1 | Sanctioned | Russia / Kyrgyzstan | Financial Enabler (Garantex successor) |
 | H-Pay Service PLC | — | T2 | Flagged | Cambodia | Financial Enabler (Huione successor) |
@@ -802,7 +802,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Nobitex | — | T2 | Sanctioned | Iran | Financial Enabler |
 | Pfcloud UG | AS51396; AS215310 (USERCLOUD; Pfcloud UG); AS400328 (Intelligence Hosting LLC [NL/ARIN]; Spamhaus-attributed via pfcloud.io); AS205329 (Muilties Network; individual registrant [DE/RIPE]; Spamhaus-attributed via pfcloud.io) | T2 | Flagged | Germany | BPH downstream / upstream of Virtualine |
 | Phanes Networks | AS49042 (historical; deregistered) | T4 | Active | Netherlands (Urk) | BPH-Adjacent |
-| PINSPB (Petersburg Internet Network Ltd) | AS44050; AS34665 (PINDC-AS; Petersburg Internet Network Ltd) | T2 | Flagged | Russia / St. Petersburg | Pure BPH |
+| PINSPB (Petersburg Internet Network Ltd) | AS44050; AS34665 (PINDC-AS; Petersburg Internet Network Ltd); AS45054 (Metrobit-AS; Petersburg Internet Network ltd.; registered, no routes) | T2 | Flagged | Russia / St. Petersburg | Pure BPH |
 | PQ Hosting Plus S.R.L. | AS44477 (historical; received 2025-05-16; withdrawn from routing ~2026-04 and deregistered) | T1 | Evading | Moldova | Sanctions Evasion (Stark) |
 | PrivateAlps / Private Layer | AS51852; AS52288 (PRIVATE-LAYER; registered, no routes) | T1 | Active | Panama reg. / Switzerland (marketed) | Offshore BPH brand (RF top 10) |
 | PROSPERO OOO / Proton66 | AS200593; AS198953 | T1 | Flagged | Russia / St. Petersburg | Pure BPH |
@@ -855,6 +855,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS44050 | PINSPB (Petersburg Internet Network Ltd) | T2 | block-prefixes | Pure BPH; Russia / St. Petersburg |
 | AS44477 | PQ Hosting Plus S.R.L. | T1 | do-not-block | historical; received 2025-05-16; withdrawn from routing ~2026-04 and deregistered |
 | AS44477 | Stark Industries Solutions | T1 | do-not-block | historical; transferred to PQ Hosting Plus 2025-05-16; now deregistered |
+| AS45054 | PINSPB (Petersburg Internet Network Ltd) | T2 | monitor | Metrobit-AS; Petersburg Internet Network ltd.; registered, no routes |
 | AS45839 | Shinjiru | T4 | monitor | BPH-Adjacent; Malaysia |
 | AS48589 | Tiger Network Limited (Tiger Net) | T3 | block | TIGER |
 | AS49037 | Prostie Reshenia LLC (WebRocket) | T5 | monitor | A1-TELECOM; no routes since 2025-02-12 |
@@ -891,6 +892,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS154177 | Kaopu Cloud HK Limited | T1 | block | LIGHT NODE LIMITED [HK]; Spamhaus-attributed via kaopuyun.com |
 | AS197170 | HostSlick | T3 | block | TECHTIES-AS, TechTies Inc. [SC]; Spamhaus ASN-DROP under hostslick.de |
 | AS197414 | Zservers | T1 | do-not-block | historical; XHOST-INTERNET-SOLUTIONS; deregistered |
+| AS197703 | First Server Limited | T2 | block-prefixes | FIRST-SERVER-AE; IP MARKET - FZCO [AE]; route objects maintained by FIRST-SERVER-MNT since 2026-09 |
 | AS198465 | BtHoster | T1 | do-not-block | predecessor, recycled to CN |
 | AS198953 | PROSPERO OOO / Proton66 | T1 | block | Pure BPH; Russia / St. Petersburg |
 | AS200019 | AlexHost | T4 | monitor | BPH-Adjacent; Moldova |
@@ -903,6 +905,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS202015 | HostZealot (HZ Hosting Ltd) | T4 | monitor | HZ-US-AS |
 | AS202412 | Railnet LLC / Virtualine Technologies | T1 | block | OMEGATECH / Omegatech LTD [SC]; Virtualine network until the Oct 2026 seizure - seen by 1 of 323 RIS peers since 2026-10-27; Spamhaus ASN-DROP under virtualine.org |
 | AS203273 | Aeza International Ltd | T1 | block | NetCrafters OU [EE]; Spamhaus ASN-DROP under aeza.net |
+| AS203319 | Global Internet Solutions LLC (GIR / 4VPS) | T1 | block | GIR-AS-1; registered to Global Internet Solutions LLC; Spamhaus ASN-DROP under gir.network; no routes |
 | AS203727 | Altawk (Daniil Yevchenko) | T2 | do-not-block | historical; reassigned to byon GmbH [DE] - do not block |
 | AS204154 | First Server Limited | T2 | block-prefixes | BPH (VMmanager fleet); Russia-linked (UK reg.) |
 | AS204339 | First Server Limited | T2 | block-prefixes | BPH (VMmanager fleet); Russia-linked (UK reg.) |

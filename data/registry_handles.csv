@@ -1,0 +1,88 @@
+handle,kind,registry,entities,basis,checked
+aeza-mnt,mntner,RIPE,Aeza International Ltd,mnt-by of aut-num AS216246,2026-10-30
+ALINDA-MNT,mntner,RIPE,Altawk (Daniil Yevchenko),mnt-by of aut-num AS209946,2026-10-30
+ELITETEAM,mntner,RIPE,ELITETEAM / 1337TEAM LIMITED,"mnt-by of aut-num AS51381, AS56873",2026-10-30
+FEMOITSOLUTIONS-mnt,mntner,RIPE,Femo IT Solutions Ltd (Defhost),mnt-by of aut-num AS214351,2026-10-30
+FIRST-SERVER-MNT,mntner,RIPE,First Server Limited,mnt-by of aut-num AS204339,2026-10-30
+FIRSTBYTE-MNT,mntner,RIPE,First Server Limited,"mnt-by of aut-num AS50113, AS200740, AS204154, AS204997, AS205090, AS214602",2026-10-30
+FPS12-MNT,mntner,RIPE,Feo Prest SRL,mnt-by of aut-num AS208137,2026-10-30
+GCS-MNT,mntner,RIPE,GCSAS (Global Connectivity Solutions LLP),mnt-by of aut-num AS215540,2026-10-30
+gening-mnt,mntner,RIPE,Zservers,mnt-by of aut-num AS213010,2026-10-30
+GHOSTYNETWORKS-MNT,mntner,RIPE,AnonRDP / Blatant Technologies,Maintainer named after GHOSTYNETWORKS (historical AS205759); maintains a route object for AnonRDP prefix 46.151.182.0/24,2026-10-30
+GIRnet-mnt,mntner,RIPE,Global Internet Solutions LLC (GIR / 4VPS),mnt-by of aut-num AS207713,2026-10-30
+IIC-RAIL-LIMITED-MNT,mntner,RIPE,BtHoster,mnt-by of aut-num AS213388,2026-10-30
+ISLAND-HOST-MNT,mntner,RIPE,Zservers,mnt-by of aut-num AS61336,2026-10-30
+itsy-mnt,mntner,RIPE,QWINS LTD,mnt-by of aut-num AS214422,2026-10-30
+KP73900-MNT,mntner,RIPE,PrivateAlps / Private Layer,mnt-by of aut-num AS51852,2026-10-30
+LimitedNetwork-MNT,mntner,RIPE,BtHoster,mnt-by of aut-num AS213790,2026-10-30
+lir-ae-cloudzy-1-MNT,mntner,RIPE,Cloudzy / abrNOC,mnt-by of aut-num AS200038,2026-10-30
+lir-de-pfcloud-2-MNT,mntner,RIPE,Pfcloud UG,"mnt-by of aut-num AS51396, AS215310",2026-10-30
+lir-hk-changway-1-MNT,mntner,RIPE,Chang Way Technologies Co. Limited,"mnt-by of aut-num AS57523, AS59425, AS207566",2026-10-30
+lir-ru-aezagroup-1-MNT,mntner,RIPE,Aeza International Ltd,"mnt-by of aut-num AS210644, AS216246",2026-10-30
+lir-ru-galeonservice-1-MNT,mntner,RIPE,Chang Way Technologies Co. Limited,mnt-by of aut-num AS211663,2026-10-30
+lir-ru-proton66-1-MNT,mntner,RIPE,PROSPERO OOO / Proton66,mnt-by of aut-num AS198953,2026-10-30
+lir-uz-datavice-1-MNT,mntner,RIPE,Datavice MCHJ,mnt-by of aut-num AS206336,2026-10-30
+media-land-llc,mntner,RIPE,Media Land LLC,mnt-by of aut-num AS206728,2026-10-30
+mnt-lt-hostbaltic-1,mntner,RIPE,UAB Host Baltic (serveroffer.lt),"mnt-by of aut-num AS209605, AS211872",2026-10-30
+mnt-mirhosting,mntner,RIPE,MIRhosting B.V.,"mnt-by of aut-num AS52000, AS206932",2026-10-30
+mnt-ru-media-land-1,mntner,RIPE,Media Land LLC,"mnt-by of aut-num AS206728, AS211805, AS215376",2026-10-30
+mnt-uk-tiger2-1,mntner,RIPE,Tiger Network Limited (Tiger Net),mnt-by of aut-num AS48589,2026-10-30
+MUILTIES-MNT,mntner,RIPE,Pfcloud UG,mnt-by of aut-num AS205329,2026-10-30
+netcrafters-mnt,mntner,RIPE,Aeza International Ltd,mnt-by of aut-num AS203273,2026-10-30
+nethost-mnt,mntner,RIPE,NECHAEVDS; Zservers,mnt-by of aut-num AS213194,2026-10-30
+NETWORK-MANAGEMENT-MNT,mntner,RIPE,First Server Limited,mnt-by of aut-num AS35196,2026-10-30
+omegatechsc-mnt,mntner,RIPE,Railnet LLC / Virtualine Technologies,mnt-by of aut-num AS202412,2026-10-30
+PROSPERO-MNT,mntner,RIPE,PROSPERO OOO / Proton66,mnt-by of aut-num AS200593,2026-10-30
+qwins-mnt,mntner,RIPE,QWINS LTD,mnt-by of aut-num AS213702,2026-10-30
+techties-mnt,mntner,RIPE,HostSlick,mnt-by of aut-num AS197170,2026-10-30
+THE-HOSTING-MNT,mntner,RIPE,WorkTitans B.V. / THE.Hosting,"mnt-by of aut-num AS209847, AS213999",2026-10-30
+TOKOWA-MNT,mntner,RIPE,Tiger Network Limited (Tiger Net),mnt-by of aut-num AS211121,2026-10-30
+UFO42-MNT,mntner,RIPE,UFO Hosting LLC,mnt-by of aut-num AS33993,2026-10-30
+UFOCORP-MNT,mntner,RIPE,Chang Way Technologies Co. Limited,"mnt-by of aut-num AS201738, AS218974",2026-10-30
+VIRTUALINE-MNT,mntner,RIPE,Railnet LLC / Virtualine Technologies,Maintainer named after Virtualine; maintains no aut-num or route objects as of 2026-10-30 (watch for reuse),2026-10-30
+vpsvaulthost-mnt,mntner,RIPE,VPSVAULT.HOST LTD,mnt-by of aut-num AS215925,2026-10-30
+WAICORE-MNT,mntner,RIPE,WAIcore Hosting Ltd,"mnt-by of aut-num AS213887, AS219262",2026-10-30
+xdearboy-mnt,mntner,RIPE,QWINS LTD,mnt-by of aut-num AS214422,2026-10-30
+ORG-AGL40-RIPE,organisation,RIPE,Aeza International Ltd,org of aut-num AS216246,2026-10-30
+ORG-AGL50-RIPE,organisation,RIPE,Aeza International Ltd,org of aut-num AS210644,2026-10-30
+ORG-AJ160-RIPE,organisation,RIPE,QWINS LTD,org of aut-num AS218731,2026-10-30
+ORG-AL592-RIPE,organisation,RIPE,Altawk (Daniil Yevchenko),org of aut-num AS209946,2026-10-30
+ORG-CAII1-RIPE,organisation,RIPE,Cloudzy / abrNOC,org of aut-num AS200038,2026-10-30
+ORG-CWTC1-RIPE,organisation,RIPE,Chang Way Technologies Co. Limited,"org of aut-num AS57523, AS59425, AS207566",2026-10-30
+ORG-DM279-RIPE,organisation,RIPE,Datavice MCHJ,org of aut-num AS206336,2026-10-30
+ORG-DN610-RIPE,organisation,RIPE,NECHAEVDS; Zservers,org of aut-num AS213194,2026-10-30
+ORG-FA790-RIPE,organisation,RIPE,First Server Limited,"org of aut-num AS35196, AS50113, AS214602",2026-10-30
+ORG-FI86-RIPE,organisation,RIPE,Femo IT Solutions Ltd (Defhost),org of aut-num AS214351,2026-10-30
+ORG-FPS12-RIPE,organisation,RIPE,Feo Prest SRL,org of aut-num AS208137,2026-10-30
+ORG-FSL27-RIPE,organisation,RIPE,First Server Limited,"org of aut-num AS200740, AS204154, AS204339, AS204997, AS205090",2026-10-30
+ORG-GCSL7-RIPE,organisation,RIPE,GCSAS (Global Connectivity Solutions LLP),org of aut-num AS215540,2026-10-30
+ORG-GIR1-RIPE,organisation,RIPE,Global Internet Solutions LLC (GIR / 4VPS),org of aut-num AS207713,2026-10-30
+ORG-GL550-RIPE,organisation,RIPE,Chang Way Technologies Co. Limited,org of aut-num AS211663,2026-10-30
+ORG-GND3-RIPE,organisation,RIPE,Zservers,org of aut-num AS213010,2026-10-30
+ORG-IA2168-RIPE,organisation,RIPE,BtHoster,org of aut-num AS213388,2026-10-30
+ORG-ISL37-RIPE,organisation,RIPE,Zservers,org of aut-num AS61336,2026-10-30
+ORG-KC106-RIPE,organisation,RIPE,Pfcloud UG,org of aut-num AS205329,2026-10-30
+ORG-LA1589-RIPE,organisation,RIPE,ELITETEAM / 1337TEAM LIMITED,"org of aut-num AS51381, AS56873",2026-10-30
+ORG-LA1969-RIPE,organisation,RIPE,BtHoster,org of aut-num AS213790,2026-10-30
+ORG-MA2135-RIPE,organisation,RIPE,Media Land LLC,org of aut-num AS215376,2026-10-30
+ORG-MB213-RIPE,organisation,RIPE,MIRhosting B.V.,"org of aut-num AS52000, AS206932",2026-10-30
+ORG-MLL13-RIPE,organisation,RIPE,Media Land LLC,"org of aut-num AS206728, AS211805",2026-10-30
+ORG-NO63-RIPE,organisation,RIPE,Aeza International Ltd,org of aut-num AS203273,2026-10-30
+ORG-OL329-RIPE,organisation,RIPE,Railnet LLC / Virtualine Technologies,org of aut-num AS202412,2026-10-30
+ORG-PINl1-RIPE,organisation,RIPE,PINSPB (Petersburg Internet Network Ltd),"org of aut-num AS34665, AS44050",2026-10-30
+ORG-PLI2-RIPE,organisation,RIPE,PrivateAlps / Private Layer,org of aut-num AS51852,2026-10-30
+ORG-PO83-RIPE,organisation,RIPE,PROSPERO OOO / Proton66,org of aut-num AS200593,2026-10-30
+ORG-PO84-RIPE,organisation,RIPE,PROSPERO OOO / Proton66,org of aut-num AS198953,2026-10-30
+ORG-PU41-RIPE,organisation,RIPE,Pfcloud UG,"org of aut-num AS51396, AS215310",2026-10-30
+ORG-QH6-RIPE,organisation,RIPE,QWINS LTD,org of aut-num AS214422,2026-10-30
+ORG-QL189-RIPE,organisation,RIPE,QWINS LTD,org of aut-num AS213702,2026-10-30
+ORG-RNL32-RIPE,organisation,RIPE,Tiger Network Limited (Tiger Net),org of aut-num AS211121,2026-10-30
+ORG-TI147-RIPE,organisation,RIPE,HostSlick,org of aut-num AS197170,2026-10-30
+ORG-TNL41-RIPE,organisation,RIPE,Tiger Network Limited (Tiger Net),org of aut-num AS48589,2026-10-30
+ORG-UEA13-RIPE,organisation,RIPE,WAIcore Hosting Ltd,org of aut-num AS219262,2026-10-30
+ORG-UHB3-RIPE,organisation,RIPE,UAB Host Baltic (serveroffer.lt),"org of aut-num AS209605, AS211872",2026-10-30
+ORG-UHL6-RIPE,organisation,RIPE,UFO Hosting LLC,org of aut-num AS33993,2026-10-30
+ORG-UTL18-RIPE,organisation,RIPE,Chang Way Technologies Co. Limited,"org of aut-num AS201738, AS218974",2026-10-30
+ORG-VL450-RIPE,organisation,RIPE,VPSVAULT.HOST LTD,org of aut-num AS215925,2026-10-30
+ORG-WB96-RIPE,organisation,RIPE,WorkTitans B.V. / THE.Hosting,"org of aut-num AS209847, AS213999",2026-10-30
+ORG-WL627-RIPE,organisation,RIPE,WAIcore Hosting Ltd,org of aut-num AS213887,2026-10-30

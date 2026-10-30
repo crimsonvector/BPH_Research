@@ -50,12 +50,12 @@ Goal: no more hand-synced tables, structured block guidance, recorded tier reaso
 
 Goal: detect changes within a day instead of at the next audit.
 
-- [ ] **2.1 Routing monitor** (`tools/monitor_routing.py`). For every ASN in `data/asns.csv` and every listed prefix: holder, announced prefixes, RIS visibility, Spamhaus ASN-DROP and DROP. Writes a dated snapshot and a diff.
-- [ ] **2.2 Successor detection.** Flag: new ASN-DROP entries under a tracked operator's Spamhaus `domain`; withdrawn tracked prefixes re-originated by another ASN; new RIPE route or aut-num objects maintained by tracked maintainers (e.g. `VIRTUALINE-MNT`, `GHOSTYNETWORKS-MNT`, `aeza-mnt`).
-- [ ] **2.3 Companies House monitor.** Filing history for tracked UK company numbers: Gazette notices, dissolutions, officer and PSC changes.
-- [ ] **2.4 Scheduled workflow.** Weekly run that opens or updates a single "Monitor findings" issue; no automatic edits to the data.
+- [x] **2.1 Routing monitor** (`tools/monitor.py`, checks `asn`, `drop`, `prefix`). For every ASN in `data/asns.csv` and every listed prefix: holder, routing state, prefix count, Spamhaus ASN-DROP and DROP. Writes a dated snapshot; the "diff" is against the recorded data rather than the previous snapshot, so findings persist until the data catches up or they are acknowledged (`monitor/acknowledged.csv`).
+- [x] **2.2 Successor detection** (checks `asndrop`, `withdrawn`, `ripe`). New ASN-DROP entries under a tracked operator's Spamhaus `domain`; withdrawn tracked prefixes re-originated by another ASN, grouped by new origin; recent RIPE aut-num and route objects of the maintainers and organisations in `data/registry_handles.csv` that point at untracked ASNs.
+- [x] **2.3 Companies House monitor** (check `company`, watchlist `data/companies.csv`). Status and filings after the recorded latest filing; officer and PSC filings shown as generic labels so no individual is named.
+- [x] **2.4 Scheduled workflow** (`.github/workflows/monitor.yml`). Weekly run that opens or updates a single "Monitor findings" issue and comments with new findings; snapshot kept as an artifact; no automatic edits to the data. The domain check (registration, registrar, status, seizure nameservers) from the R1 pilot runs in the same job.
 
-**Done when:** the October 2026 changes (Altawk, MIRhosting, WorkTitans, GCSAS listing, RetryHost re-announcement, the 2026-10-13 strike-off notices) would each have produced an issue entry.
+**Done when:** the October 2026 changes (Altawk, MIRhosting, WorkTitans, GCSAS listing, RetryHost re-announcement, the 2026-10-13 strike-off notices) would each have produced an issue entry. **Met:** a live replay against the 2026-09-25 data produced every one of them (see `docs/MONITORING.md`), and the same cases run offline in CI (`tests/test_monitor.py`).
 
 ## Phase 3 - Claims, sources and relationships
 
@@ -90,3 +90,4 @@ Goal: cover the domain layer - registrars, resellers, privacy/proxy services, TL
 | 2026-10-30 | Roadmap written; Phase 1 and the R1 pilot started |
 | 2026-10-30 | Phase 1 complete in PR: schema v2 (29 columns, tier_basis for all 79 rows), `tools/generate_docs.py`, `data/asns.csv` (124 rows; 50 block, 16 block-prefixes, 1 hunt, 38 monitor, 19 do-not-block), CI workflow |
 | 2026-10-30 | R1 pilot complete in PR: 66 domains, registrar resolved for 39; no dominant registrar (NameCheap 28%, a base-rate effect); operator clustering at NiceNIC, CNOBIN and Regtime; Cloudflare DNS on 52%; Shinjiru is itself an accredited registrar; 17 ccTLD domains lack RDAP. See `analysis/REGISTRAR_PILOT.md` |
+| 2026-10-30 | Phase 2 complete in PR: `tools/monitor.py` (8 checks), `data/companies.csv` (15), `data/registry_handles.csv` (87), weekly workflow, offline tests; October replay passes. First run: 8 retried RDAP lookups resolved; AS203319 (GIR), AS197703 (First Server) and AS45054 (PINSPB) added; post-seizure re-origination of Virtualine space by AS6461 recorded; successor origins recorded for MIRhosting, Altawk, WorkTitans, Kaopu, PINSPB and First Server |
