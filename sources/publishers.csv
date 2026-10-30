@@ -1,0 +1,51 @@
+publisher,default_grade,basis,aliases
+OFAC,A,US Treasury Office of Foreign Assets Control sanctions actions,US Treasury
+US Treasury,A,Treasury press releases on sanctions,
+US DOJ,A,"Indictments, seizures and court filings",
+US Government,A,Other US federal publications,
+FBI,A,Law-enforcement advisories,
+CISA,A,Joint advisories,CISA / Joint Ransomware Task Force
+EU Council,A,EU sanctions decisions,
+UK Government,A,UK sanctions and government publications,HM Treasury
+Europol,A,Law-enforcement press releases,Eurojust
+Politie,A,Dutch police press releases,FIOD (Netherlands); NCSC-NL
+foreignminister.gov.au,A,Australian sanctions announcements,
+icann.org,A,ICANN Contractual Compliance enforcement and advisories (regulatory action by the accrediting body),
+Recorded Future,B,CTI vendor research,Recorded Future (Insikt Group)
+Silent Push,B,CTI vendor research,
+Chainalysis,B,Blockchain-analytics vendor research,
+TRM Labs,B,Blockchain-analytics vendor research,
+Elliptic,B,Blockchain-analytics vendor research,
+Intrinsec,B,CTI vendor research,
+Hunt.io,B,CTI vendor research,
+Arctic Wolf,B,CTI vendor research,
+Trend Micro,B,CTI vendor research,
+GreyNoise,B,CTI vendor research and datasets,GreyNoise (GitHub)
+Intel 471,B,CTI vendor research,
+Google Cloud,B,CTI vendor research (Mandiant / GTIG),Google; Mandiant
+Huntress,B,CTI vendor research,
+LevelBlue,B,CTI vendor research,
+Sekoia,B,CTI vendor research,
+eSentire,B,CTI vendor research,
+ESET (GitHub),B,CTI vendor IOC repositories,ESET
+Lumen (GitHub),B,CTI vendor IOC repositories,Lumen
+Interisle Consulting Group,B,Measurement studies with a published method,
+Spamhaus,C,Community blocklists and research (graded C throughout this repository),Spamhaus (mirrored)
+Team Cymru,C,Community research,
+Qurium,C,Independent investigations,
+Krebs on Security,C,Investigative journalism,
+Recorded Future News,C,"Journalism (The Record), editorially separate from Recorded Future's research",
+The Hacker News,C,Journalism,
+DCD,C,Trade journalism,
+BleepingComputer,C,Journalism,
+Dark Reading,C,Journalism,
+CyberScoop,C,Journalism,
+Hackread,C,Journalism,
+GBHackers,C,Journalism,
+iTnews,C,Journalism,
+Domain Name Wire,C,Trade journalism,
+Domain Incite,C,Trade journalism,
+securityonline.info,C,Journalism,
+RIPE NCC,C,Registry data (as REGISTRY-SNAPSHOT); policy documents may warrant A with a note,RIPE NCC mailing list
+iana.org,C,Registry data,
+CrimsonVector (first-party),D,First-party findings are single-source by construction,

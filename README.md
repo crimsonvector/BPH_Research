@@ -42,7 +42,9 @@ BPH_Research/
 |                                     pivoting, tools/sources, workflows, templates
 |
 |-- sources/
-|   |-- SOURCE_INDEX.md           <-- Catalog of all sources with metadata and grade
+|   |-- sources.csv              <-- Source catalogue: ID, grade, publisher, date, URL, retrieved date
+|   |-- publishers.csv           <-- Default grade per publisher (deviations need a grade_note)
+|   |-- SOURCE_INDEX.md           <-- Catalog of all sources (tables generated from sources.csv)
 |
 |-- data/
 |   |-- asns.csv                 <-- ASN register: one row per (ASN, entity) with routing state,
@@ -105,7 +107,7 @@ BPH_Research/
 2. Review **`analysis/TIMELINE.md`** for the chronology of sanctions, takedowns, and evasion responses
 
 ### For adding new intelligence
-1. Add an entry to **`sources/SOURCE_INDEX.md`** with full metadata and source grade
+1. Add the source to **`sources/sources.csv`** with full metadata, URL and grade (the SOURCE_INDEX tables are generated from it)
 2. Use the assessment template in **`playbook/ANALYST_PLAYBOOK.md`** Section 5 to evaluate new providers
 3. Add the provider to **`BPH_Master.csv`** with all applicable columns populated
 4. Update relevant analytical documents as needed
@@ -126,7 +128,7 @@ The CSV uses 29 columns (schema v2, 2026-10-30: four columns appended at the end
 | `associated_threat_actors` | APT groups, ransomware brands hosted |
 | `associated_malware` | Specific malware families observed |
 | `rf_threat_density_score` | Recorded Future Threat Density Score (if available) |
-| `sources` | Source IDs referencing SOURCE_INDEX.md |
+| `sources` | Source IDs from `sources/sources.csv` (catalogued in SOURCE_INDEX.md) |
 | `geo_cluster` / `primary_role` | Geography and role shown in ECOSYSTEM_MAP Appendix A (schema v2) |
 | `tier_basis` | Taxonomy criterion and key evidence behind the tier; must start with the tier code (schema v2) |
 | `last_verified` | Date the row was last checked end to end (distinct from `last_updated`); rows older than 90 days are flagged (schema v2) |
@@ -254,7 +256,7 @@ Run it after any change to `BPH_Master.csv` or the private findings file, and re
 To add new intelligence to this repository:
 
 1. **New provider:** Use the assessment template in the playbook, add to `BPH_Master.csv`, document sources
-2. **New source:** Add to `sources/SOURCE_INDEX.md` with metadata and grade (update the Source Statistics counts), cross-reference the Source ID in the CSV `sources` column
+2. **New source:** Add a row to `sources/sources.csv` with metadata, URL and grade (the SOURCE_INDEX tables and statistics are generated), cross-reference the Source ID in the CSV `sources` column
 3. **Status change:** Update CSV status/tier, add a `TIMELINE.md` entry, update the ecosystem map if relationships changed
 4. **Sanctions update:** Add to timeline, update the CSV `sanctions_designations` field, check for evasion vehicles
 5. **ASN changes:** add or update the matching row in `data/asns.csv` (one row per ASN and entity, with a `block_recommendation`).

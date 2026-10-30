@@ -22,8 +22,10 @@ Errors (exit 1):
   - status is one of the taxonomy's lifecycle/auxiliary states
   - risk_tier starts with T1..T5
   - every Source ID cited in the CSV `sources` column is catalogued in
-    sources/SOURCE_INDEX.md, and no Source ID is catalogued twice
-  - the SOURCE_INDEX "Source Statistics" grade counts match the catalogue
+    sources/sources.csv, once, with a grade, title, publisher, section and well-formed
+    URL / retrieved fields (SOURCE_INDEX.md tables and statistics are generated from it)
+Warnings: a grade that differs from the publisher default in sources/publishers.csv
+  without a grade_note
   - BPH_Master.xlsx mirrors the CSV cell-for-cell (skipped if openpyxl is missing)
   - ECOSYSTEM_MAP Appendix A has one row per CSV entity; Appendix B lists exactly
     the ASNs cited in the CSV
@@ -81,39 +83,12 @@ def table_cells(line: str) -> list[str]:
     return [c.strip() for c in line.strip().strip("|").split("|")]
 
 
-def parse_source_index(text: str):
-    """Return ({source_id: grade}, duplicate_ids, {grade: stated_count})."""
-    grades, dupes = {}, []
-    section_grade = None
-    for line in text.splitlines():
-        m = re.match(r"^#{2,4} (.*)", line)
-        if m:
-            g = re.search(r"\(Grade ([A-E])\)", m.group(1))
-            section_grade = g.group(1) if g else None
-            continue
-        if not line.startswith("|"):
-            continue
-        cells = table_cells(line)
-        if not cells or not ID_RE.match(cells[0]) or cells[0] in ("ID",):
-            continue
-        grade = cells[1] if len(cells) > 1 and re.fullmatch(r"[A-E]", cells[1]) else section_grade
-        if cells[0] in grades:
-            dupes.append(cells[0])
-        grades[cells[0]] = grade
-    # grades stated in prose, e.g. **Grades (...):** `X`, `Y` = B; `Z` = C.
-    for line in text.splitlines():
-        if line.startswith("**Grades"):
-            for ids_blob, g in re.findall(r"((?:`[A-Z0-9-]+`[,\s]*)+)=\s*([A-E])", line):
-                for sid in re.findall(r"`([A-Z0-9-]+)`", ids_blob):
-                    grades[sid] = g
-    stated = {}
-    stats = text.split("## Source Statistics", 1)
-    if len(stats) == 2:
-        for line in stats[1].splitlines():
-            m = re.match(r"^\|\s*([A-E]) — [^|]*\|\s*(\d+)\s*\|", line)
-            if m:
-                stated[m.group(1)] = int(m.group(2))
-    return grades, dupes, stated
+def load_source_catalogue(root: str):
+    """Return (rows, {source_id: grade}, duplicate_ids) from sources/sources.csv."""
+    with open(os.path.join(root, "sources", "sources.csv"), encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    ids = collections.Counter(r["id"] for r in rows)
+    return rows, {r["id"]: r["grade"] for r in rows}, [i for i, n in ids.items() if n > 1]
 
 
 def main() -> int:
@@ -158,21 +133,34 @@ def main() -> int:
                 warnings.append(f"{r['provider_name']}: last verified {verified} (> {STALE_DAYS} days)")
     tiers = collections.Counter(r["risk_tier"][:2] for r in rows)
 
-    # ---- source index ----
-    idx_text = read(os.path.join(root, "sources", "SOURCE_INDEX.md"))
-    grades, dupes, stated = parse_source_index(idx_text)
-    errors += [f"SOURCE_INDEX: Source ID catalogued twice: {d}" for d in dupes]
+    # ---- source catalogue (sources/sources.csv; SOURCE_INDEX.md tables are generated from it) ----
+    catalogue, grades, dupes = load_source_catalogue(root)
+    errors += [f"sources.csv: Source ID catalogued twice: {d}" for d in dupes]
+    for s in catalogue:
+        if not ID_RE.match(s["id"]):
+            errors.append(f"sources.csv: malformed Source ID {s['id']!r}")
+        if not s["title"].strip() or not s["publisher"].strip() or not s["section"].strip():
+            errors.append(f"sources.csv: {s['id']} needs a title, publisher and section")
+        for col in ("url", "archive_url"):
+            if s[col] and not re.match(r"https?://\S+$", s[col]):
+                errors.append(f"sources.csv: {s['id']} {col} {s[col]!r} is not an http(s) URL")
+        if s["retrieved"]:
+            try:
+                _dt.date.fromisoformat(s["retrieved"])
+            except ValueError:
+                errors.append(f"sources.csv: {s['id']} retrieved {s['retrieved']!r} is not an ISO date")
     for r in rows:
         for sid in (s.strip() for s in r["sources"].split(";")):
             if sid and sid not in grades:
-                errors.append(f"{r['provider_name']}: source {sid} is not in SOURCE_INDEX.md")
-    ungraded = [s for s, g in grades.items() if not g]
-    errors += [f"SOURCE_INDEX: no grade for {s}" for s in ungraded]
-    actual = collections.Counter(g for g in grades.values() if g)
-    for g in "ABCDE":
-        if stated.get(g) != actual.get(g, 0):
-            errors.append(f"SOURCE_INDEX statistics: grade {g} stated {stated.get(g)}, "
-                          f"catalogue has {actual.get(g, 0)}")
+                errors.append(f"{r['provider_name']}: source {sid} is not in sources/sources.csv")
+    errors += [f"sources.csv: no valid grade for {s}" for s, g in grades.items() if g not in tuple("ABCDE")]
+    try:
+        sys.path.insert(0, HERE)
+        from generate_docs import grade_deviations, publisher_defaults
+        warnings += [f"sources.csv: {s['id']} graded {s['grade']} but {s['publisher']} defaults to {d}; add a grade_note or regrade"
+                     for s, d in grade_deviations(catalogue, publisher_defaults(root))]
+    except SystemExit as e:
+        errors.append(f"publisher defaults could not be read: {e}")
 
     # ---- xlsx mirror ----
     try:
@@ -303,7 +291,7 @@ def main() -> int:
                 if not iso(d) or kind not in ("breach", "suspension", "termination", "non-renewal"):
                     errors.append(f"{who}: ICANN notice {n!r} is not 'YYYY-MM-DD kind'")
             errors += [f"{who}: linked entity {e!r} is not in the CSV" for e in (x.strip() for x in g["linked_entities"].split(";")) if e and e not in names]
-            errors += [f"{who}: source {s} is not in SOURCE_INDEX.md" for s in (x.strip() for x in g["sources"].split(";")) if s and s not in grades]
+            errors += [f"{who}: source {s} is not in sources/sources.csv" for s in (x.strip() for x in g["sources"].split(";")) if s and s not in grades]
             if not iso(g["last_verified"]):
                 errors.append(f"{who}: last_verified is not an ISO date")
 

@@ -27,6 +27,9 @@ Checks (--checks, default all):
   registrar  IANA accreditation status and new ICANN Contractual Compliance notices
              (breach, suspension, termination) for every registrar in data/domains.csv
              and data/registrars.csv
+  stale      records due for re-verification (no network): entities, registrars and ASN
+             register rows not verified in 90 days, and claims still unverified after 90
+             days (data/claims.csv)
 
 Usage:
   python tools/monitor.py [--checks asn,prefix,...] [--out DIR] [--previous REPORT.md]
@@ -62,7 +65,8 @@ sys.path.insert(0, HERE)
 from generate_docs import defang, load_csv  # noqa: E402
 
 USER_AGENT = "BPH_Research-monitor/1.0 (+https://github.com/crimsonvector/BPH_Research)"
-CHECKS = ["asn", "drop", "prefix", "withdrawn", "asndrop", "ripe", "domain", "company", "registrar"]
+CHECKS = ["asn", "drop", "prefix", "withdrawn", "asndrop", "ripe", "domain", "company", "registrar", "stale"]
+STALE_DAYS = 90
 SEVERITY_ORDER = {"high": 0, "medium": 1, "low": 2}
 CHECK_TITLES = {
     "asn": "ASN register (`data/asns.csv`)",
@@ -74,6 +78,7 @@ CHECK_TITLES = {
     "domain": "Domains (`data/domains.csv`)",
     "company": "Companies House (`data/companies.csv`)",
     "registrar": "Registrars: IANA accreditation and ICANN compliance notices",
+    "stale": "Records due for re-verification (90 days)",
 }
 WITHDRAWN_CAP = 40  # withdrawn prefixes checked per ASN per run
 KEYS_MARK = "monitor-keys:"
@@ -272,12 +277,13 @@ def load_repo(root: str) -> dict:
     optional = lambda *x: load_csv(p(*x)) if os.path.exists(p(*x)) else []
     return index_data(rows, asns, load_csv(p("data", "domains.csv")), load_csv(p("data", "companies.csv")),
                       load_csv(p("data", "registry_handles.csv")), optional("monitor", "acknowledged.csv"),
-                      optional("data", "registrars.csv"))
+                      optional("data", "registrars.csv"), optional("data", "claims.csv"))
 
 
-def index_data(rows: list[dict], asns: list[dict], domains=(), companies=(), handles=(), acks=(), registrars=()) -> dict:
+def index_data(rows: list[dict], asns: list[dict], domains=(), companies=(), handles=(), acks=(), registrars=(), claims=()) -> dict:
     data = {"rows": {r["provider_name"]: r for r in rows}, "asns": list(asns), "domains": list(domains),
-            "companies": list(companies), "handles": list(handles), "acks": list(acks), "registrars": list(registrars)}
+            "companies": list(companies), "handles": list(handles), "acks": list(acks), "registrars": list(registrars),
+            "claims": list(claims)}
     data["tracked_asns"] = {asn_int(a["asn"]) for a in asns}
     data["entity_asns"] = collections.defaultdict(set)
     data["asn_entities"] = collections.defaultdict(set)
@@ -944,6 +950,39 @@ def compare_registrars(data: dict, obs: dict, since: dt.date) -> list[dict]:
     return out
 
 
+# --------------------------------------------------------------------------- check: stale
+
+def compare_stale(data: dict, today: dt.date, days: int = STALE_DAYS) -> list[dict]:
+    """Records whose verification date is older than `days` (repository data only, no network)."""
+    cutoff = (today - dt.timedelta(days=days)).isoformat()
+    out = []
+    ents = collections.defaultdict(list)  # grouped by date: an audit verifies many rows at once, so they age together
+    for name, r in data["rows"].items():
+        if r.get("last_verified", "") < cutoff:
+            ents[r.get("last_verified", "")].append(name)
+    for when, names in sorted(ents.items()):
+        names.sort(key=str.lower)
+        out.append(finding("stale", "low", f"entities-{when or 'never'}", f"{len(names)} entit(y/ies) last verified {when or 'never'} - "
+                           "re-check routing, sources and status end to end: " + "; ".join(names[:15]) + (" ..." if len(names) > 15 else ""),
+                           names, when, aspect="entities"))
+    for g in data.get("registrars", []):
+        if g["last_verified"] < cutoff:
+            out.append(finding("stale", "low", f"IANA {g['iana_id']}", f"registrar {g['registrar']} last verified {g['last_verified']}",
+                               [e.strip() for e in g["linked_entities"].split(";")], g["last_verified"], aspect="registrar"))
+    old = collections.defaultdict(list)
+    for a in data["asns"]:
+        if a["last_checked"] < cutoff:
+            old[a["last_checked"]].append(a["asn"])
+    for when, asns in sorted(old.items()):
+        out.append(finding("stale", "low", f"asns-{when or 'never'}", f"{len(asns)} ASN register row(s) last checked {when or 'never'}: "
+                           + ", ".join(sorted(set(asns))[:12]) + (" ..." if len(set(asns)) > 12 else ""), [], when, aspect="asn-register"))
+    for c in data.get("claims", []):
+        if c["status"] == "unverified" and c["verified_date"] < cutoff:
+            out.append(finding("stale", "low", c["claim_id"], f"claim unverified since {c['verified_date']}: {c['claim'][:160]}",
+                               [c["entity"]], c["verified_date"], aspect="claim"))
+    return out
+
+
 # --------------------------------------------------------------------------- acknowledgements and report
 
 def apply_acks(findings: list[dict], acks: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -1057,6 +1096,8 @@ def run(data: dict, checks: list[str], ctx: Ctx) -> list[dict]:
         gobs = observe_registrars(ctx, data)
         ctx.snapshot["registrars"] = gobs
         findings += compare_registrars(data, gobs, ctx.since)
+    if "stale" in checks:
+        findings += compare_stale(data, ctx.today)
     return merge(findings)
 
 
