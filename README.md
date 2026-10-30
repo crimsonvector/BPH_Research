@@ -62,6 +62,7 @@ BPH_Research/
 |-- docs/
 |   |-- ROADMAP.md               <-- Improvement plan and status (phases 1-4, registrar module)
 |   |-- MONITORING.md            <-- What the weekly monitor checks and how to act on findings
+|   |-- DATA_HEALTH.md           <-- Generated: sources without URLs, grade deviations, oldest checks
 |
 |-- .github/workflows/
 |   |-- validate.yml             <-- CI: generated-block check, validator, monitor unit tests
