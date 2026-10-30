@@ -97,3 +97,4 @@ Goal: cover the domain layer - registrars, resellers, privacy/proxy services, TL
 | 2026-10-30 | Phase 3A (3.1, 3.4) complete in PR: `sources/sources.csv` with URLs for 204 of 221 sources, `sources/publishers.csv`, generated SOURCE_INDEX tables, `docs/DATA_HEALTH.md`, monitor `stale` check, Actions on Node 24 |
 | 2026-10-30 | Phase 3B (3.2, 3.3) complete in PR: `data/claims.csv` (643), `data/relationships.csv` (174), ECOSYSTEM_MAP Appendix C diagrams, tier evidence check; notes-to-summaries left for after review |
 | 2026-10-30 | Phase 4 complete in PR: `tools/build_exports.py`, `exports/` (50 ASNs, 54 prefixes; STIX 2.1 bundle of 965 objects; MISP feed of 51 events), export safety tests, CI checks; all roadmap phases done |
+| 2026-10-30 | NameSilo evaluated under taxonomy 2.8 and rated T3 (sustained top-20 Interisle phishing rate 2024-2026; 20.5% of 2025 registrations blocklisted, below the T2 mark) |

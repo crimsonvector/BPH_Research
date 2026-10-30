@@ -257,7 +257,7 @@ Each entity is assigned one primary type and may carry secondary type tags where
 
 **Defensive use:** There is no network to block. A T1-T3 registrar is a risk-scoring input: weight newly registered domains from it more heavily, and prioritise its domains in hunting. Never block a registrar's whole namespace.
 
-**Current rated entities (`data/registrars.csv` is authoritative):** Trustname.com (T1, accreditation terminated 2026), NiceNIC International (T2), CNOBIN Information Technology and Eranet International (T3). Regtime and Bizcn were evaluated and not rated (`analysis/REGISTRAR_EVALUATION.md`).
+**Current rated entities (`data/registrars.csv` is authoritative):** Trustname.com (T1, accreditation terminated 2026), NiceNIC International (T2), CNOBIN Information Technology, Eranet International and NameSilo (T3). Regtime and Bizcn were evaluated and not rated (`analysis/REGISTRAR_EVALUATION.md`).
 
 **Data:** Rated entities are listed in `data/registrars.csv`, separate from `BPH_Master.csv`, because they have no ASNs or prefixes. Candidates that do not meet the floor are documented in `analysis/REGISTRAR_EVALUATION.md` with the reason. Only `data/registrars.csv` rows carry a tier. The weekly monitor checks every registrar the repository cites for changes in IANA accreditation and for new ICANN enforcement notices.
 
