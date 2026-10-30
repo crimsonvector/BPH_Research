@@ -2,7 +2,7 @@
 
 > **Date:** 2026-10-30 | **Maintainer:** CrimsonVector Research | **Rules:** [taxonomy section 2.8](../taxonomy/BPH_TAXONOMY.md#28-registrar--dns-enabler) | **Data:** [`data/registrars.csv`](../data/registrars.csv)
 >
-> The registrar pilot ([`REGISTRAR_PILOT.md`](REGISTRAR_PILOT.md)) nominated five registrars because tracked operators cluster on them. This document tests each one against outside evidence, under the evidence floor in taxonomy section 2.8. Being the registrar of record for a tracked operator's domain is context and never counts. Two candidates are rated T3, one T2, and two not at all. Trustname.com is added as the reference case for T1.
+> The registrar pilot ([`REGISTRAR_PILOT.md`](REGISTRAR_PILOT.md)) nominated five registrars because tracked operators cluster on them. This document tests each one against outside evidence, under the evidence floor in taxonomy section 2.8. Being the registrar of record for a tracked operator's domain is context and never counts. Two candidates are rated T3, one T2, and two not at all. Trustname.com is added as the reference case for T1. NameSilo, which holds four tracked domains, was evaluated afterwards and rated T3.
 
 ---
 
@@ -14,6 +14,7 @@
 | **NiceNIC** International Group (3765) | AnonRDP infrastructure domains; Feo Prest | **T2** | flagged | #1 by Interisle phishing rate three years running; 87.6% of its 2025 registrations blocklisted; in every Spamhaus botnet table since mid-2024 |
 | **CNOBIN** Information Technology (3254) | both Virtualine domains | **T3** | suspected | Top-20 phishing rate in 2025 and 2026, rising; one Spamhaus appearance |
 | **Eranet** International (1868) | Cryptomus | **T3** | suspected | Top-20 phishing rate in 2025 and 2026; 17.8% of 2025 registrations blocklisted |
+| **NameSilo** (1479) | FUNNULL front brands; Asocks; NETINNOVATIONLLC | **T3** | suspected | Top-20 phishing rate in 2024, 2025 and 2026; 20.5% of 2025 registrations blocklisted; in every Spamhaus botnet table since mid-2024 |
 | **Regtime** (1362) | BtHoster; Media Land | not rated | — | No outlier evidence. Its only appearance is one Spamhaus table in Q3 2023 (#20, 11 domains). |
 | **Bizcn** (471) | Kaopu Cloud | not rated | — | No current evidence. A 2014 ICANN breach notice (cured) and 2014 vendor allegations are history (rule 6). |
 
@@ -94,6 +95,24 @@ Every figure in this document was read from the primary source. Two kinds of fig
 - Eranet's InterNIC listing gives TodayNIC's contact address. TodayNIC received an ICANN breach notice on 2014-10-10 for failing to investigate and respond to abuse reports (RAA 3.18). The breaches were cured.
 - Forum reviewers list Eranet among registrars that "tend to ignore minor DMCA complaints" (Grade E).
 
+### NameSilo (IANA 1479): T3
+
+Evaluated after the first five because it is registrar of record for four tracked domains: FUNNULL's `cdn1.ai` and `yunray.ai`, Asocks' `lvcha.in` and `netinnovation.net`.
+
+| Source | Period | Measure | Value | Rank |
+|--------|--------|---------|-------|------|
+| Interisle Phishing Landscape 2024 | May 2023–Apr 2024 | phishing domain score | 201.2 (93,131 of 4,629,000) | #8 |
+| Interisle Phishing Landscape 2025 | May 2024–Apr 2025 | same | 255.1 (114,317 of 4,480,728) | #11 |
+| Interisle 2026 tables | May 2025–Apr 2026 | same | 312.2 (165,742 of 5,309,185) | #19 |
+| Interisle, Malicious Registrations (2026) | domains created in 2025 | share blocklisted | 20.5% (621,268 of 3,028,042) | #17 by share |
+| Spamhaus Botnet Threat Update | Jul–Dec 2024 / Jan–Jun 2025 / Jul–Dec 2025 / Jan–Jun 2026 | botnet C&C domains | 805 / 275 / 555 / 1,034 | #4 / #8 / #5 / #7 |
+
+**Why T3.** It is a sustained top-20 outlier on Interisle's normalised rate. No second independent normalised source exists, 20.5% is below the 25% T2 mark, and no ignored reports are documented. There are no ICANN notices.
+
+**Scale.** It manages about 5.3 million gTLD domains. Its rate is about 28× GoDaddy's (11.0) but under 3% of NiceNIC's.
+
+**Context only, not evidence (rule 1).** Interisle's 2026 case studies found FUNNULL's algorithmically generated .LOAN registrations concentrated at Dynadot (84,449), with "more than 6,000 each" at NameCheap and NameSilo. Its blocklisted .GIFT domains were "registered at just two registrars (Dynadot and NameSilo)". Dynadot holds none of this repository's tracked domains and is not rated.
+
 ### Regtime (IANA 1362) and Bizcn (IANA 471): not rated
 
 **Regtime.** It appears in none of the Interisle tables from 2024 to 2026 and in none of the Spamhaus registrar tables from mid-2024. Its only appearance is Spamhaus Q3 2023, at #20 with 11 domains. It holds `bthoster.com` and Media Land's `sshvps.net`, which is registrar-of-record context only.
@@ -133,7 +152,7 @@ Several registrars outside this repository's scope would also rate T2–T3 under
 
 They are not rated here because none holds a tracked operator's domain. A later pass can add them if tracked operators start using them.
 
-**NameSilo** is registrar of record for four tracked domains: two FUNNULL front brands, Asocks and NETINNOVATIONLLC. Its 2026 score (312.2) places it in the top 20 (#19), which would make it a T3 candidate under section 2.8. **Recommended next evaluation.**
+**NameSilo**, which holds four tracked domains, is now rated T3 (see above).
 
 ## Limits
 
