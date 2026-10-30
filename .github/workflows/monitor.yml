@@ -1,0 +1,75 @@
+name: Monitor
+
+# Weekly check of the outside world against the repository data (tools/monitor.py).
+# Findings go to a single open issue labelled "monitor"; the data is never edited
+# automatically. Raw observations are kept as a workflow artifact for 90 days.
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"  # Mondays 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      checks:
+        description: "Comma-separated subset of checks (blank = all; a subset run does not update the issue)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Find the open findings issue
+        id: issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create monitor --color B60205 --description "Automated monitor findings" 2>/dev/null || true
+          num=$(gh issue list --label monitor --state open --limit 1 --json number --jq '.[0].number // empty')
+          echo "number=$num" >> "$GITHUB_OUTPUT"
+          if [ -n "$num" ]; then gh issue view "$num" --json body --jq .body > previous.md; fi
+
+      - name: Run monitor
+        env:
+          COMPANIES_HOUSE_API_KEY: ${{ secrets.COMPANIES_HOUSE_API_KEY }}
+          CHECKS: ${{ inputs.checks }}
+        run: |
+          args=(--out monitor-out)
+          if [ -f previous.md ]; then args+=(--previous previous.md); fi
+          if [ -n "$CHECKS" ]; then args+=(--checks "$CHECKS"); fi
+          python tools/monitor.py "${args[@]}"
+
+      - name: Keep the snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitor-${{ github.run_id }}
+          path: monitor-out/
+          retention-days: 90
+
+      - name: Open or update the findings issue
+        if: ${{ !inputs.checks }}  # schedule runs have no inputs; a subset run leaves the issue alone
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUM: ${{ steps.issue.outputs.number }}
+        run: |
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file monitor-out/report.md
+            if [ -s monitor-out/new.md ]; then gh issue comment "$NUM" --body-file monitor-out/new.md; fi
+          else
+            gh issue create --title "Monitor findings" --label monitor --body-file monitor-out/report.md
+          fi

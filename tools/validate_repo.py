@@ -12,6 +12,9 @@ Errors (exit 1):
     block_recommendation, gives each ASN one recommendation, and never recommends
     anything but do-not-block for a historical / reassigned / recycled ASN
   - data/domains.csv names only entities that exist in the CSV, once per domain
+  - data/companies.csv and data/registry_handles.csv (monitor watchlists) are well formed,
+    unique and name only existing entities; monitor/acknowledged.csv entries have a
+    known check prefix, a reason and an ISO date
   - generated blocks (tools/generate_docs.py) are up to date
   - status is one of the taxonomy's lifecycle/auxiliary states
   - risk_tier starts with T1..T5
@@ -236,6 +239,63 @@ def main() -> int:
             for ent in (re.sub(r"\s*\(lead:[^)]*\)$", "", e).strip() for e in d["entities"].split(";")):
                 if ent and ent not in names:
                     errors.append(f"data/domains.csv: {d['domain']} names unknown entity {ent!r}")
+
+    # ---- monitor watchlists (Phase 2) ----
+    names = {r["provider_name"] for r in rows}
+
+    def load_opt(*parts):
+        path = os.path.join(root, *parts)
+        if not os.path.exists(path):
+            return None
+        with open(path, encoding="utf-8", newline="") as f:
+            return list(csv.DictReader(f))
+
+    def iso(value):
+        try:
+            return _dt.date.fromisoformat(value)
+        except ValueError:
+            return None
+
+    cos = load_opt("data", "companies.csv")
+    if cos is not None:
+        seen = collections.Counter(c["company_number"] for c in cos)
+        errors += [f"data/companies.csv: {n} listed {k} times" for n, k in seen.items() if k > 1]
+        for c in cos:
+            n = c["company_number"]
+            if not re.fullmatch(r"\d{8}|[A-Z]{2}\d{6}", n):
+                errors.append(f"data/companies.csv: {n!r} is not a Companies House number")
+            if c["link"] not in ("registered-entity", "name-match"):
+                errors.append(f"data/companies.csv: {n} link {c['link']!r} (expected registered-entity / name-match)")
+            if not re.fullmatch(r"[a-z]+(-[a-z]+)*", c["recorded_status"]):
+                errors.append(f"data/companies.csv: {n} recorded_status {c['recorded_status']!r} is not a Companies House status slug")
+            if not iso(c["last_filing_date"]) or not iso(c["checked"]):
+                errors.append(f"data/companies.csv: {n} has a non-ISO date")
+            errors += [f"data/companies.csv: {n} names unknown entity {e!r}" for e in (x.strip() for x in c["entities"].split(";")) if e not in names]
+
+    hs = load_opt("data", "registry_handles.csv")
+    if hs is not None:
+        seen = collections.Counter(h["handle"].upper() for h in hs)
+        errors += [f"data/registry_handles.csv: {h} listed {k} times" for h, k in seen.items() if k > 1]
+        for h in hs:
+            if h["kind"] not in ("mntner", "organisation") or h["registry"] != "RIPE":
+                errors.append(f"data/registry_handles.csv: {h['handle']} has kind/registry {h['kind']}/{h['registry']} (expected mntner|organisation / RIPE)")
+            errors += [f"data/registry_handles.csv: {h['handle']} names unknown entity {e!r}" for e in (x.strip() for x in h["entities"].split(";")) if e not in names]
+
+    acks = load_opt("monitor", "acknowledged.csv")
+    if acks is not None:
+        checks = ("asn", "drop", "prefix", "withdrawn", "asndrop", "ripe", "domain", "company")
+        seen = collections.Counter((a["key"], a["observed"]) for a in acks)
+        errors += [f"monitor/acknowledged.csv: {k} acknowledged {n} times" for (k, _), n in seen.items() if n > 1]
+        for a in acks:
+            if a["key"].split(":", 1)[0] not in checks:
+                errors.append(f"monitor/acknowledged.csv: {a['key']!r} does not start with a monitor check name")
+            if not a["reason"].strip():
+                errors.append(f"monitor/acknowledged.csv: {a['key']} has no reason")
+            when = iso(a["date"])
+            if not when:
+                errors.append(f"monitor/acknowledged.csv: {a['key']} date {a['date']!r} is not ISO")
+            elif not a["observed"] and (_dt.date.today() - when).days > 2 * STALE_DAYS:
+                warnings.append(f"monitor/acknowledged.csv: {a['key']} acknowledged without an observed value on {when}; re-review")
 
     # ---- generated blocks ----
     try:

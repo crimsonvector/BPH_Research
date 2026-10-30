@@ -1,0 +1,30 @@
+key,observed,reason,date
+drop:AS200019,85.121.4.0/24,One DROP-listed /24 among 138 announced prefixes; consistent with AlexHost T4 rating,2026-10-30
+drop:AS45839,101.99.75.0/24 101.99.76.0/24 101.99.80.0/21 101.99.88.0/23 101.99.90.0/23 101.99.92.0/24 101.99.93.0/24 101.99.94.0/24 101.99.95.0/24 103.155.92.0/24 103.155.93.0/24 111.90.140.0/23 111.90.140.0/24 111.90.142.0/23 111.90.144.0/21 111.90.152.0/22 111.90.156.0/24 111.90.158.0/23 38.133.213.0/24 38.134.3.0/24 78.40.143.0/24,Growth recorded in Shinjiru notes 2026-10-30; T4 tier review pending (prefix-level DROP growth is not a taxonomy criterion),2026-10-30
+ripe:AS197860:routes,103.76.86.0/24,Recorded in the entity notes on 2026-10-30 (first-run triage); origin ASN not attributed,2026-10-30
+ripe:AS208112:aut-num,2026-09-21,"ROMAN EMPIRE BV, a customer ASN maintained by MIRhosting as LIR; not attributed",2026-10-30
+ripe:AS213220:routes,103.24.207.0/24 116.206.95.0/24 144.48.11.0/24 195.78.48.0/24,Recorded in the entity notes on 2026-10-30 (first-run triage); origin ASN not attributed,2026-10-30
+ripe:AS36680:routes,46.151.182.0/24,Recorded in the entity notes on 2026-10-30 (first-run triage); origin ASN not attributed,2026-10-30
+ripe:AS51722:routes,103.231.75.0/24 185.153.182.0/24 185.234.66.0/24 193.46.56.0/24 45.12.143.0/24 45.89.52.0/24 62.3.12.0/24 94.131.108.0/24 94.131.123.0/24,Recorded in WorkTitans notes and known_prefixes on 2026-10-30; AS51722 (PIXOOF) not attributed,2026-10-30
+ripe:AS55286:routes,185.7.214.0/24 85.193.68.0/24 85.193.69.0/24 92.255.57.0/24,Recorded in the entity notes on 2026-10-30 (first-run triage); origin ASN not attributed,2026-10-30
+withdrawn:AS140666:from:AS138915,38.60.132.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS197769:from:AS51396,31.57.37.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS197868:from:AS34665,146.185.233.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS198364:from:AS197170,109.160.32.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS203273:from:AS213887,178.236.254.0/24,Moved to another tracked entity whose ASN is already in data/asns.csv; no data change,2026-10-30
+withdrawn:AS203273:from:AS33993,171.22.119.0/24,Moved to another tracked entity whose ASN is already in data/asns.csv; no data change,2026-10-30
+withdrawn:AS204957:from:AS215925,45.194.67.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS205548:from:AS62864,103.19.50.0/24 103.19.51.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS207359:from:AS213702+AS218731,185.238.191.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS20853:from:AS52000,195.210.8.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS216070:from:AS213702+AS218731,217.9.12.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS21859:from:AS51396,2a12:f440::/29,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS218877:from:AS197170,2.27.154.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS44559:from:AS33993,193.201.126.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS48347:from:AS33993,45.138.157.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS50714:from:AS34665,46.161.0.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS51396:from:AS214940,45.144.212.0/24 77.83.39.0/24,Moved to another tracked entity whose ASN is already in data/asns.csv; no data change,2026-10-30
+withdrawn:AS59623:from:AS51396,195.254.165.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS60781:from:AS203273,45.94.39.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS62240:from:AS33993,45.153.231.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30
+withdrawn:AS64050:from:AS152194,143.92.54.0/24,One or two prefixes moved to an unrelated origin; consistent with IP-lease churn,2026-10-30

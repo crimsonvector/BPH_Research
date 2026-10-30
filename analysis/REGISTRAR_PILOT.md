@@ -27,26 +27,27 @@
 
 | Outcome | Domains |
 |---------|---------|
-| Registrar resolved | 39 |
+| Registrar resolved | 47 (39 at first pass; the 8 rate-limited lookups resolved on retry by the Phase 2 monitor, 2026-10-30) |
 | ccTLD without an RDAP service (.ru, .su, .io, .co, .st, .hk, .lt, .ro, .de) | 17 |
-| Registry rate-limited during collection - retry pending | 8 (cdn1.ai, feoprest.info, garantex.org, genyus.sc, gir.network, stark-industries.solutions, virtualine.org, yunray.ai) |
 | No longer registered (RDAP 404 at the registry) | 2 (altawk.com, delis.one) |
 
 The ccTLD gap is not random. Russian-market operators use .ru and .su (Proton66, Zservers, 4VPS), and several hosts use .io, .co or .st. Without another data source, the registrar layer for exactly the most relevant operators stays dark.
 
 ## Findings
 
-**1. No single "bulletproof registrar" dominates.** NameCheap is registrar of record for 11 of the 39 resolved domains (28%), spread across 10 different entities. That matches its size as one of the largest registrars, so it is a base-rate effect, not a signal of enablement. Repeated use of a large mainstream registrar says little on its own.
+**1. No single "bulletproof registrar" dominates.** NameCheap is registrar of record for 11 of the 47 resolved domains (23%), spread across 10 different entities. That matches its size as one of the largest registrars, so it is a base-rate effect, not a signal of enablement. Repeated use of a large mainstream registrar says little on its own.
 
 **2. Operators cluster on particular registrars.** Clustering inside a single operator is more informative than the totals:
 
 | Operator | Registrar pattern |
 |----------|-------------------|
 | AnonRDP / Blatant | Infrastructure domains `blatant.host` (registered 2026-09-12) and `ghostynetworks.com` (2026-01-13) both at **NiceNIC International Group** (IANA 3765). The storefront domains `anonrdp.com` and `anonrdp.net` are at Tucows. |
-| Railnet / Virtualine | Seized storefront `virtualine.net` at **CNOBIN Information Technology** (IANA 3254) |
+| Feo Prest | Its Spamhaus attribution domain `feoprest.info` (registered 2025-05-20) is also at **NiceNIC** - a second, unrelated operator there |
+| Railnet / Virtualine | Seized storefront `virtualine.net` and Spamhaus attribution domain `virtualine.org` both at **CNOBIN Information Technology** (IANA 3254) |
 | CTG Server / WAIcore | `ctgserver.com`, `myctgs.com` and `waicore.com` all at Porkbun (IANA 1861) |
 | BtHoster / Media Land | `bthoster.com` and Media Land's `sshvps.net` both at **Regtime** (IANA 1362) |
-| Russian-market operators | Aeza at REG.RU (1606), Asocks at R01 (1426), GCSAS at RU-CENTER (463) |
+| Russian-market operators | Aeza at REG.RU (1606), Asocks at R01 (1426); sister fronts GCSAS (`globconnex.com`) and GIR (`gir.network`) both at RU-CENTER (463), as is Garantex |
+| FUNNULL front brands | `cdn1.ai` and `yunray.ai` both at NameSilo (1479), registered the same day (2025-06-17) |
 | Kaopu Cloud HK | `kaopuyun.com` at Bizcn (471), with DNSPod DNS |
 | Cryptomus | `cryptomus.com` at Eranet International (1868) |
 
@@ -54,14 +55,14 @@ The ccTLD gap is not random. Russian-market operators use .ru and .su (Proton66,
 
 **4. One tracked host is itself an accredited registrar.** Shinjiru Technology Sdn Bhd, a T4 row here, holds IANA registrar ID 1741 and registers its own domain. The registrar module has to handle entities that are both host and registrar.
 
-**5. Seizures say little about the registrar.** Three of the five seized domains now resolve to FBI seizure nameservers: `anonrdp.com`, `qtproxy.xyz` and `virtualine.net`. Their registrars of record were Tucows, NameCheap and CNOBIN. Seizures of .com and .net domains are typically carried out at the registry (Verisign), so registrar of record is not evidence of anything.
+**5. Seizures say little about the registrar.** Four of the five seized domains now delegate to seizure nameservers: `anonrdp.com`, `qtproxy.xyz` and `virtualine.net` to the FBI's, `garantex.org` to the US Secret Service's (`usssdomainseizure.com`). Their registrars of record were Tucows, NameCheap, CNOBIN and RU-CENTER. Seizures are typically carried out at the registry (Verisign for .com and .net, PIR for .org), so registrar of record is not evidence of anything.
 
 ## Implications for R2 (taxonomy)
 
 - **Evidence floor.** A registrar can be rated only on external abuse evidence: ICANN Contractual Compliance breach notices or terminations, law-enforcement action, self-advertised "bulletproof domains", or sustained abuse share with documented non-response (Interisle, Spamhaus, DNS Abuse Institute). Registrar-of-record links from `data/domains.csv` are context, never evidence on their own.
 - **Candidates to evaluate**, selected only by clustering in this pilot. None is attributed:
-  - **NiceNIC** (3765): used by both AnonRDP infrastructure domains.
-  - **CNOBIN** (3254): used by Virtualine.
+  - **NiceNIC** (3765): used by both AnonRDP infrastructure domains and by Feo Prest.
+  - **CNOBIN** (3254): used by both Virtualine domains.
   - **Regtime** (1362): used by BtHoster and Media Land.
   - **Eranet** (1868) and **Bizcn** (471): used by Cryptomus and Kaopu.
   - NameCheap, Porkbun, Tucows and Cloudflare are large mainstream registrars. Evaluate them only if external abuse data singles them out.
@@ -84,6 +85,6 @@ The ccTLD gap is not random. Russian-market operators use .ru and .su (Proton66,
 
 ## Next steps
 
-1. Retry the eight rate-limited lookups, and add RDAP coverage to the Phase 2 monitor so new registrations and seizures are picked up.
+1. ~~Retry the eight rate-limited lookups, and add RDAP coverage to the Phase 2 monitor.~~ Done 2026-10-30: `tools/monitor.py --checks domain` re-checks every domain weekly (registration, registrar, status, nameservers including seizure banners) - see `docs/MONITORING.md`.
 2. Draft the R2 taxonomy section: provider type "Registrar / DNS Enabler", its subtypes, tier criteria and evidence floor.
 3. Evaluate the candidates above against external abuse data before any row is created.

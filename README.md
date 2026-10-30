@@ -47,13 +47,20 @@ BPH_Research/
 |   |-- asns.csv                 <-- ASN register: one row per (ASN, entity) with routing state,
 |   |                                 Spamhaus status and a structured block_recommendation
 |   |-- domains.csv              <-- Domain register (registrar pilot): registrar / IANA ID, DNS
-|                                     provider and hosting for domains tied to tracked entities
+|   |                                 provider and hosting for domains tied to tracked entities
+|   |-- companies.csv            <-- UK companies the monitor watches at Companies House
+|   |-- registry_handles.csv     <-- RIPE maintainers/organisations the monitor watches
+|
+|-- monitor/
+|   |-- acknowledged.csv         <-- Monitor findings reviewed and accepted, with reasons
 |
 |-- docs/
 |   |-- ROADMAP.md               <-- Improvement plan and status (phases 1-4, registrar module)
+|   |-- MONITORING.md            <-- What the weekly monitor checks and how to act on findings
 |
 |-- .github/workflows/
-|   |-- validate.yml             <-- CI: generated-block check + validator on every push/PR
+|   |-- validate.yml             <-- CI: generated-block check, validator, monitor unit tests
+|   |-- monitor.yml              <-- Weekly monitor run; keeps one "Monitor findings" issue current
 |
 |-- tools/
 |   |-- build_dashboard_data.py  <-- Generates the public dashboard_data/ from the CSV +
@@ -61,6 +68,8 @@ BPH_Research/
 |   |-- build_xlsx.py            <-- Regenerates BPH_Master.xlsx from the CSV
 |   |-- generate_docs.py         <-- Regenerates ECOSYSTEM_MAP Appendices A/B, tier and entity
 |   |                                 counts and source statistics from the data
+|   |-- monitor.py               <-- Compares live routing, Spamhaus, RIPE DB, RDAP and Companies
+|   |                                 House state with the data; reports differences as findings
 |   |-- validate_repo.py         <-- Cross-file consistency checks (CSV schema, ASN register,
 |   |                                 source index, workbook, generated blocks)
 |   |-- denylist.example.txt     <-- Template for the (gitignored) publication denylist
@@ -247,7 +256,8 @@ To add new intelligence to this repository:
 4. **Sanctions update:** Add to timeline, update the CSV `sanctions_designations` field, check for evasion vehicles
 5. **ASN changes:** add or update the matching row in `data/asns.csv` (one row per ASN and entity, with a `block_recommendation`).
 6. **After any data change:** run `python tools/generate_docs.py` (rebuilds Appendices A/B, tier and entity counts and source statistics - never edit those blocks by hand), `python tools/build_xlsx.py` (workbook mirror), and `tools/build_dashboard_data.py` where you hold the private inputs.
-7. **Before committing:** run `python tools/validate_repo.py`. CI runs it, plus `generate_docs.py --check`, on every push and pull request. It fails on schema or ASN-register errors, uncatalogued Source IDs, a stale workbook, stale generated blocks, and any historical ASN not marked `do-not-block`.
+7. **Before committing:** run `python tools/validate_repo.py`. CI runs it, plus `generate_docs.py --check` and the monitor's offline tests, on every push and pull request. It fails on schema or ASN-register errors, uncatalogued Source IDs, a stale workbook, stale generated blocks, and any historical ASN not marked `do-not-block`.
+8. **Monitor findings:** the weekly [monitor](docs/MONITORING.md) keeps one open "Monitor findings" issue. Resolve each finding by updating the data (it disappears on the next run) or acknowledge it in `monitor/acknowledged.csv` with a reason.
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the improvement plan.
 

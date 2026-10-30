@@ -15,3 +15,6 @@ sources/*
 # Python build artifacts
 __pycache__/
 *.pyc
+
+# Monitor output (tools/monitor.py) - published as a workflow artifact, never committed
+/monitor-out/
