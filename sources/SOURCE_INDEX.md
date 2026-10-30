@@ -1,6 +1,6 @@
 # Source Index
 
-> **Last Updated:** 2026-10-29 | **Maintainer:** CrimsonVector Research
+> **Last Updated:** 2026-10-30 | **Maintainer:** CrimsonVector Research
 >
 > All sources used in the BPH Research repository are cataloged here. Source IDs are referenced in the `sources` column of BPH_Master.csv.
 
@@ -25,16 +25,16 @@
 
 | ID | Title | Author(s) | Publisher | Date | Type | Local File | Key Entities |
 |----|-------|-----------|-----------|------|------|------------|--------------|
-| RF-TAE-2026 | Threat Activity Enablers: The Backbone of Today's Threat Landscape | Lawrence Stowe; Jenilee Plude | Recorded Future (Insikt Group) | 2026-05-06 | Blog / Research | `screencapture-recordedfuture-blog-threat-activity-enablers-2026-05-15-22_55_31.pdf` | Virtualine; CrazyRDP; Stark Industries; Kaopu Cloud HK; Aeza; PrivateAlps; eVPS (relayed summaries say 4VPS); Defhost; Silent Connection; Dolphin-Net (DolphinHost Limited, not Dolphon 1337); metaspinner; aurologic |
+| RF-TAE-2026 | Threat Activity Enablers: The Backbone of Today's Threat Landscape | Lawrence Stowe; Jenilee Plude | Recorded Future (Insikt Group) | 2026-05-06 | Blog / Research | `screencapture-recordedfuture-blog-threat-activity-enablers-2026-05-15-22_55_31.pdf` | Virtualine; CrazyRDP; Stark Industries; Kaopu Cloud HK; Aeza; PrivateAlps; 4VPS (= GCSAS AS215540 + GIR AS207713, per RF CTA-2026-0319); Defhost; Silent Connection; Dolphin-Net (DolphinHost Limited, not Dolphon 1337); metaspinner; aurologic |
 | RF-AUROLOGIC | Malicious Infrastructure Finds Stability with aurologic GmbH | Insikt Group | Recorded Future | 2025-11-06 | Research Report | — | aurologic GmbH; Femo IT; Railnet/Virtualine; metaspinner; Tnsecurity; WAIcore; Altawk; Karina Rashkovska; KPROHOST; SWISSNETWORK02 |
 | RF-INFRA-2025 | 2025 Year in Review: Malicious Infrastructure | Insikt Group | Recorded Future | 2026-03-19 | Annual Report | — | TAE networks broadly; Threat Density List methodology; Virtualine; aurologic |
 | RF-STARK | One Step Ahead: Stark Industries Solutions Preempts EU Sanctions | Insikt Group | Recorded Future | 2025-08 | Research Report | — | Stark Industries; PQ Hosting Plus; UFO Hosting; WorkTitans/THE.Hosting |
 | GREYNOISE-STARK | The Stark Industries Shell Game | GreyNoise | GreyNoise | 2025-11 | Blog / Research | — | Stark Industries AS44477; WorkTitans AS209847; PQ Hosting Plus; migration fingerprints |
 | CENSYS-BPH | Hiding in Plain Sight: Tracking Bulletproof Hosting and Abused RDP Infrastructure | Censys | Censys | 2026-02 | Blog / Research | — | WorkTitans/THE.Hosting; RDP hostname WIN-J9D866ESIJ2; Stark migration |
 | SOPHOS-VMMANAGER | Ransomware gang uses ISPsystem VMs for stealthy payload delivery | Sophos | Sophos / BleepingComputer | 2026-02 | Research | — | Stark Industries; First Server Limited; ISPsystem VMmanager; WantToCry ransomware |
-| HALCYON-CLOUDZY | Cloudzy Exposed as Iranian Front | Halcyon | Halcyon | 2023-08 | Research Report | — | Cloudzy/abrNOC; Hassan Nozari; APT10; APT33/34; Kimsuky; Konni; Lazarus; APT29/Turla |
+| HALCYON-CLOUDZY | Cloudzy Exposed as Iranian Front | Halcyon | Halcyon | 2023-08 | Research Report | — | Cloudzy/abrNOC; Hannan Nozari; APT10; APT33/34; Kimsuky; Konni; Lazarus; APT29/Turla |
 | INTRINSEC-PROSPERO | PROSPERO/Proton66 BPH Assessment | Intrinsec | Intrinsec | 2025 | Research | — | PROSPERO OOO; Proton66; BEARHOST/SecureHost/UNDERGROUND |
-| TRENDMICRO-INTERPOL | African Cybercrime BPH Sourcing | Trend Micro | Trend Micro / Interpol | 2023 | Research Report | — | ELITETEAM (48%); PINSPB (19%); FlokiNET (13%) |
+| TRENDMICRO-INTERPOL | INTERPOL + Trend to Fight African Cybercrime Networks | Trend Micro | Trend Micro | 2023-08-23 | Blog | — | 'Prolific offshore bulletproof hosters': 1337team Limited (48%), Petersburg Internet Network Ltd (19%), Flokinet Ltd (13%) - base of the percentages not stated |
 | INTEL471-MEDIALAND | Media Land BPH Analysis | Intel 471 | Intel 471 | 2025 | Research | — | Media Land LLC; Yalishanda; Trickbot; Emotet; Qakbot; IcedID |
 | HYAS-RISEPRO | RisePro Stealer Infrastructure | HYAS | HYAS | 2024-04 | Blog / Research | — | Karina Rashkovska AS215789; Tnsecurity/EVILEMPIRE AS216309 |
 
@@ -44,11 +44,11 @@
 |----|-------|-----------|-----------|------|------|------------|--------------|
 | EXCEDO-ASN | How cybercriminals abuse ASN for bulletproof hosting | Excedo Networks | Excedo | 2025-05 | Blog | — | Silent Connection (AS215240); Dolphon 1337 (AS215208); QWINS; ASN abuse patterns |
 | KREBS-SLSH | Please Don't Feed the Scattered Lapsus ShinyHunters | Brian Krebs | Krebs on Security | 2026-02 | Blog | — | SLSH alliance; Scattered Spider; LAPSUS$; ShinyHunters |
-| SPAMHAUS-BPH | The Anatomy of Bulletproof Hosting | Spamhaus Project | Spamhaus | 2025 | Research | — | CrazyRDP confirmation; BPH anatomy; Shinjiru patterns |
+| SPAMHAUS-BPH | The anatomy of bulletproof hosting - past, present, future | Spamhaus Project | Spamhaus | 2025-11-19 | Research | — | BPH anatomy; unnamed Malaysia-based ISP advising rogue customers (Shinjiru profile); CrazyRDP context |
 | GBHACKERS-BPH | Bulletproof Hosting Providers Exploit Legitimate ISPs | GBHackers | GBHackers | 2025-03 | Blog | — | GCSAS; Railnet/Virtualine; UAC-0050; UAC-0006 |
 | SILENTPUSH-FUNNULL | Infrastructure Laundering: FUNNULL CDN | Silent Push | Silent Push | 2025-09 / 2026-04 | Research | — | FUNNULL; Triad Nexus; CTG Server; compromised cloud accounts |
 | INTEL-INSIGHTS-QWINS | QWINS LTD BPH Assessment | Vasilis Orlof | Intel Insights | 2025-07 | Blog | — | QWINS LTD AS213702; Makoob; Guloader; AgentTesla; Lumma |
-| QURIUM-DOPPELGANGER | Doppelganger Infrastructure Analysis | Qurium | Qurium | 2025 | Research | — | Tnsecurity; WAIcore; Altawk; Doppelganger disinformation |
+| QURIUM-DOPPELGANGER | How Russia uses EU companies for propaganda - Exposing the Evil Empire of Doppelganger Disinformation | Qurium | Qurium | 2024-07-11 | Research | — | Tnsecurity; WAIcore; Altawk; GIR; BL Networks (BitLaunch); aurologic peering; Doppelganger disinformation |
 | CHAINALYSIS-BPH | Cryptocurrency Flows in BPH Ecosystem | Chainalysis | Chainalysis | 2025 | Research | — | Zservers; Garantex; LockBit; BianLian payments |
 | TEAMCYMRU-VIRTUALINE | Virtualine Technologies Lineage | Team Cymru | Team Cymru | 2025 | Research | — | Virtualine; Railnet; earlier Russian BPH lineages |
 
@@ -77,11 +77,11 @@ When adding a new source to this index:
 | FALCONFEEDS-HYDRATED | Structural Resilience and the Hydrated Adversary: Threat Actor Migration and Operational Displacement | FalconFeeds | FalconFeeds.io | 2026-05-04 | Blog / Research | `screencapture-falconfeeds-io-...hydrated-adversary...pdf` | Media Land; Aeza; LockBit→Cl0p/Akira migration; A7A5 stablecoin ($72B); BPH technical tactics; 124 ransomware groups in 2025; 45% incident increase |
 | TOC-CONVERGENCE-2024 | TOC Convergence Report 2024 | Various | Unknown | 2024 | Report | `TOC_Convergence_Report_2024.pdf` | Transnational organized crime convergence |
 | CISA-FASTFLUX | Fast Flux: A National Security Threat (AA25-093A) | CISA; NSA; FBI; ASD ACSC; CCCS; NCSC-NZ | CISA | 2025-04-03 | Advisory | `advisory_Fast Flux_A National Security Threat.pdf` | Fast flux DNS technique; C2 resilience; BPH operational pattern |
-| SPAMHAUS-BPH-WP | Bulletproof Hosting Whitepaper | Spamhaus Project | Spamhaus | 2025 | Whitepaper | `SP-WP-bulletproof-hosting.pdf` | BPH anatomy and classification |
+| SILENTPUSH-BPH-WP-2025 | Shining a Light on the Global Bulletproof Hosting Ecosystem (whitepaper; ID was SPAMHAUS-BPH-WP until 2026-10-30 - the file is Silent Push's, not Spamhaus's) | Silent Push | Silent Push | 2025-12-08 | Whitepaper | `SP-WP-bulletproof-hosting.pdf` | Shinjiru (12-day abuse response; 10-day grace); AlexHost (~10,000 IPs; 400+ domains); Karina Rashkovska; Femo IT; Railnet; NETINNOVATIONLLC; Tiger Net |
 | RU-UNDERGROUND | Research: Russian Speaking Underground | Various | Unknown | Unknown | Research | `Research-Russian_Speaking_Underground.pdf` | Russian cybercrime forums; BPH advertising patterns; underground services |
 | CHAINALYSIS-CRYPTO-2026 | The 2026 Crypto Crime Report | Chainalysis | Chainalysis | 2026-03-17 | Annual Report | `the-2026-crypto-crime-report-3-17-release.pdf` | Cryptocurrency crime trends; ransomware payments; mixer usage decline; stablecoin shift |
 
-**Grades (Additional Sources, 2026-05-16 block):** `CISA-FASTFLUX` = A; `TRENDMICRO-AGENTIC`, `CHAINALYSIS-OFAC`, `FALCONFEEDS-HYDRATED`, `CHAINALYSIS-CRYPTO-2026` = B; `SANCTIONS-IO-TRENDS`, `TOC-CONVERGENCE-2024`, `SPAMHAUS-BPH-WP`, `RU-UNDERGROUND` = C.
+**Grades (Additional Sources, 2026-05-16 block):** `CISA-FASTFLUX` = A; `TRENDMICRO-AGENTIC`, `CHAINALYSIS-OFAC`, `FALCONFEEDS-HYDRATED`, `CHAINALYSIS-CRYPTO-2026`, `SILENTPUSH-BPH-WP-2025` = B; `SANCTIONS-IO-TRENDS`, `TOC-CONVERGENCE-2024`, `RU-UNDERGROUND` = C.
 
 ---
 
@@ -97,7 +97,7 @@ When adding a new source to this index:
 | NCSC-NL-ASOCKS | A | Joint police/NCSC operation takes down major residential-proxy botnet | NCSC-NL; Politie | NCSC-NL | 2026-05-28 | — | Asocks (press-attributed); 17M-device botnet; >200 NL backend servers (a subset seized) |
 | INTRINSEC-BTHOSTER | B | BtHoster: Identifying noisy networks emitting malicious traffic via masscan servers | Intrinsec | Intrinsec | 2025-06-10 | — | BtHoster; Skynet Network Ltd (AS214295); Inside Network LTD (AS215476); UAB Host Baltic (AS209605) |
 | RF-GUARANTEE-2026 | B | Evolution of Chinese-Language Guarantee Telegram Marketplaces | Insikt Group | Recorded Future | ~2026-04 (relayed 2026-04-23) | — | Dabai Guarantee (大白担保); Tudou; Xinbi; Huione successors |
-| ELLIPTIC-TUDOU | B | Tudou Guarantee Winds Down After $12B in Transactions | Elliptic | Elliptic | 2026-01 | — | Tudou Guarantee; Huione; Chen Zhi/Prince Group |
+| ELLIPTIC-TUDOU | B | Tudou Guarantee Winds Down After $12B in Transactions | Elliptic | Elliptic | 2026-01 | — | Tudou Guarantee; Huione (30% stake acquired Dec 2024); Chen Zhi/Prince Group |
 | SILENTPUSH-CHINESEVPN | B | Traffic Origin Data Uncovers Suspicious Chinese VPN | Silent Push | Silent Push | 2026-02-09 | — | Asocks; LVCHA VPN (lvcha.in); residential-proxy IOCs |
 | CHAINALYSIS-A7A5 | B | A7A5/Grinex and the Russian Crypto Economy (OFAC Aug 2025) | Chainalysis | Chainalysis | 2025-08 | — | Grinex; A7A5; Old Vector; Garantex successor rails |
 | TRM-A7A5-2026 | B | 2026 Crypto Crime Report (A7A5/Grinex laundering rails) | TRM Labs | TRM Labs | 2026 | — | A7A5; Grinex; sanctions-evasion stablecoin rails |
@@ -137,7 +137,7 @@ When adding a new source to this index:
 |----|-------|-------|-----------|-----------|------|------------|--------------|
 | EUROPOL-ENDGAME-2025 | A | End of the game for cybercrime infrastructure: 1,025 servers taken down (Operation Endgame 3.0) | Europol + partners | Europol | 2025-11-13 | — | Rhadamanthys; VenomRAT; Elysium (the Nov 2025 CrazyRDP seizure was a separate Dutch case) |
 | FBI-IC3-FUNNULL | A | FBI FLASH / IC3 CSA 250529: infrastructure used to manage domains related to cryptocurrency investment fraud (FUNNULL) | FBI IC3 | FBI | 2025-05-29 | — | FUNNULL Technology Inc.; 548 CNAMEs linked to 332,000+ domains |
-| STISC-ALEXHOST | A | Moldovan STISC / government reporting on AlexHost | STISC (Moldova) | Moldovan government | 2025 | — | AlexHost |
+| STISC-ALEXHOST | A | Moldovan STISC / government reporting on a phishing wave sent in AlexHost's name | STISC (Moldova) | Moldovan government | 2023-01 | — | AlexHost (impersonated; it disowned the emails) |
 | TRUSTWAVE-PROSPERO | B | Trustwave SpiderLabs analysis of PROSPERO / BEARHOST | Trustwave SpiderLabs | Trustwave | 2025 | — | PROSPERO OOO / Proton66 |
 | GREYNOISE-PROSPERO | B | GreyNoise: AS200593 dominant source of Ivanti EPMM mass exploitation | GreyNoise | GreyNoise | 2026-02 | — | PROSPERO OOO / Proton66 |
 | RIPE-DB | B | RIPE NCC database registrations (registry lookups) | RIPE NCC | RIPE NCC | rolling | — | KPROHOST; registrant/ASN attribution |
@@ -169,7 +169,7 @@ When adding a new source to this index:
 
 | ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
 |----|-------|-------|-----------|-----------|------|------------|--------------|
-| UK-COMPANIES-HOUSE | A | UK Companies House register entries (company numbers 15109642, 13906017, 16558658) | Companies House | UK Government | rolling (read 2026-09) | — | Aeza International Ltd (inc. 2023-09-01); Stark Industries Solutions Ltd (dissolved 2025-09-16); Hypercore Ltd |
+| UK-COMPANIES-HOUSE | A | UK Companies House register entries and filing histories (15109642, 13906017, 16558658; from 2026-10-30 also 15885164, 14459750, 15668439, 14884560, 11161830, 16072422, OC450701, 15103352, 15578799, 15589896, 15332944) | Companies House | UK Government | rolling (read 2026-09 and 2026-10-30) | — | Aeza International Ltd (dissolved 2026-03-24); Stark Industries Solutions Ltd (dissolved 2025-09-16); Hypercore Ltd (dissolved 2025-12-23); strike-off notices 2026-10-13 for Femo IT, First Server, WAICORE LTD and Tiger Network; QWINS (dissolved 2026-07-14); GCS LLP; Tnsecurity, Silent Connection, Dolphin 1337, Partner Hosting (dissolved) |
 | AU-DFAT-ZSERVERS | A | Further cyber sanctions in response to Medibank Private cyberattack | Australian Minister for Foreign Affairs | foreignminister.gov.au | 2025-02-12 | — | Zservers + five individuals; Medibank data leak |
 | AU-DFAT-MEDIALAND | A | Sanctions imposed on Russian cybercrime service providers for malicious cyber activity | Australian Minister for Foreign Affairs | foreignminister.gov.au | 2025-11-20 | — | Media Land LLC; ML.Cloud LLC; Volosovik; Zatolokin |
 | NZ-MFAT-RUSSIA-2026-08 | A | New Zealand Russia Sanctions Act designations (33 individuals and entities; reported by The Record) | NZ Minister of Foreign Affairs | New Zealand Government | 2026-08-08 | — | Aleksandr Volosovik (Media Land); CARR/Z-Pentest figures; GRU Unit 29155 officer |
@@ -183,7 +183,7 @@ When adding a new source to this index:
 | FINCEN-HPAY-2026 | A | Definition of Huione Group - proposed rule adding H-Pay Service PLC (Federal Register 2026-12794) | FinCEN | Federal Register | 2026-06-25 | — | H-Pay Service PLC; Huione Group Section 311 special measure |
 | OFAC-PRINCE-2025 | A | Prince Group TCO designations; Chen Zhi indictment (E.D.N.Y.); FinCEN Section 311 final rule on Huione Group | US Treasury OFAC; US DOJ; FinCEN | US Government | 2025-10-14 | — | Prince Group (146 targets); Chen Zhi; 127,271 BTC forfeiture action; Huione Group |
 | OFAC-XINBI-2026 | A | OFAC designation and DOJ Scam Center Strike Force action against Xinbi Guarantee | US Treasury OFAC; US DOJ; US Secret Service | US Government | 2026-09-09 | — | Xinbi Guarantee; $52.8M USDT frozen across 52 wallets; Telegram channels seized |
-| EU-21ST-PACKAGE | A | 21st package of sanctions: EU hits Russian energy, financial services and crypto hard | Council of the EU | EU Council | 2026-07-23 | — | 218 listings; transaction bans on 11 crypto-asset service providers; third-country crypto-ban tool; A7 network |
+| EU-21ST-PACKAGE | A | 21st package of sanctions: EU hits Russian energy, financial services and crypto hard | Council of the EU | EU Council | 2026-07-23 | — | 218 listings; transaction ban extended to 14 crypto-related service platforms (Georgia, Panama, UAE, Marshall Islands, Kyrgyzstan, Belarus); third-country crypto-ban tool; A7 network designations incl. new links to Africa |
 | WH-PM-2026-08-12 | A | Presidential Memorandum: Expanding Capabilities to Combat Transnational Cyber-Enabled Crime | The White House | The White House | 2026-08-12 | — | NCC 'Participating Companies'; cyber effects operations against foreign cyber-enabled TCOs; builds on E.O. 14390 |
 | HUNTIO-EE-2026 | B | Eastern Europe malicious infrastructure report | Hunt.io | Hunt.io | 2026-07-16 | — | Proton66 (CVE-2026-35273 / ShinyHunters); 3,900+ servers across 302 providers |
 | HUNTIO-GENTLEMEN-2026 | B | The Gentlemen ransomware toolkit on a Russian Proton66 server | Hunt.io | Hunt.io | 2026-03 (reported 2026-06-11) | — | Proton66 AS198953; 176[.]120[.]22[.]127 open directory |
@@ -253,9 +253,75 @@ When adding a new source to this index:
 | TRM-VIRTUALINE-2026 | B | FBI Seizes Virtualine Domain After Provider Led Bulletproof Hosting Sector in Illicit Inflows | TRM Team | TRM Labs | 2026-10-28 | — | Virtualine inflows (~44% Russian drug market, ~17% sextortion, ~13% mixer, ~5% ransomware); StealC; Volhav (BPH); Exploit.in join 2024-08-28 |
 | THERECORD-VIRTUALINE-2026 | C | FBI seizes 'bulletproof' hosting site accused of facilitating child abuse, money laundering | Alexander Martin | Recorded Future News | 2026-10-28 | — | Virtualine; DOJ allegations; no operators named or charged |
 | THN-VIRTUALINE-2026 | C | FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering | Ravie Lakshmanan | The Hacker News | 2026-10-28 | — | DOJ quotations; Virtualine price list; operator's open letter; Spamhaus Sept 2025 note on Virtualine's AS209800 expansion via aurologic |
-| REGISTRY-SNAPSHOT-2026-10 | C | RIPEstat routing, neighbour and whois data; RIPE DB organisation objects; ARIN and Verisign RDAP; Spamhaus ASN-DROP and DROP (asndrop.json, drop_v4.json) - checked 2026-10-29 | RIPE NCC; ARIN; Verisign; The Spamhaus Project | RIPEstat / RDAP / Spamhaus | 2026-10-29 | — | AS202412 (1 of 323 RIS peers; neighbours AS51396, AS213382; 27 historical /24s, all on DROP); AS219199 GENYUS SOFT LTD (genyus.sc); AS403005 BLATANTHOST (blatant.host; ARIN-registered 2026-09-25; sole upstream SMARTNET AS203446; nine /24s, all on DROP); AS205759 deregistered; virtualine[.]net and anonrdp[.]com on FBI seizure nameservers |
+| REGISTRY-SNAPSHOT-2026-10 | C | RIPEstat routing, neighbour and whois data; RIPE DB organisation and route objects; ARIN and Verisign RDAP; Spamhaus ASN-DROP and DROP (asndrop.json, drop_v4.json) - checked 2026-10-29 and, for every CSV ASN and listed prefix, 2026-10-30 | RIPE NCC; ARIN; Verisign; The Spamhaus Project | RIPEstat / RDAP / Spamhaus | 2026-10-29 | — | AS202412 (1 of 323 RIS peers; neighbours AS51396, AS213382; 27 historical /24s, all on DROP); AS219199 GENYUS SOFT LTD (genyus.sc); AS403005 BLATANTHOST (blatant.host; ARIN-registered 2026-09-25; sole upstream SMARTNET AS203446; nine /24s, all on DROP); AS205759 deregistered; virtualine[.]net and anonrdp[.]com on FBI seizure nameservers |
 | LES-VIRTUALINE-2026 | D | FBI seizes Virtualine.net (Omegatech LTD) hosting provider in "Operation OMEGALINE" (forum thread) | treesmokah and other users | LowEndSpirit | 2026-10-27 to 2026-10-28 | — | AS219199 claim; aurologic DDoS-protection tunnel traceroute (RIPE Atlas); SkyLink / Tube-Hosting / Pfcloud claim for the Limburg servers; anonrdp[.]com seizure; AS403005 Blatant Technologies |
 | ANONRDP-SELF-2026 | E | AnonRDP website (store pages) and Telegram announcements channel @anonrdpcom | AnonRDP (self-advertisement) | anonrdp[.]com / anonrdp[.]st; Telegram | 2025-11 to 2026-10-28 (read 2026-10-29) | — | 'Bulletproof' VPS/RDP and web hosting (Vilnius); 'Spamhaus Ignored' FastFlux CDN; scanning servers; Virtualine 'refugee offer' (2026-10-27); move to anonrdp[.]st and 'emergency kill switch' (2026-10-28) |
+
+### Additional Sources (Added 2026-10-30)
+
+> October-2026 audit: every CSV ASN and listed prefix re-checked against RIPEstat and Spamhaus (REGISTRY-SNAPSHOT-2026-10), plus research published or found since the 2026-09-25 audit. Companies House facts are cited as UK-COMPANIES-HOUSE. Grade shown inline.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| OFAC-A7-NETWORK-2026 | A | Treasury takes unprecedented action against the A7 Network (sb0644), with FinCEN section 9714(a) NPRM and Alert on A7 Network Sub-Agents | US Treasury (OFAC; FinCEN) | US Treasury | 2026-10-01 | — | A7 Network designated a significant TCO (E.O. 13581); Sub-Agents >$17B Jan 2025-Jun 2026; ransomware actors; Nobitex link |
+| EUROJUST-SAFFRON-2026 | A | Eurojust coordinated investigation shuts down criminal VPN network | Eurojust | Eurojust | 2026-05-21 | — | First VPN (1VPNS): 33 servers; search and interview of a suspect in Ukraine (no arrest announced) |
+| RIPE-POLICY-2026-10 | A | RIPE policy proposals 2026-02 (Contractual Accountability Framework for Infrastructure-Level Network Abuse) and 2026-01 (Simplify assignment of first ASN) | RIPE NCC | RIPE NCC | 2026-10-12 / 2026-10-13 | — | 14-of-30-days blocklist trigger and administrative quarantine; first-ASN needs assessment removal |
+| POLITIE-PROXY-2026-10 | A | Politie haalt malafide proxydienst offline | Politie (Team Cybercrime Noord-Holland) | Politie | 2026-10-08 | — | Unnamed proxy service on ~178,000 infected devices; servers taken offline at several hosting providers |
+| ARCTICWOLF-BORYPT-2026 | B | Malicious GitHub Campaign: Fake 'Arctic Wolf' and 290+ Brand-Impersonation Repositories Deliver BoryptGrab-Lineage Infostealer | Arctic Wolf Labs | Arctic Wolf | 2026-07-13 | — | Proton66 AS198953 (C2 193[.]143[.]1[.]131) |
+| LEVELBLUE-MIOLAB-2026 | B | 'Say My Name': How MioLab is building MacOS Stealer Empire | LevelBlue SpiderLabs | LevelBlue | 2026-03-20 | — | MioLab/Nova macOS stealer panels on Femo IT Solutions |
+| ESENTIRE-GCS-2024 | B | Network Infrastructure Abused in Ongoing Phishing Attacks | eSentire TRU | eSentire | 2024-12-17 | — | Global Connectivity Solutions (AS215540); Global Internet Solutions (GIR, AS207713); Storm-1575; 4VPS |
+| SRA-CLOUDZY-2026 | B | Multiple active phishing campaigns from bulletproof infrastructure with ties to Iranian APTs | Security Risk Advisors TIGR | SRA | 2026-03 | — | Cloudzy/RouterHosting; EvilProxy smishing |
+| GUARDZ-CLOUDZY-2026 | B | RouterHosting (Cloudzy) in modern identity and cloud abuse | Guardz | Guardz | 2026-10-17 | — | AS14956 (144[.]172[.]64[.]0/18); ConnectWise Cloud Backup (SkyKick) app abuse; AiTM session theft |
+| HUNTIO-SMISHING-2026 | B | Exposing a Global Smishing Operation Across 19 Countries | Hunt.io | Hunt.io | 2026-05-27 | — | Ghiseul.ro impersonation; two AlexHost (AS200019) backends |
+| TRM-TOKENSPOT-2026 | B | Kyrgyzstani Exchange TokenSpot Determined to Be Front Company for Sanctioned Russian Exchange Grinex | TRM Labs | TRM Labs | 2026-10-06 | — | TokenSpot; Grinex; shared TRON aggregator and fee addresses; A7; Garantex |
+| CHAINALYSIS-CRYPTOMUS-2026 | B | UK sanctions Cryptomus, Heleket and TokenSpot | Chainalysis Team | Chainalysis | 2026-10 | — | Cryptomus/Heleket payment rail for Zservers, Stark, First VPN, Aeza; 15,000+ illicit counterparties; TokenSpot |
+| PROOFPOINT-TA416-2026 | B | I'd come running back to EU again: TA416 resumes European government espionage | Proofpoint | Proofpoint | 2026-04 | — | TA416/Mustang Panda; PlugX; Kaopu Cloud HK (AS138915); Evoxt (AS149440); XNNET (AS6134) |
+| QURIUM-AEZA-2026 | C | Sanctioned, Still Connected: How AEZA's Infrastructure Supply Chain Survived | Qurium | Qurium | 2026-10-14 | — | Aeza/NetCrafters 536 /24s (2026-09-22); aurologic upstream; 42 LIRs; GCS/GIR; First Server; Tnsecurity; SWISSNETWORK02 |
+| HACKREAD-INFOBLOX-AEZA-2026 | C | Sanctioned Bulletproof Host Linked to Hijacking of Old Home Routers (reporting Infoblox research) | Hackread | Hackread | 2026-02-05 | — | Aeza International; DNS hijacking of home routers in 30+ countries |
+| CYBERSCOOP-CLOUDZY-2023 | C | Internet hosting company Cloudzy a global cybercrime hub (reporting Halcyon) | CyberScoop | CyberScoop | 2023-08 | — | Cloudzy; abrNOC; Hannan Nozari |
+| TEAMCYMRU-RANSOMINFRA-2026 | C | Ransomware infrastructure analysis (one year of incident response, Apr 2025 - Apr 2026) | Team Cymru | Team Cymru | 2026-09-15 | — | Qilin on AS14956; INC Ransom on AS208137; Akira C2 to AS42624; Lynx with a '1VPN' service |
+| THERECORD-ALEXHOST-2023 | C | Moldova's government hit by flood of phishing attacks | The Record | Recorded Future News | 2023-01-07 | — | 1,330+ phishing emails sent in AlexHost's name; AlexHost disowned them |
+| KREBS-CRYPTOMUS-2026 | C | U.K. Sanctions Cryptomus for RU Money Laundering | Brian Krebs | Krebs on Security | 2026-10-14 | — | Cryptomus; Heleket |
+| CAMBOJA-HPAY-2026 | C | H-Pay Exceeded License and Is Insolvent, Liquidator Says | CamboJA News | CamboJA | 2026-07-09 | — | H-Pay Service PLC liquidation |
+| THERECORD-LIXIONG-2026 | C | Cambodia extradites alleged cyber scam linchpin to China as crackdown intensifies | The Record | Recorded Future News | 2026-04-01 | — | Li Xiong (former Huione Group chairman) |
+| BRUSSELSTIMES-EU-HYBRID-2026 | C | EU extends sanctions for Russia-linked hybrid threats to 2027 (the Council release sits behind a browser check) | Brussels Times | Brussels Times | 2026-10-08 | — | EU hybrid-threats regime renewed to 2027-10-09 (80 individuals, 20 entities) |
+| AMNEZIA-HOSTING-2026 | D | Cascading hosting issues, May-June 2026 (Russian-language blog) | Amnezia | amnezia.org | 2026-06 | — | MIRhosting equipment; nLighten power cut; THE.Hosting closure |
+| PQHOSTING-PR-2026 | E | PQ HOSTING Announces Withdrawal from European Markets (press release) | PQ HOSTING | Newsfile | 2026-03-13 | — | PQ Hosting self-reported exit from Europe |
+| TRM-EU21-2026 | B | EU's 21st Package Extends Crypto Sanctions to Third Countries | TRM Labs | TRM Labs | 2026-07 | — | 14 platforms named (Rapira, Aifory Pro, ABCeX, WhiteBird, NoOnecrypto, Tradex, Monease, BitPapa, Exnode, HTX, EXMO, PilotFinance); A7 Nigeria; A7 Africa |
+| CRYPTOPOLITAN-A7A5-2026 | C | A7A5 holders miss interest as daily transfers fall to 61 (citing Elliptic's Tom Robinson and on-chain data) | Cryptopolitan | Cryptopolitan | 2026-10 | — | A7A5 exchange service hit by Yandex data-centre strikes; ~600 -> ~61 daily transfers; no interest since 2026-10-09 |
+| ALJAZEERA-YANDEX-2026 | C | Ukraine takes aim at Russia's AI data infrastructure | Al Jazeera | Al Jazeera | 2026-10-09 | — | Drone strikes on Yandex data centres in Sasovo (Ryazan) and Kaluga |
+| HOSTSLICK-PR-2026 | E | HostSlick Strategic Update: Full Focus on Dedicated & Bare-Metal (announcement) | HostSlick | hostslick.com | 2026-02-17 | — | End of new VPS sales; claimed GTT and TATA transit |
+
+### Additional Sources (Added 2026-10-30, part 2)
+
+> Follow-up research: the GCSAS tier review, candidate rows (GIR/4VPS, BL Networks, Zomro, Evoxt, Andwase, Prostie Reshenia) and the older 'unverified' caveats. Grade shown inline.
+
+| ID | Grade | Title | Author(s) | Publisher | Date | Local File | Key Entities |
+|----|-------|-------|-----------|-----------|------|------------|--------------|
+| FIOD-WORKTITANS-2026 | A | FIOD houdt twee verdachten aan wegens overtreding sanctiewetgeving | FIOD | FIOD (Netherlands) | 2026-05-22 | — | Raids in Dronten and Schiphol-Rijk; 800+ servers seized; no companies named |
+| NCCC-GAMAREDON-2023 | A | Gamaredon activity (National Cybersecurity Coordination Center) | NCCC at the NSDC of Ukraine | rnbo.gov.ua | 2023-08 | — | Gamaredon 'overwhelmingly prefers' GIR-AS (Global Internet Solutions LLC, Sevastopol) |
+| USPTO-IPIDEA | A | USPTO TSDR record, trademark 'IPIDEA' (serial 98583180) | USPTO | US Government | filed 2024-06-04; abandoned 2025-09-29 | — | Applicant Jiangsu Aidi Information Technology Co., Ltd. (Xuzhou, China) |
+| TRENDMICRO-BACKCONNECT-2025 | B | Black Basta and Cactus ransomware groups add BackConnect malware to their arsenal | Trend Micro | Trend Micro | 2025-03 | — | BackConnect C2s 5[.]181[.]3[.]164, 89[.]185[.]80[.]86, 89[.]185[.]80[.]251 (AS215540 per Intrinsec) |
+| RF-DDOSIA-2025 | B | Anatomy of DDoSia (CTA-2025-0722) | Insikt Group | Recorded Future | 2025-07-22 | — | DDoSia Tier-1 C2 hosts: BL Networks 8%, Aeza 7.5%, Global Connectivity Solutions 6% |
+| ESENTIRE-TEAMS-2026 | B | Increase in email bombing and IT impersonation campaigns | eSentire TRU | eSentire | 2026-04-29 | — | 'Bulletproof hosting providers' incl. WorkTitans and Global Connectivity Solutions |
+| SEKOIA-DDOSIA-2024 | B | NoName057(16) DDoSia project: 2024 updates and behavioural shifts | Sekoia TDR | Sekoia | 2024 | — | DDoSia C2 on GIR-AS (AS207713) |
+| GROUPIB-K0T-2026 | B | Stray cat on the network edge (k0t initial-access broker) | Group-IB | Group-IB | 2026-10-21 | — | AdaptixC2 beacons on BitLaunch (AS399629) |
+| ARCTICWOLF-LORENZ-2022 | B | Lorenz ransomware: chiseling in | Arctic Wolf Labs | Arctic Wolf | 2022-09-12 | — | Lorenz exfiltration servers on AS399629 (BL Networks) |
+| SOCRADAR-CYBERXERO-2026 | B | CyberXero: an AI-augmented initial access broker targeting Ukrainian critical infrastructure | SOCRadar STRU | SOCRadar | 2026-10-06 | — | CyberXero servers on 'AS204601, Zomro NL' |
+| TRENDMICRO-UAC0226-2026 | B | Old WinRAR flaw fuels attacks on Ukraine | Trend Micro | Trend Micro | 2026-06-08 | — | SHADOW-EARTH-066 / UAC-0226; all seven servers on Evoxt (AS149440) |
+| CHAINALYSIS-SANCTIONS-2026 | B | Crypto Sanctions (2026 Crypto Crime Report chapter) | Chainalysis Team | Chainalysis | 2026-03-05 | — | Grinex >= $4.76B and Meer $305M processed in 2025; A7A5 Instant Swapper > $2.2B |
+| KHARON-MKAN-2023 | B | Ex-CEO of sanctioned cryptocurrency exchange sets up new ventures | Kharon | Kharon | 2023-04-06 | — | MKAN Coin (Garantex partnership) |
+| KREBS-DDOSGUARD-2021 | C | DDoS-Guard to forfeit internet space occupied by Parler | Brian Krebs | Krebs on Security | 2021-01-21 | — | Parler and 8chan/QAnon sites behind DDoS-Guard |
+| KOMMERSANT-NLIGHTEN-2026 | C | nLighten data-centre power cut hits dozens of Russian hosting providers | Kommersant | Kommersant | 2026-06 | — | nLighten cut power to MIRhosting on 2026-06-02 |
+| DCD-NLIGHTEN-2026 | C | Colo provider MIRhosting sees equipment disconnected at Netherlands data center (read via a republication; DCD's page sits behind a bot check) | DatacenterDynamics | DCD | 2026-06 | — | nLighten statement: co-operated with Dutch investigations; relationship terminated |
+| ITNEWS-IPIDEA-2026 | C | Global proxy operator IPIDEA denies Google's malicious intent allegations | iTnews | iTnews | 2026-01-30 | — | IPIDEA part of Jiangsu Aidi Information Technology (Xuzhou) |
+| INTERISLE-DROP-2026 | C | DROP these hosting networks before they get the drop on you (AI-assisted analysis with Interisle datasets) | Interisle Consulting Group | Substack | 2026-08-17 | — | NEON CORE NETWORK LLC (AS205775); aurologic nexus |
+| BUSHIDOTOKEN-BITLAUNCH-2025 | C | Investigating anonymous VPS services | BushidoToken | blog.bushidotoken.net | 2025-02 | — | BitLaunch / BL Networks; Cobalt Strike C2 trend; responsive to takedowns |
+| MIRHOSTING-STMT-2026 | E | Verklaring MIRhosting naar aanleiding van recente mediapublicaties | MIRhosting | mirhosting.com | 2026-05-22 | — | Services to Work Titans 'tijdelijk opgeschort' (colocation only) |
+| BUYVM-SELF | E | BuyVM 'About' page | Frantech Solutions | buyvm.net | read 2026-10-30 | — | 'Since 2010' |
+| ALEXHOST-SELF | E | AlexHost 'About' page and LowEndBox interview | AlexHost | alexhost.com; lowendbox.com | 2024-06 / read 2026-10-30 | — | Chisinau data centre in a former Soviet bunker, 5 m underground (self-description) |
+| SHINJIRU-SELF | E | Shinjiru website (company and offshore-location pages) | Shinjiru | shinjiru.com | read 2026-10-30 | — | Founded 2000; eight offshore locations |
+| 4VPS-SELF | E | 4vps.su website footer | 4VPS.SU | 4vps.su | read 2026-10-30 | — | Operator named as Global Internet Solutions LLC (Sevastopol); 'since 2017' |
 
 ---
 
@@ -263,12 +329,12 @@ When adding a new source to this index:
 
 | Grade | Count | Description |
 |-------|-------|-------------|
-| A — Government/Official | 41 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
-| B — Established CTI Vendor | 69 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 38 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
-| D — Single Source / Unverified | 7 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
-| E — Self-Reported / Marketing | 3 | Forum advertising presence and provider marketing |
-| **Total** | **158** | |
+| A — Government/Official | 48 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
+| B — Established CTI Vendor | 90 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 54 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
+| D — Single Source / Unverified | 8 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
+| E — Self-Reported / Marketing | 10 | Forum advertising presence and provider marketing |
+| **Total** | **210** | |
 
 ---
 

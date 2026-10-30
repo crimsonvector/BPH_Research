@@ -10,7 +10,7 @@
 
 This repository is a comprehensive intelligence resource for tracking bullet-proof hosting (BPH) providers, threat activity enablers (TAEs), and the infrastructure that underpins modern cybercrime. It combines a structured provider database with analytical documents, an investigative playbook, and an organized source library.
 
-**Current scope:** 71 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
+**Current scope:** 79 providers/entities tracked across the BPH ecosystem, including sanctioned operators, upstream enablers, financial facilitators, corporate shells, sanctions-evasion vehicles, SEA guarantee-marketplace laundering facilitators, and residential-proxy/anonymization TAE networks.
 
 ---
 
@@ -106,7 +106,7 @@ Full schema documented in the CSV header row.
 
 ## Key Intelligence Highlights
 
-### Sanctioned Entities (as of September 2026)
+### Sanctioned Entities (as of October 2026)
 - **Aeza Group LLC / Aeza International Ltd (UK front)** — OFAC July 2025 (with UK NCA); UK designated Aeza Group LLC Nov 19 2025 (Russia regime); OFAC follow-on Nov 2025 (Hypercore, Smart Digital Ideas, Datavice, Makarov, Zakirov)
 - **Stark Industries Solutions** — EU May 20 2025 (Impl. Reg. (EU) 2025/965 under the **hybrid-threats regime (EU) 2024/2642**, not the 17th Russia package); company dissolved Sept 2025
 - **Zservers / XHOST** — Feb 11 2025, lists differ by authority (OFAC: Zservers + 2 admins; UK: + XHOST Internet Solutions LP and 6 people; AU: + 5 people); 127 servers seized by Dutch police Feb 12 2025
@@ -118,6 +118,8 @@ Full schema documented in the CSV header row.
 - **Grinex / A7A5 (Old Vector; A7 LLC network)** — OFAC Aug 2025; UK Aug 2025; EU 19th-package A7A5 ban (effective Nov 25 2025). *Grinex suspended after an April 15 2026 drain*
 - **Nobitex / Wallex / Bitpin / Ramzinex** — OFAC June 2026 ("Economic Fury"; Nobitex also under E.O. 13224 with four executives)
 - **First VPN Service (1VPNS)** — OFAC July 2026 (criminal VPN; dismantled in Operation Saffron, May 2026)
+- **A7 Network** — OFAC designated the whole network a transnational criminal organization on Oct 1 2026 (FinCEN proposed a rule against its Sub-Agents the same day); extends the A7A5/Old Vector designations
+- **Cryptomus / Heleket (Xeltox Enterprises Ltd)** and **TokenSpot CJSC** (Grinex front) — UK Oct 8 2026 (Russia regime). Chainalysis names Cryptomus/Heleket as the payment rail of Zservers, Stark, First VPN and Aeza
 - **Prince Group / Huione ecosystem** — OFAC/UK/DOJ/FinCEN Oct 14 2025 (146 targets; Huione Section 311 final rule) + OFAC June 2026 (35 targets) + FinCEN proposed H-Pay successor rule; Xinbi Guarantee disrupted Sept 2026
 - *Not sanctioned (corrected 2026-09-25):* **PQ Hosting Plus S.R.L.** (absent from the EU annex; exposure only via the listed Neculitis) and **WorkTitans/THE.Hosting** (successor network; FIOD raid May 2026)
 
@@ -136,19 +138,27 @@ Full schema documented in the CSV header row.
   - CDNCloud was removed: no ASN, registry record, blocklist entry or CTI report could be found for it.
   - Kaopu Cloud HK and PrivateAlps/Private Layer were raised to T1 on Recorded Future's 2025 Threat Density top 10 (#4 and #6), with the taxonomy's three-independent-source minimum met. MIRhosting was raised to T1 because its founder was arrested in the FIOD action against WorkTitans, whose only upstream it was.
 
+### Data-quality note (2026-10-30 audit)
+- Every ASN and listed prefix in the CSV was re-checked against RIPEstat and Spamhaus. **Gone dark in October:** Altawk's AS209946, both MIRhosting ASNs, and nearly all of WorkTitans' space (now `seized`). **Newly on Spamhaus ASN-DROP:** GCSAS (AS215540); Cloudzy (AS14956) re-listed; new Spamhaus-attributed ASNs for Pfcloud (AS205329) and Chang Way (AS218974). A former Virtualine block (RetryHost, 94.26.38.0/24) was re-announced from an Iranian ASN after the seizure - a lead.
+- Companies House: Aeza International Ltd and Hypercore Ltd are dissolved; QWINS' company was dissolved (row now `dissolved`, network still live); Femo IT, First Server, WAIcore and Tiger Network received strike-off notices on 2026-10-13.
+- Corrections: Cloudzy's operator is Hannan (not Hassan) Nozari and the EvilProxy link is restored; the 1VPNS operation produced an interview, not an arrest; Intel 471's Media Land figures (80% of *active* domains); the AlexHost phishing wave was 2023 and impersonated AlexHost; 'Dolphon 1337' is registered as Dolphin 1337 Limited; FUNNULL's 175+ CNAME figure is Silent Push's.
+- Tier changes: Cloudzy T3 -> T2 (ASN-DROP escalation rule). New rows: TokenSpot CJSC (T1) and Xeltox Enterprises / Cryptomus-Heleket (T2).
+- Follow-up (same day): **GCSAS raised to T1** - Recorded Future's 2025 top-10 '4VPS' (#7) is GCSAS plus its Sevastopol sister **Global Internet Solutions (GIR, AS207713)**, now a T1 row; Intrinsec, eSentire and RF all classify the pair as BPH/TAE. New rows: BL Networks/BitLaunch (T3; top DDoSia C2 host per RF) and watch-list rows for Zomro, Evoxt and the Aeza IPv4 suppliers Andwase and Prostie Reshenia. Most older 'unverified' caveats are now sourced or removed; the Silent Push BPH whitepaper had been mislabelled as Spamhaus's.
+
 ### Recent Enforcement
 - **Dutch police seize ~250 servers of a bulletproof host** Nov 12 2025 - press-attributed to **CrazyRDP**; police said the case is *not* part of Operation Endgame
 - **Operation Endgame 3.0** Nov 10-13 2025 (Rhadamanthys/VenomRAT/Elysium; 1,025 servers)
 - **Operation Olympia - Cryptomixer.io** Nov 24-28 2025, announced Dec 1 (EUR 1.3B Bitcoin mixed since 2016; EUR 25M seized)
 - **Grinex suspends operations** April 2026 after a ~$13-15M drain it blamed on foreign services
 - **Dutch FIOD raid on THE.Hosting/WorkTitans** May 18 2026 (800+ servers; WorkTitans owner and MIRhosting founder arrested) - *post-raid reports conflict on how much of the network survived*
-- **Operation Saffron - First VPN (1VPNS)** May 19-20 2026 (33 servers; administrator arrested)
+- **Operation Saffron - First VPN (1VPNS)** May 19-20 2026 (33 servers; a suspect searched and interviewed in Ukraine - no arrest announced)
 - **Residential-proxy botnet (press-attributed to Asocks)** dismantled May 28 2026 (NCSC-NL/Politie; 17M devices; a subset of 200+ NL backend servers seized)
 - **Operation Endgame** June 15-19 2026 - SocGholish/Amadey/StealC (326 servers, 142 domains, EUR 41M frozen)
 - **FBI seizes NetNut domains; Google disrupts the Popa botnet** July 2 2026 (Alarum Technologies; 2M+ devices; 316 actor clusters)
 - **Media Land/ML.Cloud** July 2026 - EU sanctions (July 13) and the DOJ indictment under FBI Operation Riptide (July 14)
 - **QScan/QTRouter (PRC "QTFY" proxy/ORB platform)** domains seized Aug 26 2026 (DOJ/FBI with Lumen)
 - **Xinbi Guarantee** disrupted Sept 9 2026 (OFAC + DOJ Scam Center Strike Force; $52.8M USDT frozen)
+- **Dutch police take down a proxy service** of ~178,000 infected devices Oct 8 2026 (servers offline at several hosting providers; service not named)
 - **Operation Omegaline - Virtualine/Omegatech** Oct 27 2026: FBI seized virtualine[.]net (E.D. Va. warrant) with Polizei Hessen, Politie Midden-Nederland, the NCA, OverRIPE and Lumen; Dutch police seized dozens of servers in Limburg (data on 3,000+ customers). DOJ alleges CSAM hosting and money laundering; no operators named or charged. OMEGATECH AS202412 is now near-invisible in routing. RF's 2025 Threat Density #1 - the repo had already tied Omegatech to Virtualine (May 2026). Same day: anonrdp[.]com moved to FBI seizure nameservers; **AnonRDP** (self-styled bulletproof VPS/RDP and fast-flux host) moved to anonrdp[.]st and is now tracked at T1 on Blatant Technologies AS403005, whose nine /24s are all on Spamhaus DROP
 
 ---
