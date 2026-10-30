@@ -233,7 +233,7 @@ def main() -> int:
         seen = collections.Counter(d["domain"] for d in doms)
         errors += [f"data/domains.csv: {d} listed {n} times" for d, n in seen.items() if n > 1]
         for d in doms:
-            for ent in (e.split("(")[0].strip() for e in d["entities"].split(";")):
+            for ent in (re.sub(r"\s*\(lead:[^)]*\)$", "", e).strip() for e in d["entities"].split(";")):
                 if ent and ent not in names:
                     errors.append(f"data/domains.csv: {d['domain']} names unknown entity {ent!r}")
 
