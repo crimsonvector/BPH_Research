@@ -55,6 +55,11 @@ BPH_Research/
 |   |-- registry_handles.csv     <-- RIPE maintainers/organisations the monitor watches
 |   |-- registrars.csv           <-- Rated registrar / DNS enablers (taxonomy 2.8), kept apart from
 |   |                                 the CSV because they have no ASNs
+|   |-- claims.csv               <-- One row per factual claim behind each entity: sources, status
+|   |                                 (verified / unverified / disputed / superseded), tier relevance
+|   |-- relationships.csv        <-- Typed links (operator-of, front-of, successor-of, upstream-of,
+|   |                                 ip-supplier-of, payment-rail-of, sister-of) with sources;
+|   |                                 drawn as Mermaid diagrams in ECOSYSTEM_MAP Appendix C
 |
 |-- monitor/
 |   |-- acknowledged.csv         <-- Monitor findings reviewed and accepted, with reasons
@@ -263,7 +268,8 @@ To add new intelligence to this repository:
 5. **ASN changes:** add or update the matching row in `data/asns.csv` (one row per ASN and entity, with a `block_recommendation`).
 6. **After any data change:** run `python tools/generate_docs.py` (rebuilds Appendices A/B, tier and entity counts and source statistics - never edit those blocks by hand), `python tools/build_xlsx.py` (workbook mirror), and `tools/build_dashboard_data.py` where you hold the private inputs.
 7. **Before committing:** run `python tools/validate_repo.py`. CI runs it, plus `generate_docs.py --check` and the monitor's offline tests, on every push and pull request. It fails on schema or ASN-register errors, uncatalogued Source IDs, a stale workbook, stale generated blocks, and any historical ASN not marked `do-not-block`.
-8. **Monitor findings:** the weekly [monitor](docs/MONITORING.md) keeps one open "Monitor findings" issue. Resolve each finding by updating the data (it disappears on the next run) or acknowledge it in `monitor/acknowledged.csv` with a reason.
+8. **Claims and relationships:** a new fact about an entity goes into `data/claims.csv` (with its Source IDs and status) as well as the row's notes; a new link between organisations goes into `data/relationships.csv`. Mark anything a source does not confirm as `unverified`; it then appears in `docs/DATA_HEALTH.md` and, after 90 days, in the weekly monitor issue.
+9. **Monitor findings:** the weekly [monitor](docs/MONITORING.md) keeps one open "Monitor findings" issue. Resolve each finding by updating the data (it disappears on the next run) or acknowledge it in `monitor/acknowledged.csv` with a reason.
 
 See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the improvement plan.
 
