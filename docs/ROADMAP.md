@@ -74,7 +74,7 @@ Goal: detect changes within a day instead of at the next audit.
 
 Goal: cover the domain layer - registrars, resellers, privacy/proxy services, TLD registries and DNS / fast-flux providers - without mislabelling registrars that are merely the registrar of record.
 
-- [ ] **R1 Pilot (data we already hold).** Extract every domain in the repo (seized domains, C2 and phishing domains, provider and front-brand domains), look up registrar (IANA ID) and DNS provider via RDAP/DNS, and measure which registrars recur across tracked operators. Output `data/domains.csv` and `analysis/REGISTRAR_PILOT.md`.
+- [x] **R1 Pilot (data we already hold).** Extract every domain in the repo (seized domains, C2 and phishing domains, provider and front-brand domains), look up registrar (IANA ID) and DNS provider via RDAP/DNS, and measure which registrars recur across tracked operators. Output `data/domains.csv` and `analysis/REGISTRAR_PILOT.md`.
 - [ ] **R2 Taxonomy.** New provider type "Registrar / DNS Enabler" with subtypes and its own tier criteria and evidence floor (ICANN compliance action or termination, LE action, self-advertised "bulletproof domains", sustained abuse share with documented non-response). Registrar-of-record is never evidence on its own.
 - [ ] **R3 Data.** `data/registrars.csv` (IANA ID, name, accreditation status, ICANN compliance actions, abuse metrics, reseller links, tier, sources) and relationships to BPH rows. Add only entities that meet the evidence floor.
 - [ ] **R4 Sources and monitoring.** Evaluate Interisle studies, Spamhaus registrar reporting, ICANN Contractual Compliance notices and DNS Abuse Institute data; add ICANN notices to the Phase 2 monitor.
@@ -89,3 +89,4 @@ Goal: cover the domain layer - registrars, resellers, privacy/proxy services, TL
 |---|---|
 | 2026-10-30 | Roadmap written; Phase 1 and the R1 pilot started |
 | 2026-10-30 | Phase 1 complete in PR: schema v2 (29 columns, tier_basis for all 79 rows), `tools/generate_docs.py`, `data/asns.csv` (124 rows; 50 block, 16 block-prefixes, 1 hunt, 38 monitor, 19 do-not-block), CI workflow |
+| 2026-10-30 | R1 pilot complete in PR: 66 domains, registrar resolved for 39; no dominant registrar (NameCheap 28%, a base-rate effect); operator clustering at NiceNIC, CNOBIN and Regtime; Cloudflare DNS on 52%; Shinjiru is itself an accredited registrar; 17 ccTLD domains lack RDAP. See `analysis/REGISTRAR_PILOT.md` |

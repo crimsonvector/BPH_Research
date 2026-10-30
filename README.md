@@ -33,6 +33,8 @@ BPH_Research/
 |   |-- TIMELINE.md              <-- Sanctions & enforcement chronology (reverse-chrono)
 |   |-- CL0P_HOSTZEALOT_REUSE.md <-- Cl0p MFT campaigns 2020-2026: HostZealot reuse and the
 |   |                                 defensive value of burned indicators
+|   |-- REGISTRAR_PILOT.md       <-- Registrar & DNS pilot (roadmap R1): which registrars and DNS
+|   |                                 providers tracked operators use; candidates for R2
 |
 |-- playbook/
 |   |-- ANALYST_PLAYBOOK.md      <-- Investigation guide: identification indicators, OSINT
@@ -43,7 +45,9 @@ BPH_Research/
 |
 |-- data/
 |   |-- asns.csv                 <-- ASN register: one row per (ASN, entity) with routing state,
-|                                     Spamhaus status and a structured block_recommendation
+|   |                                 Spamhaus status and a structured block_recommendation
+|   |-- domains.csv              <-- Domain register (registrar pilot): registrar / IANA ID, DNS
+|                                     provider and hosting for domains tied to tracked entities
 |
 |-- docs/
 |   |-- ROADMAP.md               <-- Improvement plan and status (phases 1-4, registrar module)
