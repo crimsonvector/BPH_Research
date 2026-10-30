@@ -1,12 +1,12 @@
 # BPH & TAE Ecosystem Map
 
-> **Version:** 1.4 | **Last Updated:** 2026-10-29 | **Maintainer:** CrimsonVector Research
+> **Version:** 1.4 | **Last Updated:** 2026-10-30 | **Maintainer:** CrimsonVector Research
 >
 > This document maps the bullet-proof hosting (BPH) and Threat Activity Enabler (TAE) ecosystem, charting the supply chain from bare metal to criminal end-user, the geographic clusters where these operations concentrate, the corporate relationship networks that sustain them, and the financial infrastructure that monetizes them. Risk tier references follow the classification system defined in [`taxonomy/BPH_TAXONOMY.md`](../taxonomy/BPH_TAXONOMY.md). The Appendix A/B reference tables are generated from `BPH_Master.csv` and are authoritative; the narrative sections 1–6 are hand-maintained and may lag the CSV.
 
 ---
 
-> **2026-10-29 update (Operation Omegaline):** Virtualine/Omegatech was seized on 2026-10-27. §3.2 and §3.7, the peering table and Appendices A and B now show Railnet/Virtualine as `seized` and AS202412 as disrupted rather than live. AS219199 (GENYUS SOFT LTD) is recorded in §3.7 as an unconfirmed lead, not an attribution. AnonRDP / Blatant Technologies (AS403005, with the deregistered GHOSTYNETWORKS AS205759) was added as a T1 row; its anonrdp[.]com domain went to FBI seizure nameservers the same day.
+> **2026-10-29 update (Operation Omegaline):** Virtualine/Omegatech was seized on 2026-10-27. §3.2 and §3.7, the peering table and Appendices A and B now show Railnet/Virtualine as `seized` and AS202412 as disrupted rather than live. AS219199 (GENYUS SOFT LTD) is recorded in §3.7 as an unconfirmed lead, not an attribution. AnonRDP / Blatant Technologies (AS403005, with the deregistered GHOSTYNETWORKS AS205759) was added as a T1 row; its anonrdp[.]com domain went to FBI seizure nameservers the same day. On 2026-10-30 the metaspinner-named AS209800 front was raised from T3 to T2.
 
 > **2026-09-25 audit:**
 > - **Appendices.** Appendices A and B were regenerated from `BPH_Master.csv` (70 rows), with every ASN re-checked against registry and Spamhaus ASN-DROP data.
@@ -350,7 +350,7 @@ AS214351   AS214943    AS209800     SWISS-   (reissued)  (live)   (reissued)
 | Femo IT / Defhost | AS214351 | T1 | Live; 4 /24s on Spamhaus DROP |
 | Railnet / Virtualine | AS214943 -> AS202412 | T1 | Seized 2026-10-27 (Operation Omegaline); AS214943 dark, AS202412 seen by 1 of 323 RIS peers |
 | Tnsecurity / EVILEMPIRE | AS216309 | T2 | ASN re-issued to an Italian company -- defunct |
-| metaspinner-named front | AS209800 | T3 | ASN re-issued -- defunct; ranges moved to AS202412, which was seized in Oct 2026 |
+| metaspinner-named front | AS209800 | T2 | ASN re-issued -- defunct; ranges moved to AS202412, which was seized in Oct 2026 |
 | WAIcore | AS213887 | T2 | Live (29 IPv4 prefixes) |
 | Karina Rashkovska | AS215789 | T2 | ASN re-issued to BLIK -- defunct (Virtualine sub-network) |
 | Altawk | AS209946 | T2 | Live, on ASN-DROP (earlier AS203727 re-issued) |
@@ -783,7 +783,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | Karina Rashkovska | AS215789 (historical; reassigned to BLIK / Polski Standard Platnosci SA [PL] - do not block) | T2 | Dissolved | aurologic downstream | BPH downstream (defunct; Virtualine) |
 | KPROHOST | AS214940 (dark since ~2026-08) | T2 | Flagged | US Shell (Virtualine) | BPH downstream |
 | Media Land LLC | AS206728; AS215376 (ML Cloud Ltd); AS211805 (registered to Media Land LLC; no routes) | T1 | Sanctioned | Russia / St. Petersburg | Pure BPH |
-| metaspinner-named AS209800 | AS209800 (historical; reassigned to ZEMA GbR [DE] - do not block) | T3 | Dissolved | aurologic downstream | BPH downstream (defunct; Virtualine) |
+| metaspinner-named AS209800 | AS209800 (historical; reassigned to ZEMA GbR [DE] - do not block) | T2 | Dissolved | aurologic downstream | BPH downstream (defunct; Virtualine) |
 | MIRhosting B.V. | AS52000; AS206932 (MIRHOSTING-NL) | T1 | Flagged | Netherlands | Infrastructure Pillar |
 | NECHAEVDS | AS213194 (NECHAEVDS-AS; 193[.]37[.]69[.]0/24) | T3 | Suspected | Russia | Zservers successor hop |
 | NETINNOVATIONLLC | AS62864 (NILAS; ARIN); AS23865; AS34985; AS149286 (APNIC; registered, no routes) | T3 | Flagged | US reg. / mixed APAC-ARIN space | BPH (ASN-DROP listed) |
@@ -898,7 +898,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS208046 | HostSlick | T3 | historical; ColocationX Ltd; reassigned to a French individual - do not block |
 | AS208137 | Feo Prest SRL | T2 | Mass-scanning / exploitation source; Romania |
 | AS209605 | UAB Host Baltic | T2 | HOSTBALTIC |
-| AS209800 | metaspinner-named AS209800 | T3 | historical; reassigned to ZEMA GbR [DE] - do not block |
+| AS209800 | metaspinner-named AS209800 | T2 | historical; reassigned to ZEMA GbR [DE] - do not block |
 | AS209847 | WorkTitans / THE.Hosting | T1 | Sanctions Evasion (Stark); Netherlands |
 | AS209946 | Altawk | T2 | ALINDA LLC [UA]; Spamhaus ASN-DROP under altawk.com |
 | AS210281 | WAIcore | T2 | historical; reassigned to EcoConnect LLC [RU] - do not block |
