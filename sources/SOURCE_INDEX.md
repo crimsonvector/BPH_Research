@@ -134,7 +134,7 @@ The catalogue lives in [`sources/sources.csv`](sources.csv); every table in this
 | EU-20TH-PACKAGE | A | 20th package of EU sanctions — energy, financial services including crypto | Council of the EU | EU Council | 2026-04-23 | [link](https://www.consilium.europa.eu/en/press/press-releases/2026/04/23/russia-s-war-of-aggression-against-ukraine-20th-round-of-stern-eu-sanctions-hits-energy-military-industrial-complex-trade-and-financial-services-including-crypto/) | — | Transaction ban on Russia- and Belarus-based CASPs (eff. 2026-05-24); CJSC TengriCoin; RUBx; Kyrgyzstan anti-circumvention measure; '120 listings' unverified |
 | FCDO-UK-SANCTIONS-LIST | A | UK Sanctions List (machine-readable consolidated designations) | FCDO | UK Government | 2026 (rolling) | [link](https://www.gov.uk/government/publications/the-uk-sanctions-list) | — | Authoritative UK designations; supersedes deprecated OFSI consolidated list |
 | KREBS-FIOD-STARK | C | Netherlands Seizes 800 Servers, Arrests 2 for Aiding Cyberattacks | Brian Krebs | Krebs on Security | 2026-05-25 | [link](https://krebsonsecurity.com/2026/05/netherlands-seizes-800-servers-arrests-2-for-aiding-cyberattacks/) | — | FIOD raid of 2026-05-18; THE.Hosting/WorkTitans; Youssef Zinad (WorkTitans owner); Andrey Nesterenko (MIRhosting founder); NoName057(16) |
-| DARKREADING-ELLIO-STARK | B | Dutch Raid Fails to Dent Russian Bulletproof Host | Dark Reading (citing ELLIO) | Dark Reading | 2026-05-28 | [link](https://www.darkreading.com/cyber-risk/dutch-raid-russian-bulletproof-host) | — | THE.Hosting/WorkTitans; post-raid telemetry; reseller-distributed resilience |
+| DARKREADING-ELLIO-STARK | C | Dutch Raid Fails to Dent Russian Bulletproof Host | Dark Reading (citing ELLIO) | Dark Reading | 2026-05-28 | [link](https://www.darkreading.com/cyber-risk/dutch-raid-russian-bulletproof-host) | — | THE.Hosting/WorkTitans; post-raid telemetry; reseller-distributed resilience |
 | ELLIPTIC-GRINEX | B | Sanctioned Russia-Linked Crypto Exchange Grinex Halts Operations Following Alleged Hack | Elliptic | Elliptic | 2026-04 | [link](https://www.elliptic.co/insights/sanctioned-russia-linked-crypto-exchange-grinex-halts-operations-following-alleged-hack/) | — | Grinex suspension after the 2026-04-15 drain (~$15M USDT measured by Elliptic) |
 <!-- generated:sources-additional-sources-added-2026-07-17:end -->
 
@@ -374,8 +374,8 @@ The catalogue lives in [`sources/sources.csv`](sources.csv); every table in this
 | Grade | Count | Description |
 |-------|-------|-------------|
 | A — Government/Official | 50 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
-| B — Established CTI Vendor | 94 | Published research from recognized threat intelligence firms |
-| C — Community/Independent | 58 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
+| B — Established CTI Vendor | 93 | Published research from recognized threat intelligence firms |
+| C — Community/Independent | 59 | Independent researchers, community blocklists and registry mirrors, investigative journalism |
 | D — Single Source / Unverified | 8 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
 | E — Self-Reported / Marketing | 11 | Forum advertising presence and provider marketing |
 | **Total** | **221** | |

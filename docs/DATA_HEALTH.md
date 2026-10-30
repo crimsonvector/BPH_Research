@@ -35,14 +35,7 @@
 
 A grade that differs from `sources/publishers.csv` needs a `grade_note` in `sources/sources.csv`; until then it is listed here for review.
 
-| ID | Grade | Publisher | Default | Title |
-|----|-------|-----------|---------|-------|
-| SILENTPUSH-FUNNULL | C | Silent Push | B | Infrastructure Laundering: Silent Push Exposes Cloudy Behavior Around FUNNULL CDN Renting IPs from B |
-| CHAINALYSIS-BPH | C | Chainalysis | B | Cryptocurrency Flows in BPH Ecosystem |
-| RIPE-AAWG-BTHOSTER | B | RIPE NCC mailing list | C | RIPE anti-abuse-wg thread — BtHoster LTD (AS198465) abuse report + advertised pricing |
-| DARKREADING-ELLIO-STARK | B | Dark Reading | C | Dutch Raid Fails to Dent Russian Bulletproof Host |
-| RIPE-DB | B | RIPE NCC | C | RIPE NCC database registrations (registry lookups) |
-| RIPE-POLICY-2026-10 | A | RIPE NCC | C | RIPE policy proposals 2026-02 (Contractual Accountability Framework for Infrastructure-Level Network |
+None.
 
 ### Oldest entity verifications
 
