@@ -59,10 +59,10 @@ Goal: detect changes within a day instead of at the next audit.
 
 ## Phase 3 - Claims, sources and relationships
 
-- [ ] **3.1 `sources/sources.csv`.** ID, grade, title, publisher, date, URL, archive URL, retrieved date; SOURCE_INDEX tables generated from it. Default grade per publisher.
+- [x] **3.1 `sources/sources.csv`.** ID, grade, title, publisher, date, URL, archive URL, retrieved date and URL note; every SOURCE_INDEX table and the statistics generated from it. Default grade per publisher in `sources/publishers.csv` (a different grade needs a `grade_note`). URLs found and checked for 204 of 221 sources (183 fetched, 21 behind bot checks); 23 titles, dates and publishers corrected against the live pages.
 - [ ] **3.2 `data/claims.csv`.** Entity, claim, source ID, grade, status (`verified` / `unverified` / `disputed` / `superseded`), verified date. Migrate every caveat and tier-relevant claim; notes become summaries.
 - [ ] **3.3 `data/relationships.csv`.** Typed edges (operator-of, front-of, successor-of, upstream-of, ip-supplier-of, payment-rail-of, sister-of) with source IDs; Mermaid diagrams generated into ECOSYSTEM_MAP.
-- [ ] **3.4 Staleness report.** Rows with `last_verified` older than 90 days and claims still `unverified` after 90 days listed by the generator.
+- [x] **3.4 Staleness report.** Split in two so CI never fails because the calendar moved: `docs/DATA_HEALTH.md` (generated, date-independent: sources without URLs, grade deviations, oldest verifications) and the monitor's `stale` check, which lists entities, registrars, ASN rows and claims past 90 days in the weekly issue.
 
 ## Phase 4 - Exports
 
@@ -92,3 +92,4 @@ Goal: cover the domain layer - registrars, resellers, privacy/proxy services, TL
 | 2026-10-30 | R1 pilot complete in PR: 66 domains, registrar resolved for 39; no dominant registrar (NameCheap 28%, a base-rate effect); operator clustering at NiceNIC, CNOBIN and Regtime; Cloudflare DNS on 52%; Shinjiru is itself an accredited registrar; 17 ccTLD domains lack RDAP. See `analysis/REGISTRAR_PILOT.md` |
 | 2026-10-30 | Phase 2 complete in PR: `tools/monitor.py` (8 checks), `data/companies.csv` (15), `data/registry_handles.csv` (87), weekly workflow, offline tests; October replay passes. First run: 8 retried RDAP lookups resolved; AS203319 (GIR), AS197703 (First Server) and AS45054 (PINSPB) added; post-seizure re-origination of Virtualine space by AS6461 recorded; successor origins recorded for MIRhosting, Altawk, WorkTitans, Kaopu, PINSPB and First Server |
 | 2026-10-30 | Phase R (R2-R4) complete in PR: taxonomy section 2.8, `data/registrars.csv` (Trustname T1, NiceNIC T2, CNOBIN and Eranet T3), `analysis/REGISTRAR_EVALUATION.md`, monitor `registrar` check, 11 new sources |
+| 2026-10-30 | Phase 3A (3.1, 3.4) complete in PR: `sources/sources.csv` with URLs for 204 of 221 sources, `sources/publishers.csv`, generated SOURCE_INDEX tables, `docs/DATA_HEALTH.md`, monitor `stale` check, Actions on Node 24 |

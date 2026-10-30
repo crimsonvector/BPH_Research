@@ -166,8 +166,13 @@ def data_health(root: str, rows: list[dict], asns: list[dict], sources: list[dic
         by_grade = collections.Counter(s["grade"] for s in no_url)
         out.append(f"{len(no_url)} of {len(sources)} (" + ", ".join(f"{g}: {by_grade[g]}" for g in "ABCDE" if by_grade[g]) + "). "
                    "First-party findings and bucket sources have no single URL by design.")
-        out += ["", "| ID | Grade | Publisher | Title |", "|----|-------|-----------|-------|"]
-        out += [f"| {s['id']} | {s['grade']} | {cell(s['publisher'])} | {cell(s['title'])[:120]} |" for s in sorted(no_url, key=lambda s: (s['grade'], s['id']))]
+        out += ["", "| ID | Grade | Publisher | Title | Note |", "|----|-------|-----------|-------|------|"]
+        out += [f"| {s['id']} | {s['grade']} | {cell(s['publisher'])} | {cell(s['title'])[:100]} | {cell(s.get('url_note', ''))[:140]} |"
+                for s in sorted(no_url, key=lambda s: (s['grade'], s['id']))]
+    blocked = [s for s in sources if s["url"] and not s["retrieved"]]
+    if blocked:
+        out += ["", f"{len(blocked)} more have a URL that could not be fetched from the collection environment (bot checks or blocks): "
+                + ", ".join(s["id"] for s in sorted(blocked, key=lambda s: s["id"])) + "."]
     else:
         out.append("None.")
     dev = grade_deviations(sources, defaults)
