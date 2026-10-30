@@ -1,0 +1,71 @@
+{
+ "Event": {
+  "Attribute": [
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "559a91fe-075f-5123-b386-aa5a61247aca",
+    "value": "45.194.92.0/24"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: On ASN-DROP, but GreyNoise advises against an ASN-level block (shared tenancy); block the listed prefixes",
+    "timestamp": "1793318400",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "7bc1e401-4c88-5541-88f6-700b0271ce89",
+    "value": "AS215925"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"block-prefixes\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "block-prefixes: Known prefix of an entity with a live block-prefixes ASN (BPH_Master.csv known_prefixes)",
+    "timestamp": "1793318400",
+    "to_ids": true,
+    "type": "ip-dst",
+    "uuid": "87dbb3d5-2f01-5ddc-a8ac-57cb94cea5e9",
+    "value": "45.198.224.0/24"
+   }
+  ],
+  "Orgc": {
+   "name": "CrimsonVector Research",
+   "uuid": "7aa47ee2-2489-5c68-bf6c-48324a5bb477"
+  },
+  "Tag": [
+   {
+    "name": "tlp:clear"
+   },
+   {
+    "name": "bph-research:tier=\"T2\""
+   },
+   {
+    "name": "bph-research:status=\"flagged\""
+   }
+  ],
+  "analysis": "2",
+  "date": "2026-10-30",
+  "info": "BPH Research: VPSVAULT.HOST LTD (T2-High Risk)",
+  "publish_timestamp": "1793318400",
+  "published": true,
+  "threat_level_id": "2",
+  "timestamp": "1793318400",
+  "uuid": "d47a1b30-8a4f-5059-b4f4-7a0c096eb5c0"
+ }
+}

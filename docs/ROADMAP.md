@@ -66,9 +66,11 @@ Goal: detect changes within a day instead of at the next audit.
 
 ## Phase 4 - Exports
 
-- [ ] **4.1 STIX 2.1 bundle** (identities, infrastructure, indicators for `block` / `block-prefixes` ASNs and prefixes, relationships) with `valid_until` from monitor freshness.
-- [ ] **4.2 MISP feed** with decay-friendly attributes and do-not-block items excluded.
-- [ ] **4.3 Plain blocklists** (ASN and CIDR) generated only from `block` recommendations.
+- [x] **4.1 STIX 2.1 bundle** (`exports/stix/bph-bundle.json`): identities, infrastructure with autonomous-system and ip SCOs, indicators for `block` ASNs and for the curated prefixes of entities with a live `block` / `block-prefixes` ASN, typed relationships. `valid_until` is 30 days after the data's last check. Valid STIX 2.1 (OASIS `stix2-validator` 3.2.0 in CI); custom properties declared through an extension definition.
+- [x] **4.2 MISP feed** (`exports/misp/`): one event per entity, AS and ip-dst attributes with check-date timestamps and recommendation tags, `to_ids` only for block items, `do-not-block` ASNs excluded.
+- [x] **4.3 Plain blocklists** (`exports/blocklists/`): ASN list from `block` recommendations only; CIDR list from curated, non-historical, non-moved prefixes; CSV with entity, tier, basis and validity window.
+
+**Done when:** a consumer can pull blocking guidance without parsing the CSV, and no `do-not-block` ASN can reach a blocklist. **Met:** `tools/build_exports.py` builds all three reproducibly, CI checks they are current and the STIX bundle valid, and safety tests (backed by a mutation test) prove re-issued ASNs, moved prefixes and monitor/hunt ASNs never become blocking indicators. See `docs/EXPORTS.md`.
 
 ## Phase R - Registrar and DNS Enabler module
 
@@ -94,3 +96,4 @@ Goal: cover the domain layer - registrars, resellers, privacy/proxy services, TL
 | 2026-10-30 | Phase R (R2-R4) complete in PR: taxonomy section 2.8, `data/registrars.csv` (Trustname T1, NiceNIC T2, CNOBIN and Eranet T3), `analysis/REGISTRAR_EVALUATION.md`, monitor `registrar` check, 11 new sources |
 | 2026-10-30 | Phase 3A (3.1, 3.4) complete in PR: `sources/sources.csv` with URLs for 204 of 221 sources, `sources/publishers.csv`, generated SOURCE_INDEX tables, `docs/DATA_HEALTH.md`, monitor `stale` check, Actions on Node 24 |
 | 2026-10-30 | Phase 3B (3.2, 3.3) complete in PR: `data/claims.csv` (643), `data/relationships.csv` (174), ECOSYSTEM_MAP Appendix C diagrams, tier evidence check; notes-to-summaries left for after review |
+| 2026-10-30 | Phase 4 complete in PR: `tools/build_exports.py`, `exports/` (50 ASNs, 54 prefixes; STIX 2.1 bundle of 965 objects; MISP feed of 51 events), export safety tests, CI checks; all roadmap phases done |
