@@ -6,7 +6,12 @@ BPH_Master.csv is authoritative; several documents restate parts of it by hand a
 drift. This script catches that drift before it is committed.
 
 Errors (exit 1):
-  - CSV shape: 25 named columns, every row the same width, unique provider_name
+  - CSV shape: 29 named columns (schema v2), every row the same width, unique provider_name
+  - tier_basis starts with the row's tier; last_verified is an ISO date
+  - data/asns.csv lists exactly the (ASN, entity) pairs cited in the CSV, uses a known
+    block_recommendation, gives each ASN one recommendation, and never recommends
+    anything but do-not-block for a historical / reassigned / recycled ASN
+  - generated blocks (tools/generate_docs.py) are up to date
   - status is one of the taxonomy's lifecycle/auxiliary states
   - risk_tier starts with T1..T5
   - every Source ID cited in the CSV `sources` column is catalogued in
@@ -21,6 +26,7 @@ Warnings (exit 0):
   - dashboard_data/providers.json provider count differs from the CSV (the owner's
     daily build refreshes it)
   - CSV rows with an empty `sources` column
+  - rows whose last_verified is more than 90 days old
 
 Usage:
   python tools/validate_repo.py [--repo-root DIR]
@@ -31,6 +37,7 @@ from __future__ import annotations
 import argparse
 import collections
 import csv
+import datetime as _dt
 import json
 import os
 import re
@@ -47,7 +54,11 @@ EXPECTED_COLUMNS = [
     "associated_threat_actors", "associated_malware", "operational_patterns",
     "identification_signals", "first_observed", "last_updated",
     "rf_threat_density_score", "sources", "notes", "description",
+    # schema v2 (2026-10-30)
+    "geo_cluster", "primary_role", "tier_basis", "last_verified",
 ]
+BLOCK_RECS = {"block", "block-prefixes", "hunt", "monitor", "do-not-block"}
+STALE_DAYS = 90
 STATUSES = {"active", "flagged", "suspected", "sanctioned", "evading",
             "dissolved", "seized", "exposed", "dormant"}
 ID_RE = re.compile(r"^[A-Z0-9][A-Z0-9-]+$")
@@ -115,7 +126,7 @@ def main() -> int:
 
     # ---- CSV shape and values ----
     if header != EXPECTED_COLUMNS:
-        errors.append(f"CSV header differs from the 25-column schema: {header}")
+        errors.append(f"CSV header differs from the {len(EXPECTED_COLUMNS)}-column schema: {header}")
     for n, r in enumerate(body, start=2):
         if len(r) != len(header):
             errors.append(f"CSV line {n}: {len(r)} fields, expected {len(header)}")
@@ -129,6 +140,15 @@ def main() -> int:
             errors.append(f"{r['provider_name']}: risk_tier {r['risk_tier']!r} is not T1-T5")
         if not r["sources"].strip():
             warnings.append(f"{r['provider_name']}: no sources cited")
+        if not r.get("tier_basis", "").startswith(r["risk_tier"][:2]):
+            errors.append(f"{r['provider_name']}: tier_basis must start with its tier {r['risk_tier'][:2]}")
+        try:
+            verified = _dt.date.fromisoformat(r.get("last_verified", ""))
+        except ValueError:
+            errors.append(f"{r['provider_name']}: last_verified {r.get('last_verified')!r} is not an ISO date")
+        else:
+            if (_dt.date.today() - verified).days > STALE_DAYS:
+                warnings.append(f"{r['provider_name']}: last verified {verified} (> {STALE_DAYS} days)")
     tiers = collections.Counter(r["risk_tier"][:2] for r in rows)
 
     # ---- source index ----
@@ -174,6 +194,42 @@ def main() -> int:
     if b_asns != csv_asns:
         errors.append("ECOSYSTEM_MAP Appendix B ASNs differ from CSV: missing "
                       f"{sorted(csv_asns - b_asns, key=int)}, extra {sorted(b_asns - csv_asns, key=int)}")
+
+    # ---- ASN register ----
+    asn_path = os.path.join(root, "data", "asns.csv")
+    if not os.path.exists(asn_path):
+        errors.append("data/asns.csv is missing")
+    else:
+        with open(asn_path, encoding="utf-8", newline="") as f:
+            reg = list(csv.DictReader(f))
+        csv_pairs = {(f"AS{m}", r["provider_name"]) for r in rows
+                     for m in ASN_RE.findall(r["primary_asn"] + " " + r["additional_asns"])}
+        reg_pairs = {(a["asn"], a["provider_name"]) for a in reg}
+        for asn, name in sorted(csv_pairs - reg_pairs):
+            errors.append(f"data/asns.csv: missing {asn} for {name}")
+        for asn, name in sorted(reg_pairs - csv_pairs):
+            errors.append(f"data/asns.csv: {asn} for {name} is not in the CSV")
+        recs = collections.defaultdict(set)
+        for a in reg:
+            rec = a["block_recommendation"]
+            recs[a["asn"]].add(rec)
+            if rec not in BLOCK_RECS:
+                errors.append(f"data/asns.csv: {a['asn']} has unknown block_recommendation {rec!r}")
+            q = a["qualifier"].lower()
+            if any(k in q for k in ("historical", "reassigned", "re-registered", "recycled")) and rec != "do-not-block":
+                errors.append(f"data/asns.csv: {a['asn']} ({a['provider_name']}) is historical/reassigned but "
+                              f"recommended {rec!r} - must be do-not-block")
+        for asn, rs in recs.items():
+            if len(rs) > 1:
+                errors.append(f"data/asns.csv: {asn} has conflicting recommendations {sorted(rs)}")
+
+    # ---- generated blocks ----
+    try:
+        sys.path.insert(0, HERE)
+        from generate_docs import stale_files
+        errors += [f"{path} is stale - run tools/generate_docs.py" for path in stale_files(root)]
+    except SystemExit as e:  # missing markers or inputs
+        errors.append(f"generate_docs could not run: {e}")
 
     # ---- taxonomy + README counts ----
     tax = read(os.path.join(root, "taxonomy", "BPH_TAXONOMY.md"))

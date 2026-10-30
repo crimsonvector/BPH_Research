@@ -327,6 +327,7 @@ When adding a new source to this index:
 
 ## Source Statistics
 
+<!-- generated:source-stats:start -->
 | Grade | Count | Description |
 |-------|-------|-------------|
 | A — Government/Official | 48 | Sanctions notices, LE press releases, court filings, company registers, government advisories |
@@ -335,6 +336,7 @@ When adding a new source to this index:
 | D — Single Source / Unverified | 8 | Reputation/review platforms, single-analyst datasets, leaked chats, and first-party findings |
 | E — Self-Reported / Marketing | 10 | Forum advertising presence and provider marketing |
 | **Total** | **210** | |
+<!-- generated:source-stats:end -->
 
 ---
 

@@ -20,7 +20,7 @@ This repository is a comprehensive intelligence resource for tracking bullet-pro
 BPH_Research/
 |
 |-- README.md                    <-- You are here
-|-- BPH_Master.csv               <-- Master provider database (flat CSV, 25 columns)
+|-- BPH_Master.csv               <-- Master provider database (flat CSV, 29 columns - schema v2)
 |-- BPH_Master.xlsx              <-- Single-sheet Excel mirror of the CSV
 |
 |-- taxonomy/
@@ -41,12 +41,24 @@ BPH_Research/
 |-- sources/
 |   |-- SOURCE_INDEX.md           <-- Catalog of all sources with metadata and grade
 |
+|-- data/
+|   |-- asns.csv                 <-- ASN register: one row per (ASN, entity) with routing state,
+|                                     Spamhaus status and a structured block_recommendation
+|
+|-- docs/
+|   |-- ROADMAP.md               <-- Improvement plan and status (phases 1-4, registrar module)
+|
+|-- .github/workflows/
+|   |-- validate.yml             <-- CI: generated-block check + validator on every push/PR
+|
 |-- tools/
 |   |-- build_dashboard_data.py  <-- Generates the public dashboard_data/ from the CSV +
 |   |                                 the private findings file, with denylist/defang gates
 |   |-- build_xlsx.py            <-- Regenerates BPH_Master.xlsx from the CSV
-|   |-- validate_repo.py         <-- Cross-file consistency checks (CSV, source index,
-|   |                                 workbook, appendices, stated counts)
+|   |-- generate_docs.py         <-- Regenerates ECOSYSTEM_MAP Appendices A/B, tier and entity
+|   |                                 counts and source statistics from the data
+|   |-- validate_repo.py         <-- Cross-file consistency checks (CSV schema, ASN register,
+|   |                                 source index, workbook, generated blocks)
 |   |-- denylist.example.txt     <-- Template for the (gitignored) publication denylist
 |
 |-- dashboard_data/              <-- Sanitized, public dashboard outputs (generated)
@@ -86,7 +98,7 @@ BPH_Research/
 
 ## Master Database Schema
 
-The CSV uses 25 columns. Key fields:
+The CSV uses 29 columns (schema v2, 2026-10-30: four columns appended at the end, so earlier positions are unchanged). Key fields:
 
 | Column | Description |
 |--------|-------------|
@@ -99,6 +111,21 @@ The CSV uses 25 columns. Key fields:
 | `associated_malware` | Specific malware families observed |
 | `rf_threat_density_score` | Recorded Future Threat Density Score (if available) |
 | `sources` | Source IDs referencing SOURCE_INDEX.md |
+| `geo_cluster` / `primary_role` | Geography and role shown in ECOSYSTEM_MAP Appendix A (schema v2) |
+| `tier_basis` | Taxonomy criterion and key evidence behind the tier; must start with the tier code (schema v2) |
+| `last_verified` | Date the row was last checked end to end (distinct from `last_updated`); rows older than 90 days are flagged (schema v2) |
+
+**ASN register (`data/asns.csv`).** One row per (ASN, entity) pair cited in the CSV, with `routing_state` (`live`, `dark`, `unregistered`, `reassigned`), Spamhaus ASN-DROP status and a `block_recommendation`:
+
+| Value | Meaning |
+|-------|---------|
+| `block` | Block at ASN level (T1, or on Spamhaus ASN-DROP) |
+| `block-prefixes` | Block the entity's malicious prefixes, not the whole ASN (T2, shared tenancy, successor hops) |
+| `hunt` | Alert and block confirmed-malicious IPs only (T3) |
+| `monitor` | No blocking; watch for change (T4/T5, upstream carriers, dark ASNs) |
+| `do-not-block` | Historical, reassigned or recycled ASN - now belongs to someone else or nobody |
+
+Build blocklists from `data/asns.csv`, never from the free-text qualifiers in the CSV. Registry holders that are private individuals are recorded as `[individual registrant]`.
 
 Full schema documented in the CSV header row.
 
@@ -214,8 +241,11 @@ To add new intelligence to this repository:
 2. **New source:** Add to `sources/SOURCE_INDEX.md` with metadata and grade (update the Source Statistics counts), cross-reference the Source ID in the CSV `sources` column
 3. **Status change:** Update CSV status/tier, add a `TIMELINE.md` entry, update the ecosystem map if relationships changed
 4. **Sanctions update:** Add to timeline, update the CSV `sanctions_designations` field, check for evasion vehicles
-5. **After any CSV change:** run `python tools/build_xlsx.py` (regenerates the single-sheet `BPH_Master.xlsx` mirror) and re-run `tools/build_dashboard_data.py` so the workbook and `dashboard_data/` stay in sync. Appendices A/B of `ECOSYSTEM_MAP.md` are also CSV-derived — keep them consistent.
-6. **Before committing:** run `python tools/validate_repo.py`. It fails on drift between the CSV and everything that restates it — uncatalogued Source IDs, a stale workbook, Appendix A/B gaps, and out-of-date tier or entity counts.
+5. **ASN changes:** add or update the matching row in `data/asns.csv` (one row per ASN and entity, with a `block_recommendation`).
+6. **After any data change:** run `python tools/generate_docs.py` (rebuilds Appendices A/B, tier and entity counts and source statistics - never edit those blocks by hand), `python tools/build_xlsx.py` (workbook mirror), and `tools/build_dashboard_data.py` where you hold the private inputs.
+7. **Before committing:** run `python tools/validate_repo.py`. CI runs it, plus `generate_docs.py --check`, on every push and pull request. It fails on schema or ASN-register errors, uncatalogued Source IDs, a stale workbook, stale generated blocks, and any historical ASN not marked `do-not-block`.
+
+See [`docs/ROADMAP.md`](docs/ROADMAP.md) for the improvement plan.
 
 ---
 
