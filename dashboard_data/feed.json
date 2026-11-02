@@ -22,8 +22,8 @@
       "fraud",
       "cert-pivot"
     ],
-    "last_verified": "2026-11-01",
-    "last_seen_utc": "2026-10-31",
+    "last_verified": "2026-11-02",
+    "last_seen_utc": "2026-11-02",
     "stale_days": 0
   },
   {
@@ -48,9 +48,9 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-11-01",
+    "last_verified": "2026-11-02",
     "last_seen_utc": "2026-11-01",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -74,9 +74,9 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-11-01",
-    "last_seen_utc": "2026-10-31",
-    "stale_days": 1
+    "last_verified": "2026-11-02",
+    "last_seen_utc": "2026-11-01",
+    "stale_days": 0
   },
   {
     "id": "darkseller-carding-market-2026-07",
@@ -101,7 +101,7 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-11-01",
+    "last_verified": "2026-11-02",
     "last_seen_utc": "2026-11-01",
     "stale_days": 0
   },
@@ -127,9 +127,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-11-01",
+    "last_verified": "2026-11-02",
     "last_seen_utc": "2026-11-01",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -151,8 +151,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-11-01",
+    "last_verified": "2026-11-02",
     "last_seen_utc": "2026-10-30",
-    "stale_days": 2
+    "stale_days": 3
   }
 ]
