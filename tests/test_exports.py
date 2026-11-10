@@ -64,11 +64,30 @@ class Exports(unittest.TestCase):
         self.assertIn("31.56.19.0/24", cidrs)  # AnonRDP, live block ASN
 
     def test_validity_window(self):
-        as_of = max(a["last_checked"] for a in self.asns)
+        as_of = max(a["last_checked"] for a in self.asns if a["block_recommendation"] in ("block", "block-prefixes"))
         until = (dt.date.fromisoformat(as_of) + dt.timedelta(days=bx.VALID_DAYS)).isoformat()
         for o in self.bundle["objects"]:
             if o["type"] == "indicator":
                 self.assertEqual((o["valid_from"][:10], o["valid_until"][:10]), (as_of, until))
+
+    def test_as_of_ignores_rows_without_indicators(self):
+        """Re-checking a hunt or monitor ASN must not extend the validity of block indicators nobody re-checked."""
+        rows = [{"block_recommendation": "block", "last_checked": "2026-10-30"},
+                {"block_recommendation": "block-prefixes", "last_checked": "2026-10-29"},
+                {"block_recommendation": "monitor", "last_checked": "2026-11-10"},
+                {"block_recommendation": "hunt", "last_checked": "2026-11-09"},
+                {"block_recommendation": "do-not-block", "last_checked": "2026-11-08"}]
+        self.assertEqual(bx.data_as_of(rows), "2026-10-30")
+        self.assertEqual(bx.data_as_of(rows[2:]), "2026-11-10")  # no block rows: newest check overall
+
+    def test_existing_export_paths_use_forward_slashes(self):
+        """build() keys use '/', so the stale and extra comparison must too (on Windows relpath gives '\\')."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            os.makedirs(os.path.join(tmp, "blocklists"))
+            for name in ("README.md", os.path.join("blocklists", "asn-block.txt")):
+                open(os.path.join(tmp, name), "w").close()
+            self.assertEqual(bx.existing_exports(tmp), {"blocklists/asn-block.txt"})
 
     def test_stix_references_resolve(self):
         ids = [o["id"] for o in self.bundle["objects"]]

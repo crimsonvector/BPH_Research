@@ -37,7 +37,7 @@ The weekly monitor ([`MONITORING.md`](MONITORING.md)) re-checks every listed pre
 
 ## Freshness
 
-Every export carries the date the data was last checked (`as_of`, the newest `last_checked` in `data/asns.csv`):
+Every export carries the date the data was last checked (`as_of`, the newest `last_checked` among the `block` and `block-prefixes` rows of `data/asns.csv`; re-checking a `hunt` or `monitor` row, which yields no indicator, does not move it):
 - Indicators are valid from `as_of` until **`as_of` + 30 days**: STIX `valid_until`, `valid_until` in `blocklist.csv`, and the header of each text list.
 - If the repository stops being refreshed, consumers get expired indicators rather than silently ageing ones. Re-pull after each monitor-driven update.
 - MISP attributes carry the timestamp of their check date, so MISP's decaying models score them by age.

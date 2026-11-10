@@ -22,7 +22,9 @@ Safety rules (also enforced by tests):
     record does not mark it historical, not announced, former, moved, re-originated or
     "re-check before blocking"; the weekly monitor keeps those notes current
   - indicators are valid for VALID_DAYS after the data was last checked, so a stale
-    repository yields expired indicators instead of silently aging ones
+    repository yields expired indicators instead of silently aging ones. "Last checked" is the
+    newest last_checked among block and block-prefixes rows: re-checking a hunt or monitor row,
+    which yields no indicator, does not extend the window
 
 Usage:
   python tools/build_exports.py           # write exports/
@@ -80,6 +82,22 @@ def epoch(day: str) -> str:
     return str(int(dt.datetime.fromisoformat(day).replace(tzinfo=dt.timezone.utc).timestamp()))
 
 
+def data_as_of(asns: list[dict]) -> str:
+    """Newest last_checked among the rows that yield indicators (block, block-prefixes). Hunt and monitor rows
+    carry no indicator, so re-checking one must not extend the validity of block indicators nobody re-checked.
+    Falls back to the newest check overall when no row is a block row."""
+    blocking = [a["last_checked"] for a in asns if a["block_recommendation"] in ("block", "block-prefixes")]
+    return max(blocking or [a["last_checked"] for a in asns])
+
+
+def existing_exports(out: str) -> set[str]:
+    """Files already under exports/ (except README.md), with '/' separators like the keys build() returns."""
+    if not os.path.isdir(out):
+        return set()
+    found = {os.path.relpath(os.path.join(d, f), out).replace(os.sep, "/") for d, _, fs in os.walk(out) for f in fs}
+    return found - {"README.md"}
+
+
 def load(root: str) -> dict:
     p = lambda *x: os.path.join(root, *x)
     for need in ("BPH_Master.csv", "data/asns.csv", "data/relationships.csv", "sources/sources.csv"):
@@ -88,7 +106,7 @@ def load(root: str) -> dict:
             sys.exit(4)
     rows = load_csv(p("BPH_Master.csv"))
     asns = load_csv(p("data", "asns.csv"))
-    as_of = max(a["last_checked"] for a in asns)
+    as_of = data_as_of(asns)
     return {"rows": rows, "by_name": {r["provider_name"]: r for r in rows}, "asns": asns,
             "rels": load_csv(p("data", "relationships.csv")), "sources": {s["id"]: s for s in load_csv(p("sources", "sources.csv"))},
             "as_of": as_of, "until": (dt.date.fromisoformat(as_of) + dt.timedelta(days=VALID_DAYS)).isoformat()}
@@ -317,8 +335,7 @@ def main() -> int:
     root = os.path.abspath(args.repo_root)
     out = os.path.join(root, "exports")
     files = build(root)
-    existing = {os.path.relpath(os.path.join(d, f), out) for d, _, fs in os.walk(out) for f in fs} if os.path.isdir(out) else set()
-    existing -= {"README.md"}
+    existing = existing_exports(out)
     stale = [f for f, body in files.items() if not os.path.exists(os.path.join(out, f)) or open(os.path.join(out, f), encoding="utf-8").read() != body]
     extra = sorted(existing - set(files))
     if args.check:
