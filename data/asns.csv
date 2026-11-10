@@ -17,6 +17,7 @@ AS44477,Stark Industries Solutions,primary,historical; transferred to PQ Hosting
 AS45054,PINSPB (Petersburg Internet Network Ltd),additional,"Metrobit-AS; Petersburg Internet Network ltd.; registered, no routes",Metrobit-AS Petersburg Internet Network ltd.,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
 AS45839,Shinjiru,primary,,SHINJIRU-MY-AS-AP - Shinjiru Technology Sdn Bhd,live,37,no,,monitor,T4: no blanket blocking (taxonomy),2026-10-30
 AS48589,Tiger Network Limited (Tiger Net),primary,TIGER,TIGER Tiger Network Limited,live,11,yes,imtigernet,block,On Spamhaus ASN-DROP,2026-10-30
+AS48753,AlexHost,additional,"AVAHOHST; AVA HOST SRL [MD]; sponsored, maintained and routed by AlexHost",AVAHOHST AVA HOST SRL,live,20,no,,monitor,T4: no blanket blocking (taxonomy),2026-11-10
 AS49037,Prostie Reshenia LLC (WebRocket),primary,A1-TELECOM; no routes since 2025-02-12,A1-TELECOM Prostie Reshenia LLC,dark,0,no,,monitor,Registered but announcing nothing: watch for re-announcement,2026-10-30
 AS49042,Phanes Networks,primary,historical; deregistered,,unregistered,0,no,,do-not-block,Historical ASN: deregistered or transferred - never block it as this entity; re-check before any use,2026-10-30
 AS49217,HOSTYPE,primary,registered; no routes,,unregistered,0,no,,monitor,No current registry holder: watch for re-issue and re-check before any block,2026-10-30

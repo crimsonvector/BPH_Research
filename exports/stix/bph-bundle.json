@@ -565,6 +565,13 @@
    "type": "autonomous-system"
   },
   {
+   "id": "autonomous-system--cecc4738-7ebb-565c-9c6d-c35e5a9b6da2",
+   "name": "AVAHOHST AVA HOST SRL",
+   "number": 48753,
+   "spec_version": "2.1",
+   "type": "autonomous-system"
+  },
+  {
    "id": "autonomous-system--d10acc64-81ed-5812-aa98-0391a5cd7ece",
    "number": 214295,
    "spec_version": "2.1",
@@ -1450,6 +1457,20 @@
    "x_bph_risk_tier": "T1-Confirmed BPH (Financial Enabler)",
    "x_bph_status": "sanctioned",
    "x_bph_tier_basis": "T1: front of T1 Grinex (TRM, high confidence); UK-designated (Russia regime)"
+  },
+  {
+   "created": "2026-10-30T00:00:00.000Z",
+   "created_by_ref": "identity--296bfcea-df86-50c5-bf23-f0a578f8138b",
+   "description": "External party linked to a tracked entity in data/relationships.csv",
+   "id": "identity--21386874-7255-52d3-bd38-796a8e0881fb",
+   "identity_class": "organization",
+   "modified": "2026-10-30T00:00:00.000Z",
+   "name": "AVA HOST SRL (AS48753)",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "spec_version": "2.1",
+   "type": "identity"
   },
   {
    "created": "2026-10-30T00:00:00.000Z",
@@ -4835,6 +4856,10 @@
     {
      "source_name": "SILENTPUSH-BPH-WP-2025",
      "url": "https://info.silentpush.com/hubfs/SP-WP-bulletproof-hosting.pdf"
+    },
+    {
+     "source_name": "RIPE-DB",
+     "url": "https://apps.db.ripe.net/db-web-ui/query"
     }
    ],
    "id": "identity--ce280d49-8bca-5391-b247-1770722b200b",
@@ -14013,6 +14038,20 @@
    "type": "relationship"
   },
   {
+   "created": "2026-10-30T00:00:00.000Z",
+   "created_by_ref": "identity--296bfcea-df86-50c5-bf23-f0a578f8138b",
+   "id": "relationship--999c01ec-60a1-5e71-8734-0d736835c0c4",
+   "modified": "2026-10-30T00:00:00.000Z",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "consists-of",
+   "source_ref": "infrastructure--ce886e69-19e7-5b0e-8538-4914b20cb8ad",
+   "spec_version": "2.1",
+   "target_ref": "autonomous-system--cecc4738-7ebb-565c-9c6d-c35e5a9b6da2",
+   "type": "relationship"
+  },
+  {
    "confidence": 80,
    "created": "2026-10-30T00:00:00.000Z",
    "created_by_ref": "identity--296bfcea-df86-50c5-bf23-f0a578f8138b",
@@ -16935,6 +16974,34 @@
    "source_ref": "identity--029d8333-7ebc-52d8-81c2-2596377c334d",
    "spec_version": "2.1",
    "target_ref": "identity--0418b50d-55a2-5e58-8d6a-2bf4128d0b45",
+   "type": "relationship",
+   "x_bph_status": "verified"
+  },
+  {
+   "confidence": 80,
+   "created": "2026-10-30T00:00:00.000Z",
+   "created_by_ref": "identity--296bfcea-df86-50c5-bf23-f0a578f8138b",
+   "description": "ALEXHOST S.R.L. is the sponsoring LIR of AS48753, whose aut-num (maintained by AlexHost's maintainer) imports and exports only via AS200019 and AS207636 (RIPE DB, 2026-11-10).",
+   "extensions": {
+    "extension-definition--17b9fc97-3cde-565f-9e18-c2de15d16095": {
+     "extension_type": "toplevel-property-extension"
+    }
+   },
+   "external_references": [
+    {
+     "source_name": "RIPE-DB",
+     "url": "https://apps.db.ripe.net/db-web-ui/query"
+    }
+   ],
+   "id": "relationship--e62142e7-2909-524f-83ae-05a7d0185570",
+   "modified": "2026-10-30T00:00:00.000Z",
+   "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+   ],
+   "relationship_type": "upstream-of",
+   "source_ref": "identity--ce280d49-8bca-5391-b247-1770722b200b",
+   "spec_version": "2.1",
+   "target_ref": "identity--21386874-7255-52d3-bd38-796a8e0881fb",
    "type": "relationship",
    "x_bph_status": "verified"
   },

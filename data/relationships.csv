@@ -159,6 +159,7 @@ UAB Host Baltic (serveroffer.lt),upstream-of,BtHoster,verified,REGISTRY-SNAPSHOT
 UFO Hosting LLC,successor-of,PQ Hosting Plus S.R.L.,unverified,,,No catalogued source; the record states this as fact. Record: successor capacity sits with UFO Hosting; no source given.
 UFO Hosting LLC,successor-of,Stark Industries Solutions,verified,RF-STARK; SPAMHAUS-ASNDROP-2026,2025-04-13,AS33993 listed by ASN-DROP under stark-industries.solutions.
 Voxility,upstream-of,AlexHost,unverified,,,No catalogued source; the record states this as fact. DDoS-mitigation upstream; record gives no source.
+AlexHost,upstream-of,AVA HOST SRL (AS48753),verified,RIPE-DB,2023-07,"ALEXHOST S.R.L. is the sponsoring LIR of AS48753, whose aut-num (maintained by AlexHost's maintainer) imports and exports only via AS200019 and AS207636 (RIPE DB, 2026-11-10)."
 WAIcore Ltd,operator-of,WAIcore Hosting Ltd,verified,UK-COMPANIES-HOUSE,,"corporate_entity field; WAICORE LTD is Companies House 15668439. Companies House shows the company, not the ASN link."
 WorkTitans B.V. / THE.Hosting,ip-supplier-of,PIXOOF TEKNOLOJI (AS51722),verified,REGISTRY-SNAPSHOT-2026-10,2026-09-07,THE-HOSTING-MNT route objects (2026-09-07/10) authorise AS51722 to originate WorkTitans space; five former AS209847 prefixes announced from AS51722 since 2026-09-10.
 WorkTitans B.V. / THE.Hosting,successor-of,PQ Hosting Plus S.R.L.,unverified,,,No catalogued source; the record states this as fact. Record: successor capacity sits with WorkTitans/THE.Hosting; no source given.

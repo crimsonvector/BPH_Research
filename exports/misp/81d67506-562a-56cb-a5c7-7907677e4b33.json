@@ -23,6 +23,20 @@
     ],
     "category": "Network activity",
     "comment": "monitor: T4: no blanket blocking (taxonomy)",
+    "timestamp": "1794268800",
+    "to_ids": false,
+    "type": "AS",
+    "uuid": "52e0182e-e22e-5c24-8bd5-448f7e2cdf40",
+    "value": "AS48753"
+   },
+   {
+    "Tag": [
+     {
+      "name": "bph-research:block-recommendation=\"monitor\""
+     }
+    ],
+    "category": "Network activity",
+    "comment": "monitor: T4: no blanket blocking (taxonomy)",
     "timestamp": "1793318400",
     "to_ids": false,
     "type": "AS",

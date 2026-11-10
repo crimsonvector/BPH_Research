@@ -220,7 +220,7 @@ Step 4: Operate; when flagged or dissolved, move on
 
 | Provider | ASN | Location | Risk Tier | Key Detail |
 |----------|-----|----------|-----------|------------|
-| **AlexHost** | AS200019, AS207636 | Chisinau | T4 | DMCA-ignored offshore hosting; Dark Caracal Bandook C2 (2026); Cl0p Cleo callback (2024) |
+| **AlexHost** | AS200019, AS207636, AS48753 | Chisinau | T4 | DMCA-ignored offshore hosting; Dark Caracal Bandook C2 (2026); Cl0p Cleo callback (2024) |
 | **PQ Hosting Plus S.R.L.** | AS44477 (historical) | Moldova | T1 (sanctions evasion; not itself listed) | Neculiti-linked; received AS44477 four days before the EU listing |
 
 **Why Moldova:** Moldova sits outside the EU (though an EU candidate), has limited cybercrime enforcement capacity, and offers geographic proximity to both Russia and Romania. The Neculiti brothers' PQ Hosting operation shows how Moldovan entities serve as waypoints in sanctions-evasion chains: AS44477 moved from Stark Industries to PQ Hosting Plus S.R.L. four days before the EU listing. (The frequently repeated claim that AlexHost colocates in a Soviet-era bomb shelter is unverified.)
@@ -754,7 +754,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | 1GSERVERS LLC | AS14315 | T5 | Active | United States | Watch list |
 | A7A5 / Old Vector | — | T1 | Sanctioned | Russia / Kyrgyzstan | Financial Enabler (sanctions-evasion stablecoin) |
 | Aeza International Ltd | AS210644; AS216246; AS203273 (NetCrafters OU [EE]; Spamhaus ASN-DROP under aeza.net) | T1 | Sanctioned | Russia / St. Petersburg (UK front) | Pure BPH |
-| AlexHost | AS200019; AS207636 (ALEXHOST-SRL) | T4 | Active | Moldova | BPH-Adjacent |
+| AlexHost | AS200019; AS207636 (ALEXHOST-SRL); AS48753 (AVAHOHST; AVA HOST SRL [MD]; sponsored, maintained and routed by AlexHost) | T4 | Active | Moldova | BPH-Adjacent |
 | Altawk (Daniil Yevchenko) | AS209946 (ALINDA LLC [UA]; Spamhaus ASN-DROP under altawk.com; no routes since 2026-10-02); AS203727 (historical; reassigned to byon GmbH [DE] - do not block); AS215826 (Partner Hosting LTD [GB]; listed under altawk.com in Dec 2025, delisted) | T2 | Flagged | aurologic downstream | BPH downstream |
 | Andwase Limited (ex-Network Management / IP4MARKET) | — | T5 | Active | British Virgin Islands | Upstream Enabler (IPv4 LIR / broker) |
 | AnonRDP / Blatant Technologies | AS403005 (BLATANTHOST; Blatant Technologies, LLC [SC/ARIN], registered 2026-09-25; Spamhaus ASN-DROP under blatant.host); AS205759 (historical; GHOSTYNETWORKS [US-KY]; deregistered) | T1 | Seized | Seychelles shell / Lithuania, Netherlands (servers) | Pure BPH |
@@ -837,7 +837,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 ## Appendix B: ASN Cross-Reference Index
 
 <!-- generated:appendix-b:start -->
-> Every ASN attributed to a tracked entity, generated from `data/asns.csv` by `tools/generate_docs.py` - do not edit by hand. **Block** gives the structured recommendation (`block`, `block-prefixes`, `hunt`, `monitor`, `do-not-block`); ASNs marked `do-not-block` now belong to unrelated organisations or are deregistered - never block them as the listed entity. Routing and Spamhaus state last checked 2026-10-30.
+> Every ASN attributed to a tracked entity, generated from `data/asns.csv` by `tools/generate_docs.py` - do not edit by hand. **Block** gives the structured recommendation (`block`, `block-prefixes`, `hunt`, `monitor`, `do-not-block`); ASNs marked `do-not-block` now belong to unrelated organisations or are deregistered - never block them as the listed entity. Routing and Spamhaus state last checked 2026-11-10.
 
 | ASN | Entity | Tier | Block | Notes |
 |-----|--------|------|-------|-------|
@@ -859,6 +859,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 | AS45054 | PINSPB (Petersburg Internet Network Ltd) | T2 | monitor | Metrobit-AS; Petersburg Internet Network ltd.; registered, no routes |
 | AS45839 | Shinjiru | T4 | monitor | BPH-Adjacent; Malaysia |
 | AS48589 | Tiger Network Limited (Tiger Net) | T3 | block | TIGER |
+| AS48753 | AlexHost | T4 | monitor | AVAHOHST; AVA HOST SRL [MD]; sponsored, maintained and routed by AlexHost |
 | AS49037 | Prostie Reshenia LLC (WebRocket) | T5 | monitor | A1-TELECOM; no routes since 2025-02-12 |
 | AS49042 | Phanes Networks | T4 | do-not-block | historical; deregistered |
 | AS49217 | HOSTYPE | T5 | monitor | registered; no routes |
@@ -977,7 +978,7 @@ Femo IT/Defhost (AS214351) alone has been associated with 12+ distinct malware f
 Every relationship between tracked entities and the parties around them (operators, fronts, successors, upstreams, IP suppliers, payment rails, sister companies), drawn from `data/relationships.csv` with its sources. The hand-drawn diagrams earlier in this document give the narrative; these are complete and regenerated whenever the data changes.
 
 <!-- generated:appendix-c:start -->
-> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read *from → to* with the relationship type as label; solid = verified, dashed with `?` = unverified or disputed, `former` = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are external parties. 174 relationships among 171 parties, shown in three views; an entity can appear in more than one.
+> Generated from `data/relationships.csv` by `tools/generate_docs.py` - do not edit by hand. Arrows read *from → to* with the relationship type as label; solid = verified, dashed with `?` = unverified or disputed, `former` = superseded. Fill shows the tracked entity's tier (T1 dark red → T5 grey); white dashed boxes are external parties. 175 relationships among 172 parties, shown in three views; an entity can appear in more than one.
 
 ### Corporate structure
 
@@ -1335,7 +1336,7 @@ flowchart LR
 
 ### Network supply
 
-54 relationships: upstream transit and IP-space suppliers.
+55 relationships: upstream transit and IP-space suppliers.
 
 #### Aeza International Ltd, BtHoster, Femo IT Solutions Ltd (Defhost), Railnet LLC / Virtualine Technologies and 13 more
 
@@ -1479,6 +1480,19 @@ flowchart LR
   classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
 ```
 
+#### AlexHost
+
+```mermaid
+flowchart LR
+  n1["AlexHost"]:::t4
+  n2["AVA HOST SRL (AS48753)"]:::ext
+  n1 -->|upstream-of| n2
+  n3["Voxility"]:::ext
+  n3 -.->|upstream-of ?| n1
+  classDef t4 fill:#475569,color:#fff,stroke:#1e293b
+  classDef ext fill:#fff,color:#000,stroke:#64748b,stroke-dasharray:4 3
+```
+
 #### Chang Way Technologies Co. Limited
 
 ```mermaid
@@ -1508,9 +1522,6 @@ flowchart LR
   n7["SpectraIP (AS62068/AS218878)"]:::ext
   n8["Phanes Networks"]:::t4
   n7 -->|upstream-of| n8
-  n9["Voxility"]:::ext
-  n10["AlexHost"]:::t4
-  n9 -.->|upstream-of ?| n10
   classDef t1 fill:#991b1b,color:#fff,stroke:#450a0a
   classDef t4 fill:#475569,color:#fff,stroke:#1e293b
   classDef t5 fill:#94a3b8,color:#000,stroke:#475569
