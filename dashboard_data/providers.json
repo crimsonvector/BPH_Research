@@ -533,7 +533,7 @@
     "status": "active",
     "risk_tier": "T4-Gray Zone",
     "primary_asn": "AS200019",
-    "additional_asns": "AS207636 (ALEXHOST-SRL)",
+    "additional_asns": "AS207636 (ALEXHOST-SRL); AS48753 (AVAHOHST; AVA HOST SRL [MD]; sponsored, maintained and routed by AlexHost)",
     "known_prefixes": "176[.]123[.]0[.]0/21; 176[.]123[.]8[.]0/22; 37[.]221[.]65[.]0/24; 37[.]221[.]67[.]0/24 (78 prefixes / 44,800 addresses in total, 2026-09-25)",
     "country_registration": "Moldova",
     "country_operations": "Moldova (Chisinau)",
@@ -547,7 +547,7 @@
     "associated_malware": "",
     "operational_patterns": "DMCA-ignored marketing; Offshore jurisdiction; Crypto payment",
     "first_observed": "",
-    "last_updated": "2026-10-30",
+    "last_updated": "2026-11-10",
     "rf_threat_density_score": "",
     "description": ""
   },
