@@ -1,32 +1,5 @@
 [
   {
-    "id": "vshell-newsakaye-operator-2026-07",
-    "title": "Live Vshell C2 operator 'newsakaye' - 4-node HK cluster",
-    "date": "2026-09-10",
-    "first_observed": "2026-07-23",
-    "category": "c2",
-    "family": "Vshell C2 (Chinese framework)",
-    "confidence": "confirmed",
-    "status": "active",
-    "asn": "AS45753",
-    "provider": "Netsec Limited (AS45753, HK)",
-    "bph_link": "Netsec Limited (AS45753) - HK host, not currently a tracked BPH entity",
-    "vt": "6-15 malicious per node",
-    "summary": "A single Vshell C2 operator runs a four-node cluster on Netsec Limited (AS45753, HK), all four Shodan-visible and VirusTotal-flagged as of 2026-09-10, with an exposed MariaDB still on :3306. The nodes share one TLS cert (vshell[.]newsakaye[.]com) and back the same operator tooling domain. Shares the fraud-oriented, HK-hosted, Chinese-C2 profile of the co-reported Gshell activity.",
-    "tags": [
-      "vshell",
-      "c2",
-      "china-nexus",
-      "newsakaye",
-      "netsec",
-      "fraud",
-      "cert-pivot"
-    ],
-    "last_verified": "2026-11-19",
-    "last_seen_utc": "2026-11-16",
-    "stale_days": 2
-  },
-  {
     "id": "aeza-comfyui-cryptojacking-2026-08",
     "title": "GPU/AI-host (ComfyUI) cryptojacking run from sanctioned Aeza",
     "date": "2026-09-10",
@@ -48,9 +21,9 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-11-19",
+    "last_verified": "2026-11-20",
     "last_seen_utc": "2026-11-13",
-    "stale_days": 5
+    "stale_days": 6
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -74,8 +47,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-11-19",
-    "last_seen_utc": "2026-11-19",
+    "last_verified": "2026-11-20",
+    "last_seen_utc": "2026-11-20",
     "stale_days": 0
   },
   {
@@ -101,9 +74,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-11-19",
+    "last_verified": "2026-11-20",
     "last_seen_utc": "2026-11-19",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -127,9 +100,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-11-19",
+    "last_verified": "2026-11-20",
     "last_seen_utc": "2026-11-07",
-    "stale_days": 11
+    "stale_days": 12
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -151,8 +124,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-11-19",
-    "last_seen_utc": "2026-11-19",
+    "last_verified": "2026-11-20",
+    "last_seen_utc": "2026-11-20",
     "stale_days": 0
   }
 ]
