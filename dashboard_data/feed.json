@@ -21,9 +21,9 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-11-21",
+    "last_verified": "2026-11-22",
     "last_seen_utc": "2026-11-13",
-    "stale_days": 7
+    "stale_days": 8
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -47,8 +47,8 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-11-21",
-    "last_seen_utc": "2026-11-20",
+    "last_verified": "2026-11-22",
+    "last_seen_utc": "2026-11-22",
     "stale_days": 0
   },
   {
@@ -74,9 +74,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-11-21",
+    "last_verified": "2026-11-22",
     "last_seen_utc": "2026-11-21",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "ns-mheusa04-2026-06",
@@ -100,9 +100,9 @@
       "aeza",
       "novel-sample"
     ],
-    "last_verified": "2026-11-21",
+    "last_verified": "2026-11-22",
     "last_seen_utc": "2026-11-07",
-    "stale_days": 13
+    "stale_days": 14
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -124,8 +124,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-11-21",
-    "last_seen_utc": "2026-11-20",
+    "last_verified": "2026-11-22",
+    "last_seen_utc": "2026-11-22",
     "stale_days": 0
   }
 ]
