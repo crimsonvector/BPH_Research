@@ -21,9 +21,9 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-11-22",
+    "last_verified": "2026-11-23",
     "last_seen_utc": "2026-11-13",
-    "stale_days": 8
+    "stale_days": 9
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -47,7 +47,7 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-11-22",
+    "last_verified": "2026-11-23",
     "last_seen_utc": "2026-11-22",
     "stale_days": 0
   },
@@ -74,35 +74,9 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-11-22",
-    "last_seen_utc": "2026-11-21",
-    "stale_days": 1
-  },
-  {
-    "id": "ns-mheusa04-2026-06",
-    "title": "Unreported NetSupport RAT C2 chain (mheusa04)",
-    "date": "2026-06-30",
-    "first_observed": "2026-06-09",
-    "category": "c2",
-    "family": "NetSupport Manager RAT",
-    "confidence": "confirmed",
-    "status": "active",
-    "asn": "AS135392",
-    "provider": "MillenialHost",
-    "bph_link": "Aeza International Ltd",
-    "vt": "0/91",
-    "summary": "A novel, unsubmitted NetSupport Manager RAT dropper staged on Aeza infrastructure delivers a fully unreported C2 chain. Procurement/tender-themed lure; financially-motivated (BEC/fraud/access) tradecraft against corporate finance teams.",
-    "tags": [
-      "netsupport",
-      "rat",
-      "bec",
-      "procurement-lure",
-      "aeza",
-      "novel-sample"
-    ],
-    "last_verified": "2026-11-22",
-    "last_seen_utc": "2026-11-07",
-    "stale_days": 14
+    "last_verified": "2026-11-23",
+    "last_seen_utc": "2026-11-22",
+    "stale_days": 0
   },
   {
     "id": "meshcentral-23-94-252-217-2026-06",
@@ -124,8 +98,8 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-11-22",
-    "last_seen_utc": "2026-11-22",
+    "last_verified": "2026-11-23",
+    "last_seen_utc": "2026-11-23",
     "stale_days": 0
   }
 ]
