@@ -21,9 +21,9 @@
       "aeza",
       "sanctioned"
     ],
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "last_seen_utc": "2026-11-24",
-    "stale_days": 0
+    "stale_days": 1
   },
   {
     "id": "delivery-evriupdate-aeza-2026-07",
@@ -47,9 +47,9 @@
       "sanctioned",
       "dns-on-bph"
     ],
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "last_seen_utc": "2026-11-22",
-    "stale_days": 1
+    "stale_days": 2
   },
   {
     "id": "darkseller-carding-market-2026-07",
@@ -74,8 +74,8 @@
       "vdsina",
       "cloudflare-fronted"
     ],
-    "last_verified": "2026-11-24",
-    "last_seen_utc": "2026-11-24",
+    "last_verified": "2026-11-25",
+    "last_seen_utc": "2026-11-25",
     "stale_days": 0
   },
   {
@@ -98,7 +98,7 @@
       "aeza",
       "remote-access"
     ],
-    "last_verified": "2026-11-24",
+    "last_verified": "2026-11-25",
     "last_seen_utc": "2026-11-24",
     "stale_days": 0
   }
